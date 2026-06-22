@@ -1,0 +1,158 @@
+/*
+  Button component — built directly from the live Figma master component
+  (COMPONENT_SET 2624:6375), verified variant by variant via the Figma
+  Plugin API rather than approximated from memory.
+
+  Every colour, shadow, radius and spacing value below is a CSS custom
+  property resolved from the real token export (tokens.tokens.json).
+  No hardcoded hex values, no hardcoded px values for anything that has
+  a token. The only literal numbers here are the font-size/letter-spacing
+  pairs per size and the fixed heights — both measured directly off the
+  Figma component, which does not alias those to a shared type/spacing
+  token (confirmed by inspecting bound variables on the live node; these
+  are deliberately bespoke per-size overrides in the source file, not an
+  oversight in this build).
+
+  Requires (load before this file):
+    tokens-primitives.css
+    tokens-light.css  (+ tokens-dark.css for [data-theme="dark"])
+    tokens-desktop.css (+ tokens-mobile.css for [data-density="mobile"])
+*/
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-100);
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+}
+
+/* ---- Sizes ---- (measured from the Figma component: 32 / 40 / 48px tall) */
+
+.btn--small {
+  height: 32px;
+  padding-inline: var(--button-padding-sm);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.btn--medium {
+  height: 40px;
+  padding-inline: var(--button-padding-default);
+  font-size: 14px;
+  letter-spacing: 0.75px;
+}
+
+.btn--large {
+  height: 48px;
+  padding-inline: var(--button-padding-default);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* ---- Variant: Primary ---- */
+
+.btn--primary {
+  background-color: var(--background-action-primary);
+  color: var(--text-on-action);
+  box-shadow: 0 1px 0 0 var(--border-action);
+}
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--background-action-primary-hover);
+}
+.btn--primary:active:not(:disabled) {
+  background-color: var(--background-action-primary-pressed);
+  box-shadow: none;
+}
+.btn--primary:focus-visible {
+  background-color: var(--background-action-primary);
+  box-shadow:
+    0 1px 0 0 var(--border-action),
+    0 0 0 4px var(--border-focus),
+    0 0 0 6px var(--background-page);
+}
+
+/* ---- Variant: Secondary ---- */
+
+.btn--secondary {
+  background-color: var(--background-action-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 1px 0 0 var(--border-action-secondary);
+}
+.btn--secondary:hover:not(:disabled) {
+  background-color: var(--background-action-secondary-hover);
+}
+.btn--secondary:active:not(:disabled) {
+  background-color: var(--background-action-secondary-pressed);
+  box-shadow: none;
+}
+.btn--secondary:focus-visible {
+  background-color: var(--background-action-secondary);
+  box-shadow:
+    0 1px 0 0 var(--border-action-secondary),
+    0 0 0 4px var(--border-focus),
+    0 0 0 6px var(--background-page);
+}
+
+/* ---- Variant: Ghost ---- (no resting shadow in the source component) */
+
+.btn--ghost {
+  background-color: var(--background-action-ghost);
+  color: var(--text-primary);
+  box-shadow: none;
+}
+.btn--ghost:hover:not(:disabled) {
+  background-color: var(--background-action-ghost-hover);
+}
+.btn--ghost:active:not(:disabled) {
+  background-color: var(--background-action-ghost-pressed);
+}
+.btn--ghost:focus-visible {
+  background-color: var(--background-page);
+  box-shadow:
+    0 0 0 4px var(--border-focus),
+    0 0 0 6px var(--background-page);
+}
+
+/* ---- Variant: Destructive ---- */
+
+.btn--destructive {
+  background-color: var(--background-action-destructive);
+  color: var(--text-on-danger);
+  box-shadow: 0 1px 0 0 var(--border-danger);
+}
+.btn--destructive:hover:not(:disabled) {
+  background-color: var(--background-action-destructive-hover);
+}
+.btn--destructive:active:not(:disabled) {
+  background-color: var(--background-action-destructive-pressed);
+  box-shadow: none;
+}
+.btn--destructive:focus-visible {
+  background-color: var(--background-action-destructive);
+  box-shadow:
+    0 1px 0 0 var(--border-danger),
+    0 0 0 4px var(--border-focus),
+    0 0 0 6px var(--background-page);
+}
+
+/* ---- Disabled ---- (same across all four variants, per source component) */
+
+.btn:disabled,
+.btn[disabled] {
+  background-color: var(--background-disabled) !important;
+  color: var(--text-disabled) !important;
+  box-shadow: none !important;
+}

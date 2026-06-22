@@ -1,0 +1,119 @@
+[data-density='mobile'] {
+  --button-padding-default: 16px;
+  --button-padding-sm: 8px;
+  /* Grid columns — 4 mobile. */
+  --layout-grid-columns: 4px;
+  /* Column gap. 16px mobile. */
+  --layout-grid-gutter: 16px;
+  /* Container padding. Matches spacing/page-margin. 16px. */
+  --layout-grid-margin: 16px;
+  /* Full-width at mobile — 430px (standard iPhone artboard). */
+  --layout-max-content-width: 430px;
+  /* Full-width reading on mobile — uses frame width. */
+  --layout-reading-column-width: 430px;
+  /* Grandparent — cards. 16px. */
+  --radius-large: 16px;
+  /* Parent level — buttons, inputs. 8px. */
+  --radius-medium: 8px;
+  /* Fully rounded — badges. 999px. */
+  --radius-pill: 999px;
+  /* Deepest nested — tags, chips. 4px. */
+  --radius-small: 4px;
+  /* Outermost containers — sharp (0px). */
+  --radius-xl: 0;
+  /* Project card internal padding. 16px mobile. */
+  --spacing-card-padding: 16px;
+  /* Buttons, inputs. 16px mobile — minimum, no smaller. */
+  --spacing-component-padding: 16px;
+  /* Between content blocks. 16px mobile. */
+  --spacing-content-gap: 16px;
+  /* Image to caption. 8px mobile. */
+  --spacing-figure-gap: 8px;
+  --spacing-group-gap: 48px;
+  /* Icon + label. 8px both viewports. */
+  --spacing-inline-gap: 8px;
+  --spacing-list-gap: 2px;
+  --spacing-overline-gap: 4px;
+  /* Inner container padding. 16px mobile. */
+  --spacing-page-margin: 16px;
+  /* Between paragraphs. 16px mobile. */
+  --spacing-paragraph-gap: 16px;
+  /* Sibling row elements. 16px mobile. */
+  --spacing-row-gap: 16px;
+  /* Between major sections. 48px mobile. */
+  --spacing-section-gap: 48px;
+  --spacing-sheet-margin-x: 120px;
+  --spacing-sheet-margin-y: 80px;
+  /* Stacked elements. 16px mobile. */
+  --spacing-stack-gap: 16px;
+  --spacing-table-cell-padding: 16px;
+  /* Vertical text rhythm. 8px mobile. */
+  --spacing-text-stack-gap: 8px;
+  --spacing-tight-padding: 8px;
+  /* Body small line height mobile. 22px. */
+  --type-body-small-line-height: 22px;
+  /* Supporting content, captions. 14px. */
+  --type-body-small-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-small-weight: 400;
+  /* Body line height mobile — more generous for narrow screens. 28px. */
+  --type-body-line-height: 28px;
+  /* Body text. 16px — consistent with desktop for scale cohesion. */
+  --type-body-size: 16px;
+  /* Body weight — regular. */
+  --type-body-weight: 400;
+  /* Caption line height mobile. */
+  --type-caption-line-height: 18px;
+  /* Timestamps, tags, helper text. 13px. */
+  --type-caption-size: 13px;
+  /* Caption weight — regular. */
+  --type-caption-weight: 400;
+  /* Display letter spacing. */
+  --type-display-letter-spacing: -0.5px;
+  /* Display line height mobile. */
+  --type-display-line-height: 38px;
+  /* Homepage hero at mobile scale. 32px. */
+  --type-display-size: 32px;
+  /* Display weight — bold. */
+  --type-display-weight: 700;
+  /* Primary typeface — Eina04. */
+  --type-family-primary: Eina04;
+  /* Heading 1 letter spacing. */
+  --type-heading-1-letter-spacing: -0.30000001192092896px;
+  /* Heading 1 line height mobile. */
+  --type-heading-1-line-height: 30px;
+  /* Page-level titles. 24px mobile. */
+  --type-heading-1-size: 24px;
+  /* Heading 1 weight — semibold. */
+  --type-heading-1-weight: 600;
+  /* Heading 2 letter spacing. */
+  --type-heading-2-letter-spacing: -0.20000000298023224px;
+  /* Heading 2 line height mobile. */
+  --type-heading-2-line-height: 28px;
+  /* Section headers. 20px mobile. */
+  --type-heading-2-size: 20px;
+  /* Heading 2 weight — semibold. */
+  --type-heading-2-weight: 600;
+  /* Heading 3 line height mobile. */
+  --type-heading-3-line-height: 26px;
+  /* Subsections. 18px mobile. */
+  --type-heading-3-size: 18px;
+  /* Heading 3 weight — semibold. */
+  --type-heading-3-weight: 600;
+  /* Label letter spacing. */
+  --type-label-letter-spacing: 0.009999999776482582px;
+  /* Label line height. */
+  --type-label-line-height: 20px;
+  /* Navigation, buttons. 14px. */
+  --type-label-size: 14px;
+  /* Label weight — medium. */
+  --type-label-weight: 500;
+  /* Overline letter spacing — wide. */
+  --type-overline-letter-spacing: 0.07999999821186066px;
+  /* Overline line height. */
+  --type-overline-line-height: 16px;
+  /* Category labels. 12px. */
+  --type-overline-size: 12px;
+  /* Overline weight — semibold. */
+  --type-overline-weight: 600;
+}

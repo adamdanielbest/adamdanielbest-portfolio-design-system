@@ -1,0 +1,107 @@
+:root {
+  /* Cobalt indicator dots, progress fills, icon fills, tag backgrounds. */
+  --accent-brand: #88B0CD;
+  /* X icons, negative indicators. */
+  --accent-error: #F43F5E;
+  /* Information icons. Aliases brand cobalt. */
+  --accent-info: #3A73A0;
+  /* Check icons, progress success, positive metric indicators. */
+  --accent-success: #22C55E;
+  /* Caution icons, amber indicators. */
+  --accent-warning: #F59E0B;
+  --background-action-destructive: #E11D48;
+  --background-action-destructive-hover: #BE123C;
+  --background-action-destructive-pressed: #9F1239;
+  --background-action-ghost: #F0F6FA;
+  --background-action-ghost-hover: #D9ECF7;
+  --background-action-ghost-pressed: #B8D8ED;
+  /* Primary CTA button. Pair with foreground/on-action. */
+  --background-action-primary: #3A73A0;
+  /* CTA button hover state. */
+  --background-action-primary-hover: #2D5C82;
+  /* CTA button pressed/active state. */
+  --background-action-primary-pressed: #224868;
+  --background-action-secondary: #121212;
+  --background-action-secondary-hover: #000000;
+  --background-action-secondary-pressed: #000000;
+  /* Brand cobalt surface — branded callouts, highlights. */
+  --background-brand: #88B0CD;
+  /* Subtle cobalt tint — tags, selected states, soft brand accents. */
+  --background-brand-subtle: #F0F6FA;
+  /* Card/container surfaces — panels holding content. Pair with border/default. */
+  --background-card: #FFFFFF;
+  /* Disabled state — inactive buttons and inputs. Not for interactive elements. */
+  --background-disabled: #E8E8E8;
+  /* Elevated surface — popovers, tooltips, sticky headers. */
+  --background-elevated: #FFFFFF;
+  /* Error background — validation errors, destructive actions. */
+  --background-error: #FFF1F2;
+  /* Info background — neutral informational banners. Aliases brand. */
+  --background-info: #F0F6FA;
+  /* Form inputs, selects, textareas. */
+  --background-input: #FFFFFF;
+  /* Inverted surface — dark chip/badge on light mode. */
+  --background-inverse: #121212;
+  /* Modal scrim — darkens page to focus attention on elevated content. */
+  --background-overlay: #0000007A;
+  /* Page background — Off White outermost surface. */
+  --background-page: #FAF9F6;
+  /* Success background — confirmation banners, success toasts. */
+  --background-success: #F0FDF4;
+  /* Warning background — caution banners, advisory states. */
+  --background-warning: #FFFBEB;
+  --border-action: #081527;
+  --border-action-secondary: #2E2E2E;
+  --border-action-secondary-hover: #2E2E2E;
+  --border-action-secondary-pressed: #888888;
+  /* Brand-coloured border — cobalt edges for callouts, selected tags. */
+  --border-brand: #88B0CD;
+  --border-danger: #4C0519;
+  /* Standard card edges, input borders, content dividers. */
+  --border-default: #E8E8E8;
+  --border-divider: #E8E8E8;
+  /* Error state border — error banners, invalid inputs. */
+  --border-error: #F43F5E;
+  /* Keyboard focus ring — 2px outline. Always visible for accessibility. */
+  --border-focus: #3A73A0;
+  --border-ghost: #5C91B5;
+  /* Info state border — informational banners. */
+  --border-info: #3A73A0;
+  /* Prominent edge — selected/active states, strong dividers. */
+  --border-strong: #ABABAB;
+  /* Barely-there dividers — section separators, list rules. */
+  --border-subtle: #F0EFEC;
+  /* Success state border — success banners, valid inputs. */
+  --border-success: #22C55E;
+  /* Warning state border — caution banners. */
+  --border-warning: #F59E0B;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
+  --text-accent: #3A73A0;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels. */
+  --text-brand: #3A73A0;
+  /* Disabled text and icons. Never on interactive elements. */
+  --text-disabled: #ABABAB;
+  /* Error text and icons — validation messages. */
+  --text-error: #E11D48;
+  /* Info text and icons. Aliases brand cobalt. */
+  --text-info: #3A73A0;
+  /* Text on inverted/dark surfaces in light mode. */
+  --text-inverse: #FAF9F6;
+  /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
+  --text-link-hover: #2D5C82;
+  /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
+  --text-link-visited: #224868;
+  /* Text/icons on background/action buttons — white on cobalt/500. */
+  --text-on-action: #FFFFFF;
+  --text-on-danger: #FFFFFF;
+  /* Body copy and long-form reading text. Highest contrast. Pairs with background/page. */
+  --text-primary: #121212;
+  /* Timestamps, project tags, secondary labels. */
+  --text-secondary: #666666;
+  /* Success text and icons — confirmation messages. */
+  --text-success: #16A34A;
+  /* Placeholder, helper text, captions. Least prominent foreground. */
+  --text-tertiary: #737373;
+  /* Warning text and icons — caution messages. */
+  --text-warning: #B45309;
+}

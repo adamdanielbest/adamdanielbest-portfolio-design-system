@@ -1,0 +1,120 @@
+:root {
+  --button-padding-default: 16px;
+  --button-padding-sm: 8px;
+  /* Number of grid columns. 12 desktop. */
+  --layout-grid-columns: 12px;
+  /* Gap between grid columns. 24px desktop. */
+  --layout-grid-gutter: 24px;
+  /* Inner container padding. Matches spacing/page-margin. 32px desktop. */
+  --layout-grid-margin: 32px;
+  /* Maximum content width — container centred at this width. 1200px desktop. */
+  --layout-max-content-width: 1200px;
+  /* Max width for long-form body text. Optimal reading measure. 720px desktop. */
+  --layout-reading-column-width: 720px;
+  /* Grandparent — project cards, thumbnails. 16px. */
+  --radius-large: 16px;
+  /* Parent level — buttons, inputs, tooltips. 8px. */
+  --radius-medium: 8px;
+  /* Fully rounded — badges, toggles. 999px. */
+  --radius-pill: 999px;
+  /* Deepest nested — tags, chips, indicators inside a card. 4px. */
+  --radius-small: 4px;
+  /* Outermost containers — currently sharp (0px). Update primitive when needed. */
+  --radius-xl: 0;
+  /* Internal padding for project cards. 24px desktop. */
+  --spacing-card-padding: 24px;
+  /* Buttons, inputs, chips. 16px desktop. */
+  --spacing-component-padding: 16px;
+  /* Between content blocks within a section. 32px desktop. */
+  --spacing-content-gap: 32px;
+  /* Image to caption gap. 12px desktop. */
+  --spacing-figure-gap: 12px;
+  --spacing-group-gap: 48px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-inline-gap: 8px;
+  --spacing-list-gap: 2px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-overline-gap: 4px;
+  /* Inner padding of the max-width container. 32px desktop. */
+  --spacing-page-margin: 32px;
+  /* Between body paragraphs. 24px desktop. */
+  --spacing-paragraph-gap: 24px;
+  /* Between sibling elements in a row. 16px desktop. */
+  --spacing-row-gap: 16px;
+  /* Between major page sections — hero/work/about. 96px desktop. */
+  --spacing-section-gap: 96px;
+  --spacing-sheet-margin-x: 120px;
+  --spacing-sheet-margin-y: 80px;
+  /* Between stacked elements in a column. 16px desktop. */
+  --spacing-stack-gap: 16px;
+  --spacing-table-cell-padding: 16px;
+  /* Vertical rhythm between stacked text lines (title + caption). 8px desktop. */
+  --spacing-text-stack-gap: 8px;
+  --spacing-tight-padding: 8px;
+  /* Body small line height. 20px desktop. */
+  --type-body-small-line-height: 20px;
+  /* Supporting content, image captions, metadata. 14px. */
+  --type-body-small-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-small-weight: 400;
+  /* Body line height — generous for readability. 26px desktop. */
+  --type-body-line-height: 26px;
+  /* Default long-form reading text. Case study content. 16px both viewports. */
+  --type-body-size: 16px;
+  /* Body weight — regular. */
+  --type-body-weight: 400;
+  /* Caption line height. */
+  --type-caption-line-height: 16px;
+  /* Timestamps, tags, helper text. 13px. */
+  --type-caption-size: 12px;
+  /* Caption weight — regular. */
+  --type-caption-weight: 400;
+  /* Display letter spacing — slightly tight. */
+  --type-display-letter-spacing: -0.5px;
+  /* Display line height — tight for large type. */
+  --type-display-line-height: 56px;
+  /* Homepage hero, case study titles at full scale. 48px desktop. */
+  --type-display-size: 48px;
+  /* Display weight — bold. */
+  --type-display-weight: 700;
+  /* Primary typeface — Eina04, all text. */
+  --type-family-primary: Eina04;
+  /* Heading 1 letter spacing. */
+  --type-heading-1-letter-spacing: -0.30000001192092896px;
+  /* Heading 1 line height. */
+  --type-heading-1-line-height: 40px;
+  /* Page-level titles. 32px desktop. */
+  --type-heading-1-size: 32px;
+  /* Heading 1 weight — semibold. */
+  --type-heading-1-weight: 600;
+  /* Heading 2 letter spacing. */
+  --type-heading-2-letter-spacing: -0.20000000298023224px;
+  /* Heading 2 line height. */
+  --type-heading-2-line-height: 32px;
+  /* Case study section headers. 24px desktop. */
+  --type-heading-2-size: 24px;
+  /* Heading 2 weight — semibold. */
+  --type-heading-2-weight: 600;
+  /* Heading 3 line height. */
+  --type-heading-3-line-height: 28px;
+  /* Subsections, callout labels. 20px desktop. */
+  --type-heading-3-size: 20px;
+  /* Heading 3 weight — semibold. */
+  --type-heading-3-weight: 600;
+  /* Label letter spacing — slightly open. */
+  --type-label-letter-spacing: 0.009999999776482582px;
+  /* Label line height. */
+  --type-label-line-height: 16px;
+  /* Navigation, buttons, input labels. 14px. */
+  --type-label-size: 12px;
+  /* Label weight — medium. Distinguishes UI text from body copy. */
+  --type-label-weight: 600;
+  /* Overline letter spacing — wide, adds visual texture. */
+  --type-overline-letter-spacing: 0.07999999821186066px;
+  /* Overline line height. */
+  --type-overline-line-height: 16px;
+  /* Category labels, project tags above a heading. 12px. */
+  --type-overline-size: 12px;
+  /* Overline weight — semibold. */
+  --type-overline-weight: 600;
+}

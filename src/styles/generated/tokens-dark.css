@@ -1,0 +1,107 @@
+[data-theme='dark'] {
+  /* Cobalt indicators, progress fills in dark. */
+  --accent-brand: #88B0CD;
+  /* Error indicators in dark. */
+  --accent-error: #F43F5E;
+  /* Info indicators in dark. Aliases cobalt. */
+  --accent-info: #3A73A0;
+  /* Success indicators in dark. */
+  --accent-success: #22C55E;
+  /* Warning indicators in dark. */
+  --accent-warning: #F59E0B;
+  --background-action-destructive: #FDA4AF;
+  --background-action-destructive-hover: #FECDD3;
+  --background-action-destructive-pressed: #FB7185;
+  --background-action-ghost: #141C27;
+  --background-action-ghost-hover: #193651;
+  --background-action-ghost-pressed: #081527;
+  /* Primary CTA button — light cobalt on dark. Pair with foreground/on-action. */
+  --background-action-primary: #88B0CD;
+  /* CTA button hover — lighter cobalt. */
+  --background-action-primary-hover: #B8D8ED;
+  /* CTA button pressed — slightly deeper cobalt. */
+  --background-action-primary-pressed: #5C91B5;
+  --background-action-secondary: #121212;
+  --background-action-secondary-hover: #000000;
+  --background-action-secondary-pressed: #000000;
+  /* Brand cobalt surface — deeper cobalt for dark branded sections. */
+  --background-brand: #2D5C82;
+  /* Subtle brand surface — dark card with blue cast for soft brand accents. */
+  --background-brand-subtle: #141C27;
+  /* Card surfaces — slightly lifted from page. Pair with border/default. */
+  --background-card: #141C27;
+  /* Disabled state — inactive elements in dark mode. */
+  --background-disabled: #1B2537;
+  /* Elevated surface — dropdowns, popovers, sticky headers. */
+  --background-elevated: #1B2537;
+  /* Error background — dark red tint. */
+  --background-error: #4C0519;
+  /* Info background — dark cobalt tint. Aliases brand. */
+  --background-info: #0D1117;
+  /* Form inputs — same as card in dark mode. */
+  --background-input: #141C27;
+  /* Inverted surface — light chip/badge on dark. */
+  --background-inverse: #FAF9F6;
+  /* Modal scrim — deep black at high opacity. */
+  --background-overlay: #00000080;
+  /* Page background — near-black blue-grey. Reduces eye strain in low light. */
+  --background-page: #0D1117;
+  /* Success background — dark green tint. */
+  --background-success: #052E16;
+  /* Warning background — dark amber tint. */
+  --background-warning: #451A03;
+  --border-action: #224868;
+  --border-action-secondary: #2E2E2E;
+  --border-action-secondary-hover: #2E2E2E;
+  --border-action-secondary-pressed: #2E2E2E;
+  /* Brand cobalt border in dark. */
+  --border-brand: #5C91B5;
+  --border-danger: #BE123C;
+  /* Standard card edges and dividers — blue-grey tinted. */
+  --border-default: #2A3C52;
+  --border-divider: #E8E8E8;
+  /* Error border in dark. */
+  --border-error: #E11D48;
+  /* Keyboard focus ring — cobalt/300 in dark. Always visible. */
+  --border-focus: #88B0CD;
+  --border-ghost: #88B0CD;
+  /* Info border in dark. */
+  --border-info: #5C91B5;
+  /* Prominent edge — selected states, strong dividers in dark. */
+  --border-strong: #888888;
+  /* Barely-there dividers — section separators in dark. */
+  --border-subtle: #1D2B3F;
+  /* Success border in dark. */
+  --border-success: #16A34A;
+  /* Warning border in dark. */
+  --border-warning: #D97706;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
+  --text-accent: #88B0CD;
+  /* Brand cobalt text in dark — links, active nav items. */
+  --text-brand: #88B0CD;
+  /* Disabled text and icons in dark mode. */
+  --text-disabled: #666666;
+  /* Error text and icons in dark mode. */
+  --text-error: #FB7185;
+  /* Info text and icons in dark mode. Aliases brand cobalt. */
+  --text-info: #88B0CD;
+  /* Dark text on inverted light surfaces. */
+  --text-inverse: #121212;
+  /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
+  --text-link-hover: #B8D8ED;
+  /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
+  --text-link-visited: #D9ECF7;
+  /* Text/icons on background/action — off-black on cobalt/300 (8.5:1 contrast). */
+  --text-on-action: #121212;
+  --text-on-danger: #121212;
+  /* Body copy in dark mode — Off White. Maximum contrast against dark surfaces. */
+  --text-primary: #FAF9F6;
+  /* Secondary text — muted but readable. Timestamps, tags, metadata. */
+  --text-secondary: #ABABAB;
+  /* Success text and icons in dark mode. */
+  --text-success: #4ADE80;
+  /* Placeholder text, helper text, captions. Least prominent. */
+  --text-tertiary: #888888;
+  /* Warning text and icons in dark mode. */
+  --text-warning: #FCD34D;
+}

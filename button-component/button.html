@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Button — Token-driven component</title>
+<link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css" />
+<link rel="stylesheet" href="../src/styles/generated/tokens-light.css" />
+<link rel="stylesheet" href="../src/styles/generated/tokens-dark.css" />
+<link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css" />
+<link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" />
+<link rel="stylesheet" href="button.css" />
+<style>
+  body {
+    background-color: var(--background-page);
+    color: var(--text-primary);
+    font-family: var(--type-family-primary), system-ui, sans-serif;
+    margin: 0;
+    padding: 48px;
+  }
+  h1 { font-size: var(--type-heading-1-size, 32px); margin-bottom: 4px; }
+  p.lede { color: var(--text-secondary); margin-top: 0; margin-bottom: 32px; }
+  .toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 32px; }
+  .toolbar button {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: var(--radius-100);
+    border: 1px solid var(--border-default);
+    background: var(--background-card);
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 48px; }
+  caption { text-align: left; font-weight: 600; font-size: 14px; padding: 12px 0; color: var(--text-secondary); }
+  th, td {
+    border: 1px solid var(--border-subtle);
+    padding: 16px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  th { background: var(--background-card); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); }
+</style>
+</head>
+<body>
+
+<h1>Button</h1>
+<p class="lede">Generated from the live Figma token export — every colour, shadow and radius below is a CSS custom property, not a hardcoded value. Toggle theme/density to verify it's wired, not staged.</p>
+
+<div class="toolbar">
+  <button type="button" id="theme-toggle">Toggle dark mode</button>
+  <button type="button" id="density-toggle">Toggle mobile density</button>
+</div>
+
+<script>
+  // Demo controls only — not part of the component itself.
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const html = document.documentElement;
+    html.dataset.theme = html.dataset.theme === 'dark' ? '' : 'dark';
+  });
+  document.getElementById('density-toggle').addEventListener('click', () => {
+    const html = document.documentElement;
+    html.dataset.density = html.dataset.density === 'mobile' ? '' : 'mobile';
+  });
+</script>
+
+<table>
+  <caption>Primary</caption>
+  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td><button class="btn btn--primary btn--small">Button</button></td>
+      <td><button class="btn btn--primary btn--small">Hover me</button></td>
+      <td><button class="btn btn--primary btn--small">Click + hold</button></td>
+      <td><button class="btn btn--primary btn--small">Tab to me</button></td>
+      <td><button class="btn btn--primary btn--small" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><button class="btn btn--primary btn--medium">Button</button></td>
+      <td><button class="btn btn--primary btn--medium">Hover me</button></td>
+      <td><button class="btn btn--primary btn--medium">Click + hold</button></td>
+      <td><button class="btn btn--primary btn--medium">Tab to me</button></td>
+      <td><button class="btn btn--primary btn--medium" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><button class="btn btn--primary btn--large">Button</button></td>
+      <td><button class="btn btn--primary btn--large">Hover me</button></td>
+      <td><button class="btn btn--primary btn--large">Click + hold</button></td>
+      <td><button class="btn btn--primary btn--large">Tab to me</button></td>
+      <td><button class="btn btn--primary btn--large" disabled>Button</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Secondary</caption>
+  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td><button class="btn btn--secondary btn--small">Button</button></td>
+      <td><button class="btn btn--secondary btn--small">Hover me</button></td>
+      <td><button class="btn btn--secondary btn--small">Click + hold</button></td>
+      <td><button class="btn btn--secondary btn--small">Tab to me</button></td>
+      <td><button class="btn btn--secondary btn--small" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><button class="btn btn--secondary btn--medium">Button</button></td>
+      <td><button class="btn btn--secondary btn--medium">Hover me</button></td>
+      <td><button class="btn btn--secondary btn--medium">Click + hold</button></td>
+      <td><button class="btn btn--secondary btn--medium">Tab to me</button></td>
+      <td><button class="btn btn--secondary btn--medium" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><button class="btn btn--secondary btn--large">Button</button></td>
+      <td><button class="btn btn--secondary btn--large">Hover me</button></td>
+      <td><button class="btn btn--secondary btn--large">Click + hold</button></td>
+      <td><button class="btn btn--secondary btn--large">Tab to me</button></td>
+      <td><button class="btn btn--secondary btn--large" disabled>Button</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Ghost</caption>
+  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td><button class="btn btn--ghost btn--small">Button</button></td>
+      <td><button class="btn btn--ghost btn--small">Hover me</button></td>
+      <td><button class="btn btn--ghost btn--small">Click + hold</button></td>
+      <td><button class="btn btn--ghost btn--small">Tab to me</button></td>
+      <td><button class="btn btn--ghost btn--small" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><button class="btn btn--ghost btn--medium">Button</button></td>
+      <td><button class="btn btn--ghost btn--medium">Hover me</button></td>
+      <td><button class="btn btn--ghost btn--medium">Click + hold</button></td>
+      <td><button class="btn btn--ghost btn--medium">Tab to me</button></td>
+      <td><button class="btn btn--ghost btn--medium" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><button class="btn btn--ghost btn--large">Button</button></td>
+      <td><button class="btn btn--ghost btn--large">Hover me</button></td>
+      <td><button class="btn btn--ghost btn--large">Click + hold</button></td>
+      <td><button class="btn btn--ghost btn--large">Tab to me</button></td>
+      <td><button class="btn btn--ghost btn--large" disabled>Button</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Destructive</caption>
+  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td><button class="btn btn--destructive btn--small">Button</button></td>
+      <td><button class="btn btn--destructive btn--small">Hover me</button></td>
+      <td><button class="btn btn--destructive btn--small">Click + hold</button></td>
+      <td><button class="btn btn--destructive btn--small">Tab to me</button></td>
+      <td><button class="btn btn--destructive btn--small" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><button class="btn btn--destructive btn--medium">Button</button></td>
+      <td><button class="btn btn--destructive btn--medium">Hover me</button></td>
+      <td><button class="btn btn--destructive btn--medium">Click + hold</button></td>
+      <td><button class="btn btn--destructive btn--medium">Tab to me</button></td>
+      <td><button class="btn btn--destructive btn--medium" disabled>Button</button></td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><button class="btn btn--destructive btn--large">Button</button></td>
+      <td><button class="btn btn--destructive btn--large">Hover me</button></td>
+      <td><button class="btn btn--destructive btn--large">Click + hold</button></td>
+      <td><button class="btn btn--destructive btn--large">Tab to me</button></td>
+      <td><button class="btn btn--destructive btn--large" disabled>Button</button></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
