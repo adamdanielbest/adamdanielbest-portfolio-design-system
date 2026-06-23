@@ -1,7 +1,7 @@
 {
   "$extensions": {
     "figma-console-mcp": {
-      "exportedAt": "2026-06-22T16:29:26.490Z",
+      "exportedAt": "2026-06-23T07:43:22.061Z",
       "mcpVersion": "1.32.0"
     }
   },
@@ -17,7 +17,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFFBEB"
@@ -33,7 +33,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FEF3C7"
@@ -49,7 +49,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FDE68A"
@@ -65,7 +65,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FCD34D"
@@ -81,7 +81,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FBBF24"
@@ -98,7 +98,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F59E0B"
@@ -114,7 +114,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D97706"
@@ -131,7 +131,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#B45309"
@@ -147,7 +147,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#92400E"
@@ -163,7 +163,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#78350F"
@@ -179,7 +179,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#451A03"
@@ -198,7 +198,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#3A73A0"
@@ -215,7 +215,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#666666"
@@ -232,7 +232,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#121212"
@@ -249,7 +249,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FAF9F6"
@@ -266,7 +266,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E8E8E8"
@@ -285,7 +285,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0F6FA"
@@ -302,7 +302,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D9ECF7"
@@ -319,7 +319,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#B8D8ED"
@@ -336,7 +336,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#88B0CD"
@@ -353,7 +353,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#5C91B5"
@@ -370,7 +370,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#3A73A0"
@@ -387,7 +387,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#2D5C82"
@@ -404,7 +404,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#224868"
@@ -421,7 +421,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#193651"
@@ -438,7 +438,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#10243A"
@@ -455,7 +455,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#081527"
@@ -474,7 +474,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "Eina04"
@@ -492,7 +492,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0FDF4"
@@ -508,7 +508,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#DCFCE7"
@@ -524,7 +524,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#BBF7D0"
@@ -540,7 +540,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#86EFAC"
@@ -556,7 +556,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4ADE80"
@@ -573,7 +573,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#22C55E"
@@ -590,7 +590,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#16A34A"
@@ -606,7 +606,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#15803D"
@@ -622,7 +622,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#166534"
@@ -638,7 +638,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#14532D"
@@ -654,7 +654,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#052E16"
@@ -673,7 +673,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFFFFF"
@@ -690,7 +690,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FAF9F6"
@@ -707,7 +707,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0EFEC"
@@ -724,7 +724,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E8E8E8"
@@ -741,7 +741,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D4D4D4"
@@ -758,7 +758,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#ABABAB"
@@ -775,7 +775,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#888888"
@@ -791,7 +791,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#737373"
@@ -808,7 +808,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#666666"
@@ -825,7 +825,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4A4A4A"
@@ -842,7 +842,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#2E2E2E"
@@ -859,7 +859,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#1A1A1A"
@@ -876,7 +876,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#121212"
@@ -893,7 +893,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#000000"
@@ -912,7 +912,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 4
@@ -929,7 +929,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 8
@@ -946,7 +946,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 16
@@ -963,7 +963,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 0
@@ -980,7 +980,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 999
@@ -998,7 +998,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFF1F2"
@@ -1014,7 +1014,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFE4E6"
@@ -1030,7 +1030,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FECDD3"
@@ -1046,7 +1046,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FDA4AF"
@@ -1062,7 +1062,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FB7185"
@@ -1079,7 +1079,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F43F5E"
@@ -1096,7 +1096,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E11D48"
@@ -1112,7 +1112,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#BE123C"
@@ -1128,7 +1128,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#9F1239"
@@ -1144,7 +1144,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#881337"
@@ -1160,7 +1160,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4C0519"
@@ -1178,7 +1178,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0000003D"
@@ -1194,7 +1194,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000047"
@@ -1210,7 +1210,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000066"
@@ -1226,7 +1226,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000099"
@@ -1242,7 +1242,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E16260F"
@@ -1258,7 +1258,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E162614"
@@ -1274,7 +1274,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E16261A"
@@ -1290,7 +1290,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E162624"
@@ -1309,7 +1309,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 11
@@ -1326,7 +1326,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 12
@@ -1343,7 +1343,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 13
@@ -1360,7 +1360,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 14
@@ -1377,7 +1377,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 16
@@ -1394,7 +1394,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 18
@@ -1411,7 +1411,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 20
@@ -1428,7 +1428,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 24
@@ -1445,7 +1445,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 32
@@ -1462,7 +1462,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 40
@@ -1479,7 +1479,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 48
@@ -1498,7 +1498,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 4
@@ -1515,7 +1515,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 8
@@ -1532,7 +1532,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 12
@@ -1549,7 +1549,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 16
@@ -1566,7 +1566,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 20
@@ -1583,7 +1583,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 24
@@ -1600,7 +1600,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 32
@@ -1617,7 +1617,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 40
@@ -1634,7 +1634,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 48
@@ -1651,7 +1651,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 64
@@ -1668,7 +1668,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 80
@@ -1685,7 +1685,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 96
@@ -1701,7 +1701,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 120
@@ -1717,7 +1717,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 2
@@ -1736,7 +1736,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 700
@@ -1753,7 +1753,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 500
@@ -1770,7 +1770,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 400
@@ -1787,7 +1787,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 600
@@ -1814,7 +1814,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -1831,7 +1831,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{red.500}"
@@ -1848,7 +1848,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.500}"
@@ -1865,7 +1865,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{green.500}"
@@ -1882,7 +1882,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{amber.500}"
@@ -1901,7 +1901,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{red.300}"
@@ -1917,7 +1917,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{red.200}"
@@ -1933,7 +1933,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{red.400}"
@@ -1949,7 +1949,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "literal": "#141C27"
@@ -1965,7 +1965,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "literal": "#193651"
@@ -1981,7 +1981,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "literal": "#081527"
@@ -1998,7 +1998,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{cobalt.300}"
@@ -2015,7 +2015,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{cobalt.200}"
@@ -2032,7 +2032,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{cobalt.400}"
@@ -2048,7 +2048,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{brand.off-black}"
@@ -2064,7 +2064,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{neutral.1000}"
@@ -2080,7 +2080,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{neutral.1000}"
@@ -2098,7 +2098,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.600}"
@@ -2115,7 +2115,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#141C27"
@@ -2132,7 +2132,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#141C27"
@@ -2149,7 +2149,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#1B2537"
@@ -2166,7 +2166,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#1B2537"
@@ -2183,7 +2183,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{red.950}"
@@ -2200,7 +2200,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#0D1117"
@@ -2217,7 +2217,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#141C27"
@@ -2234,7 +2234,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.50}"
@@ -2251,7 +2251,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#00000080"
@@ -2268,7 +2268,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#0D1117"
@@ -2285,7 +2285,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{green.950}"
@@ -2302,7 +2302,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{amber.950}"
@@ -2320,7 +2320,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.700}"
@@ -2336,7 +2336,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.800}"
@@ -2352,7 +2352,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.800}"
@@ -2368,7 +2368,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.800}"
@@ -2385,7 +2385,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.400}"
@@ -2401,7 +2401,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{red.700}"
@@ -2418,7 +2418,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#2A3C52"
@@ -2434,7 +2434,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.200}"
@@ -2451,7 +2451,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{red.600}"
@@ -2468,7 +2468,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -2484,7 +2484,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -2501,7 +2501,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.400}"
@@ -2518,7 +2518,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.500}"
@@ -2535,7 +2535,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "literal": "#1D2B3F"
@@ -2552,7 +2552,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{green.600}"
@@ -2569,7 +2569,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{amber.600}"
@@ -2588,7 +2588,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -2605,7 +2605,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -2622,7 +2622,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.600}"
@@ -2639,7 +2639,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{red.400}"
@@ -2656,7 +2656,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.300}"
@@ -2673,7 +2673,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.950}"
@@ -2690,7 +2690,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.200}"
@@ -2707,7 +2707,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{cobalt.100}"
@@ -2724,7 +2724,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.950}"
@@ -2736,11 +2736,28 @@
         "$type": "color",
         "$value": "{neutral.950}"
       },
+      "on-action-secondary": {
+        "$description": "Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3652",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
+            "lastSyncedValue": {
+              "Dark": {
+                "reference": "{neutral.50}"
+              }
+            },
+            "variableId": "VariableID:2638:21205"
+          }
+        },
+        "$type": "color",
+        "$value": "{neutral.50}"
+      },
       "on-danger": {
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.950}"
@@ -2757,7 +2774,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.50}"
@@ -2774,7 +2791,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.400}"
@@ -2791,7 +2808,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{green.400}"
@@ -2808,7 +2825,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{neutral.500}"
@@ -2825,7 +2842,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{amber.300}"
@@ -2852,7 +2869,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.300}"
@@ -2869,7 +2886,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{red.500}"
@@ -2886,7 +2903,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -2903,7 +2920,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{green.500}"
@@ -2920,7 +2937,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{amber.500}"
@@ -2939,7 +2956,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{red.600}"
@@ -2955,7 +2972,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{red.700}"
@@ -2971,7 +2988,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{red.800}"
@@ -2987,7 +3004,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.50}"
@@ -3003,7 +3020,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.100}"
@@ -3019,7 +3036,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.200}"
@@ -3036,7 +3053,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.500}"
@@ -3053,7 +3070,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.600}"
@@ -3070,7 +3087,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{cobalt.700}"
@@ -3086,7 +3103,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{brand.off-black}"
@@ -3102,7 +3119,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{neutral.1000}"
@@ -3118,7 +3135,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{neutral.1000}"
@@ -3136,7 +3153,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.300}"
@@ -3153,7 +3170,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.50}"
@@ -3170,7 +3187,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.0}"
@@ -3187,7 +3204,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.200}"
@@ -3204,7 +3221,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.0}"
@@ -3221,7 +3238,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{red.50}"
@@ -3238,7 +3255,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.50}"
@@ -3255,7 +3272,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.0}"
@@ -3272,7 +3289,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.950}"
@@ -3289,7 +3306,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "literal": "#0000007A"
@@ -3306,7 +3323,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.50}"
@@ -3323,7 +3340,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{green.50}"
@@ -3340,7 +3357,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{amber.50}"
@@ -3358,7 +3375,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.950}"
@@ -3374,7 +3391,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.800}"
@@ -3390,7 +3407,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.800}"
@@ -3406,7 +3423,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{border.strong}"
@@ -3423,7 +3440,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.300}"
@@ -3439,7 +3456,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{red.950}"
@@ -3456,7 +3473,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.200}"
@@ -3472,7 +3489,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.200}"
@@ -3489,7 +3506,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{red.500}"
@@ -3506,7 +3523,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -3522,7 +3539,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.400}"
@@ -3539,7 +3556,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -3556,7 +3573,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.400}"
@@ -3573,7 +3590,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.100}"
@@ -3590,7 +3607,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{green.500}"
@@ -3607,7 +3624,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{amber.500}"
@@ -3626,7 +3643,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -3643,7 +3660,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -3660,7 +3677,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.400}"
@@ -3677,7 +3694,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{red.600}"
@@ -3694,7 +3711,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.500}"
@@ -3711,7 +3728,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.50}"
@@ -3728,7 +3745,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.600}"
@@ -3745,7 +3762,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{cobalt.700}"
@@ -3762,7 +3779,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.0}"
@@ -3774,11 +3791,28 @@
         "$type": "color",
         "$value": "{neutral.0}"
       },
+      "on-action-secondary": {
+        "$description": "Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3610",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
+            "lastSyncedValue": {
+              "Light": {
+                "reference": "{neutral.50}"
+              }
+            },
+            "variableId": "VariableID:2638:21204"
+          }
+        },
+        "$type": "color",
+        "$value": "{neutral.50}"
+      },
       "on-danger": {
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.0}"
@@ -3795,7 +3829,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.950}"
@@ -3812,7 +3846,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.600}"
@@ -3829,7 +3863,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{green.600}"
@@ -3846,7 +3880,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{neutral.550}"
@@ -3863,7 +3897,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{amber.700}"
@@ -3889,7 +3923,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.400}"
@@ -3905,7 +3939,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.200}"
@@ -3924,7 +3958,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 12
@@ -3941,7 +3975,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.600}"
@@ -3958,7 +3992,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.700}"
@@ -3975,7 +4009,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 1200
@@ -3992,7 +4026,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 720
@@ -4011,7 +4045,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{radius.300}"
@@ -4028,7 +4062,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{radius.200}"
@@ -4045,7 +4079,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{radius.pill}"
@@ -4062,7 +4096,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{radius.100}"
@@ -4079,7 +4113,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{radius.400}"
@@ -4098,7 +4132,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.600}"
@@ -4115,7 +4149,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.400}"
@@ -4132,7 +4166,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.700}"
@@ -4149,7 +4183,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.300}"
@@ -4165,7 +4199,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.900}"
@@ -4182,7 +4216,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.200}"
@@ -4198,7 +4232,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.050}"
@@ -4215,7 +4249,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.100}"
@@ -4232,7 +4266,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.700}"
@@ -4249,7 +4283,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.600}"
@@ -4266,7 +4300,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.400}"
@@ -4283,7 +4317,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.1200}"
@@ -4299,7 +4333,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.1300}"
@@ -4315,7 +4349,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.1100}"
@@ -4332,7 +4366,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.400}"
@@ -4348,7 +4382,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.400}"
@@ -4365,7 +4399,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.200}"
@@ -4381,7 +4415,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.060Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{space.200}"
@@ -4401,7 +4435,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 26
@@ -4418,7 +4452,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.500}"
@@ -4435,7 +4469,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.regular}"
@@ -4454,7 +4488,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 20
@@ -4471,7 +4505,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.400}"
@@ -4488,7 +4522,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.regular}"
@@ -4507,7 +4541,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -4524,7 +4558,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.200}"
@@ -4541,7 +4575,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.regular}"
@@ -4560,7 +4594,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.5
@@ -4577,7 +4611,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 56
@@ -4594,7 +4628,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.1100}"
@@ -4611,7 +4645,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.bold}"
@@ -4630,7 +4664,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{family.primary}"
@@ -4649,7 +4683,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.30000001192092896
@@ -4666,7 +4700,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 40
@@ -4683,7 +4717,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.900}"
@@ -4700,7 +4734,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.semibold}"
@@ -4719,7 +4753,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.20000000298023224
@@ -4736,7 +4770,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 32
@@ -4753,7 +4787,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.800}"
@@ -4770,7 +4804,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.semibold}"
@@ -4789,7 +4823,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 28
@@ -4806,7 +4840,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.700}"
@@ -4823,7 +4857,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.semibold}"
@@ -4842,7 +4876,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.009999999776482582
@@ -4859,7 +4893,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -4876,7 +4910,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.200}"
@@ -4893,7 +4927,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.semibold}"
@@ -4912,7 +4946,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.07999999821186066
@@ -4929,7 +4963,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -4946,7 +4980,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{size.200}"
@@ -4963,7 +4997,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{weight.semibold}"
@@ -4990,7 +5024,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5006,7 +5040,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.200}"
@@ -5025,7 +5059,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 4
@@ -5042,7 +5076,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5059,7 +5093,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5076,7 +5110,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 430
@@ -5093,7 +5127,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 430
@@ -5112,7 +5146,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{radius.300}"
@@ -5129,7 +5163,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{radius.200}"
@@ -5146,7 +5180,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{radius.pill}"
@@ -5163,7 +5197,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{radius.100}"
@@ -5180,7 +5214,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{radius.400}"
@@ -5199,7 +5233,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5216,7 +5250,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5233,7 +5267,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5250,7 +5284,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.200}"
@@ -5266,7 +5300,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.900}"
@@ -5283,7 +5317,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.200}"
@@ -5299,7 +5333,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.050}"
@@ -5315,7 +5349,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.100}"
@@ -5332,7 +5366,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5349,7 +5383,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5366,7 +5400,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5383,7 +5417,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.900}"
@@ -5399,7 +5433,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.1300}"
@@ -5415,7 +5449,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.1100}"
@@ -5432,7 +5466,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5448,7 +5482,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.400}"
@@ -5465,7 +5499,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.200}"
@@ -5481,7 +5515,7 @@
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-22T16:29:26.490Z",
+            "lastSyncedAt": "2026-06-23T07:43:22.061Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{space.200}"
@@ -5501,7 +5535,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 28
@@ -5518,7 +5552,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.500}"
@@ -5535,7 +5569,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.regular}"
@@ -5554,7 +5588,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 22
@@ -5571,7 +5605,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.400}"
@@ -5588,7 +5622,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.regular}"
@@ -5607,7 +5641,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 18
@@ -5624,7 +5658,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.300}"
@@ -5641,7 +5675,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.regular}"
@@ -5660,7 +5694,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.5
@@ -5677,7 +5711,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 38
@@ -5694,7 +5728,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.900}"
@@ -5711,7 +5745,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.bold}"
@@ -5730,7 +5764,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{family.primary}"
@@ -5749,7 +5783,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.30000001192092896
@@ -5766,7 +5800,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 30
@@ -5783,7 +5817,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.800}"
@@ -5800,7 +5834,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.semibold}"
@@ -5819,7 +5853,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.20000000298023224
@@ -5836,7 +5870,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 28
@@ -5853,7 +5887,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.060Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.700}"
@@ -5870,7 +5904,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.semibold}"
@@ -5889,7 +5923,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 26
@@ -5906,7 +5940,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.600}"
@@ -5923,7 +5957,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.semibold}"
@@ -5942,7 +5976,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.009999999776482582
@@ -5959,7 +5993,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 20
@@ -5976,7 +6010,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.400}"
@@ -5993,7 +6027,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.medium}"
@@ -6012,7 +6046,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.07999999821186066
@@ -6029,7 +6063,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 16
@@ -6046,7 +6080,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{size.200}"
@@ -6063,7 +6097,7 @@
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
-              "lastSyncedAt": "2026-06-22T16:29:26.489Z",
+              "lastSyncedAt": "2026-06-23T07:43:22.061Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{weight.semibold}"

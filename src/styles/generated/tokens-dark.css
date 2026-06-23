@@ -93,6 +93,8 @@
   --text-link-visited: #D9ECF7;
   /* Text/icons on background/action — off-black on cobalt/300 (8.5:1 contrast). */
   --text-on-action: #121212;
+  /* Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark. */
+  --text-on-action-secondary: #FAF9F6;
   --text-on-danger: #121212;
   /* Body copy in dark mode — Off White. Maximum contrast against dark surfaces. */
   --text-primary: #FAF9F6;

@@ -93,6 +93,8 @@
   --text-link-visited: #224868;
   /* Text/icons on background/action buttons — white on cobalt/500. */
   --text-on-action: #FFFFFF;
+  /* Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark. */
+  --text-on-action-secondary: #FAF9F6;
   --text-on-danger: #FFFFFF;
   /* Body copy and long-form reading text. Highest contrast. Pairs with background/page. */
   --text-primary: #121212;
