@@ -17,7 +17,7 @@ import re
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent / "design-system-repo"
+REPO_ROOT = Path(__file__).parent
 TOKENS_PATH = REPO_ROOT / "src/styles/tokens/tokens.tokens.json"
 OUT_DIR = REPO_ROOT / "src/styles/generated"
 

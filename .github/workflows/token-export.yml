@@ -1,0 +1,36 @@
+name: Token Export
+
+on:
+  workflow_dispatch:
+
+jobs:
+  export:
+    name: Regenerate token CSS from Figma export
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate token CSS
+        run: python3 generate-tokens-css.py
+
+      - name: Open PR if tokens changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: token-export/${{ github.run_id }}
+          delete-branch: true
+          commit-message: "chore: regenerate token CSS from tokens.tokens.json"
+          title: "chore: token export — ${{ github.run_id }}"
+          body: |
+            Automated token CSS regeneration triggered manually via Actions.
+
+            Review the colour/spacing diff below before merging. The source
+            of truth is `src/styles/tokens/tokens.tokens.json` (re-exported
+            from Figma before running this workflow).
+          labels: tokens
