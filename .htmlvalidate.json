@@ -3,6 +3,6 @@
   "rules": {
     "require-sri": "off",
     "void-style": ["error", { "style": "omit" }],
-    "button-type": "off"
+    "no-implicit-button-type": "off"
   }
 }
