@@ -88,7 +88,7 @@
 
 .btn--secondary {
   background-color: var(--background-action-secondary);
-  color: var(--text-primary);
+  color: var(--text-on-action-secondary);
   box-shadow: 0 1px 0 0 var(--border-action-secondary);
 }
 .btn--secondary:hover:not(:disabled) {
