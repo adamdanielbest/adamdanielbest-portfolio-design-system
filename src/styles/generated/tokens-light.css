@@ -22,7 +22,7 @@
   /* CTA button pressed/active state. */
   --background-action-primary-pressed: #224868;
   --background-action-secondary: #121212;
-  --background-action-secondary-hover: #000000;
+  --background-action-secondary-hover: #2E2E2E;
   --background-action-secondary-pressed: #000000;
   /* Brand cobalt surface — branded callouts, highlights. */
   --background-brand: #88B0CD;
@@ -51,8 +51,8 @@
   /* Warning background — caution banners, advisory states. */
   --background-warning: #FFFBEB;
   --border-action: #081527;
-  --border-action-secondary: #2E2E2E;
-  --border-action-secondary-hover: #2E2E2E;
+  --border-action-secondary: #000000;
+  --border-action-secondary-hover: #000000;
   --border-action-secondary-pressed: #888888;
   /* Brand-coloured border — cobalt edges for callouts, selected tags. */
   --border-brand: #88B0CD;
