@@ -1,192 +1,512 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <title>Button — Token-driven component</title>
-<link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
-<link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
-<link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
-<link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
-<link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
-<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css" >
+<link rel="stylesheet" href="../src/styles/generated/tokens-light.css" >
+<link rel="stylesheet" href="../src/styles/generated/tokens-dark.css" >
+<link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css" >
+<link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" >
+<link rel="stylesheet" href="button.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" >
 <style>
   body {
     background-color: var(--background-page);
     color: var(--text-primary);
     font-family: var(--type-family-primary), system-ui, sans-serif;
     margin: 0;
-    padding: 48px;
+    padding: var(--spacing-sheet-margin-y) var(--spacing-sheet-margin-x);
   }
-  h1 { font-size: var(--type-heading-1-size, 32px); margin-bottom: 4px; }
-  p.lede { color: var(--text-secondary); margin-top: 0; margin-bottom: 32px; }
-  .toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 32px; }
-  .toolbar button {
-    font-family: inherit;
-    font-size: 13px;
-    padding: 6px 12px;
-    border-radius: var(--radius-100);
+
+  /* ---- Page header (matches the live Figma sheet pattern) ---- */
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-text-stack-gap);
+    margin-bottom: var(--spacing-content-gap);
+  }
+  .page-header h1 {
+    font-size: var(--type-display-size);
+    font-weight: var(--type-display-weight);
+    line-height: var(--type-display-line-height);
+    letter-spacing: var(--type-display-letter-spacing);
+    margin: 0;
+  }
+  .page-header__divider {
+    border: none;
+    border-bottom: 2px solid var(--border-default);
+    margin: 0;
+    width: 100%;
+  }
+  .breadcrumb {
+    margin: 0;
+    font-size: var(--type-caption-size);
+    line-height: var(--type-caption-line-height);
+    color: var(--text-accent);
+  }
+  .meta {
+    margin: 0;
+    font-size: var(--type-caption-size);
+    line-height: var(--type-caption-line-height);
+    color: var(--text-tertiary);
+  }
+  .usage {
+    margin: 0;
+    font-size: var(--type-caption-size);
+    line-height: var(--type-caption-line-height);
+    color: var(--text-tertiary);
+  }
+
+  /* ---- Demo controls ---- (own area — not part of the Figma header pattern) */
+
+  .demo-controls {
+    display: flex;
+    gap: var(--spacing-content-gap);
+    align-items: center;
+    padding: var(--spacing-component-padding);
     border: 1px solid var(--border-default);
+    border-radius: var(--radius-large);
     background: var(--background-card);
-    color: var(--text-primary);
-    cursor: pointer;
+    margin-bottom: var(--spacing-content-gap);
   }
-  table { border-collapse: collapse; width: 100%; margin-bottom: 48px; }
-  caption { text-align: left; font-weight: 600; font-size: 14px; padding: 12px 0; color: var(--text-secondary); }
-  th, td {
+  .demo-controls__label {
+    font-size: var(--type-caption-size);
+    text-transform: uppercase;
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-tertiary);
+  }
+
+  /* ---- Toggle switch component ---- */
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-inline-gap);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--type-body-small-size);
+    color: var(--text-primary);
+  }
+  .toggle__track {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: var(--radius-pill);
+    background: var(--border-default);
+    transition: background-color 150ms ease;
+  }
+  .toggle__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-pill);
+    background: var(--background-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 150ms ease;
+  }
+  .toggle[aria-checked="true"] .toggle__track {
+    background: var(--background-action-primary);
+  }
+  .toggle[aria-checked="true"] .toggle__thumb {
+    transform: translateX(16px);
+  }
+  .toggle:focus-visible .toggle__track {
+    box-shadow: 0 0 0 3px var(--border-focus);
+  }
+
+  /* ---- Variant cards ---- (outer card radius-large, inner grid radius-medium — matches live Figma sheet's nested-card pattern) */
+
+  .variant-card {
+    background: var(--background-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-card-padding);
+    margin-bottom: var(--spacing-content-gap);
+  }
+  .variant-card__title {
+    font-size: var(--type-heading-3-size);
+    line-height: var(--type-heading-3-line-height);
+    font-weight: var(--type-heading-3-weight);
+    margin: 0 0 var(--spacing-row-gap) 0;
+  }
+  .variant-card__grid {
     border: 1px solid var(--border-subtle);
-    padding: 16px;
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+    margin: 0;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    padding: var(--spacing-table-cell-padding);
     text-align: left;
     vertical-align: middle;
   }
-  th { background: var(--background-card); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); }
+  td {
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-line-height);
+  }
+  tr > :last-child { border-right: none; }
+  tbody tr:last-child td { border-bottom: none; }
+  th {
+    background: var(--background-page);
+    font-size: var(--type-caption-size);
+    text-transform: uppercase;
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-primary);
+  }
+
+  /* ---- "With Icon" section heading ---- */
+
+  .page-subheading {
+    font-size: var(--type-heading-2-size);
+    font-weight: var(--type-heading-2-weight);
+    line-height: var(--type-heading-2-line-height);
+    letter-spacing: var(--type-heading-2-letter-spacing);
+    margin: var(--spacing-content-gap) 0 var(--spacing-row-gap) 0;
+  }
 </style>
 </head>
 <body>
 
-<h1>Button</h1>
-<p class="lede">Generated from the live Figma token export — every colour, shadow and radius below is a CSS custom property, not a hardcoded value. Toggle theme/density to verify it's wired, not staged.</p>
+<header class="page-header">
+  <h1>Button</h1>
+  <hr class="page-header__divider" >
+  <p class="breadcrumb">adamdanielbest.com · Buttons · Light</p>
+  <p class="meta">Eina04 · 4px base unit · v1.1 Stable · Updated 22 Jun 2026 · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+  <p class="usage">Primary for the main action per view · Secondary for alternative actions · Ghost for tertiary/low-emphasis actions · Destructive requires confirmation step · With-icon variant pairs the label with a supporting Material Symbols icon</p>
+</header>
 
-<div class="toolbar">
-  <button type="button" id="theme-toggle">Toggle dark mode</button>
-  <button type="button" id="density-toggle">Toggle mobile density</button>
+<div class="demo-controls">
+  <span class="demo-controls__label">Demo controls</span>
+  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="false">
+    <span class="toggle__track"><span class="toggle__thumb"></span></span>
+    <span class="toggle__text" id="theme-toggle-label">Light mode</span>
+  </button>
+  <button type="button" class="toggle" id="density-toggle" role="switch" aria-checked="false">
+    <span class="toggle__track"><span class="toggle__thumb"></span></span>
+    <span class="toggle__text">Mobile density</span>
+  </button>
 </div>
 
 <script>
   // Demo controls only — not part of the component itself.
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    const html = document.documentElement;
-    html.dataset.theme = html.dataset.theme === 'dark' ? '' : 'dark';
+  function wireToggle(id, onChange) {
+    const el = document.getElementById(id);
+    el.addEventListener('click', () => {
+      const next = el.getAttribute('aria-checked') !== 'true';
+      el.setAttribute('aria-checked', String(next));
+      onChange(next);
+    });
+  }
+  wireToggle('theme-toggle', (on) => {
+    document.documentElement.dataset.theme = on ? 'dark' : '';
+    document.getElementById('theme-toggle-label').textContent = on ? 'Dark mode' : 'Light mode';
   });
-  document.getElementById('density-toggle').addEventListener('click', () => {
-    const html = document.documentElement;
-    html.dataset.density = html.dataset.density === 'mobile' ? '' : 'mobile';
+  wireToggle('density-toggle', (on) => {
+    document.documentElement.dataset.density = on ? 'mobile' : '';
   });
 </script>
 
-<table>
-  <caption>Primary</caption>
-  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
-  <tbody>
-    <tr>
-      <td>Small</td>
-      <td><button class="btn btn--primary btn--small">Button</button></td>
-      <td><button class="btn btn--primary btn--small">Hover me</button></td>
-      <td><button class="btn btn--primary btn--small">Click + hold</button></td>
-      <td><button class="btn btn--primary btn--small">Tab to me</button></td>
-      <td><button class="btn btn--primary btn--small" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Medium</td>
-      <td><button class="btn btn--primary btn--medium">Button</button></td>
-      <td><button class="btn btn--primary btn--medium">Hover me</button></td>
-      <td><button class="btn btn--primary btn--medium">Click + hold</button></td>
-      <td><button class="btn btn--primary btn--medium">Tab to me</button></td>
-      <td><button class="btn btn--primary btn--medium" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td><button class="btn btn--primary btn--large">Button</button></td>
-      <td><button class="btn btn--primary btn--large">Hover me</button></td>
-      <td><button class="btn btn--primary btn--large">Click + hold</button></td>
-      <td><button class="btn btn--primary btn--large">Tab to me</button></td>
-      <td><button class="btn btn--primary btn--large" disabled>Button</button></td>
-    </tr>
-  </tbody>
-</table>
+<h2 class="page-subheading">1. Button — Default</h2>
 
-<table>
-  <caption>Secondary</caption>
-  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-  <tbody>
-    <tr>
-      <td>Small</td>
-      <td><button class="btn btn--secondary btn--small">Button</button></td>
-      <td><button class="btn btn--secondary btn--small">Hover me</button></td>
-      <td><button class="btn btn--secondary btn--small">Click + hold</button></td>
-      <td><button class="btn btn--secondary btn--small">Tab to me</button></td>
-      <td><button class="btn btn--secondary btn--small" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Medium</td>
-      <td><button class="btn btn--secondary btn--medium">Button</button></td>
-      <td><button class="btn btn--secondary btn--medium">Hover me</button></td>
-      <td><button class="btn btn--secondary btn--medium">Click + hold</button></td>
-      <td><button class="btn btn--secondary btn--medium">Tab to me</button></td>
-      <td><button class="btn btn--secondary btn--medium" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td><button class="btn btn--secondary btn--large">Button</button></td>
-      <td><button class="btn btn--secondary btn--large">Hover me</button></td>
-      <td><button class="btn btn--secondary btn--large">Click + hold</button></td>
-      <td><button class="btn btn--secondary btn--large">Tab to me</button></td>
-      <td><button class="btn btn--secondary btn--large" disabled>Button</button></td>
-    </tr>
-  </tbody>
-</table>
+<section class="variant-card">
+  <h2 class="variant-card__title">Primary</h2>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--primary btn--small">Button</button></td>
+          <td><button class="btn btn--primary btn--small">Hover me</button></td>
+          <td><button class="btn btn--primary btn--small">Click + hold</button></td>
+          <td><button class="btn btn--primary btn--small">Tab to me</button></td>
+          <td><button class="btn btn--primary btn--small" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--primary btn--medium">Button</button></td>
+          <td><button class="btn btn--primary btn--medium">Hover me</button></td>
+          <td><button class="btn btn--primary btn--medium">Click + hold</button></td>
+          <td><button class="btn btn--primary btn--medium">Tab to me</button></td>
+          <td><button class="btn btn--primary btn--medium" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--primary btn--large">Button</button></td>
+          <td><button class="btn btn--primary btn--large">Hover me</button></td>
+          <td><button class="btn btn--primary btn--large">Click + hold</button></td>
+          <td><button class="btn btn--primary btn--large">Tab to me</button></td>
+          <td><button class="btn btn--primary btn--large" disabled>Button</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<table>
-  <caption>Ghost</caption>
-  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-  <tbody>
-    <tr>
-      <td>Small</td>
-      <td><button class="btn btn--ghost btn--small">Button</button></td>
-      <td><button class="btn btn--ghost btn--small">Hover me</button></td>
-      <td><button class="btn btn--ghost btn--small">Click + hold</button></td>
-      <td><button class="btn btn--ghost btn--small">Tab to me</button></td>
-      <td><button class="btn btn--ghost btn--small" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Medium</td>
-      <td><button class="btn btn--ghost btn--medium">Button</button></td>
-      <td><button class="btn btn--ghost btn--medium">Hover me</button></td>
-      <td><button class="btn btn--ghost btn--medium">Click + hold</button></td>
-      <td><button class="btn btn--ghost btn--medium">Tab to me</button></td>
-      <td><button class="btn btn--ghost btn--medium" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td><button class="btn btn--ghost btn--large">Button</button></td>
-      <td><button class="btn btn--ghost btn--large">Hover me</button></td>
-      <td><button class="btn btn--ghost btn--large">Click + hold</button></td>
-      <td><button class="btn btn--ghost btn--large">Tab to me</button></td>
-      <td><button class="btn btn--ghost btn--large" disabled>Button</button></td>
-    </tr>
-  </tbody>
-</table>
+<section class="variant-card">
+  <h2 class="variant-card__title">Secondary</h2>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--secondary btn--small">Button</button></td>
+          <td><button class="btn btn--secondary btn--small">Hover me</button></td>
+          <td><button class="btn btn--secondary btn--small">Click + hold</button></td>
+          <td><button class="btn btn--secondary btn--small">Tab to me</button></td>
+          <td><button class="btn btn--secondary btn--small" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--secondary btn--medium">Button</button></td>
+          <td><button class="btn btn--secondary btn--medium">Hover me</button></td>
+          <td><button class="btn btn--secondary btn--medium">Click + hold</button></td>
+          <td><button class="btn btn--secondary btn--medium">Tab to me</button></td>
+          <td><button class="btn btn--secondary btn--medium" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--secondary btn--large">Button</button></td>
+          <td><button class="btn btn--secondary btn--large">Hover me</button></td>
+          <td><button class="btn btn--secondary btn--large">Click + hold</button></td>
+          <td><button class="btn btn--secondary btn--large">Tab to me</button></td>
+          <td><button class="btn btn--secondary btn--large" disabled>Button</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<table>
-  <caption>Destructive</caption>
-  <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-  <tbody>
-    <tr>
-      <td>Small</td>
-      <td><button class="btn btn--destructive btn--small">Button</button></td>
-      <td><button class="btn btn--destructive btn--small">Hover me</button></td>
-      <td><button class="btn btn--destructive btn--small">Click + hold</button></td>
-      <td><button class="btn btn--destructive btn--small">Tab to me</button></td>
-      <td><button class="btn btn--destructive btn--small" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Medium</td>
-      <td><button class="btn btn--destructive btn--medium">Button</button></td>
-      <td><button class="btn btn--destructive btn--medium">Hover me</button></td>
-      <td><button class="btn btn--destructive btn--medium">Click + hold</button></td>
-      <td><button class="btn btn--destructive btn--medium">Tab to me</button></td>
-      <td><button class="btn btn--destructive btn--medium" disabled>Button</button></td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td><button class="btn btn--destructive btn--large">Button</button></td>
-      <td><button class="btn btn--destructive btn--large">Hover me</button></td>
-      <td><button class="btn btn--destructive btn--large">Click + hold</button></td>
-      <td><button class="btn btn--destructive btn--large">Tab to me</button></td>
-      <td><button class="btn btn--destructive btn--large" disabled>Button</button></td>
-    </tr>
-  </tbody>
-</table>
+<section class="variant-card">
+  <h2 class="variant-card__title">Ghost</h2>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--ghost btn--small">Button</button></td>
+          <td><button class="btn btn--ghost btn--small">Hover me</button></td>
+          <td><button class="btn btn--ghost btn--small">Click + hold</button></td>
+          <td><button class="btn btn--ghost btn--small">Tab to me</button></td>
+          <td><button class="btn btn--ghost btn--small" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--ghost btn--medium">Button</button></td>
+          <td><button class="btn btn--ghost btn--medium">Hover me</button></td>
+          <td><button class="btn btn--ghost btn--medium">Click + hold</button></td>
+          <td><button class="btn btn--ghost btn--medium">Tab to me</button></td>
+          <td><button class="btn btn--ghost btn--medium" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--ghost btn--large">Button</button></td>
+          <td><button class="btn btn--ghost btn--large">Hover me</button></td>
+          <td><button class="btn btn--ghost btn--large">Click + hold</button></td>
+          <td><button class="btn btn--ghost btn--large">Tab to me</button></td>
+          <td><button class="btn btn--ghost btn--large" disabled>Button</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="variant-card">
+  <h2 class="variant-card__title">Destructive</h2>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--destructive btn--small">Button</button></td>
+          <td><button class="btn btn--destructive btn--small">Hover me</button></td>
+          <td><button class="btn btn--destructive btn--small">Click + hold</button></td>
+          <td><button class="btn btn--destructive btn--small">Tab to me</button></td>
+          <td><button class="btn btn--destructive btn--small" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--destructive btn--medium">Button</button></td>
+          <td><button class="btn btn--destructive btn--medium">Hover me</button></td>
+          <td><button class="btn btn--destructive btn--medium">Click + hold</button></td>
+          <td><button class="btn btn--destructive btn--medium">Tab to me</button></td>
+          <td><button class="btn btn--destructive btn--medium" disabled>Button</button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--destructive btn--large">Button</button></td>
+          <td><button class="btn btn--destructive btn--large">Hover me</button></td>
+          <td><button class="btn btn--destructive btn--large">Click + hold</button></td>
+          <td><button class="btn btn--destructive btn--large">Tab to me</button></td>
+          <td><button class="btn btn--destructive btn--large" disabled>Button</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<h2 class="page-subheading">2. Button — With Icon</h2>
+
+<section class="variant-card">
+  <h3 class="variant-card__title">Primary</h3>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="variant-card">
+  <h3 class="variant-card__title">Secondary</h3>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="variant-card">
+  <h3 class="variant-card__title">Ghost</h3>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="variant-card">
+  <h3 class="variant-card__title">Destructive</h3>
+  <div class="variant-card__grid">
+    <table>
+      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 </body>
 </html>
