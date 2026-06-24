@@ -174,8 +174,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  align-self: stretch;
+  aspect-ratio: 1;
   flex-shrink: 0;
 }
 .btn__icon {
