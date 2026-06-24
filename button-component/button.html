@@ -10,13 +10,6 @@
 <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css" >
 <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" >
 <link rel="stylesheet" href="button.css" >
-<script>
-  function setDensity() {
-    document.documentElement.setAttribute('data-density', window.innerWidth < 768 ? 'mobile' : 'desktop');
-  }
-  setDensity();
-  window.addEventListener('resize', setDensity);
-</script>
 <style>
   body {
     background-color: var(--background-page);
@@ -24,6 +17,11 @@
     font-family: var(--type-family-primary), system-ui, sans-serif;
     margin: 0;
     padding: var(--spacing-sheet-margin-y) var(--spacing-page-margin);
+  }
+
+  @media (max-width: 767px) {
+    :root { --spacing-page-margin: 16px; }
+    body  { padding: var(--spacing-page-margin); }
   }
 
   /* ---- Page header (matches the live Figma sheet pattern) ---- */
