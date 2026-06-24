@@ -184,11 +184,17 @@
 </head>
 <body>
 
-<svg hidden aria-hidden="true" focusable="false">
-  <symbol id="icon-download" viewBox="0 0 24 24">
-    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-  </symbol>
-</svg>
+<script>
+  fetch('../src/icons/sprite.svg')
+    .then(r => r.text())
+    .then(svg => {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.setAttribute('aria-hidden', 'true');
+      div.innerHTML = svg;
+      document.body.insertBefore(div, document.body.firstChild);
+    });
+</script>
 
 <header class="page-header">
   <h1>Button</h1>
