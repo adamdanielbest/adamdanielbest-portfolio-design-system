@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../src/styles/generated/tokens-light.css" >
 <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css" >
 <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css" >
-<link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" >
+<link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" media="(max-width: 767px)" >
 <link rel="stylesheet" href="button.css" >
 <style>
   body {
@@ -17,6 +17,12 @@
     font-family: var(--type-family-primary), system-ui, sans-serif;
     margin: 0;
     padding: var(--spacing-sheet-margin-y) var(--spacing-sheet-margin-x);
+  }
+
+  @media (max-width: 767px) {
+    body {
+      padding: var(--spacing-page-margin);
+    }
   }
 
   /* ---- Page header (matches the live Figma sheet pattern) ---- */
