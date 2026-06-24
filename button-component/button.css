@@ -111,7 +111,7 @@
 .btn--ghost {
   background-color: var(--background-action-ghost);
   color: var(--text-primary);
-  box-shadow: none;
+  box-shadow: 0 0 0 1px var(--border-ghost);
 }
 .btn--ghost:hover:not(:disabled) {
   background-color: var(--background-action-ghost-hover);
