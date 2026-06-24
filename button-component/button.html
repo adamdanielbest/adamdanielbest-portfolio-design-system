@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css" >
 <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css" >
 <link rel="stylesheet" href="button.css" >
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download" >
 <style>
   body {
     background-color: var(--background-page);
@@ -185,12 +184,18 @@
 </head>
 <body>
 
+<svg hidden aria-hidden="true" focusable="false">
+  <symbol id="icon-download" viewBox="0 -960 960 960">
+    <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+  </symbol>
+</svg>
+
 <header class="page-header">
   <h1>Button</h1>
   <hr class="page-header__divider" >
   <p class="breadcrumb">adamdanielbest.com · Buttons · Light</p>
   <p class="meta">Eina04 · 4px base unit · v1.1 Stable · Updated 22 Jun 2026 · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
-  <p class="usage">Primary for the main action per view · Secondary for alternative actions · Ghost for tertiary/low-emphasis actions · Destructive requires confirmation step · With-icon variant pairs the label with a supporting Material Symbols icon</p>
+  <p class="usage">Primary for the main action per view · Secondary for alternative actions · Ghost for tertiary/low-emphasis actions · Destructive requires confirmation step · With-icon variant pairs the label with a supporting Material Icons SVG</p>
 </header>
 
 <div class="demo-controls">
@@ -376,27 +381,27 @@
       <tbody>
         <tr>
           <td>Small</td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Medium</td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Large</td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--primary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
       </tbody>
     </table>
@@ -411,27 +416,27 @@
       <tbody>
         <tr>
           <td>Small</td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Medium</td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Large</td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--secondary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
       </tbody>
     </table>
@@ -446,27 +451,27 @@
       <tbody>
         <tr>
           <td>Small</td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Medium</td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Large</td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--ghost btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
       </tbody>
     </table>
@@ -481,27 +486,27 @@
       <tbody>
         <tr>
           <td>Small</td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Medium</td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
         <tr>
           <td>Large</td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><span class="btn__icon material-symbols-outlined" aria-hidden="true">download</span></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+          <td><button class="btn btn--icon btn--destructive btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
         </tr>
       </tbody>
     </table>

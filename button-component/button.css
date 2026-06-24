@@ -185,11 +185,8 @@
 .btn--icon.btn--medium .btn__icon-container { width: 40px; height: 40px; }
 .btn--icon.btn--large .btn__icon-container  { width: 48px; height: 48px; }
 .btn__icon {
-  font-size: 16px;
   width: 16px;
   height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-variation-settings: 'opsz' 20, 'wght' 400, 'FILL' 0, 'GRAD' 0;
+  fill: currentColor;
+  flex-shrink: 0;
 }
