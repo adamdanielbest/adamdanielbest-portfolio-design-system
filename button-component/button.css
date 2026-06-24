@@ -44,22 +44,25 @@
 .btn--small {
   height: 32px;
   padding-inline: var(--button-padding-sm);
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  font-size: var(--type-button-sm-size);
+  line-height: var(--type-button-sm-line-height);
+  letter-spacing: var(--type-button-sm-letter-spacing);
 }
 
 .btn--medium {
   height: 40px;
   padding-inline: var(--button-padding-default);
-  font-size: 14px;
-  letter-spacing: 0.75px;
+  font-size: var(--type-button-md-size);
+  line-height: var(--type-button-md-line-height);
+  letter-spacing: var(--type-button-md-letter-spacing);
 }
 
 .btn--large {
   height: 48px;
   padding-inline: var(--button-padding-default);
-  font-size: 16px;
-  letter-spacing: 1px;
+  font-size: var(--type-button-lg-size);
+  line-height: var(--type-button-lg-line-height);
+  letter-spacing: var(--type-button-lg-letter-spacing);
 }
 
 /* ---- Variant: Primary ---- */

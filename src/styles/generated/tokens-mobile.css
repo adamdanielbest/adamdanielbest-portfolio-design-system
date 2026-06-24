@@ -116,4 +116,19 @@
   --type-overline-size: 12px;
   /* Overline weight — semibold. */
   --type-overline-weight: 600;
+  /* Button label — small (12px). */
+  --type-button-sm-size: 12px;
+  --type-button-sm-line-height: 16px;
+  --type-button-sm-weight: 600;
+  --type-button-sm-letter-spacing: 0.5px;
+  /* Button label — medium (14px). */
+  --type-button-md-size: 14px;
+  --type-button-md-line-height: 20px;
+  --type-button-md-weight: 600;
+  --type-button-md-letter-spacing: 0.5px;
+  /* Button label — large (16px). */
+  --type-button-lg-size: 16px;
+  --type-button-lg-line-height: 24px;
+  --type-button-lg-weight: 600;
+  --type-button-lg-letter-spacing: 0.5px;
 }
