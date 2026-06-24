@@ -185,8 +185,9 @@
 .btn--icon.btn--medium .btn__icon-container { width: 40px; height: 40px; }
 .btn--icon.btn--large .btn__icon-container  { width: 48px; height: 48px; }
 .btn__icon {
-  width: 100%;
-  height: 100%;
+  width: 16px;
+  height: 16px;
   fill: currentColor;
   display: block;
+  flex-shrink: 0;
 }
