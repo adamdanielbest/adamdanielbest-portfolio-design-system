@@ -175,6 +175,7 @@
 .btn--secondary .btn__divider   { background-color: var(--border-action-secondary); }
 .btn--ghost .btn__divider       { background-color: var(--border-ghost); }
 .btn--destructive .btn__divider { background-color: var(--border-danger); }
+.btn:disabled .btn__divider     { background-color: var(--text-disabled); }
 .btn__icon-container {
   display: flex;
   align-items: center;
