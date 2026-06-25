@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundations – Layout – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <main>
+    <div class="container">
+
+      <header class="page-header">
+        <h1>Layout</h1>
+        <hr class="page-header__divider">
+        <p class="breadcrumb">adamdanielbest.com · Foundations · Layout</p>
+        <p class="meta">Font-family: Eina04 · Units: 4px base unit · v1.0 · Updated <span class="meta-date"></span></p>
+        <p class="usage">Container centres content at 1200px max-width · Grid is 12-col desktop / 4-col mobile · Reading column constrains long-form text to 720px · Form column constrains forms to 600px</p>
+      </header>
+
+      <!-- ===================================================================
+           Container
+           =================================================================== -->
+      <section class="demo-section">
+        <h2 class="demo-heading">Container</h2>
+        <p class="demo-meta">Max-width: <code>--layout-max-content-width</code> (1200px) · Padding: <code>--spacing-page-margin</code> (32px desktop / 16px mobile)</p>
+        <div class="demo-box demo-box--container">
+          <span>.container</span>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           12-column grid
+           =================================================================== -->
+      <section class="demo-section">
+        <h2 class="demo-heading">Grid</h2>
+        <p class="demo-meta">12 columns desktop · 4 columns mobile · Gutter: <code>--layout-grid-gutter</code> (24px desktop / 16px mobile)</p>
+
+        <div class="demo-label js-all-cols-label">All 12 columns</div>
+        <div class="grid demo-grid">
+          <!-- No col-* class — items auto-place 1 track each, showing all grid columns -->
+          <div class="demo-col"><span>1</span></div>
+          <div class="demo-col"><span>2</span></div>
+          <div class="demo-col"><span>3</span></div>
+          <div class="demo-col"><span>4</span></div>
+          <div class="demo-col"><span>5</span></div>
+          <div class="demo-col"><span>6</span></div>
+          <div class="demo-col"><span>7</span></div>
+          <div class="demo-col"><span>8</span></div>
+          <div class="demo-col"><span>9</span></div>
+          <div class="demo-col"><span>10</span></div>
+          <div class="demo-col"><span>11</span></div>
+          <div class="demo-col"><span>12</span></div>
+        </div>
+
+        <div class="demo-label" style="margin-top: var(--spacing-content-gap)">Common column spans</div>
+        <div class="grid demo-grid">
+          <div class="col-8 demo-col demo-col--primary" data-desktop-span="8" data-label="Main content"><span class="js-span-label">col-8 · Main content</span></div>
+          <div class="col-4 demo-col demo-col--secondary" data-desktop-span="4" data-label="Sidebar"><span class="js-span-label">col-4 · Sidebar</span></div>
+        </div>
+        <div class="grid demo-grid" style="margin-top: var(--spacing-stack-gap)">
+          <div class="col-6 demo-col" data-desktop-span="6"><span class="js-span-label">col-6</span></div>
+          <div class="col-6 demo-col" data-desktop-span="6"><span class="js-span-label">col-6</span></div>
+        </div>
+        <div class="grid demo-grid" style="margin-top: var(--spacing-stack-gap)">
+          <div class="col-4 demo-col" data-desktop-span="4"><span class="js-span-label">col-4</span></div>
+          <div class="col-4 demo-col" data-desktop-span="4"><span class="js-span-label">col-4</span></div>
+          <div class="col-4 demo-col" data-desktop-span="4"><span class="js-span-label">col-4</span></div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           Reading column
+           =================================================================== -->
+      <section class="demo-section">
+        <h2 class="demo-heading">Reading column</h2>
+        <p class="demo-meta">Max-width: <code>--layout-reading-column-width</code> (720px) · Left-aligned by default · Add <code>.reading-col--center</code> to centre</p>
+        <div class="reading-col demo-box demo-box--reading">
+          <span>.reading-col — optimal line length for long-form body text, case study content, and articles.</span>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           Form column
+           =================================================================== -->
+      <section class="demo-section">
+        <h2 class="demo-heading">Form column</h2>
+        <p class="demo-meta">Max-width: <code>--layout-form-max-width</code> (600px desktop / 430px mobile) · Left-aligned by default · Add <code>.form-col--center</code> to centre</p>
+        <div class="form-col demo-box demo-box--form">
+          <span>.form-col — keeps form fields cohesive and easy to scan. Narrower than reading column.</span>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           Section spacing
+           =================================================================== -->
+      <section class="demo-section">
+        <h2 class="demo-heading">Section spacing</h2>
+        <p class="demo-meta"><code>--spacing-section-gap</code> (96px desktop / 48px mobile) · Applied via <code>.section</code></p>
+        <div class="demo-section-block">
+          <span class="demo-section-label">.section</span>
+          <div class="demo-section-gap"><span class="section-gap-label"></span></div>
+          <span class="demo-section-label">.section</span>
+        </div>
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+<script>
+  // Static: date
+  document.querySelectorAll('.meta-date').forEach(el => {
+    el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  });
+
+  // Dynamic: updates on load and resize
+  function getBreakpoint() {
+    const w = window.innerWidth;
+    if (w <= 480) return { label: 'Phone',  cols: 2 };
+    if (w <= 767) return { label: 'Tablet', cols: 4 };
+    return              { label: 'Desktop', cols: 12 };
+  }
+
+  function desktopSpanToActual(desktopSpan, totalCols) {
+    if (totalCols === 12) return desktopSpan;
+    if (totalCols === 4) {
+      if (desktopSpan <= 4) return 1;
+      if (desktopSpan <= 6) return 2;
+      if (desktopSpan <= 9) return 3;
+      return 4;
+    }
+    if (totalCols === 2) {
+      return desktopSpan <= 3 ? 1 : 2;
+    }
+    return desktopSpan;
+  }
+
+  function updateDemoLabels() {
+    const bp = getBreakpoint();
+    const styles = getComputedStyle(document.documentElement);
+
+    // "All X columns" label
+    document.querySelectorAll('.js-all-cols-label').forEach(el => {
+      el.textContent = `All ${bp.cols} columns`;
+    });
+
+    // Common span labels
+    document.querySelectorAll('[data-desktop-span]').forEach(el => {
+      const desktop = parseInt(el.dataset.desktopSpan, 10);
+      const actual  = desktopSpanToActual(desktop, bp.cols);
+      const suffix  = el.dataset.label ? ' · ' + el.dataset.label : '';
+      const prefix  = bp.cols < 12 ? `col-${desktop} → ` : '';
+      el.querySelector('.js-span-label').textContent = `${prefix}col-${actual}${suffix}`;
+    });
+
+    // Section gap
+    const gap = styles.getPropertyValue('--spacing-section-gap').trim();
+    document.querySelectorAll('.section-gap-label').forEach(el => {
+      el.textContent = `${gap} --spacing-section-gap`;
+    });
+  }
+
+  updateDemoLabels();
+  window.addEventListener('resize', updateDemoLabels);
+</script>
+
+</body>
+</html>

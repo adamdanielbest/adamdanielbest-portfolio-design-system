@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Layout utilities
+   Shared across all pages. Import after token files.
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   Max-width wrapper, centred, with page-margin padding on both sides.
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--layout-max-content-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-page-margin);
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   12-column desktop / 4-column mobile using CSS grid.
+   Note: --layout-grid-columns token carries a px unit so repeat count is
+   hardcoded here; gutter still pulls from the token.
+   -------------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--layout-grid-gutter);
+}
+
+/* Span helpers — use as additional classes on grid children */
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Tablet (≤767px): 4-col grid, 16px gutter.
+   Spans map proportionally: 12-col thirds → 4-col quarters. */
+@media (max-width: 767px) {
+  :root {
+    --spacing-page-margin: 16px;
+    --layout-grid-gutter: 16px;
+    --spacing-section-gap: 48px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .col-1, .col-2, .col-3, .col-4    { grid-column: span 1; }
+  .col-5, .col-6                     { grid-column: span 2; }
+  .col-7, .col-8, .col-9            { grid-column: span 3; }
+  .col-10, .col-11, .col-12         { grid-column: span 4; }
+}
+
+/* Phone (≤480px): 2-col grid. Spans map to half/full. */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-1, .col-2, .col-3            { grid-column: span 1; }
+  .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9,
+  .col-10, .col-11, .col-12         { grid-column: span 2; }
+}
+
+/* --------------------------------------------------------------------------
+   Reading column
+   Left-aligned by default. Constrained to the optimal reading measure.
+   Add .reading-col--center to centre it when needed.
+   -------------------------------------------------------------------------- */
+.reading-col {
+  width: 100%;
+  max-width: var(--layout-reading-column-width);
+}
+
+.reading-col--center {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Form container
+   Left-aligned by default. Narrower than reading column.
+   Add .form-col--center to centre it when needed.
+   -------------------------------------------------------------------------- */
+.form-col {
+  width: 100%;
+  max-width: var(--layout-form-max-width);
+}
+
+.form-col--center {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Section spacing
+   Vertical rhythm between major page sections.
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--spacing-section-gap);
+}
+
+.section + .section {
+  padding-top: 0;
+}

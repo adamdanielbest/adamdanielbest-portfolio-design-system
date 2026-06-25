@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Layout demo — page-specific styles only
+   Base styles (body, page-header, breadcrumb, meta, code) live in
+   src/styles/sheet.css which is imported by all component sheets.
+   ========================================================================== */
+
+
+/* Demo sections */
+.demo-section {
+  padding-block: var(--spacing-content-gap);
+  border-bottom: 2px solid var(--border-default);
+}
+
+.demo-section:last-child {
+  border-bottom: none;
+}
+
+.demo-heading {
+  margin: 0 0 var(--spacing-text-stack-gap);
+  font-size: var(--type-heading-2-size);
+  font-weight: var(--type-heading-2-weight);
+  line-height: var(--type-heading-2-line-height);
+  letter-spacing: var(--type-heading-2-letter-spacing);
+}
+
+.demo-meta {
+  margin: 0 0 var(--spacing-content-gap);
+  font-size: var(--type-body-small-size);
+  color: var(--text-secondary);
+  line-height: var(--type-body-small-line-height);
+}
+
+.demo-label {
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-stack-gap);
+}
+
+/* Container demo */
+.demo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-card-padding);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.demo-box--container {
+  background: var(--background-elevated);
+  border: 1px dashed var(--border-default);
+  min-height: 64px;
+}
+
+.demo-box--reading {
+  background: var(--background-elevated);
+  border: 1px dashed var(--border-brand);
+  min-height: 80px;
+}
+
+.demo-box--form {
+  background: var(--background-elevated);
+  border: 1px dashed var(--border-success);
+  min-height: 80px;
+}
+
+/* Grid demo — card background, page-background shows through gutters */
+.demo-col {
+  background: var(--background-card);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-component-padding) var(--spacing-inline-gap);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-label-weight);
+  color: var(--text-secondary);
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-col--primary {
+  background: var(--background-brand-subtle);
+  border: 1px solid var(--border-brand);
+  color: var(--text-brand);
+}
+
+.demo-col--secondary {
+  background: var(--neutral-200);
+  border: 1px dashed var(--border-default);
+  color: var(--text-secondary);
+}
+
+/* Section spacing demo */
+.demo-section-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-section-label {
+  display: block;
+  background: var(--background-elevated);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-small);
+  padding: var(--spacing-component-padding);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.demo-section-gap {
+  height: var(--spacing-section-gap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.demo-section-gap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-brand);
+}
+
+.demo-section-gap span {
+  background: var(--background-page);
+  padding: 4px var(--spacing-inline-gap);
+  font-size: var(--type-caption-size);
+  color: var(--text-brand);
+  font-weight: var(--type-label-weight);
+  position: relative;
+  z-index: 1;
+}

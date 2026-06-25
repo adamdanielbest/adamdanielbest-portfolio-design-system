@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "design-system",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["preview.sh"],
+      "cwd": "/Users/adamdanielbest/Documents/adamdanielbest-portfolio-design-system",
+      "port": 4321,
+      "autoPort": true
+    }
+  ]
+}

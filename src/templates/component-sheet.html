@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Category] – [Component] – adamdanielbest Design System</title>
+
+  <!-- Tokens — order matters: primitives → semantic colour → dimensions -->
+  <link rel="stylesheet" href="../../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../../src/styles/generated/tokens-mobile.css">
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="../../src/styles/layout.css">
+  <link rel="stylesheet" href="../../src/styles/sheet.css">
+
+  <!-- Component styles — add your component CSS file here -->
+  <!-- <link rel="stylesheet" href="../[component].css"> -->
+</head>
+<body>
+
+  <!-- Icon sprite — required for any SVG icon usage -->
+  <script>
+    fetch('../../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1>[Component name]</h1>
+      <hr class="page-header__divider">
+      <p class="breadcrumb">adamdanielbest.com · [Category] · [Component name]</p>
+      <p class="meta">Font-family: Eina04 · Units: 4px base unit · v1.0 · Updated <span class="meta-date"></span></p>
+      <p class="usage">[One-line description of what this component is and when to use it]</p>
+    </header>
+
+    <!-- =====================================================================
+         Component content goes here
+         ===================================================================== -->
+
+  </div><!-- /.container -->
+
+  <!-- Dynamic date -->
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

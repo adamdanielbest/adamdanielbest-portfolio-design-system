@@ -1,5 +1,4 @@
 #!/bin/sh
-echo "Starting preview server at http://localhost:4321"
-echo "Open: http://localhost:4321/button-component/button.html"
-echo "Press Ctrl+C to stop."
-python3 -m http.server 4321
+PORT=${PORT:-4321}
+cd /Users/adamdanielbest/Documents/adamdanielbest-portfolio-design-system
+exec npx --yes serve -l $PORT .

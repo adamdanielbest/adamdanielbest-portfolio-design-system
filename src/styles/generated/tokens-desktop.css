@@ -1,6 +1,8 @@
 :root {
   --button-padding-default: 16px;
   --button-padding-sm: 8px;
+  /* Max width for form layouts. Keeps fields readable and connected. 600px desktop. */
+  --layout-form-max-width: 600px;
   /* Number of grid columns. 12 desktop. */
   --layout-grid-columns: 12px;
   /* Gap between grid columns. 24px desktop. */

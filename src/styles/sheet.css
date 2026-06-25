@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Sheet styles
+   Shared demo/reference sheet styles. Import after tokens and layout.css.
+   Not part of the component or page — purely for the reference sheet UI.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+body {
+  margin: 0;
+  background-color: var(--background-page);
+  color: var(--text-primary);
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  padding-block: var(--spacing-sheet-margin-y);
+}
+
+@media (max-width: 767px) {
+  body { padding-block: var(--spacing-component-padding); }
+}
+
+code {
+  font-family: monospace;
+  font-size: 12px;
+  background: #1e1e1e;
+  color: #f0883e;
+  padding: 2px 6px;
+  border-radius: var(--radius-small);
+}
+
+/* --------------------------------------------------------------------------
+   Page header
+   -------------------------------------------------------------------------- */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-text-stack-gap);
+  margin-bottom: var(--spacing-content-gap);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
+  line-height: var(--type-display-line-height);
+  letter-spacing: var(--type-display-letter-spacing);
+}
+
+.page-header__divider {
+  border: none;
+  border-bottom: 2px solid var(--border-default);
+  margin: 0;
+  width: 100%;
+}
+
+.breadcrumb {
+  margin: 0;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-accent);
+}
+
+.meta {
+  margin: 0;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+}
+
+.usage {
+  margin: 0;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   Overline
+   -------------------------------------------------------------------------- */
+.overline {
+  font-size: var(--type-overline-size);
+  font-weight: var(--type-overline-weight);
+  line-height: var(--type-overline-line-height);
+  letter-spacing: var(--type-overline-letter-spacing);
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin: 0;
+}
