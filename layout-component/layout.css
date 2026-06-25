@@ -30,6 +30,14 @@
   line-height: var(--type-body-small-line-height);
 }
 
+.demo-label--section {
+  margin-top: var(--spacing-content-gap);
+}
+
+.demo-grid--stacked {
+  margin-top: var(--spacing-stack-gap);
+}
+
 .demo-label {
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
