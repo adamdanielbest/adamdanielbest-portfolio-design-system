@@ -30,6 +30,7 @@ body {
 }
 
 code {
+  display: inline-block;
   font-family: monospace;
   font-size: 12px;
   background: var(--background-code);
