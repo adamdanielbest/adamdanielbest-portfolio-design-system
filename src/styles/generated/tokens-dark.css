@@ -30,6 +30,7 @@
   --background-brand-subtle: #141C27;
   /* Card surfaces — slightly lifted from page. Pair with border/default. */
   --background-card: #141C27;
+  --background-code: #1A1A1A;
   /* Disabled state — inactive elements in dark mode. */
   --background-disabled: #1B2537;
   /* Elevated surface — dropdowns, popovers, sticky headers. */

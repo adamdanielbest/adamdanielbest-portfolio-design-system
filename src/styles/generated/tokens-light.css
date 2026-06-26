@@ -30,6 +30,7 @@
   --background-brand-subtle: #F0F6FA;
   /* Card/container surfaces — panels holding content. Pair with border/default. */
   --background-card: #FFFFFF;
+  --background-code: #1A1A1A;
   /* Disabled state — inactive buttons and inputs. Not for interactive elements. */
   --background-disabled: #E8E8E8;
   /* Elevated surface — popovers, tooltips, sticky headers. */

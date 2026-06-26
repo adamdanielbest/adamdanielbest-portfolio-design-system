@@ -1,7 +1,7 @@
 [data-density='mobile'] {
   --button-padding-default: 16px;
   --button-padding-sm: 8px;
-  /* Max width for form layouts. Full-width on mobile. 430px. */
+  /* Max width for form layouts. Full-width on mobile. */
   --layout-form-max-width: 430px;
   /* Grid columns — 4 mobile. */
   --layout-grid-columns: 4px;
