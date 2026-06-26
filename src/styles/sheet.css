@@ -17,9 +17,10 @@ body {
   padding-block: var(--spacing-sheet-margin-y);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+@supports (text-box: cap alphabetic) {
+  h1, h2, h3, h4, h5, h6 {
+    text-box: cap alphabetic;
+  }
 }
 
 @media (max-width: 767px) {
@@ -52,8 +53,7 @@ code {
   font-weight: 400;
   line-height: var(--type-display-line-height);
   letter-spacing: var(--type-display-letter-spacing);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+  text-box: cap alphabetic;
 }
 
 .page-header__divider {
