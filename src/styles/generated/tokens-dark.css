@@ -80,6 +80,7 @@
   --text-accent: #88B0CD;
   /* Brand cobalt text in dark — links, active nav items. */
   --text-brand: #88B0CD;
+  --text-code: #F59E0B;
   /* Disabled text and icons in dark mode. */
   --text-disabled: #666666;
   /* Error text and icons in dark mode. */

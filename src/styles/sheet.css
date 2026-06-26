@@ -17,6 +17,10 @@ body {
   padding-block: var(--spacing-sheet-margin-y);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-box: trim-both cap alphabetic;
+}
+
 @media (max-width: 767px) {
   body { padding-block: var(--spacing-component-padding); }
 }
@@ -25,7 +29,7 @@ code {
   font-family: monospace;
   font-size: 12px;
   background: var(--background-code);
-  color: var(--text-brand);
+  color: var(--text-code);
   padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
   border-radius: var(--radius-small);
 }
@@ -44,9 +48,10 @@ code {
   margin: 0;
   font-family: var(--type-family-bold), system-ui, sans-serif;
   font-size: var(--type-display-size);
-  font-weight: var(--type-display-weight);
+  font-weight: 400;
   line-height: var(--type-display-line-height);
   letter-spacing: var(--type-display-letter-spacing);
+  text-box: trim-both cap alphabetic;
 }
 
 .page-header__divider {

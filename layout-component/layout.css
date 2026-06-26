@@ -19,9 +19,10 @@
   margin: 0 0 var(--spacing-text-stack-gap);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-heading-2-size);
-  font-weight: var(--type-heading-2-weight);
+  font-weight: 400;
   line-height: var(--type-heading-2-line-height);
   letter-spacing: var(--type-heading-2-letter-spacing);
+  text-box: trim-both cap alphabetic;
 }
 
 .demo-meta {

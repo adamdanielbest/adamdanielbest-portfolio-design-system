@@ -80,6 +80,7 @@
   --text-accent: #3A73A0;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels. */
   --text-brand: #3A73A0;
+  --text-code: #F59E0B;
   /* Disabled text and icons. Never on interactive elements. */
   --text-disabled: #ABABAB;
   /* Error text and icons — validation messages. */
