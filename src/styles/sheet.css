@@ -26,6 +26,7 @@ body {
 
 @media (max-width: 767px) {
   body { padding-block: var(--spacing-component-padding); }
+  code { margin-block: 2px; }
 }
 
 code {
