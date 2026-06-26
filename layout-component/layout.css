@@ -7,11 +7,11 @@
 
 /* Demo sections */
 .demo-section {
-  padding-block: var(--spacing-section-gap);
+  margin-bottom: var(--spacing-section-gap);
 }
 
 .demo-section:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .demo-heading {
