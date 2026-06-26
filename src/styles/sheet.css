@@ -49,6 +49,7 @@ code {
 
 .page-header h1 {
   margin: 0;
+  padding-block: var(--spacing-card-padding);
   font-family: var(--type-family-bold), system-ui, sans-serif;
   font-size: var(--type-display-size);
   font-weight: 400;
@@ -56,6 +57,12 @@ code {
   letter-spacing: var(--type-display-letter-spacing);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
+}
+
+.page-header__metadata {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-text-stack-gap);
 }
 
 .page-header__divider {
