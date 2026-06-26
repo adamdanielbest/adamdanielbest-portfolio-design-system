@@ -17,9 +17,9 @@ body {
   padding-block: var(--spacing-sheet-margin-y);
 }
 
-@supports (text-box: cap alphabetic) {
+@supports (text-box: ex alphabetic) {
   h1, h2, h3, h4, h5, h6 {
-    text-box: cap alphabetic;
+    text-box: ex alphabetic;
   }
 }
 
@@ -53,7 +53,7 @@ code {
   font-weight: 400;
   line-height: var(--type-display-line-height);
   letter-spacing: var(--type-display-letter-spacing);
-  text-box: cap alphabetic;
+  text-box: ex alphabetic;
 }
 
 .page-header__divider {

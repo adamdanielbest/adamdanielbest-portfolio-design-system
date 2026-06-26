@@ -22,7 +22,7 @@
   font-weight: 400;
   line-height: var(--type-heading-2-line-height);
   letter-spacing: var(--type-heading-2-letter-spacing);
-  text-box: cap alphabetic;
+  text-box: ex alphabetic;
 }
 
 .demo-meta {
