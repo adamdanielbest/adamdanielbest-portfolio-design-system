@@ -19,7 +19,7 @@
 
   .demo-controls {
     display: flex;
-    gap: var(--spacing-content-gap);
+    gap: var(--spacing-stack-gap);
     align-items: center;
     padding: var(--spacing-component-padding);
     border: 1px solid var(--border-default);
@@ -28,10 +28,11 @@
     margin-bottom: var(--spacing-content-gap);
   }
   .demo-controls__label {
-    font-size: var(--type-caption-size);
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    letter-spacing: var(--type-label-letter-spacing);
     text-transform: uppercase;
-    letter-spacing: var(--type-overline-letter-spacing);
-    color: var(--text-tertiary);
+    color: var(--text-primary);
   }
 
   /* ---- Toggle switch component ---- */
@@ -46,7 +47,9 @@
     margin: 0;
     cursor: pointer;
     font-family: inherit;
-    font-size: var(--type-body-small-size);
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    letter-spacing: var(--type-label-letter-spacing);
     color: var(--text-primary);
   }
   .toggle__track {
