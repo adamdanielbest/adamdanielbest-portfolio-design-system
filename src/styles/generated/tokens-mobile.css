@@ -92,8 +92,10 @@
   --type-display-size: 32px;
   /* Display weight — bold. */
   --type-display-weight: 700;
+  --type-family-bold: Eina04-Bold;
   /* Primary typeface — Eina04. */
   --type-family-primary: Eina04;
+  --type-family-semibold: Eina04-SemiBold;
   /* Heading 1 letter spacing. */
   --type-heading-1-letter-spacing: -0.30000001192092896px;
   /* Heading 1 line height mobile. */

@@ -17,6 +17,7 @@
 
 .demo-heading {
   margin: 0 0 var(--spacing-text-stack-gap);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-heading-2-size);
   font-weight: var(--type-heading-2-weight);
   line-height: var(--type-heading-2-line-height);

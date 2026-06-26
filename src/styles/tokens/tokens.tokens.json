@@ -485,6 +485,38 @@
         },
         "$type": "string",
         "$value": "Eina04"
+      },
+      "semibold": {
+        "$type": "string",
+        "$value": "Eina04-SemiBold",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3512",
+            "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+            "lastSyncedValue": {
+              "Value": {
+                "literal": "Eina04-SemiBold"
+              }
+            },
+            "variableId": "VariableID:2655:3339"
+          }
+        }
+      },
+      "bold": {
+        "$type": "string",
+        "$value": "Eina04-Bold",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3512",
+            "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+            "lastSyncedValue": {
+              "Value": {
+                "literal": "Eina04-Bold"
+              }
+            },
+            "variableId": "VariableID:2655:3340"
+          }
+        }
       }
     },
     "green": {
@@ -4939,6 +4971,38 @@
           },
           "$type": "string",
           "$value": "{family.primary}"
+        },
+        "semibold": {
+          "$type": "string",
+          "$value": "{family.semibold}",
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3694",
+              "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+              "lastSyncedValue": {
+                "Desktop": {
+                  "reference": "{family.semibold}"
+                }
+              },
+              "variableId": "VariableID:2655:3341"
+            }
+          }
+        },
+        "bold": {
+          "$type": "string",
+          "$value": "{family.bold}",
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3694",
+              "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+              "lastSyncedValue": {
+                "Desktop": {
+                  "reference": "{family.bold}"
+                }
+              },
+              "variableId": "VariableID:2655:3342"
+            }
+          }
         }
       },
       "heading-1": {
@@ -6271,6 +6335,38 @@
           },
           "$type": "string",
           "$value": "{family.primary}"
+        },
+        "semibold": {
+          "$type": "string",
+          "$value": "{family.semibold}",
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3747",
+              "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+              "lastSyncedValue": {
+                "Mobile": {
+                  "reference": "{family.semibold}"
+                }
+              },
+              "variableId": "VariableID:2655:3343"
+            }
+          }
+        },
+        "bold": {
+          "$type": "string",
+          "$value": "{family.bold}",
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3747",
+              "lastSyncedAt": "2026-06-26T08:05:57.000Z",
+              "lastSyncedValue": {
+                "Mobile": {
+                  "reference": "{family.bold}"
+                }
+              },
+              "variableId": "VariableID:2655:3344"
+            }
+          }
         }
       },
       "heading-1": {

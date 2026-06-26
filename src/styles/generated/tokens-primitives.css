@@ -44,8 +44,10 @@
   --cobalt-900: #10243A;
   /* Deepest cobalt */
   --cobalt-950: #081527;
+  --family-bold: Eina04-Bold;
   /* Primary typeface — all text across portfolio */
   --family-primary: Eina04;
+  --family-semibold: Eina04-SemiBold;
   --green-100: #DCFCE7;
   --green-200: #BBF7D0;
   --green-300: #86EFAC;
