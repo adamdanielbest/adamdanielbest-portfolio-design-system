@@ -31,8 +31,14 @@
     font-size: var(--type-label-size);
     font-weight: var(--type-label-weight);
     letter-spacing: var(--type-label-letter-spacing);
-    text-transform: uppercase;
     color: var(--text-primary);
+  }
+  .demo-controls__divider {
+    width: 1px;
+    height: 16px;
+    background: var(--border-default);
+    margin-inline: var(--spacing-stack-gap);
+    flex-shrink: 0;
   }
 
   /* ---- Toggle switch component ---- */
@@ -170,6 +176,7 @@
 
 <div class="demo-controls">
   <span class="demo-controls__label">Demo controls</span>
+  <span class="demo-controls__divider" aria-hidden="true"></span>
   <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="false">
     <span class="toggle__track"><span class="toggle__thumb"></span></span>
     <span class="toggle__text" id="theme-toggle-label">Light mode</span>
