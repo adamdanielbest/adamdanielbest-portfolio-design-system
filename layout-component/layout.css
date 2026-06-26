@@ -7,16 +7,17 @@
 
 /* Demo sections */
 .demo-section {
-  padding-block: var(--spacing-content-gap);
+  padding-block: var(--spacing-section-gap);
   border-bottom: 2px solid var(--border-default);
 }
 
 .demo-section:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .demo-heading {
-  margin: 0 0 var(--spacing-text-stack-gap);
+  margin: 0 0 var(--spacing-stack-gap);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-heading-2-size);
   font-weight: 400;
@@ -27,7 +28,7 @@
 }
 
 .demo-meta {
-  margin: 0 0 var(--spacing-content-gap);
+  margin: 0 0 var(--spacing-stack-gap);
   font-size: var(--type-body-small-size);
   color: var(--text-secondary);
   line-height: var(--type-body-small-line-height);
@@ -45,7 +46,7 @@
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   letter-spacing: var(--type-label-letter-spacing);
-  color: var(--text-secondary);
+  color: var(--text-accent);
   text-transform: uppercase;
   margin-bottom: var(--spacing-stack-gap);
 }
