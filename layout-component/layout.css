@@ -145,7 +145,7 @@
 
 .demo-section-gap span {
   background: var(--background-page);
-  padding: 4px var(--spacing-inline-gap);
+  padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
   font-size: var(--type-caption-size);
   color: var(--text-brand);
   font-weight: var(--type-label-weight);
