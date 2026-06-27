@@ -1,0 +1,23 @@
+{
+  "name": "adamdanielbest Design System",
+  "version": "1.0",
+  "tokens": {
+    "source": "src/styles/tokens/",
+    "generated": "src/styles/generated/",
+    "generateScript": "generate-tokens-css.py",
+    "checkScript": "scripts/check-token-refs.py"
+  },
+  "figma": {
+    "fileId": "3VlrPuBG0g8fBUb3YL6T4k",
+    "iconNodeId": "2601:3955"
+  },
+  "components": ".",
+  "templates": "src/templates/",
+  "preview": {
+    "script": "preview.sh",
+    "port": 4321
+  },
+  "log": {
+    "path": "docs/progress.md"
+  }
+}
