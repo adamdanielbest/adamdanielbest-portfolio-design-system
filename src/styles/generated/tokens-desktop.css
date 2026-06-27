@@ -46,8 +46,8 @@
   --spacing-row-gap: 16px;
   /* Between major page sections — hero/work/about. 96px desktop. */
   --spacing-section-gap: 96px;
-  --spacing-sheet-margin-x: 120px;
-  --spacing-sheet-margin-y: 80px;
+  --spacing-page-margin-x: 120px;
+  --spacing-page-margin-y: 80px;
   /* Between stacked elements in a column. 16px desktop. */
   --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;

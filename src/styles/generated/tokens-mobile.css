@@ -45,8 +45,8 @@
   --spacing-row-gap: 16px;
   /* Between major sections. 48px mobile. */
   --spacing-section-gap: 48px;
-  --spacing-sheet-margin-x: 120px;
-  --spacing-sheet-margin-y: 40px;
+  --spacing-page-margin-x: 120px;
+  --spacing-page-margin-y: 40px;
   /* Stacked elements. 16px mobile. */
   --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;

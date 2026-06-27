@@ -4398,7 +4398,7 @@
         "$type": "dimension",
         "$value": "{space.1200}"
       },
-      "sheet-margin-x": {
+      "page-margin-x": {
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
@@ -4414,7 +4414,7 @@
         "$type": "dimension",
         "$value": "{space.1300}"
       },
-      "sheet-margin-y": {
+      "page-margin-y": {
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
@@ -5725,7 +5725,7 @@
         "$type": "dimension",
         "$value": "{space.900}"
       },
-      "sheet-margin-x": {
+      "page-margin-x": {
         "$extensions": {
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
@@ -5741,7 +5741,7 @@
         "$type": "dimension",
         "$value": "{space.1300}"
       },
-      "sheet-margin-y": {
+      "page-margin-y": {
         "$value": "{space.800}",
         "$type": "dimension"
       },
