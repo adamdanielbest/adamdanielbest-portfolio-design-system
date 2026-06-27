@@ -39,8 +39,7 @@
   /* Between inline elements — icon + label. 8px both. */
   --spacing-overline-gap: 4px;
   /* Inner padding of the max-width container. 32px desktop. */
-  --spacing-page-margin: 32px;
-  --spacing-page-margin-x: 120px;
+  --spacing-page-margin-x: 32px;
   --spacing-page-margin-y: 80px;
   /* Between body paragraphs. 24px desktop. */
   --spacing-paragraph-gap: 24px;

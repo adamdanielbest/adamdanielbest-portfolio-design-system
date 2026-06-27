@@ -4390,23 +4390,6 @@
         "$type": "dimension",
         "$value": "{space.100}"
       },
-      "page-margin": {
-        "$description": "Inner padding of the max-width container. 32px desktop.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{space.700}"
-              }
-            },
-            "variableId": "VariableID:2612:3728"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{space.700}"
-      },
       "paragraph-gap": {
         "$description": "Between body paragraphs. 24px desktop.",
         "$extensions": {
@@ -4457,22 +4440,6 @@
         },
         "$type": "dimension",
         "$value": "{space.1200}"
-      },
-      "page-margin-x": {
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{space.1300}"
-              }
-            },
-            "variableId": "VariableID:2632:48673"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{space.1300}"
       },
       "page-margin-y": {
         "$extensions": {
@@ -4555,6 +4522,23 @@
         },
         "$type": "dimension",
         "$value": "{space.200}"
+      },
+      "page-margin-x": {
+        "$description": "Inner padding of the max-width container. 32px desktop.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3694",
+            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
+            "lastSyncedValue": {
+              "Desktop": {
+                "reference": "{space.700}"
+              }
+            },
+            "variableId": "VariableID:2612:3728"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{space.700}"
       }
     },
     "type": {
@@ -5753,23 +5737,6 @@
         "$type": "dimension",
         "$value": "{space.100}"
       },
-      "page-margin": {
-        "$description": "Inner container padding. 16px mobile.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{space.400}"
-              }
-            },
-            "variableId": "VariableID:2612:3781"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{space.400}"
-      },
       "paragraph-gap": {
         "$description": "Between paragraphs. 16px mobile.",
         "$extensions": {
@@ -5820,22 +5787,6 @@
         },
         "$type": "dimension",
         "$value": "{space.900}"
-      },
-      "page-margin-x": {
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{space.1300}"
-              }
-            },
-            "variableId": "VariableID:2632:48675"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{space.1300}"
       },
       "page-margin-y": {
         "$extensions": {
@@ -5918,6 +5869,23 @@
         },
         "$type": "dimension",
         "$value": "{space.200}"
+      },
+      "page-margin-x": {
+        "$description": "Inner container padding. 16px mobile.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3747",
+            "lastSyncedAt": "2026-06-27T13:44:00.965Z",
+            "lastSyncedValue": {
+              "Mobile": {
+                "reference": "{space.400}"
+              }
+            },
+            "variableId": "VariableID:2612:3781"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{space.400}"
       }
     },
     "type": {

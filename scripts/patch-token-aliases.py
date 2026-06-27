@@ -20,13 +20,14 @@ PATCHES = [
     ("02-dimensions-desktop", ("spacing", "badge-padding"), "{space.100}", "dimension", "Badge padding. 4px."),
     ("02-dimensions-mobile",  ("spacing", "badge-padding"), "{space.100}", "dimension", "Badge padding. 4px."),
 
-    # spacing/page-margin-x — aliases space.1300 (120px) in both modes
-    ("02-dimensions-desktop", ("spacing", "page-margin-x"), "{space.1300}", "dimension", "Page horizontal margin. 120px desktop."),
-    ("02-dimensions-mobile",  ("spacing", "page-margin-x"), "{space.1300}", "dimension", "Page horizontal margin. 120px mobile."),
+    # spacing/page-margin-x — min horizontal page padding (32px desktop, 16px mobile)
+    # Container centering is handled by margin: auto + max-content-width, not this value
+    ("02-dimensions-desktop", ("spacing", "page-margin-x"), "{space.800}", "dimension", "Min horizontal page padding. 32px desktop."),
+    ("02-dimensions-mobile",  ("spacing", "page-margin-x"), "{space.400}", "dimension", "Min horizontal page padding. 16px mobile."),
 
-    # spacing/page-margin-y — desktop 80px (space.1100), mobile 40px (space.800)
-    ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{space.1100}", "dimension", "Page vertical margin. 80px desktop."),
-    ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{space.800}",  "dimension", "Page vertical margin. 40px mobile."),
+    # spacing/page-margin-y — vertical page padding (80px desktop, 40px mobile)
+    ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{space.1100}", "dimension", "Page vertical padding. 80px desktop."),
+    ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{space.800}",  "dimension", "Page vertical padding. 40px mobile."),
 ]
 
 

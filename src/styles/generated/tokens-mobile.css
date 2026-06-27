@@ -38,8 +38,7 @@
   --spacing-list-gap: 2px;
   --spacing-overline-gap: 4px;
   /* Inner container padding. 16px mobile. */
-  --spacing-page-margin: 16px;
-  --spacing-page-margin-x: 120px;
+  --spacing-page-margin-x: 16px;
   --spacing-page-margin-y: 40px;
   /* Between paragraphs. 16px mobile. */
   --spacing-paragraph-gap: 16px;

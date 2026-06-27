@@ -15,7 +15,7 @@
   width: 100%;
   max-width: var(--layout-max-content-width);
   margin-inline: auto;
-  padding-inline: var(--spacing-page-margin);
+  padding-inline: var(--spacing-page-margin-x);
 }
 
 /* --------------------------------------------------------------------------
