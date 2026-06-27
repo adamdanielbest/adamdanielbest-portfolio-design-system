@@ -9,7 +9,8 @@
   },
   "figma": {
     "fileId": "3VlrPuBG0g8fBUb3YL6T4k",
-    "iconNodeId": "2601:3955"
+    "iconNodeId": "2601:3955",
+    "boilerplateNodeId": "2663:7530"
   },
   "components": ".",
   "templates": "src/templates/",
