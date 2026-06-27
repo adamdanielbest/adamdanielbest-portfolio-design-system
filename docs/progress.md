@@ -17,3 +17,24 @@
 - Consider running `/review-design` on remaining Figma frames (button, typography) to bring them up to standard
 
 ---
+
+## 27 Jun 2026 — adamdanielbest Design System
+
+### What changed
+- Token Reference page built out (uncommitted working tree)
+
+### Context & decisions
+- Applied `text-box-trim: trim-both; text-box-edge: cap alphabetic` globally to all text elements. The `*` selector does not cascade `text-box-trim` reliably in Chrome — must use an explicit element list (h1–h6, p, span, a, li, code, th, td, etc.)
+- Fixed borders on semantic swatch cards and primitive swatches
+- Updated swatch/label names to label style (Eina04-SemiBold, 12/16) across the board
+- Removed trailing slashes from overline group labels (e.g. `foreground/` → `Foreground`)
+- Restructured link states into a 3-column table (State / Token / Example) matching Figma button-grid table style — `border-collapse: collapse` on `<table>` prevents `border-radius`, so wrapped in a container div
+- Fixed code badge colours to use `--background-code` / `--text-code` tokens (were incorrectly using brand accent)
+- Full spacing audit against Figma: section header gap 8→16px, swatch grid gap 8→16px, group label bottom padding +8px, type row meta gap 2→8px, spacing list gap 8→16px, radius grid gap 24→16px
+- Removed `overflow: hidden` from `.type-row__sample` — was clipping heading text after text-box-trim was applied
+
+### Next session
+- Commit token-reference/ files to a feature branch
+- Token Reference page is otherwise visually complete — consider a final Figma diff before committing
+
+---
