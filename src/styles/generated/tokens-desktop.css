@@ -23,7 +23,6 @@
   --radius-small: 4px;
   /* Outermost containers — currently sharp (0px). Update primitive when needed. */
   --radius-xl: 0;
-  /* Vertical padding for badge/pill labels. 4px. */
   --spacing-badge-padding: 4px;
   /* Internal padding for project cards. 24px desktop. */
   --spacing-card-padding: 24px;

@@ -23,7 +23,6 @@
   --radius-small: 4px;
   /* Outermost containers — sharp (0px). */
   --radius-xl: 0;
-  /* Vertical padding for badge/pill labels. 4px. */
   --spacing-badge-padding: 4px;
   /* Project card internal padding. 16px mobile. */
   --spacing-card-padding: 16px;
@@ -47,7 +46,7 @@
   /* Between major sections. 48px mobile. */
   --spacing-section-gap: 48px;
   --spacing-sheet-margin-x: 120px;
-  --spacing-sheet-margin-y: 80px;
+  --spacing-sheet-margin-y: 40px;
   /* Stacked elements. 16px mobile. */
   --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;
