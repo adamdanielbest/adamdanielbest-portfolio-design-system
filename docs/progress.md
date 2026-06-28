@@ -38,3 +38,23 @@
 - Token Reference page is otherwise visually complete — consider a final Figma diff before committing
 
 ---
+
+## 28 Jun 2026 — adamdanielbest Design System
+
+### What changed
+- **Token reference:** Rebuilt Elevation, Border Radius, Spacing, and Layout & Grid sections to match Figma — semantic token names, card layouts, visual demos, code badges
+- **Token reference:** Added `title` attributes to all text elements across the entire page (232 total) — headings, breadcrumbs, table cells, swatch names, descriptions, code badges
+- **Boilerplate:** Updated `component-sheet.html` with mandatory `title` rule in comments
+- **Tooling:** Updated `/review-code` skill to check for missing `title` attributes on text elements
+- **CSS:** Elevation dark swatches use inverted code badges (`rgba(255,255,255,0.08)`); spacing code badges hug content (`align-self: flex-start`)
+
+### Context & decisions
+- Dark elevation swatches hardcode `#141C27` / `#FAF9F6` as light-mode CSS vars don't resolve correctly for the dark-surface context
+- `min-height: 52px` on `.elevation-item__meta` prevents the `high` card from floating when text wraps differently across columns
+- Layout & Grid table now uses the same `link-state-table` pattern as link states — approved design going forward for all token tables
+
+### Next session
+- Commit `token-reference/` files to a feature branch
+- Run `/log-progress` is already done — go straight to commit
+
+---
