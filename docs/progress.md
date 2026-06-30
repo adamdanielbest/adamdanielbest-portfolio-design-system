@@ -58,3 +58,25 @@
 - Run `/log-progress` is already done — go straight to commit
 
 ---
+
+## 30 Jun 2026 — adamdanielbest Design System
+
+### What changed
+- **Token reference:** Typography table padding corrected to equal 24px (`spacing/card-padding`); `type-row` padding also equalised to 24px all sides
+- **Token reference:** Table border-radius corrected to `radius/small` (4px) — was inheriting outer card 16px, now correctly nested
+- **CSS:** `code` font-size tokenised to `--type-caption-size` in `sheet.css` (was hardcoded 12px)
+- **Boilerplate:** `component-sheet.html` RULES block updated with `<code>` element guidance (parent needs defined width for truncation)
+- **Tooling:** `figma-console` MCP (Desktop Bridge) configured in `~/.claude.json` — switches from rate-limited official Figma MCP to local WebSocket bridge with no rate limits
+- **Figma:** Input component set built — 20 variants (4 types × 5 states), all fills/strokes/text token-bound, auto-wired `Type` and `State` variant properties
+
+### Context & decisions
+- Official Figma MCP (`mcp.figma.com`) hit Starter plan rate limit mid-build — switched permanently to `figma-console-mcp` (southleft Desktop Bridge). Rule saved to memory.
+- Custom font Eina04 requires text content to be set before calling `setTextStyleIdAsync` — `loadFontAsync` fails for uploaded fonts. Content → style order is now the established pattern.
+- `combineAsVariants` auto-extracts variant properties from `Type=X, State=Y` naming convention — no manual property wiring needed.
+
+### Next session
+- Review Input component in Figma and give feedback
+- Place Input component on page template (node 2680-1882)
+- Build Input CSS component sheet
+
+---
