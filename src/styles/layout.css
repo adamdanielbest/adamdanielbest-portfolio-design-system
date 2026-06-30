@@ -49,6 +49,8 @@
 @media (max-width: 767px) {
   :root {
     --spacing-page-margin: 16px;
+    --spacing-page-margin-x: 16px;
+    --spacing-page-margin-y: 40px;
     --layout-grid-gutter: 16px;
     --spacing-section-gap: 48px;
   }

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundations – Design Token Reference – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="token-reference.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Design Token Reference">Design Token Reference</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · 01 Primitives &amp; 02 Semantics · Desktop &amp; Mobile · Light &amp; Dark">adamdanielbest.com · 01 Primitives &amp; 02 Semantics · Desktop &amp; Mobile · Light &amp; Dark</p>
+        <p class="meta" title="Font: Eina04 · Base unit: 4px · Colour: Cobalt #3A73A0 · AA contrast verified">Font: Eina04 · Base unit: 4px · Colour: Cobalt #3A73A0 · AA contrast verified</p>
+        <p class="usage" title="All design tokens used across the system — colours, spacing, typography, radius, and layout.">All design tokens used across the system — colours, spacing, typography, radius, and layout.</p>
+      </div>
+    </header>
+
+
+    <!-- =====================================================================
+         01 — PRIMITIVES
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="01 Primitives">01 Primitives</h2>
+        <p class="section-header__desc" title="Raw scale values · Alias to these from semantic tokens · Never use in components directly">Raw scale values · Alias to these from semantic tokens · Never use in components directly</p>
+      </div>
+
+      <!-- Brand -->
+      <div class="token-group">
+        <p class="token-group__label" title="Brand">Brand</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-cobalt)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="cobalt">cobalt</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-off-white);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-white">off-white</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-off-black)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-black">off-black</p><p class="prim-swatch__hex" title="#121212">#121212</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-platinum-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="platinum-grey">platinum-grey</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-granite-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="granite-grey">granite-grey</p><p class="prim-swatch__hex" title="#666666">#666666</p></div></div>
+        </div>
+      </div>
+
+      <!-- Cobalt -->
+      <div class="token-group">
+        <p class="token-group__label" title="Cobalt">Cobalt</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0F6FA">#F0F6FA</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#D9ECF7">#D9ECF7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#B8D8ED">#B8D8ED</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#88B0CD">#88B0CD</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#5C91B5">#5C91B5</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#2D5C82">#2D5C82</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#224868">#224868</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#193651">#193651</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#10243A">#10243A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#081527">#081527</p></div></div>
+        </div>
+      </div>
+
+      <!-- Neutral -->
+      <div class="token-group">
+        <p class="token-group__label" title="Neutral">Neutral</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-0);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="0">0</p><p class="prim-swatch__hex" title="#FFFFFF">#FFFFFF</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#F0EFEC">#F0EFEC</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#D4D4D4">#D4D4D4</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#ABABAB">#ABABAB</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#888888">#888888</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-550)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="550">550</p><p class="prim-swatch__hex" title="#737373">#737373</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-1000)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="1000">1000</p><p class="prim-swatch__hex" title="#000000">#000000</p></div></div>
+        </div>
+      </div>
+
+      <!-- Green -->
+      <div class="token-group">
+        <p class="token-group__label" title="Green">Green</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0FDF4">#F0FDF4</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#DCFCE7">#DCFCE7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#BBF7D0">#BBF7D0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#86EFAC">#86EFAC</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#4ADE80">#4ADE80</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#22C55E">#22C55E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#16A34A">#16A34A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#15803D">#15803D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#166534">#166534</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#14532D">#14532D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#052E16">#052E16</p></div></div>
+        </div>
+      </div>
+
+      <!-- Amber -->
+      <div class="token-group">
+        <p class="token-group__label" title="Amber">Amber</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FFFBEB">#FFFBEB</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#FEF3C7">#FEF3C7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#FDE68A">#FDE68A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#FCD34D">#FCD34D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#FBBF24">#FBBF24</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#F59E0B">#F59E0B</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#D97706">#D97706</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#B45309">#B45309</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#92400E">#92400E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#78350F">#78350F</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#451A03">#451A03</p></div></div>
+        </div>
+      </div>
+
+      <!-- Red -->
+      <div class="token-group">
+        <p class="token-group__label" title="Red">Red</p>
+        <div class="prim-swatch-row">
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FFF1F2"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FFF1F2">#FFF1F2</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FFE4E6"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#FFE4E6">#FFE4E6</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FECDD3"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#FECDD3">#FECDD3</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FDA4AF"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#FDA4AF">#FDA4AF</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FB7185"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#FB7185">#FB7185</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#F43F5E"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#F43F5E">#F43F5E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#E11D48"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#E11D48">#E11D48</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#BE123C"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#BE123C">#BE123C</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#9F1239"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#9F1239">#9F1239</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#881337"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#881337">#881337</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#4C0519"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#4C0519">#4C0519</p></div></div>
+        </div>
+      </div>
+
+    </div><!-- /.token-card primitives -->
+
+
+    <!-- =====================================================================
+         02 — SEMANTICS
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="02 Semantics">02 Semantics</h2>
+        <p class="section-header__desc" title="Context-named tokens · Use these in all components · Light and Dark collections">Context-named tokens · Use these in all components · Light and Dark collections</p>
+      </div>
+
+      <!-- ── Colour: Background ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Background">Background</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-page)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Outermost surface">Outermost surface</p><div class="swatch__code" title="--background-page">--background-page</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-card)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Card / panel surfaces">Card / panel surfaces</p><div class="swatch__code" title="--background-card">--background-card</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-elevated)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Popovers, tooltips">Popovers, tooltips</p><div class="swatch__code" title="--background-elevated">--background-elevated</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-input)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Form inputs, selects">Form inputs, selects</p><div class="swatch__code" title="--background-input">--background-input</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-inverse)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Inverted / dark chip">Inverted / dark chip</p><div class="swatch__code" title="--background-inverse">--background-inverse</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-disabled)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Inactive elements">Inactive elements</p><div class="swatch__code" title="--background-disabled">--background-disabled</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-brand)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Brand cobalt surface">Brand cobalt surface</p><div class="swatch__code" title="--background-brand">--background-brand</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-brand-subtle)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Subtle cobalt tint">Subtle cobalt tint</p><div class="swatch__code" title="--background-brand-subtle">--background-brand-subtle</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-code)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Code block">Code block</p><div class="swatch__code" title="--background-code">--background-code</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-error)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Error / destructive">Error / destructive</p><div class="swatch__code" title="--background-error">--background-error</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-success)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Success / confirmation">Success / confirmation</p><div class="swatch__code" title="--background-success">--background-success</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-warning)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Caution / advisory">Caution / advisory</p><div class="swatch__code" title="--background-warning">--background-warning</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-info)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Informational banners">Informational banners</p><div class="swatch__code" title="--background-info">--background-info</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-primary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Primary CTA button">Primary CTA button</p><div class="swatch__code" title="--background-action-primary">--background-action-primary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-secondary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Secondary button">Secondary button</p><div class="swatch__code" title="--background-action-secondary">--background-action-secondary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-ghost)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Ghost button">Ghost button</p><div class="swatch__code" title="--background-action-ghost">--background-action-ghost</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-destructive)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Danger button">Danger button</p><div class="swatch__code" title="--background-action-destructive">--background-action-destructive</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Colour: Foreground ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Foreground">Foreground</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-on-action)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Text on action buttons">Text on action buttons</p><div class="swatch__code" title="foreground/on-action">foreground/on-action</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-brand)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Brand cobalt icon fills">Brand cobalt icon fills</p><div class="swatch__code" title="foreground/brand">foreground/brand</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-success)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Check icons, positive">Check icons, positive</p><div class="swatch__code" title="foreground/success">foreground/success</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-warning)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Caution icons">Caution icons</p><div class="swatch__code" title="foreground/warning">foreground/warning</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-error)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="X icons, negative">X icons, negative</p><div class="swatch__code" title="foreground/error">foreground/error</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-info)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Information icons">Information icons</p><div class="swatch__code" title="foreground/info">foreground/info</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-disabled)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Disabled icons">Disabled icons</p><div class="swatch__code" title="foreground/disabled">foreground/disabled</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Colour: Text ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Text">Text</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-primary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Body copy, highest contrast">Body copy, highest contrast</p><div class="swatch__code" title="--text-primary">--text-primary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-secondary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Timestamps, project tags">Timestamps, project tags</p><div class="swatch__code" title="--text-secondary">--text-secondary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-tertiary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Placeholder, helper text">Placeholder, helper text</p><div class="swatch__code" title="--text-tertiary">--text-tertiary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-accent)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Links, active nav">Links, active nav</p><div class="swatch__code" title="--text-accent">--text-accent</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-disabled)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Disabled text">Disabled text</p><div class="swatch__code" title="--text-disabled">--text-disabled</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-inverse)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Text on dark surfaces">Text on dark surfaces</p><div class="swatch__code" title="--text-inverse">--text-inverse</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-on-action)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Text on action buttons">Text on action buttons</p><div class="swatch__code" title="--text-on-action">--text-on-action</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-code)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Code snippet text">Code snippet text</p><div class="swatch__code" title="--text-code">--text-code</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-error)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Validation messages">Validation messages</p><div class="swatch__code" title="--text-error">--text-error</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-success)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Confirmation text">Confirmation text</p><div class="swatch__code" title="--text-success">--text-success</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-warning)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Caution text">Caution text</p><div class="swatch__code" title="--text-warning">--text-warning</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Colour: Border ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Border">Border</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-default)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Cards, inputs, dividers">Cards, inputs, dividers</p><div class="swatch__code" title="--border-default">--border-default</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-subtle)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Barely-there dividers">Barely-there dividers</p><div class="swatch__code" title="--border-subtle">--border-subtle</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-strong)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Selected / active">Selected / active</p><div class="swatch__code" title="--border-strong">--border-strong</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-brand)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Brand cobalt edges">Brand cobalt edges</p><div class="swatch__code" title="--border-brand">--border-brand</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-focus)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Keyboard focus ring">Keyboard focus ring</p><div class="swatch__code" title="--border-focus">--border-focus</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-error)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Error state">Error state</p><div class="swatch__code" title="--border-error">--border-error</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-success)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Success state">Success state</p><div class="swatch__code" title="--border-success">--border-success</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-warning)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Warning state">Warning state</p><div class="swatch__code" title="--border-warning">--border-warning</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Colour: Accent ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Accent">Accent</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-brand)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Cobalt indicator dots">Cobalt indicator dots</p><div class="swatch__code" title="--accent-brand">--accent-brand</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-error)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="X icons, negative">X icons, negative</p><div class="swatch__code" title="--accent-error">--accent-error</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-success)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Check icons, positive">Check icons, positive</p><div class="swatch__code" title="--accent-success">--accent-success</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-warning)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Caution indicators">Caution indicators</p><div class="swatch__code" title="--accent-warning">--accent-warning</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--accent-info)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Information icons">Information icons</p><div class="swatch__code" title="--accent-info">--accent-info</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.token-card semantics colour -->
+
+
+    <!-- =====================================================================
+         03 — TYPOGRAPHY
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="Typography">Typography</h2>
+        <p class="section-header__desc" title="Eina04 typeface · Named font-family tokens pair with font-weight: 400">Eina04 typeface · Named font-family tokens pair with font-weight: 400</p>
+      </div>
+
+      <div class="token-group">
+        <div class="token-group">
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Display" style="font-family:var(--type-family-bold),system-ui,sans-serif;font-size:var(--type-display-size);line-height:var(--type-display-line-height);letter-spacing:var(--type-display-letter-spacing);font-weight:400;">Display</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/display">type/display</code>
+              <span class="type-row__value" title="48/56 desktop · 32/38 mobile · Bold">48/56 desktop · 32/38 mobile · Bold</span>
+              <span class="type-row__usage" title="Hero text, page titles">Hero text, page titles</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Heading 1" style="font-family:var(--type-family-semibold),system-ui,sans-serif;font-size:var(--type-heading-1-size);line-height:var(--type-heading-1-line-height);letter-spacing:var(--type-heading-1-letter-spacing);font-weight:400;">Heading 1</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/heading-1">type/heading-1</code>
+              <span class="type-row__value" title="32/40 desktop · 24/30 mobile · SemiBold">32/40 desktop · 24/30 mobile · SemiBold</span>
+              <span class="type-row__usage" title="Primary section heads">Primary section heads</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Heading 2" style="font-family:var(--type-family-semibold),system-ui,sans-serif;font-size:var(--type-heading-2-size);line-height:var(--type-heading-2-line-height);letter-spacing:var(--type-heading-2-letter-spacing);font-weight:400;">Heading 2</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/heading-2">type/heading-2</code>
+              <span class="type-row__value" title="24/32 desktop · 20/28 mobile · SemiBold">24/32 desktop · 20/28 mobile · SemiBold</span>
+              <span class="type-row__usage" title="Sub-section heads">Sub-section heads</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Heading 3" style="font-family:var(--type-family-semibold),system-ui,sans-serif;font-size:var(--type-heading-3-size);line-height:var(--type-heading-3-line-height);font-weight:400;">Heading 3</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/heading-3">type/heading-3</code>
+              <span class="type-row__value" title="20/28 desktop · 18/26 mobile · SemiBold">20/28 desktop · 18/26 mobile · SemiBold</span>
+              <span class="type-row__usage" title="Content group labels">Content group labels</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Body — The quick brown fox jumps over the lazy dog. Design tokens provide a shared language between design and code." style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:400;">Body — The quick brown fox jumps over the lazy dog. Design tokens provide a shared language between design and code.</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/body">type/body</code>
+              <span class="type-row__value" title="16/26 desktop · 16/28 mobile · Regular">16/26 desktop · 16/28 mobile · Regular</span>
+              <span class="type-row__usage" title="Body copy — mobile gets slightly more generous line-height">Body copy — mobile gets slightly more generous line-height</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Body Emphasis — Strong emphasis within body copy, not a heading level." style="font-family:var(--type-family-semibold),system-ui,sans-serif;font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:400;">Body Emphasis — Strong emphasis within body copy, not a heading level.</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/body-emphasis">type/body-emphasis</code>
+              <span class="type-row__value" title="16/26 desktop · 16/28 mobile · SemiBold">16/26 desktop · 16/28 mobile · SemiBold</span>
+              <span class="type-row__usage" title="Strong emphasis within body copy">Strong emphasis within body copy</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Body Small — Supporting content, image captions, metadata." style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-small-size);line-height:var(--type-body-small-line-height);font-weight:400;">Body Small — Supporting content, image captions, metadata.</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/body-small">type/body-small</code>
+              <span class="type-row__value" title="14/20 desktop · 14/22 mobile · Regular">14/20 desktop · 14/22 mobile · Regular</span>
+              <span class="type-row__usage" title="Captions, metadata">Captions, metadata</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Caption — Timestamps, helper text, secondary metadata." style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-caption-size);line-height:var(--type-caption-line-height);color:var(--text-tertiary);font-weight:400;">Caption — Timestamps, helper text, secondary metadata.</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/caption">type/caption</code>
+              <span class="type-row__value" title="12/16 · Regular">12/16 · Regular</span>
+              <span class="type-row__usage" title="Supporting text">Supporting text</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" title="Label / Navigation" style="font-family:var(--type-family-semibold),system-ui,sans-serif;font-size:var(--type-label-size);line-height:var(--type-label-line-height);letter-spacing:var(--type-label-letter-spacing);font-weight:400;">Label / Navigation</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/label">type/label</code>
+              <span class="type-row__value" title="12/16 · SemiBold">12/16 · SemiBold</span>
+              <span class="type-row__usage" title="Buttons, tags, nav items">Buttons, tags, nav items</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample overline" title="Overline label" style="color:var(--text-accent)">Overline label</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/overline">type/overline</code>
+              <span class="type-row__value" title="12/16 · SemiBold · 0.08em · uppercase">12/16 · SemiBold · 0.08em · uppercase</span>
+              <span class="type-row__usage" title="Category labels above headings">Category labels above headings</span>
+            </div>
+          </div>
+
+          <div class="type-row">
+            <p class="type-row__sample" style="margin:0;font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:400;">I redesigned the onboarding flow — <a href="#" style="color:var(--text-accent);text-decoration:none;" onmouseover="this.style.color='var(--text-link-hover)';this.style.textDecoration='underline'" onmouseout="this.style.color='var(--text-accent)';this.style.textDecoration='none'">read the full case study</a> for details.</p>
+            <div class="type-row__meta">
+              <code class="type-row__token" title="type/link">type/link</code>
+              <span class="type-row__value" title="16/26 · Regular">16/26 · Regular</span>
+              <span class="type-row__usage" title="Inline &amp; standalone links">Inline &amp; standalone links</span>
+            </div>
+            <div class="link-state-table-wrap type-row__full"><table class="link-state-table">
+              <thead>
+                <tr>
+                  <th title="State">State</th>
+                  <th title="Token">Token</th>
+                  <th title="Example">Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td title="Default">Default</td>
+                  <td><code>--text-accent</code></td>
+                  <td><a href="#" style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);color:var(--text-accent);text-decoration:none;">Link text</a></td>
+                </tr>
+                <tr>
+                  <td title="Hover">Hover</td>
+                  <td><code>--text-link-hover</code></td>
+                  <td><a href="#" style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);color:var(--text-link-hover);text-decoration:underline;">Link text</a></td>
+                </tr>
+                <tr>
+                  <td title="Visited">Visited</td>
+                  <td><code>--text-link-visited</code></td>
+                  <td><a href="#" style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);color:var(--text-link-visited);text-decoration:none;">Link text</a></td>
+                </tr>
+                <tr>
+                  <td title="Disabled">Disabled</td>
+                  <td><code>--text-disabled</code></td>
+                  <td><span style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);color:var(--text-disabled);">Link text</span></td>
+                </tr>
+                <tr>
+                  <td title="Focus">Focus</td>
+                  <td><code>--border-focus</code></td>
+                  <td><a href="#" style="font-family:var(--type-family-primary),system-ui,sans-serif;font-size:var(--type-body-size);color:var(--text-accent);text-decoration:none;outline:2px solid var(--border-focus);outline-offset:2px;border-radius:2px;">Link text</a></td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /.token-card typography -->
+
+
+    <!-- =====================================================================
+         04 — SPACING
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="Spacing">Spacing</h2>
+        <p class="section-header__desc" title="4px base unit · Semantic tokens alias to space/ primitives · All values multiples of 4">4px base unit · Semantic tokens alias to space/ primitives · All values multiples of 4</p>
+      </div>
+
+      <div class="spacing-list">
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:32px" title="Desktop: 32px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/page-margin">spacing/page-margin</p>
+            <p class="spacing-item__values" title="Desktop: 32px · Mobile: 16px">Desktop: 32px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Inner container padding · max-width 1200px enforced via CSS on desktop">Inner container padding  ·  max-width 1200px enforced via CSS on desktop</p>
+            <code class="spacing-item__code" title="--spacing-page-margin-x">--spacing-page-margin-x</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:96px" title="Desktop: 96px"></div>
+            <div class="spacing-item__bar" style="height:48px" title="Mobile: 48px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/section-gap">spacing/section-gap</p>
+            <p class="spacing-item__values" title="Desktop: 96px · Mobile: 48px">Desktop: 96px  ·  Mobile: 48px</p>
+            <p class="spacing-item__desc" title="Between major page sections (hero → work, work → about)">Between major page sections (hero → work, work → about)</p>
+            <code class="spacing-item__code" title="--spacing-section-gap">--spacing-section-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:32px" title="Desktop: 32px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/content-gap">spacing/content-gap</p>
+            <p class="spacing-item__values" title="Desktop: 32px · Mobile: 16px">Desktop: 32px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Between content blocks within a section">Between content blocks within a section</p>
+            <code class="spacing-item__code" title="--spacing-content-gap">--spacing-content-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:24px" title="Desktop: 24px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/card-padding">spacing/card-padding</p>
+            <p class="spacing-item__values" title="Desktop: 24px · Mobile: 16px">Desktop: 24px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Project card internal padding">Project card internal padding</p>
+            <code class="spacing-item__code" title="--spacing-card-padding">--spacing-card-padding</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:16px" title="Desktop: 16px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/component-padding">spacing/component-padding</p>
+            <p class="spacing-item__values" title="Desktop: 16px · Mobile: 16px">Desktop: 16px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Buttons, inputs, chips, tags">Buttons, inputs, chips, tags</p>
+            <code class="spacing-item__code" title="--spacing-component-padding">--spacing-component-padding</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:16px" title="Desktop: 16px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/stack-gap">spacing/stack-gap</p>
+            <p class="spacing-item__values" title="Desktop: 16px · Mobile: 16px">Desktop: 16px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Stacked elements in a column layout">Stacked elements in a column layout</p>
+            <code class="spacing-item__code" title="--spacing-stack-gap">--spacing-stack-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:16px" title="Desktop: 16px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/row-gap">spacing/row-gap</p>
+            <p class="spacing-item__values" title="Desktop: 16px · Mobile: 16px">Desktop: 16px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Between sibling elements in a row layout">Between sibling elements in a row layout</p>
+            <code class="spacing-item__code" title="--spacing-row-gap">--spacing-row-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:8px" title="Desktop: 8px"></div>
+            <div class="spacing-item__bar" style="height:8px" title="Mobile: 8px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/inline-gap">spacing/inline-gap</p>
+            <p class="spacing-item__values" title="Desktop: 8px · Mobile: 8px">Desktop: 8px  ·  Mobile: 8px</p>
+            <p class="spacing-item__desc" title="Icon + label · inline element gap">Icon + label  ·  inline element gap</p>
+            <code class="spacing-item__code" title="--spacing-inline-gap">--spacing-inline-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:8px" title="Desktop: 8px"></div>
+            <div class="spacing-item__bar" style="height:8px" title="Mobile: 8px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/text-stack-gap">spacing/text-stack-gap</p>
+            <p class="spacing-item__values" title="Desktop: 8px · Mobile: 8px">Desktop: 8px  ·  Mobile: 8px</p>
+            <p class="spacing-item__desc" title="Vertical rhythm between stacked text lines">Vertical rhythm between stacked text lines</p>
+            <code class="spacing-item__code" title="--spacing-text-stack-gap">--spacing-text-stack-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:24px" title="Desktop: 24px"></div>
+            <div class="spacing-item__bar" style="height:16px" title="Mobile: 16px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/paragraph-gap">spacing/paragraph-gap</p>
+            <p class="spacing-item__values" title="Desktop: 24px · Mobile: 16px">Desktop: 24px  ·  Mobile: 16px</p>
+            <p class="spacing-item__desc" title="Between body paragraphs">Between body paragraphs</p>
+            <code class="spacing-item__code" title="--spacing-paragraph-gap">--spacing-paragraph-gap</code>
+          </div>
+        </div>
+
+        <div class="spacing-item">
+          <div class="spacing-item__bars">
+            <div class="spacing-item__bar" style="height:12px" title="Desktop: 12px"></div>
+            <div class="spacing-item__bar" style="height:8px" title="Mobile: 8px"></div>
+          </div>
+          <div class="spacing-item__meta">
+            <p class="spacing-item__name" title="spacing/figure-gap">spacing/figure-gap</p>
+            <p class="spacing-item__values" title="Desktop: 12px · Mobile: 8px">Desktop: 12px  ·  Mobile: 8px</p>
+            <p class="spacing-item__desc" title="Image/video to caption">Image/video to caption</p>
+            <code class="spacing-item__code" title="--spacing-figure-gap">--spacing-figure-gap</code>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.token-card spacing -->
+
+
+    <!-- =====================================================================
+         05 — BORDER RADIUS
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="Border Radius">Border Radius</h2>
+        <p class="section-header__desc" title="Concentric nesting: deepest nested → smallest radius · 4 → 8 → 16 · Grandparent stays sharp until needed">Concentric nesting: deepest nested → smallest radius · 4 → 8 → 16 · Grandparent stays sharp until needed</p>
+      </div>
+
+      <div class="radius-grid">
+
+        <div class="radius-item">
+          <div class="radius-item__demo" style="border-radius:12px">
+            <div class="radius-item__rect" style="border-radius:var(--radius-small)"></div>
+          </div>
+          <p class="radius-item__token-name" title="radius/small">radius/small</p>
+          <p class="radius-item__value" title="4px">4px</p>
+          <p class="radius-item__role" title="Deepest nested">Deepest nested</p>
+          <p class="radius-item__desc" title="Tags, chips, status dots inside a card">Tags, chips, status dots inside a card</p>
+          <code class="radius-item__code" title="--radius-small">--radius-small</code>
+        </div>
+
+        <div class="radius-item">
+          <div class="radius-item__demo" style="border-radius:16px">
+            <div class="radius-item__rect" style="border-radius:var(--radius-medium)"></div>
+          </div>
+          <p class="radius-item__token-name" title="radius/medium">radius/medium</p>
+          <p class="radius-item__value" title="8px">8px</p>
+          <p class="radius-item__role" title="Parent level">Parent level</p>
+          <p class="radius-item__desc" title="Buttons, inputs, tooltips, dropdowns">Buttons, inputs, tooltips, dropdowns</p>
+          <code class="radius-item__code" title="--radius-medium">--radius-medium</code>
+        </div>
+
+        <div class="radius-item">
+          <div class="radius-item__demo" style="border-radius:24px">
+            <div class="radius-item__rect" style="border-radius:var(--radius-large)"></div>
+          </div>
+          <p class="radius-item__token-name" title="radius/large">radius/large</p>
+          <p class="radius-item__value" title="16px">16px</p>
+          <p class="radius-item__role" title="Grandparent">Grandparent</p>
+          <p class="radius-item__desc" title="Project cards, image thumbnails, panels">Project cards, image thumbnails, panels</p>
+          <code class="radius-item__code" title="--radius-large">--radius-large</code>
+        </div>
+
+        <div class="radius-item">
+          <div class="radius-item__demo" style="border-radius:0">
+            <div class="radius-item__rect" style="border-radius:var(--radius-xl)"></div>
+          </div>
+          <p class="radius-item__token-name" title="radius/xl">radius/xl</p>
+          <p class="radius-item__value" title="0px">0px</p>
+          <p class="radius-item__role" title="Outermost">Outermost</p>
+          <p class="radius-item__desc" title="Sharp containers · update primitive if needed">Sharp containers · update primitive if needed</p>
+          <code class="radius-item__code" title="--radius-xl">--radius-xl</code>
+        </div>
+
+        <div class="radius-item">
+          <div class="radius-item__demo" style="border-radius:999px">
+            <div class="radius-item__rect" style="border-radius:var(--radius-pill)"></div>
+          </div>
+          <p class="radius-item__token-name" title="radius/pill">radius/pill</p>
+          <p class="radius-item__value" title="999px">999px</p>
+          <p class="radius-item__role" title="Full round">Full round</p>
+          <p class="radius-item__desc" title="Pill badges, toggles, avatar frames">Pill badges, toggles, avatar frames</p>
+          <code class="radius-item__code" title="--radius-pill">--radius-pill</code>
+        </div>
+
+      </div>
+
+    </div><!-- /.token-card radius -->
+
+
+    <!-- =====================================================================
+         06 — ELEVATION
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="Elevation">Elevation</h2>
+        <p class="section-header__desc" title="Effect Styles · Layered ambient + direct shadows · Light: brand off-black #0E1626 · Dark: pure black at higher opacity">Effect Styles · Layered ambient + direct shadows · Light: brand off-black #0E1626 · Dark: pure black at higher opacity</p>
+      </div>
+
+      <div class="elevation-grid">
+
+        <div class="elevation-item">
+          <div class="elevation-item__meta">
+            <p class="elevation-item__token" title="elevation/none">elevation/none</p>
+            <p class="elevation-item__desc" title="Flat embedded elements, backgrounds">Flat embedded elements, backgrounds</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--light" style="box-shadow:none;border:1px solid var(--border-subtle)">
+            <p class="elevation-swatch__label" title="Light">Light</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/light/none">elevation/light/none</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--dark" style="box-shadow:none">
+            <p class="elevation-swatch__label" title="Dark">Dark</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/dark/none">elevation/dark/none</p>
+          </div>
+        </div>
+
+        <div class="elevation-item">
+          <div class="elevation-item__meta">
+            <p class="elevation-item__token" title="elevation/low">elevation/low</p>
+            <p class="elevation-item__desc" title="Default card resting state, thumbnails">Default card resting state, thumbnails</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--light" style="box-shadow:0px 4px 6px rgba(14,22,38,0.08),0px 1px 1.5px rgba(14,22,38,0.06)">
+            <p class="elevation-swatch__label" title="Light">Light</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/light/low">elevation/light/low</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--dark" style="box-shadow:0px 4px 6px rgba(0,0,0,0.28),0px 1px 1.5px rgba(0,0,0,0.24)">
+            <p class="elevation-swatch__label" title="Dark">Dark</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/dark/low">elevation/dark/low</p>
+          </div>
+        </div>
+
+        <div class="elevation-item">
+          <div class="elevation-item__meta">
+            <p class="elevation-item__token" title="elevation/medium">elevation/medium</p>
+            <p class="elevation-item__desc" title="Dropdowns, popovers, sticky headers">Dropdowns, popovers, sticky headers</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--light" style="box-shadow:0px 8px 12px rgba(14,22,38,0.1),0px 1px 2px rgba(14,22,38,0.06)">
+            <p class="elevation-swatch__label" title="Light">Light</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/light/medium">elevation/light/medium</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--dark" style="box-shadow:0px 8px 12px rgba(0,0,0,0.4),0px 1px 2px rgba(0,0,0,0.28)">
+            <p class="elevation-swatch__label" title="Dark">Dark</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/dark/medium">elevation/dark/medium</p>
+          </div>
+        </div>
+
+        <div class="elevation-item">
+          <div class="elevation-item__meta">
+            <p class="elevation-item__token" title="elevation/high">elevation/high</p>
+            <p class="elevation-item__desc" title="Modals, dialogs, command palettes">Modals, dialogs, command palettes</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--light" style="box-shadow:0px 24px 32px rgba(14,22,38,0.14),0px 4px 8px rgba(14,22,38,0.08)">
+            <p class="elevation-swatch__label" title="Light">Light</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/light/high">elevation/light/high</p>
+          </div>
+          <div class="elevation-swatch elevation-swatch--dark" style="box-shadow:0px 24px 32px rgba(0,0,0,0.6),0px 4px 8px rgba(0,0,0,0.4)">
+            <p class="elevation-swatch__label" title="Dark">Dark</p>
+            <p class="elevation-swatch__example" title="Surface example">Surface example</p>
+            <p class="elevation-swatch__token" title="elevation/dark/high">elevation/dark/high</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.token-card elevation -->
+
+
+    <!-- =====================================================================
+         07 — LAYOUT & GRID
+         ===================================================================== -->
+    <div class="token-card">
+
+      <div class="section-header">
+        <h2 class="section-header__title" title="Layout &amp; Grid">Layout &amp; Grid</h2>
+        <p class="section-header__desc" title="Desktop: 12-col · Tablet: 8-col (fluid, no max-width) · Mobile: 4-col">Desktop: 12-col · Tablet: 8-col (fluid, no max-width) · Mobile: 4-col</p>
+      </div>
+
+      <div class="link-state-table-wrap">
+        <table class="link-state-table layout-grid-table">
+          <thead>
+            <tr>
+              <th title="Desktop">Desktop</th>
+              <th title="Mobile">Mobile</th>
+              <th title="Usage">Usage</th>
+              <th title="Token">Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td title="1200px">1200px</td>
+              <td title="100%">100%</td>
+              <td title="Container max-width — centred at this width on desktop">Container max-width — centred at this width on desktop</td>
+              <td title="--layout-max-content-width"><code>--layout-max-content-width</code></td>
+            </tr>
+            <tr>
+              <td title="720px">720px</td>
+              <td title="100%">100%</td>
+              <td title="Long-form body text — optimal reading measure">Long-form body text — optimal reading measure</td>
+              <td title="--layout-reading-column-width"><code>--layout-reading-column-width</code></td>
+            </tr>
+            <tr>
+              <td title="12">12</td>
+              <td title="4">4</td>
+              <td title="Grid column count">Grid column count</td>
+              <td title="--layout-grid-columns"><code>--layout-grid-columns</code></td>
+            </tr>
+            <tr>
+              <td title="24px">24px</td>
+              <td title="16px">16px</td>
+              <td title="Gap between columns">Gap between columns</td>
+              <td title="--layout-grid-gutter"><code>--layout-grid-gutter</code></td>
+            </tr>
+            <tr>
+              <td title="32px">32px</td>
+              <td title="16px">16px</td>
+              <td title="Inner container padding (matches page-margin-x)">Inner container padding (matches page-margin-x)</td>
+              <td title="--layout-grid-margin"><code>--layout-grid-margin</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /.token-card layout -->
+
+
+    <!-- Footer -->
+
+  </div><!-- /.container -->
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

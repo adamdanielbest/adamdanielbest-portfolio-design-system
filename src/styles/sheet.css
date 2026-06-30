@@ -17,26 +17,33 @@ body {
   padding-block: var(--spacing-page-margin-y);
 }
 
-@supports (text-box-trim: trim-both) {
-  h1, h2, h3, h4, h5, h6 {
-    text-box-trim: trim-both;
-    text-box-edge: cap alphabetic;
-  }
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, dt, dd,
+code, pre, label, caption,
+th, td, blockquote, figcaption {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 @media (max-width: 767px) {
-  body { padding-block: var(--spacing-component-padding); }
-  code { margin-block: 2px; }
+  body { padding-block: var(--spacing-page-margin-y); }
+  code { margin-block: 2px; } /* small optical nudge — no token at this scale */
 }
 
 code {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
   font-family: monospace;
-  font-size: 12px;
+  font-size: var(--type-caption-size);
   background: var(--background-code);
   color: var(--text-code);
   padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
   border-radius: var(--radius-small);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
 /* --------------------------------------------------------------------------
@@ -46,7 +53,7 @@ code {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: var(--spacing-section-gap);
+  margin-bottom: var(--spacing-content-gap);
 }
 
 .page-header h1 {
