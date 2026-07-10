@@ -80,3 +80,25 @@
 - Build Input CSS component sheet
 
 ---
+
+## 10 Jul 2026 — adamdanielbest Design System
+
+### What changed
+- **Figma:** Light input grid (`2702:13009`) fully rebuilt from scratch — all 24 cells using `FIXED` sizing with explicit row heights `[40, 106, 106, 89]`. Fixed persistent border misalignment caused by Figma GRID layout's `FILL`/`HUG` cell sizing behaving differently to auto-layout. Text-type cells have `Icon#2694:0: false` (no dropdown chevron).
+- **Figma:** Dark input grid (`2703:38937`) rebuilt with the same FIXED-cell approach.
+- **Figma:** Dark grid instance tokens remapped — 85 fills and 30 strokes overridden from `02 Color/Light` to `02 Color/Dark` equivalents across all nested instance nodes. Root cause: master component uses light collection variables; dark sheets require explicit node-level overrides since collections can't be mode-switched.
+- **Skills:** `/review-design` (global + project) updated — new check 1b detects `wrong-collection` fails on any dark sheet; all nodes at depth > 0 must use `02 Color/Dark`. Includes fix script in `## Dark token remap` section.
+- **Skills:** `/build-figma-guideline-page` updated — new Step 6b runs `remapNode(grid)` after cell population on dark sheets; dark token reference table added.
+
+### Context & decisions
+- Figma GRID layout mode does not follow the same sizing rules as auto-layout: `FILL` cells collapse to minimum height (~14px), `HUG` cells only work if content exactly matches row height. `FIXED` sizing with explicit pixel heights is the only reliable approach for variant matrix grids.
+- Light/dark as separate collections (not modes within one collection) means dark sheet instances can't inherit the correct tokens automatically. The name-matched light→dark remap (`lightToDark` map by token name) is the established pattern until collections are restructured.
+
+### Food for thought
+- The variant matrix grid keeps causing friction — cell sizing, border alignment, row height mismatches. Worth considering building the grid as a **reusable Figma component or organism** rather than constructing it fresh each time via script. A parameterised grid component (with slot cells, fixed header row, configurable column count) could be instantiated rather than built, reducing drift and debugging time per component sheet.
+
+### Next session
+- Build `input-component/input.html` and `input.css` — HTML guideline page for the input component
+- Check dark Select sheet for same light-token issue and apply remap if needed
+
+---
