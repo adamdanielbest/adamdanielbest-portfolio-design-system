@@ -143,7 +143,7 @@
   td.demo-cell--dropdown {
     min-width: 280px;
     vertical-align: top;
-    padding-bottom: calc(var(--spacing-table-cell-padding) + 200px);
+    padding-bottom: calc(var(--spacing-table-cell-padding) + 240px);
   }
 
   /* Dropdown list */
@@ -165,28 +165,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--spacing-inline-gap);
     padding: 10px var(--spacing-input-padding);
     font-size: var(--type-body-size);
     font-weight: var(--type-body-weight);
     line-height: var(--type-body-line-height);
     color: var(--text-primary);
     cursor: pointer;
+    user-select: none;
   }
+  .select__option:hover,
   .select__option--hover {
-    background-color: var(--background-page);
+    background-color: var(--background-hover);
   }
   .select__option--selected {
-    font-weight: var(--type-label-weight);
+    background-color: var(--background-selected);
   }
   .select__option-check {
-    width: 12px;
-    height: 9px;
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
-    color: var(--text-primary);
-    visibility: hidden;
+    color: var(--text-accent);
+    fill: currentColor;
   }
   .select__option--selected .select__option-check {
-    visibility: visible;
+    color: var(--text-primary);
   }
 </style>
 </head>
@@ -361,18 +364,20 @@
             <div class="select select--open" style="position: relative;">
               <div class="select__label-row">
                 <span class="select__label" title="Label">Label</span>
+                <span class="select__required" aria-hidden="true" title="Required"> *</span>
               </div>
               <div class="select__field" role="combobox" aria-expanded="true" aria-haspopup="listbox" tabindex="0">
                 <span class="select__value" title="Select option...">Select option...</span>
                 <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
               </div>
-              <ul class="select__dropdown" role="listbox" aria-label="Options">
-                <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-                <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-                <li class="select__option select__option--hover" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-                <li class="select__option select__option--selected" role="option" aria-selected="true" title="Option four"><span>Option four</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-                <li class="select__option" role="option" aria-selected="false" title="Option five"><span>Option five</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+              <ul class="select__dropdown" role="listbox" aria-label="Options" aria-multiselectable="true">
+                <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 15.835 15.835" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M 6.685910246107313 11.612370427449545 L 12.887971724404228 5.410308949152628 L 11.65635667906867 4.178693903817071 L 6.685910246107313 9.149140336778428 L 4.178693903817071 6.641923994488186 L 2.947078858481513 7.8735390398237435 L 6.685910246107313 11.612370427449545 Z M 1.7594500647650824 15.835050582885742 C 1.2756012969546848 15.835050582885742 0.8613974345326646 15.66277110436892 0.5168384565247429 15.318212126360999 C 0.17227947851682124 14.973653148353078 0 14.559449285931057 0 14.075600518120659 L 0 1.7594500647650824 C 0 1.2756012969546848 0.17227947851682124 0.8613974345326646 0.5168384565247429 0.5168384565247429 C 0.8613974345326646 0.17227947851682124 1.2756012969546848 0 1.7594500647650824 0 L 14.075600518120659 0 C 14.559449285931057 0 14.973653148353078 0.17227947851682124 15.318212126360999 0.5168384565247429 C 15.66277110436892 0.8613974345326646 15.835050582885742 1.2756012969546848 15.835050582885742 1.7594500647650824 L 15.835050582885742 14.075600518120659 C 15.835050582885742 14.559449285931057 15.66277110436892 14.973653148353078 15.318212126360999 15.318212126360999 C 14.973653148353078 15.66277110436892 14.559449285931057 15.835050582885742 14.075600518120659 15.835050582885742 L 1.7594500647650824 15.835050582885742 Z"/></svg></li>
+                <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 15.835 15.835" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M 6.685910246107313 11.612370427449545 L 12.887971724404228 5.410308949152628 L 11.65635667906867 4.178693903817071 L 6.685910246107313 9.149140336778428 L 4.178693903817071 6.641923994488186 L 2.947078858481513 7.8735390398237435 L 6.685910246107313 11.612370427449545 Z M 1.7594500647650824 15.835050582885742 C 1.2756012969546848 15.835050582885742 0.8613974345326646 15.66277110436892 0.5168384565247429 15.318212126360999 C 0.17227947851682124 14.973653148353078 0 14.559449285931057 0 14.075600518120659 L 0 1.7594500647650824 C 0 1.2756012969546848 0.17227947851682124 0.8613974345326646 0.5168384565247429 0.5168384565247429 C 0.8613974345326646 0.17227947851682124 1.2756012969546848 0 1.7594500647650824 0 L 14.075600518120659 0 C 14.559449285931057 0 14.973653148353078 0.17227947851682124 15.318212126360999 0.5168384565247429 C 15.66277110436892 0.8613974345326646 15.835050582885742 1.2756012969546848 15.835050582885742 1.7594500647650824 L 15.835050582885742 14.075600518120659 C 15.835050582885742 14.559449285931057 15.66277110436892 14.973653148353078 15.318212126360999 15.318212126360999 C 14.973653148353078 15.66277110436892 14.559449285931057 15.835050582885742 14.075600518120659 15.835050582885742 L 1.7594500647650824 15.835050582885742 Z"/></svg></li>
+                <li class="select__option select__option--hover" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 15.835 15.835" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M 6.685910246107313 11.612370427449545 L 12.887971724404228 5.410308949152628 L 11.65635667906867 4.178693903817071 L 6.685910246107313 9.149140336778428 L 4.178693903817071 6.641923994488186 L 2.947078858481513 7.8735390398237435 L 6.685910246107313 11.612370427449545 Z M 1.7594500647650824 15.835050582885742 C 1.2756012969546848 15.835050582885742 0.8613974345326646 15.66277110436892 0.5168384565247429 15.318212126360999 C 0.17227947851682124 14.973653148353078 0 14.559449285931057 0 14.075600518120659 L 0 1.7594500647650824 C 0 1.2756012969546848 0.17227947851682124 0.8613974345326646 0.5168384565247429 0.5168384565247429 C 0.8613974345326646 0.17227947851682124 1.2756012969546848 0 1.7594500647650824 0 L 14.075600518120659 0 C 14.559449285931057 0 14.973653148353078 0.17227947851682124 15.318212126360999 0.5168384565247429 C 15.66277110436892 0.8613974345326646 15.835050582885742 1.2756012969546848 15.835050582885742 1.7594500647650824 L 15.835050582885742 14.075600518120659 C 15.835050582885742 14.559449285931057 15.66277110436892 14.973653148353078 15.318212126360999 15.318212126360999 C 14.973653148353078 15.66277110436892 14.559449285931057 15.835050582885742 14.075600518120659 15.835050582885742 L 1.7594500647650824 15.835050582885742 Z"/></svg></li>
+                <li class="select__option select__option--selected" role="option" aria-selected="true" title="Option four"><span>Option four</span><svg class="select__option-check" viewBox="0 0 15.835 15.835" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M 6.685910246107313 11.612370427449545 L 12.887971724404228 5.410308949152628 L 11.65635667906867 4.178693903817071 L 6.685910246107313 9.149140336778428 L 4.178693903817071 6.641923994488186 L 2.947078858481513 7.8735390398237435 L 6.685910246107313 11.612370427449545 Z M 1.7594500647650824 15.835050582885742 C 1.2756012969546848 15.835050582885742 0.8613974345326646 15.66277110436892 0.5168384565247429 15.318212126360999 C 0.17227947851682124 14.973653148353078 0 14.559449285931057 0 14.075600518120659 L 0 1.7594500647650824 C 0 1.2756012969546848 0.17227947851682124 0.8613974345326646 0.5168384565247429 0.5168384565247429 C 0.8613974345326646 0.17227947851682124 1.2756012969546848 0 1.7594500647650824 0 L 14.075600518120659 0 C 14.559449285931057 0 14.973653148353078 0.17227947851682124 15.318212126360999 0.5168384565247429 C 15.66277110436892 0.8613974345326646 15.835050582885742 1.2756012969546848 15.835050582885742 1.7594500647650824 L 15.835050582885742 14.075600518120659 C 15.835050582885742 14.559449285931057 15.66277110436892 14.973653148353078 15.318212126360999 15.318212126360999 C 14.973653148353078 15.66277110436892 14.559449285931057 15.835050582885742 14.075600518120659 15.835050582885742 L 1.7594500647650824 15.835050582885742 Z"/></svg></li>
+                <li class="select__option" role="option" aria-selected="false" title="Option five"><span>Option five</span><svg class="select__option-check" viewBox="0 0 15.835 15.835" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M 6.685910246107313 11.612370427449545 L 12.887971724404228 5.410308949152628 L 11.65635667906867 4.178693903817071 L 6.685910246107313 9.149140336778428 L 4.178693903817071 6.641923994488186 L 2.947078858481513 7.8735390398237435 L 6.685910246107313 11.612370427449545 Z M 1.7594500647650824 15.835050582885742 C 1.2756012969546848 15.835050582885742 0.8613974345326646 15.66277110436892 0.5168384565247429 15.318212126360999 C 0.17227947851682124 14.973653148353078 0 14.559449285931057 0 14.075600518120659 L 0 1.7594500647650824 C 0 1.2756012969546848 0.17227947851682124 0.8613974345326646 0.5168384565247429 0.5168384565247429 C 0.8613974345326646 0.17227947851682124 1.2756012969546848 0 1.7594500647650824 0 L 14.075600518120659 0 C 14.559449285931057 0 14.973653148353078 0.17227947851682124 15.318212126360999 0.5168384565247429 C 15.66277110436892 0.8613974345326646 15.835050582885742 1.2756012969546848 15.835050582885742 1.7594500647650824 L 15.835050582885742 14.075600518120659 C 15.835050582885742 14.559449285931057 15.66277110436892 14.973653148353078 15.318212126360999 15.318212126360999 C 14.973653148353078 15.66277110436892 14.559449285931057 15.835050582885742 14.075600518120659 15.835050582885742 L 1.7594500647650824 15.835050582885742 Z"/></svg></li>
               </ul>
+              <p class="select__helper" title="Helper text">Helper text</p>
             </div>
           </td>
         </tr>
@@ -421,19 +426,11 @@
     });
 
     options.forEach(opt => {
-      opt.addEventListener('click', () => {
-        const text = opt.querySelector('span') ? opt.querySelector('span').textContent : opt.textContent.trim();
-        valueEl.textContent = text;
-        valueEl.title = text;
-        options.forEach(o => {
-          o.classList.remove('select__option--selected');
-          o.setAttribute('aria-selected', 'false');
-        });
-        opt.classList.add('select__option--selected');
-        opt.setAttribute('aria-selected', 'true');
-        interactiveSelect.classList.add('select--filled');
-        closeDropdown();
-        field.focus();
+      opt.addEventListener('click', e => {
+        e.stopPropagation();
+        const isSelected = opt.classList.contains('select__option--selected');
+        opt.classList.toggle('select__option--selected', !isSelected);
+        opt.setAttribute('aria-selected', String(!isSelected));
       });
     });
 
