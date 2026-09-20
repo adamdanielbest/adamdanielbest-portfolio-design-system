@@ -19,6 +19,13 @@ Every fill and stroke colour must be bound to a variable (not a hard-coded hex).
 
 Fail if any SOLID fill or stroke is unbound. Ignore IMAGE and GRADIENT fills (they can't be variable-bound).
 
+### 1b. Dark sheet collection check
+If the audited frame's name contains `dark`, every bound variable in content cells (nodes named `cell-*` and their descendants) must belong to `02 Color/Dark`, not `02 Color/Light`. Light collection IDs on a dark sheet mean component instances were not remapped and will render in light mode.
+
+To check: fetch `figma.variables.getLocalVariableCollectionsAsync()`, find the `02 Color/Light` collection, then for every bound fill/stroke (at depth > 0) verify `v.variableCollectionId !== lightColl.id`. No exceptions — all nodes on a dark sheet must use dark collection tokens.
+
+When this fails, apply the dark token remap from the global `review-design` skill's `## Dark token remap` section.
+
 ### 2. Text styles
 Every text node should have a `textStyleId` applied. A node with manually set `fontSize`, `fontWeight`, or `lineHeight` but no style applied is a fail.
 

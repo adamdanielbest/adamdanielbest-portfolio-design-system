@@ -84,7 +84,26 @@ Verify it matches the boilerplate:
 
 `page-header__metadata` wrapper is required. Breadcrumb/meta/usage as direct children of `.page-header` is wrong.
 
-### 7. Flex gap pattern
+### 7. Title attributes on text elements
+
+Every text element whose content could be clipped or truncated must have a `title` attribute matching its text content exactly. This includes:
+- Swatch names and token code badges
+- Table `<th>` and `<td>` cells
+- Page header `.breadcrumb`, `.meta`, `.usage`
+- Token labels, spacing descriptions, type row metadata
+- Any element with `overflow: hidden`, `white-space: nowrap`, or `text-overflow: ellipsis`
+
+```bash
+grep -n 'overflow: hidden\|white-space: nowrap\|text-overflow: ellipsis' <component-dir>/*.css
+```
+Cross-reference matching HTML elements to confirm `title` is present.
+
+```bash
+grep -n 'class="[^"]*">[^<]*</' <component-dir>/*.html | grep -v 'title='
+```
+Flag any text-bearing elements missing a `title` attribute.
+
+### 8. Flex gap pattern
 
 Spacing between flex siblings should use `gap`, not `margin-top`/`margin-bottom` on children. Established exceptions (don't flag these):
 - `margin-bottom` on `.demo-section`
@@ -118,6 +137,9 @@ Spacing between flex siblings should use `gap`, not `margin-top`/`margin-bottom`
 
 ### Page-header structure
 ✅ Correct
+
+### Title attributes
+✅ All text elements have title attributes
 
 ### Flex gap
 ✅ Gap used correctly

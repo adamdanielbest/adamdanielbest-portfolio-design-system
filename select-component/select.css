@@ -1,0 +1,159 @@
+/*
+  Select component — built from the live Figma master component
+  (COMPONENT_SET 2695:1564), verified state by state via the Figma Plugin API.
+
+  States: default, open, filled, disabled, error.
+  Height varies by density: 40px desktop, 48px mobile (spacing/input-height).
+  Padding: 8px, same across densities (spacing/input-padding).
+
+  Both now come from the generated token CSS (synced from Figma 20 Sep 2026)
+  rather than a local fallback — see tokens-desktop.css / tokens-mobile.css.
+
+  Requires (load before this file):
+    tokens-primitives.css
+    tokens-light.css  (+ tokens-dark.css for [data-theme="dark"])
+    tokens-desktop.css (+ tokens-mobile.css for [data-density="mobile"])
+*/
+
+/* --------------------------------------------------------------------------
+   Select wrapper
+   Wraps label-row + select-field + helper-text
+   -------------------------------------------------------------------------- */
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-inline-gap);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Label row
+   -------------------------------------------------------------------------- */
+
+.select__label-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-overline-gap);
+}
+
+.select__label {
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.select__required {
+  color: var(--text-error);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line-height);
+  aria-hidden: true;
+}
+
+/* --------------------------------------------------------------------------
+   Field
+   -------------------------------------------------------------------------- */
+
+.select__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--spacing-input-height);
+  padding-inline: var(--spacing-input-padding);
+  gap: var(--spacing-input-padding);
+  background-color: var(--background-input);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+  box-sizing: border-box;
+}
+
+.select__value {
+  flex: 1;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line-height);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  user-select: none;
+}
+
+.select__icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-secondary);
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: transform 120ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   Helper text
+   -------------------------------------------------------------------------- */
+
+.select__helper {
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   State: open
+   Simulated with .select--open class for the reference sheet
+   -------------------------------------------------------------------------- */
+
+.select--open .select__field {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
+}
+
+.select--open .select__icon {
+  transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   State: filled
+   Value text switches to text/primary
+   -------------------------------------------------------------------------- */
+
+.select--filled .select__value {
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   State: disabled
+   -------------------------------------------------------------------------- */
+
+.select--disabled .select__field {
+  background-color: var(--background-disabled);
+  border-color: var(--border-subtle);
+  cursor: not-allowed;
+}
+
+.select--disabled .select__value {
+  color: var(--text-disabled);
+}
+
+.select--disabled .select__icon {
+  fill: var(--text-disabled);
+}
+
+/* --------------------------------------------------------------------------
+   State: error
+   -------------------------------------------------------------------------- */
+
+.select--error .select__field {
+  border-color: var(--border-error);
+}
+
+.select--error .select__helper {
+  color: var(--text-error);
+}
