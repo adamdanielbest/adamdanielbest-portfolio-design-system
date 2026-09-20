@@ -23,6 +23,17 @@ Primitives are raw scale values (colour ramps, spacing scale). The Light/Dark an
 
 Exported 22 June 2026, immediately after a full four-part design system audit (hardcoded-value sweep, naming consistency, WCAG AA contrast, component structural review) — see the [design system case study](https://adamdanielbest.com) for the full process writeup.
 
+## Components
+
+Coded, token-driven component pages sit alongside the tokens, each with its own README covering coverage and known simplifications against the Figma source.
+
+| Component | Status |
+|---|---|
+| Button | Built |
+| Layout | Built |
+| Select | In progress (not yet committed) |
+| Input | Not started |
+
 ## Status
 
-Tokens only, for now. A first coded component consuming these tokens (e.g. Button) is a planned next step, not yet in this repo.
+Tokens plus two coded components in this repo so far — Button and Layout, both fully token-driven with no hardcoded values. Select is built locally but not yet committed; Input hasn't been started.
