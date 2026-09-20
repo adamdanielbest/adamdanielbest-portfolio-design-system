@@ -165,7 +165,7 @@
   <div class="page-header__metadata">
     <p class="breadcrumb" title="adamdanielbest.com · Components · Input">adamdanielbest.com · Components · Input</p>
     <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
-    <p class="usage" title="Use for capturing single-line text, passwords, or search queries · Text type is plain input with no trailing icon · Password type shows a visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback">Use for capturing single-line text, passwords, or search queries · Text type is plain input with no trailing icon · Password type shows a visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback</p>
+    <p class="usage" title="Use for capturing single-line text, passwords, or search queries · Text type shows a trailing chevron by default · Password type shows an eye-slash visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback">Use for capturing single-line text, passwords, or search queries · Text type shows a trailing chevron by default · Password type shows an eye-slash visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback</p>
   </div>
 </header>
 
@@ -200,6 +200,14 @@
   });
 </script>
 
+<!--
+  SVG icon paths extracted directly from Figma component set 2687:1994.
+  All icons are fill-based (no stroke). viewBox matches Figma vector bounds.
+  Chevron: filled downward triangle (text type trailing icon).
+  Eye-slash: filled eye + diagonal slash (password trailing icon).
+  Magnifier: filled lens + handle (search leading icon).
+-->
+
 <section class="variant-card">
   <h2 class="variant-card__title">Input</h2>
   <div class="variant-card__grid">
@@ -228,6 +236,9 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, default state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z"/></svg>
+                </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
             </div>
@@ -241,6 +252,9 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, focus state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z"/></svg>
+                </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
             </div>
@@ -254,6 +268,9 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" value="User input value" aria-label="Text input, filled state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z"/></svg>
+                </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
             </div>
@@ -267,6 +284,9 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, disabled state" disabled tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z"/></svg>
+                </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
             </div>
@@ -280,6 +300,9 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, error state" aria-invalid="true" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z"/></svg>
+                </span>
               </div>
               <p class="input__helper" title="This field is required">This field is required</p>
             </div>
@@ -300,11 +323,7 @@
               <div class="input__field">
                 <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, default state" tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
-                    <circle cx="8" cy="8" r="2"/>
-                    <line x1="2" y1="2" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
@@ -320,11 +339,7 @@
               <div class="input__field">
                 <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, focus state" tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
-                    <circle cx="8" cy="8" r="2"/>
-                    <line x1="2" y1="2" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
@@ -340,11 +355,7 @@
               <div class="input__field">
                 <input class="input__value" type="password" value="password123" aria-label="Password input, filled state" tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
-                    <circle cx="8" cy="8" r="2"/>
-                    <line x1="2" y1="2" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
@@ -360,11 +371,7 @@
               <div class="input__field">
                 <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, disabled state" disabled tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
-                    <circle cx="8" cy="8" r="2"/>
-                    <line x1="2" y1="2" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
@@ -380,11 +387,7 @@
               <div class="input__field">
                 <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, error state" aria-invalid="true" tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
-                    <circle cx="8" cy="8" r="2"/>
-                    <line x1="2" y1="2" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
               </div>
               <p class="input__helper" title="Password is required">Password is required</p>
@@ -405,10 +408,7 @@
               </div>
               <div class="input__field">
                 <span class="input__leading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="6.5" cy="6.5" r="5"/>
-                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
                 </span>
                 <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, default state" tabindex="-1">
               </div>
@@ -423,10 +423,7 @@
               </div>
               <div class="input__field">
                 <span class="input__leading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="6.5" cy="6.5" r="5"/>
-                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
                 </span>
                 <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, focus state" tabindex="-1">
               </div>
@@ -441,10 +438,7 @@
               </div>
               <div class="input__field">
                 <span class="input__leading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="6.5" cy="6.5" r="5"/>
-                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
                 </span>
                 <input class="input__value" type="search" value="Search query" aria-label="Search input, filled state" tabindex="-1">
               </div>
@@ -459,10 +453,7 @@
               </div>
               <div class="input__field">
                 <span class="input__leading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="6.5" cy="6.5" r="5"/>
-                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
                 </span>
                 <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, disabled state" disabled tabindex="-1">
               </div>
@@ -477,10 +468,7 @@
               </div>
               <div class="input__field">
                 <span class="input__leading-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <circle cx="6.5" cy="6.5" r="5"/>
-                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
-                  </svg>
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
                 </span>
                 <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, error state" aria-invalid="true" tabindex="-1">
               </div>
