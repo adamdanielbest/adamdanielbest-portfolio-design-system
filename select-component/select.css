@@ -83,6 +83,7 @@
   text-overflow: ellipsis;
   pointer-events: none;
   user-select: none;
+  text-box-trim: none;
 }
 
 .select__icon {
