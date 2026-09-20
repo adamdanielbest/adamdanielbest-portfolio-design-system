@@ -183,6 +183,10 @@
     height: 9px;
     flex-shrink: 0;
     color: var(--text-primary);
+    visibility: hidden;
+  }
+  .select__option--selected .select__option-check {
+    visibility: visible;
   }
 </style>
 </head>
@@ -363,14 +367,11 @@
                 <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
               </div>
               <ul class="select__dropdown" role="listbox" aria-label="Options">
-                <li class="select__option" role="option" aria-selected="false" title="Option one">Option one</li>
-                <li class="select__option" role="option" aria-selected="false" title="Option two">Option two</li>
-                <li class="select__option select__option--hover" role="option" aria-selected="false" title="Option three">Option three</li>
-                <li class="select__option select__option--selected" role="option" aria-selected="true" title="Option four">
-                  <span title="Option four">Option four</span>
-                  <svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </li>
-                <li class="select__option" role="option" aria-selected="false" title="Option five">Option five</li>
+                <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                <li class="select__option select__option--hover" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                <li class="select__option select__option--selected" role="option" aria-selected="true" title="Option four"><span>Option four</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                <li class="select__option" role="option" aria-selected="false" title="Option five"><span>Option five</span><svg class="select__option-check" viewBox="0 0 12 9" aria-hidden="true" focusable="false"><path d="M 1 4 L 4.5 7.5 L 11 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
               </ul>
             </div>
           </td>
@@ -386,6 +387,60 @@
   document.querySelectorAll('.meta-date').forEach(el => {
     el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   });
+
+  // Interactive dropdown in the dropdown list section
+  const interactiveSelect = document.querySelector('.demo-cell--dropdown .select');
+  if (interactiveSelect) {
+    const field = interactiveSelect.querySelector('.select__field');
+    const valueEl = interactiveSelect.querySelector('.select__value');
+    const dropdown = interactiveSelect.querySelector('.select__dropdown');
+    const options = interactiveSelect.querySelectorAll('.select__option');
+
+    function openDropdown() {
+      interactiveSelect.classList.add('select--open');
+      field.setAttribute('aria-expanded', 'true');
+      dropdown.style.display = '';
+    }
+
+    function closeDropdown() {
+      interactiveSelect.classList.remove('select--open');
+      field.setAttribute('aria-expanded', 'false');
+      dropdown.style.display = 'none';
+    }
+
+    // Start closed
+    closeDropdown();
+
+    field.addEventListener('click', () => {
+      interactiveSelect.classList.contains('select--open') ? closeDropdown() : openDropdown();
+    });
+
+    field.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDropdown(); }
+      if (e.key === 'Escape') closeDropdown();
+    });
+
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const text = opt.querySelector('span') ? opt.querySelector('span').textContent : opt.textContent.trim();
+        valueEl.textContent = text;
+        valueEl.title = text;
+        options.forEach(o => {
+          o.classList.remove('select__option--selected');
+          o.setAttribute('aria-selected', 'false');
+        });
+        opt.classList.add('select__option--selected');
+        opt.setAttribute('aria-selected', 'true');
+        interactiveSelect.classList.add('select--filled');
+        closeDropdown();
+        field.focus();
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!interactiveSelect.contains(e.target)) closeDropdown();
+    });
+  }
 </script>
 
 </body>
