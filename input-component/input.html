@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components – Input – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="input.css">
+<style>
+
+  /* ---- Demo controls ---- */
+
+  .demo-controls {
+    display: flex;
+    gap: var(--spacing-stack-gap);
+    align-items: center;
+    padding: var(--spacing-component-padding);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-large);
+    background: var(--background-card);
+    margin-bottom: var(--spacing-content-gap);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .demo-controls__label {
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+  }
+  .demo-controls__divider {
+    width: 1px;
+    align-self: stretch;
+    background: var(--border-default);
+    flex-shrink: 0;
+  }
+
+  /* ---- Toggle switch ---- */
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-inline-gap);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+  }
+  .toggle__track {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: var(--radius-pill);
+    background: var(--border-default);
+    transition: background-color 150ms ease;
+  }
+  .toggle__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-pill);
+    background: var(--background-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 150ms ease;
+  }
+  .toggle[aria-checked="true"] .toggle__track {
+    background: var(--background-action-primary);
+  }
+  .toggle[aria-checked="true"] .toggle__thumb {
+    transform: translateX(16px);
+  }
+  .toggle:focus-visible .toggle__track {
+    box-shadow: 0 0 0 3px var(--border-focus);
+  }
+
+  /* ---- Variant cards ---- */
+
+  .variant-card {
+    background: var(--background-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-card-padding);
+    margin-bottom: var(--spacing-content-gap);
+  }
+  .variant-card__title {
+    font-size: var(--type-heading-3-size);
+    line-height: var(--type-heading-3-line-height);
+    font-weight: var(--type-heading-3-weight);
+    margin: 0 0 var(--spacing-row-gap) 0;
+  }
+  .variant-card__grid {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 720px;
+    margin: 0;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    padding: var(--spacing-table-cell-padding);
+    text-align: left;
+    vertical-align: top;
+  }
+  td {
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    line-height: var(--type-body-line-height);
+  }
+  tr > :last-child { border-right: none; }
+  tbody tr:last-child td { border-bottom: none; }
+  th, td:first-child {
+    background: var(--background-page);
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+    vertical-align: middle;
+  }
+  td.demo-cell {
+    min-width: 180px;
+  }
+</style>
+</head>
+<body>
+
+<script>
+  fetch('../src/icons/sprite.svg')
+    .then(r => r.text())
+    .then(svg => {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.setAttribute('aria-hidden', 'true');
+      div.innerHTML = svg;
+      document.body.insertBefore(div, document.body.firstChild);
+    });
+</script>
+
+<div class="container">
+
+<header class="page-header">
+  <h1>Input</h1>
+  <hr class="page-header__divider">
+  <div class="page-header__metadata">
+    <p class="breadcrumb" title="adamdanielbest.com · Components · Input">adamdanielbest.com · Components · Input</p>
+    <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage" title="Use for capturing single-line text, passwords, or search queries · Text type is plain input with no trailing icon · Password type shows a visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback">Use for capturing single-line text, passwords, or search queries · Text type is plain input with no trailing icon · Password type shows a visibility-toggle icon · Search type shows a leading magnifier icon · Error state pairs with helper text for validation feedback</p>
+  </div>
+</header>
+
+<div class="demo-controls">
+  <span class="demo-controls__label">Demo controls</span>
+  <span class="demo-controls__divider" aria-hidden="true"></span>
+  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="false">
+    <span class="toggle__track"><span class="toggle__thumb"></span></span>
+    <span class="toggle__text" id="theme-toggle-label">Light mode</span>
+  </button>
+  <button type="button" class="toggle" id="density-toggle" role="switch" aria-checked="false">
+    <span class="toggle__track"><span class="toggle__thumb"></span></span>
+    <span class="toggle__text">Mobile density</span>
+  </button>
+</div>
+
+<script>
+  function wireToggle(id, onChange) {
+    const el = document.getElementById(id);
+    el.addEventListener('click', () => {
+      const next = el.getAttribute('aria-checked') !== 'true';
+      el.setAttribute('aria-checked', String(next));
+      onChange(next);
+    });
+  }
+  wireToggle('theme-toggle', (on) => {
+    document.documentElement.dataset.theme = on ? 'dark' : '';
+    document.getElementById('theme-toggle-label').textContent = on ? 'Dark mode' : 'Light mode';
+  });
+  wireToggle('density-toggle', (on) => {
+    document.documentElement.dataset.density = on ? 'mobile' : '';
+  });
+</script>
+
+<section class="variant-card">
+  <h2 class="variant-card__title">Input</h2>
+  <div class="variant-card__grid">
+    <table>
+      <thead>
+        <tr>
+          <th title="Variant">Variant</th>
+          <th title="Default">Default</th>
+          <th title="Focus">Focus</th>
+          <th title="Filled">Filled</th>
+          <th title="Disabled">Disabled</th>
+          <th title="Error">Error</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- ── Text ── -->
+        <tr>
+          <td title="Text">Text</td>
+
+          <!-- Text / Default -->
+          <td class="demo-cell">
+            <div class="input input--text">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, default state" tabindex="-1">
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Text / Focus -->
+          <td class="demo-cell">
+            <div class="input input--text input--focus">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, focus state" tabindex="-1">
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Text / Filled -->
+          <td class="demo-cell">
+            <div class="input input--text input--filled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" value="User input value" aria-label="Text input, filled state" tabindex="-1">
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Text / Disabled -->
+          <td class="demo-cell">
+            <div class="input input--text input--disabled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, disabled state" disabled tabindex="-1">
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Text / Error -->
+          <td class="demo-cell">
+            <div class="input input--text input--error">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, error state" aria-invalid="true" tabindex="-1">
+              </div>
+              <p class="input__helper" title="This field is required">This field is required</p>
+            </div>
+          </td>
+
+        </tr>
+
+        <!-- ── Password ── -->
+        <tr>
+          <td title="Password">Password</td>
+
+          <!-- Password / Default -->
+          <td class="demo-cell">
+            <div class="input input--password">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, default state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
+                    <circle cx="8" cy="8" r="2"/>
+                    <line x1="2" y1="2" x2="14" y2="14"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Password / Focus -->
+          <td class="demo-cell">
+            <div class="input input--password input--focus">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, focus state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
+                    <circle cx="8" cy="8" r="2"/>
+                    <line x1="2" y1="2" x2="14" y2="14"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Password / Filled -->
+          <td class="demo-cell">
+            <div class="input input--password input--filled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" value="password123" aria-label="Password input, filled state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
+                    <circle cx="8" cy="8" r="2"/>
+                    <line x1="2" y1="2" x2="14" y2="14"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Password / Disabled -->
+          <td class="demo-cell">
+            <div class="input input--password input--disabled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, disabled state" disabled tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
+                    <circle cx="8" cy="8" r="2"/>
+                    <line x1="2" y1="2" x2="14" y2="14"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Password / Error -->
+          <td class="demo-cell">
+            <div class="input input--password input--error">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, error state" aria-invalid="true" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M1 8C1 8 3.5 3.5 8 3.5S15 8 15 8s-2.5 4.5-7 4.5S1 8 1 8z"/>
+                    <circle cx="8" cy="8" r="2"/>
+                    <line x1="2" y1="2" x2="14" y2="14"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Password is required">Password is required</p>
+            </div>
+          </td>
+
+        </tr>
+
+        <!-- ── Search ── -->
+        <tr>
+          <td title="Search">Search</td>
+
+          <!-- Search / Default -->
+          <td class="demo-cell">
+            <div class="input input--search">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="6.5" cy="6.5" r="5"/>
+                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
+                  </svg>
+                </span>
+                <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, default state" tabindex="-1">
+              </div>
+            </div>
+          </td>
+
+          <!-- Search / Focus -->
+          <td class="demo-cell">
+            <div class="input input--search input--focus">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="6.5" cy="6.5" r="5"/>
+                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
+                  </svg>
+                </span>
+                <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, focus state" tabindex="-1">
+              </div>
+            </div>
+          </td>
+
+          <!-- Search / Filled -->
+          <td class="demo-cell">
+            <div class="input input--search input--filled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="6.5" cy="6.5" r="5"/>
+                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
+                  </svg>
+                </span>
+                <input class="input__value" type="search" value="Search query" aria-label="Search input, filled state" tabindex="-1">
+              </div>
+            </div>
+          </td>
+
+          <!-- Search / Disabled -->
+          <td class="demo-cell">
+            <div class="input input--search input--disabled">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="6.5" cy="6.5" r="5"/>
+                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
+                  </svg>
+                </span>
+                <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, disabled state" disabled tabindex="-1">
+              </div>
+            </div>
+          </td>
+
+          <!-- Search / Error -->
+          <td class="demo-cell">
+            <div class="input input--search input--error">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="6.5" cy="6.5" r="5"/>
+                    <line x1="10.5" y1="10.5" x2="14" y2="14"/>
+                  </svg>
+                </span>
+                <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, error state" aria-invalid="true" tabindex="-1">
+              </div>
+            </div>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</div><!-- /.container -->
+
+<script>
+  document.querySelectorAll('.meta-date').forEach(el => {
+    el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  });
+</script>
+
+</body>
+</html>

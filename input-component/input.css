@@ -1,0 +1,187 @@
+/*
+  Input component — built from the live Figma master component
+  (COMPONENT_SET 2687:1994), verified state by state via the Figma Plugin API.
+
+  Types: text, password, search.
+  States: default, focus, filled, disabled, error.
+  Height varies by density: 40px desktop, 48px mobile (spacing/input-height).
+  Padding: 8px, same across densities (spacing/input-padding).
+
+  Both now come from the generated token CSS (synced from Figma 20 Sep 2026)
+  rather than a local fallback — see tokens-desktop.css / tokens-mobile.css.
+
+  Requires (load before this file):
+    tokens-primitives.css
+    tokens-light.css  (+ tokens-dark.css for [data-theme="dark"])
+    tokens-desktop.css (+ tokens-mobile.css for [data-density="mobile"])
+*/
+
+/* --------------------------------------------------------------------------
+   Input wrapper
+   Wraps label-row + input-field + helper-text
+   -------------------------------------------------------------------------- */
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-inline-gap);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Label row
+   -------------------------------------------------------------------------- */
+
+.input__label-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-overline-gap);
+}
+
+.input__label {
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.input__required {
+  color: var(--text-error);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line-height);
+  aria-hidden: true;
+}
+
+/* --------------------------------------------------------------------------
+   Field
+   -------------------------------------------------------------------------- */
+
+.input__field {
+  display: flex;
+  align-items: center;
+  height: var(--spacing-input-height);
+  padding-inline: var(--spacing-input-padding);
+  gap: var(--spacing-input-padding);
+  background-color: var(--background-input);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-small);
+  cursor: text;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+  box-sizing: border-box;
+}
+
+/* Native input element — reset all browser defaults */
+.input__value {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line-height);
+  color: var(--text-tertiary);
+  cursor: inherit;
+}
+
+.input__value::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+/* Remove the native search cancel button */
+.input__value[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Icons
+   -------------------------------------------------------------------------- */
+
+.input__leading-icon,
+.input__trailing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.input__leading-icon svg,
+.input__trailing-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Helper text
+   -------------------------------------------------------------------------- */
+
+.input__helper {
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   State: focus
+   Simulated with .input--focus class for the reference sheet;
+   also fires on real keyboard focus via :focus-within
+   -------------------------------------------------------------------------- */
+
+.input--focus .input__field,
+.input__field:focus-within {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   State: filled
+   Value text switches to text/primary
+   -------------------------------------------------------------------------- */
+
+.input--filled .input__value {
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   State: disabled
+   -------------------------------------------------------------------------- */
+
+.input--disabled .input__field {
+  background-color: var(--background-disabled);
+  border-color: var(--border-subtle);
+  cursor: not-allowed;
+}
+
+.input--disabled .input__value {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+.input--disabled .input__leading-icon,
+.input--disabled .input__trailing-icon {
+  color: var(--text-disabled);
+}
+
+/* --------------------------------------------------------------------------
+   State: error
+   -------------------------------------------------------------------------- */
+
+.input--error .input__field {
+  border-color: var(--border-error);
+}
+
+.input--error .input__helper {
+  color: var(--text-error);
+}
