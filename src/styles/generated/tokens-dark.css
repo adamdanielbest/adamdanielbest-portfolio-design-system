@@ -37,6 +37,7 @@
   --background-elevated: #1B2537;
   /* Error background — dark red tint. */
   --background-error: #4C0519;
+  --background-hover: #2E2E2E;
   /* Info background — dark cobalt tint. Aliases brand. */
   --background-info: #0D1117;
   /* Form inputs — same as card in dark mode. */
@@ -47,6 +48,7 @@
   --background-overlay: #00000080;
   /* Page background — near-black blue-grey. Reduces eye strain in low light. */
   --background-page: #0D1117;
+  --background-selected: #4A4A4A;
   /* Success background — dark green tint. */
   --background-success: #052E16;
   /* Warning background — dark amber tint. */
@@ -100,6 +102,7 @@
   --text-on-danger: #121212;
   /* Body copy in dark mode — Off White. Maximum contrast against dark surfaces. */
   --text-primary: #FAF9F6;
+  --text-required: #FB7185;
   /* Secondary text — muted but readable. Timestamps, tags, metadata. */
   --text-secondary: #ABABAB;
   /* Success text and icons in dark mode. */

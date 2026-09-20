@@ -35,11 +35,13 @@
   --spacing-group-gap: 48px;
   /* Icon + label. 8px both viewports. */
   --spacing-inline-gap: 8px;
+  --spacing-input-height: 48px;
   --spacing-list-gap: 2px;
   --spacing-overline-gap: 4px;
   /* Inner container padding. 16px mobile. */
   --spacing-page-margin-x: 16px;
   --spacing-page-margin-y: 40px;
+  --spacing-panel-padding: 4px;
   /* Between paragraphs. 16px mobile. */
   --spacing-paragraph-gap: 16px;
   /* Sibling row elements. 16px mobile. */

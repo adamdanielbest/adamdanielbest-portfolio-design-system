@@ -37,6 +37,7 @@
   --background-elevated: #FFFFFF;
   /* Error background — validation errors, destructive actions. */
   --background-error: #FFF1F2;
+  --background-hover: #F0EFEC;
   /* Info background — neutral informational banners. Aliases brand. */
   --background-info: #F0F6FA;
   /* Form inputs, selects, textareas. */
@@ -47,6 +48,7 @@
   --background-overlay: #0000007A;
   /* Page background — Off White outermost surface. */
   --background-page: #FAF9F6;
+  --background-selected: #E8E8E8;
   /* Success background — confirmation banners, success toasts. */
   --background-success: #F0FDF4;
   /* Warning background — caution banners, advisory states. */
@@ -54,7 +56,7 @@
   --border-action: #081527;
   --border-action-secondary: #000000;
   --border-action-secondary-hover: #000000;
-  --border-action-secondary-pressed: #888888;
+  --border-action-secondary-pressed: #ABABAB;
   /* Brand-coloured border — cobalt edges for callouts, selected tags. */
   --border-brand: #88B0CD;
   --border-danger: #4C0519;
@@ -100,6 +102,7 @@
   --text-on-danger: #FFFFFF;
   /* Body copy and long-form reading text. Highest contrast. Pairs with background/page. */
   --text-primary: #121212;
+  --text-required: #E11D48;
   /* Timestamps, project tags, secondary labels. */
   --text-secondary: #666666;
   /* Success text and icons — confirmation messages. */

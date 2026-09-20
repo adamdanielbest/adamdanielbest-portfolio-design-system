@@ -35,12 +35,15 @@
   --spacing-group-gap: 48px;
   /* Between inline elements — icon + label. 8px both. */
   --spacing-inline-gap: 8px;
+  --spacing-input-height: 40px;
+  --spacing-input-padding: 8px;
   --spacing-list-gap: 2px;
   /* Between inline elements — icon + label. 8px both. */
   --spacing-overline-gap: 4px;
   /* Inner padding of the max-width container. 32px desktop. */
   --spacing-page-margin-x: 32px;
   --spacing-page-margin-y: 80px;
+  --spacing-panel-padding: 4px;
   /* Between body paragraphs. 24px desktop. */
   --spacing-paragraph-gap: 24px;
   /* Between sibling elements in a row. 16px desktop. */
