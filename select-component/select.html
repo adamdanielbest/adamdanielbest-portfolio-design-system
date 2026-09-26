@@ -104,6 +104,24 @@
     font-weight: var(--type-heading-3-weight);
     margin: 0 0 var(--spacing-row-gap) 0;
   }
+  .variant-card__demo {
+    margin-top: var(--spacing-card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-inline-gap);
+  }
+  .variant-card__demo .overline {
+    margin-bottom: var(--spacing-row-gap);
+  }
+  .overline {
+    font-size: var(--type-overline-size);
+    font-weight: var(--type-overline-weight);
+    line-height: var(--type-overline-line-height);
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-accent);
+    text-transform: uppercase;
+    margin: 0;
+  }
   .variant-card__grid {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-medium);
@@ -112,7 +130,7 @@
   table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 960px;
+    min-width: 1120px;
     margin: 0;
   }
   th, td {
@@ -139,58 +157,11 @@
   }
   td.demo-cell {
     min-width: 180px;
-  }
-  td.demo-cell--dropdown {
-    min-width: 280px;
-    vertical-align: top;
-    padding-bottom: calc(var(--spacing-table-cell-padding) + 240px);
+    max-width: 320px;
+    width: 320px;
   }
 
-  /* Dropdown list */
-  .select__dropdown {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 0;
-    right: 0;
-    background-color: var(--background-card);
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-small);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    list-style: none;
-    margin: 0;
-    padding: 4px 0;
-    z-index: 10;
-  }
-  .select__option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-inline-gap);
-    padding: 10px var(--spacing-input-padding);
-    font-size: var(--type-body-size);
-    font-weight: var(--type-body-weight);
-    line-height: var(--type-body-line-height);
-    color: var(--text-primary);
-    cursor: pointer;
-    user-select: none;
-  }
-  .select__option:hover,
-  .select__option--hover {
-    background-color: var(--background-hover);
-  }
-  .select__option--selected {
-    background-color: var(--background-selected);
-  }
-  .select__option-check {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    color: var(--border-default);
-    fill: currentColor;
-  }
-  .select__option--selected .select__option-check {
-    color: var(--border-action-secondary);
-  }
+
 </style>
 </head>
 <body>
@@ -257,6 +228,7 @@
         <tr>
           <th title="Size">Size</th>
           <th title="Default">Default</th>
+          <th title="Hover">Hover</th>
           <th title="Open">Open</th>
           <th title="Filled">Filled</th>
           <th title="Disabled">Disabled</th>
@@ -270,6 +242,21 @@
           <!-- Default -->
           <td class="demo-cell">
             <div class="select">
+              <div class="select__label-row">
+                <span class="select__label" title="Label">Label</span>
+                <span class="select__required" aria-hidden="true" title="Required">*</span>
+              </div>
+              <div class="select__field" role="combobox" aria-expanded="false" tabindex="0">
+                <span class="select__value" title="Select option...">Select option...</span>
+                <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
+              </div>
+              <p class="select__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Hover -->
+          <td class="demo-cell">
+            <div class="select select--hover">
               <div class="select__label-row">
                 <span class="select__label" title="Label">Label</span>
                 <span class="select__required" aria-hidden="true" title="Required">*</span>
@@ -346,44 +333,29 @@
       </tbody>
     </table>
   </div>
-</section>
 
-<section class="variant-card">
-  <div class="variant-card__grid">
-    <table>
-      <thead>
-        <tr>
-          <th title=""></th>
-          <th title="Open">Open</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td title="Dropdown list">Dropdown list</td>
-          <td class="demo-cell demo-cell--dropdown">
-            <div class="select select--open" style="position: relative;">
-              <div class="select__label-row">
-                <span class="select__label" title="Label">Label</span>
-                <span class="select__required" aria-hidden="true" title="Required"> *</span>
-              </div>
-              <div class="select__field" role="combobox" aria-expanded="true" aria-haspopup="listbox" tabindex="0">
-                <span class="select__value" title="Select option...">Select option...</span>
-                <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
-              </div>
-              <ul class="select__dropdown" role="listbox" aria-label="Options" aria-multiselectable="true">
-                <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
-                <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
-                <li class="select__option select__option--hover" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
-                <li class="select__option select__option--selected" role="option" aria-selected="true" title="Option four"><span>Option four</span><svg class="select__option-check select__option-check--checked" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg></li>
-                <li class="select__option" role="option" aria-selected="false" title="Option five"><span>Option five</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
-              </ul>
-              <p class="select__helper" title="Helper text">Helper text</p>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="variant-card__demo">
+    <p class="overline">Demo</p>
+    <div class="select" style="max-width: 320px;">
+      <div class="select__label-row">
+        <span class="select__label" title="Label">Label</span>
+        <span class="select__required" aria-hidden="true" title="Required"> *</span>
+      </div>
+      <div class="select__field" role="combobox" aria-expanded="false" aria-haspopup="listbox" tabindex="0" style="position: relative;">
+        <span class="select__value" title="Select option...">Select option...</span>
+        <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
+        <ul class="select__dropdown" role="listbox" aria-label="Options" aria-multiselectable="true">
+          <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
+          <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
+          <li class="select__option" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
+          <li class="select__option" role="option" aria-selected="false" title="Option four"><span>Option four</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
+          <li class="select__option" role="option" aria-selected="false" title="Option five"><span>Option five</span><svg class="select__option-check" viewBox="0 0 49 48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg></li>
+        </ul>
+      </div>
+      <p class="select__helper" title="Helper text">Helper text</p>
+    </div>
   </div>
+
 </section>
 
 </div><!-- /.container -->
@@ -394,7 +366,7 @@
   });
 
   // Interactive dropdown in the dropdown list section
-  const interactiveSelect = document.querySelector('.demo-cell--dropdown .select');
+  const interactiveSelect = document.querySelector('.variant-card__demo .select');
   if (interactiveSelect) {
     const field = interactiveSelect.querySelector('.select__field');
     const valueEl = interactiveSelect.querySelector('.select__value');
@@ -425,6 +397,17 @@
       if (e.key === 'Escape') closeDropdown();
     });
 
+    function updateFieldValue() {
+      const selected = [...options].filter(o => o.classList.contains('select__option--selected'));
+      if (selected.length > 0) {
+        valueEl.textContent = selected.map(o => o.querySelector('span').textContent).join(', ');
+        interactiveSelect.classList.add('select--filled');
+      } else {
+        valueEl.textContent = 'Select option...';
+        interactiveSelect.classList.remove('select--filled');
+      }
+    }
+
     options.forEach(opt => {
       opt.addEventListener('click', e => {
         e.stopPropagation();
@@ -434,8 +417,12 @@
         const useEl = opt.querySelector('.select__option-check use');
         if (useEl) useEl.setAttribute('href', isSelected ? '#icon-check-box' : '#icon-check-box-checked');
         opt.querySelector('.select__option-check').classList.toggle('select__option-check--checked', !isSelected);
+        updateFieldValue();
       });
     });
+
+    // Initialise value from any pre-selected options
+    updateFieldValue();
 
     document.addEventListener('click', e => {
       if (!interactiveSelect.contains(e.target)) closeDropdown();

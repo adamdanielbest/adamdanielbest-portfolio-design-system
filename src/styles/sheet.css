@@ -17,6 +17,12 @@ body {
   padding-block: var(--spacing-page-margin-y);
 }
 
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent),
+              0 0 0 1.5px var(--border-focus);
+}
+
 h1, h2, h3, h4, h5, h6,
 p, span, a, li, dt, dd,
 code, pre, label, caption,

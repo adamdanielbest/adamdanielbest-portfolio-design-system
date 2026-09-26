@@ -81,6 +81,34 @@
 
 ---
 
+## 23 Sep 2026 — adamdanielbest Design System
+
+### Decisions & key learnings
+
+**Checkbox icon colour**
+Changed selected-state checkmark from `--background-action-primary` (blue) to `--text-primary`. Reason: the blue read as an accent colour rather than a confirmation mark, and `--text-primary` adapts correctly across light and dark without extra overrides.
+
+**Global focus ring**
+Applied the box-shadow focus style from the open-state select to all focusable elements via a global `:focus-visible` rule in `sheet.css`. Uses `color-mix(in srgb, var(--border-focus) 20%, transparent)` for the soft halo and `0 0 0 1.5px var(--border-focus)` for the inner solid ring. Browser default outline suppressed. `.select--open .select__field` has higher specificity so its existing box-shadow still wins for that state (identical style, no visual difference).
+
+**Dark prototype limitation — deferred**
+The dark select demo in Figma can't display dark mode in prototype preview. Root cause: Figma's prototype player renders a component's own variable fills directly — it ignores instance-level overrides. The open-state component (`2695:1536`) has all fills bound to the light collection (`VariableCollectionId:2612:3610`). No dark mode exists within that collection, so there's nothing to switch to.
+- NAVIGATE approach rejected — navigates to a separate page, breaking the style guide sheet context.
+- Solution: add dark variants to the component set (~30–45 min effort, 6 states × dark variable IDs). Deferred.
+- For now: removed all prototype reactions from the dark demo instance.
+
+**Figma NAVIGATE constraint**
+Navigate destinations must be top-level frames on the same page. Frames nested inside auto-layout containers cannot be Navigate targets — Figma rejects with "destination must be a different top-level frame."
+
+**Open state border appearance**
+Border is 1px on all states — no actual width difference. Open state reads heavier because the colour shifts from `--border-default` (neutral grey) to `--border-focus` (cobalt) and the 3px outer halo box-shadow sits outside. Deliberate visual hierarchy.
+
+### Next session
+- Build dark variants of the Select component set for dark mode prototype support (6 states × dark variable IDs)
+- Consider same for Input component dark demos
+
+---
+
 ## 10 Jul 2026 — adamdanielbest Design System
 
 ### What changed

@@ -104,6 +104,67 @@
     font-weight: var(--type-heading-3-weight);
     margin: 0 0 var(--spacing-row-gap) 0;
   }
+  .variant-card__demo {
+    margin-top: var(--spacing-card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-inline-gap);
+  }
+  .variant-card__demo .overline {
+    margin-bottom: var(--spacing-row-gap);
+  }
+  .demo-type-picker-wrapper {
+    margin-top: var(--spacing-content-gap);
+  }
+  .demo-type-picker {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-inline-gap);
+  }
+  .demo-type-picker__legend {
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-secondary);
+    padding: 0;
+    margin-bottom: var(--spacing-row-gap);
+  }
+  .demo-type-picker__options {
+    display: flex;
+    gap: var(--spacing-stack-gap);
+  }
+  .radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-overline-gap);
+    cursor: pointer;
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+    user-select: none;
+  }
+  .radio-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .radio-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    fill: currentColor;
+  }
+  .radio-icon--checked { display: none; }
+  .radio-option input[type="radio"]:checked ~ .radio-icon--unchecked { display: none; }
+  .radio-option input[type="radio"]:checked ~ .radio-icon--checked {
+    display: inline-block;
+    color: var(--text-primary);
+  }
   .variant-card__grid {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-medium);
@@ -140,6 +201,8 @@
   }
   td.demo-cell {
     min-width: 180px;
+    max-width: 320px;
+    width: 320px;
   }
 </style>
 </head>
@@ -215,6 +278,7 @@
         <tr>
           <th></th>
           <th title="Default">Default</th>
+          <th title="Hover">Hover</th>
           <th title="Focus">Focus</th>
           <th title="Filled">Filled</th>
           <th title="Disabled">Disabled</th>
@@ -235,6 +299,19 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, default state" tabindex="-1">
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Text / Hover -->
+          <td class="demo-cell">
+            <div class="input input--text input--hover">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Text input, hover state" tabindex="-1">
               </div>
               <p class="input__helper" title="Helper text">Helper text</p>
             </div>
@@ -306,6 +383,22 @@
               </div>
               <div class="input__field">
                 <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, default state" tabindex="-1">
+                <span class="input__trailing-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
+                </span>
+              </div>
+              <p class="input__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Password / Hover -->
+          <td class="demo-cell">
+            <div class="input input--password input--hover">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <input class="input__value" type="password" placeholder="••••••" aria-label="Password input, hover state" tabindex="-1">
                 <span class="input__trailing-icon" aria-hidden="true">
                   <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
                 </span>
@@ -399,6 +492,21 @@
             </div>
           </td>
 
+          <!-- Search / Hover -->
+          <td class="demo-cell">
+            <div class="input input--search input--hover">
+              <div class="input__label-row">
+                <span class="input__label" title="Label">Label</span>
+              </div>
+              <div class="input__field">
+                <span class="input__leading-icon" aria-hidden="true">
+                  <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
+                </span>
+                <input class="input__value" type="search" placeholder="Search..." aria-label="Search input, hover state" tabindex="-1">
+              </div>
+            </div>
+          </td>
+
           <!-- Search / Focus -->
           <td class="demo-cell">
             <div class="input input--search input--focus">
@@ -464,6 +572,51 @@
       </tbody>
     </table>
   </div>
+  <div class="variant-card__demo">
+    <p class="overline">Demo</p>
+    <div class="input input--text" id="demo-input" style="max-width: 320px;">
+      <div class="input__label-row">
+        <span class="input__label" title="Label">Label</span>
+        <span class="input__required" aria-hidden="true" title="Required"> *</span>
+      </div>
+      <div class="input__field" id="demo-input-field">
+        <span class="input__leading-icon" id="demo-leading-icon" aria-hidden="true" style="display:none;">
+          <svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>
+        </span>
+        <input class="input__value" type="text" placeholder="Placeholder text" aria-label="Demo text input" id="demo-input-value">
+        <span class="input__trailing-icon" id="demo-trailing-icon" aria-hidden="true" style="display:none;">
+          <svg viewBox="0 0 16 13.825" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 8.004 2.91 C 10.012 2.91 11.642 4.54 11.642 6.548 C 11.642 7.021 11.547 7.465 11.38 7.88 L 13.504 10.005 C 14.603 9.088 15.469 7.902 16 6.548 C 14.741 3.354 11.634 1.091 7.996 1.091 C 6.978 1.091 6.003 1.273 5.101 1.601 L 6.672 3.172 C 7.087 3.005 7.531 2.91 8.004 2.91 Z M 0.728 0.924 L 2.387 2.583 L 2.721 2.918 C 1.513 3.856 0.568 5.108 0 6.548 C 1.259 9.743 4.366 12.005 8.004 12.005 C 9.131 12.005 10.208 11.787 11.191 11.394 L 11.496 11.7 L 13.628 13.824 L 14.552 12.9 L 1.652 0 L 0.728 0.924 Z M 4.751 4.948 L 5.879 6.075 C 5.843 6.228 5.821 6.388 5.821 6.548 C 5.821 7.756 6.796 8.731 8.004 8.731 C 8.164 8.731 8.324 8.709 8.477 8.673 L 9.604 9.801 C 9.117 10.041 8.578 10.186 8.004 10.186 C 5.995 10.186 4.366 8.557 4.366 6.548 C 4.366 5.974 4.511 5.435 4.751 4.948 Z M 7.887 4.38 L 10.179 6.672 L 10.194 6.556 C 10.194 5.348 9.219 4.373 8.011 4.373 L 7.887 4.38 Z"/></svg>
+        </span>
+      </div>
+      <p class="input__helper" title="Helper text">Helper text</p>
+    </div>
+    <div class="demo-type-picker-wrapper">
+    <fieldset class="demo-type-picker" style="border:none;padding:0;margin:0;">
+      <legend class="demo-type-picker__legend">Type</legend>
+      <div class="demo-type-picker__options">
+        <label class="radio-option">
+          <input type="radio" name="demo-variant" value="text" checked>
+          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
+          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
+          Text
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="demo-variant" value="password">
+          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
+          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
+          Password
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="demo-variant" value="search">
+          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
+          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
+          Search
+        </label>
+      </div>
+    </fieldset>
+    </div>
+  </div>
+
 </section>
 
 </div><!-- /.container -->
@@ -472,6 +625,49 @@
   document.querySelectorAll('.meta-date').forEach(el => {
     el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   });
+
+  // Interactive demo input — reflect focus/filled/hover states live
+  const demoInput = document.getElementById('demo-input');
+  const demoField = document.getElementById('demo-input-field');
+  const demoValue = document.getElementById('demo-input-value');
+  const demoLeading = document.getElementById('demo-leading-icon');
+  const demoTrailing = document.getElementById('demo-trailing-icon');
+
+  function applyVariant(variant) {
+    demoInput.classList.remove('input--text', 'input--password', 'input--search');
+    demoInput.classList.add('input--' + variant);
+    demoLeading.style.display = variant === 'search' ? '' : 'none';
+    demoTrailing.style.display = variant === 'password' ? '' : 'none';
+    demoValue.type = variant === 'search' ? 'search' : variant === 'password' ? 'password' : 'text';
+    demoValue.placeholder = variant === 'search' ? 'Search...' : variant === 'password' ? '••••••' : 'Placeholder text';
+    demoValue.setAttribute('aria-label', 'Demo ' + variant + ' input');
+    demoInput.classList.remove('input--filled');
+    demoValue.value = '';
+  }
+
+  document.querySelectorAll('input[name="demo-variant"]').forEach(radio => {
+    radio.addEventListener('change', () => applyVariant(radio.value));
+  });
+
+  if (demoInput && demoValue) {
+    demoValue.addEventListener('focus', () => {
+      demoInput.classList.add('input--focus');
+    });
+    demoValue.addEventListener('blur', () => {
+      demoInput.classList.remove('input--focus');
+    });
+    demoValue.addEventListener('input', () => {
+      demoInput.classList.toggle('input--filled', demoValue.value.length > 0);
+    });
+    demoField.addEventListener('mouseenter', () => {
+      if (!demoInput.classList.contains('input--focus')) {
+        demoInput.classList.add('input--hover');
+      }
+    });
+    demoField.addEventListener('mouseleave', () => {
+      demoInput.classList.remove('input--hover');
+    });
+  }
 </script>
 
 </body>
