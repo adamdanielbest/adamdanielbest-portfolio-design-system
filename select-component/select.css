@@ -74,6 +74,7 @@
 
 .select__value {
   flex: 1;
+  min-width: 0;
   font-size: var(--type-body-size);
   font-weight: var(--type-body-weight);
   line-height: var(--type-body-line-height);
@@ -92,7 +93,7 @@
   fill: var(--text-secondary);
   flex-shrink: 0;
   pointer-events: none;
-  transition: transform 120ms ease;
+  transition: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -104,6 +105,16 @@
   line-height: var(--type-caption-line-height);
   color: var(--text-tertiary);
   margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   State: hover
+   -------------------------------------------------------------------------- */
+
+.select:not(.select--open):not(.select--disabled) .select__field:hover,
+.select--hover .select__field {
+  background-color: var(--background-hover);
+  border-color: var(--border-action-secondary-hover);
 }
 
 /* --------------------------------------------------------------------------
@@ -157,4 +168,67 @@
 
 .select--error .select__helper {
   color: var(--text-error);
+}
+
+/* --------------------------------------------------------------------------
+   Dropdown list
+   -------------------------------------------------------------------------- */
+
+.select__dropdown {
+  position: absolute;
+  top: calc(100% + var(--spacing-inline-gap));
+  left: 0;
+  right: 0;
+  background-color: var(--background-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-small);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10;
+}
+
+[data-theme="dark"] .select__dropdown {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-inline-gap);
+  padding: var(--spacing-inline-gap) var(--spacing-input-padding);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--radius-small);
+  text-box-trim: none;
+}
+
+.select__option span {
+  text-box-trim: none !important;
+  text-box-edge: auto !important;
+}
+
+.select__option:hover {
+  background-color: var(--background-hover);
+}
+
+.select__option--selected {
+  background-color: var(--background-selected);
+}
+
+.select__option-check {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--text-primary);
+  fill: currentColor;
 }
