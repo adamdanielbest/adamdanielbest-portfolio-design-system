@@ -1,178 +1,116 @@
+/* ==========================================================================
+   PRIMITIVE TOKENS — internal reference only
+   Do not use these directly in component stylesheets.
+   Always reference semantic tokens (tokens-light/dark, tokens-desktop/mobile).
+   ========================================================================== */
+
 :root {
-  --amber-100: #FEF3C7;
-  --amber-200: #FDE68A;
-  --amber-300: #FCD34D;
-  --amber-400: #FBBF24;
-  --amber-50: #FFFBEB;
-  /* Primary warning — icons and backgrounds */
-  --amber-500: #F59E0B;
-  --amber-600: #D97706;
-  /* Warning text — 4.5:1 on white, AA */
-  --amber-700: #B45309;
-  --amber-800: #92400E;
-  --amber-900: #78350F;
-  --amber-950: #451A03;
-  /* Secondary text, Granite */
-  --brand-cobalt: #3A73A0;
-  /* Secondary text, Granite */
-  --brand-granite-grey: #666666;
-  /* Primary text, near-black */
-  --brand-off-black: #121212;
-  /* Page background, near-white surface */
-  --brand-off-white: #FAF9F6;
-  /* Borders, dividers, Platinum */
-  --brand-platinum-grey: #E8E8E8;
-  /* Very light cobalt */
-  --cobalt-100: #D9ECF7;
-  /* Light cobalt */
-  --cobalt-200: #B8D8ED;
-  /* Light Cobalt Blue — brand colour, decorative use */
-  --cobalt-300: #88B0CD;
-  /* Medium cobalt */
-  --cobalt-400: #5C91B5;
-  /* Lightest cobalt tint */
-  --cobalt-50: #F0F6FA;
-  /* Interactive cobalt — primary actions (5.3:1 on white, AA) */
-  --cobalt-500: #3A73A0;
-  /* Dark cobalt — hover states */
-  --cobalt-600: #2D5C82;
-  /* Deeper cobalt — pressed states */
-  --cobalt-700: #224868;
-  /* Very dark cobalt */
-  --cobalt-800: #193651;
-  /* Near-black cobalt */
-  --cobalt-900: #10243A;
-  /* Deepest cobalt */
-  --cobalt-950: #081527;
-  --family-bold: Eina04-Bold;
-  /* Primary typeface — all text across portfolio */
-  --family-primary: Eina04;
-  --family-semibold: Eina04-SemiBold;
-  --green-100: #DCFCE7;
-  --green-200: #BBF7D0;
-  --green-300: #86EFAC;
-  --green-400: #4ADE80;
-  --green-50: #F0FDF4;
-  /* Primary success — icons and backgrounds */
-  --green-500: #22C55E;
-  /* Success text — 4.5:1 on white, AA */
-  --green-600: #16A34A;
-  --green-700: #15803D;
-  --green-800: #166534;
-  --green-900: #14532D;
-  --green-950: #052E16;
-  /* Pure white */
-  --neutral-0: #FFFFFF;
-  /* Near-white surface */
-  --neutral-100: #F0EFEC;
-  /* Pure black */
-  --neutral-1000: #000000;
-  /* Platinum Grey — light surface and borders */
-  --neutral-200: #E8E8E8;
-  /* Light divider */
-  --neutral-300: #D4D4D4;
-  /* Placeholder text, muted icons */
-  --neutral-400: #ABABAB;
-  /* Off White — brand warm near-white */
-  --neutral-50: #FAF9F6;
-  /* Mid-grey */
-  --neutral-500: #888888;
-  --neutral-550: #737373;
-  /* Granite Grey — secondary text */
-  --neutral-600: #666666;
-  /* Strong secondary foreground */
-  --neutral-700: #4A4A4A;
-  /* Near-dark foreground */
-  --neutral-800: #2E2E2E;
-  /* Almost black */
-  --neutral-900: #1A1A1A;
-  /* Off Black — brand near-black */
-  --neutral-950: #121212;
-  /* Deepest nested — tags, chips, indicators */
-  --radius-100: 4px;
-  /* Parent level — buttons, inputs, tooltips */
-  --radius-200: 8px;
-  /* Grandparent — project cards, thumbnails */
-  --radius-300: 16px;
-  /* Outermost containers — currently sharp, update when needed */
-  --radius-400: 0;
-  /* Fully rounded — badges, toggles */
-  --radius-pill: 999px;
-  --red-100: #FFE4E6;
-  --red-200: #FECDD3;
-  --red-300: #FDA4AF;
-  --red-400: #FB7185;
-  --red-50: #FFF1F2;
-  /* Primary error — icons and backgrounds */
-  --red-500: #F43F5E;
-  /* Error text — 4.5:1 on white, AA */
-  --red-600: #E11D48;
-  --red-700: #BE123C;
-  --red-800: #9F1239;
-  --red-900: #881337;
-  --red-950: #4C0519;
-  --shadow-dark-24: #0000003D;
-  --shadow-dark-28: #00000047;
-  --shadow-dark-40: #00000066;
-  --shadow-dark-60: #00000099;
-  --shadow-light-06: #0E16260F;
-  --shadow-light-08: #0E162614;
-  --shadow-light-10: #0E16261A;
-  --shadow-light-14: #0E162624;
-  /* 11px type size */
-  --size-100: 11px;
-  /* 40px type size */
-  --size-1000: 40px;
-  /* 48px type size */
-  --size-1100: 48px;
-  /* 12px type size */
-  --size-200: 12px;
-  /* 13px type size */
-  --size-300: 13px;
-  /* 14px type size */
-  --size-400: 14px;
-  /* 16px type size */
-  --size-500: 16px;
-  /* 18px type size */
-  --size-600: 18px;
-  /* 20px type size */
-  --size-700: 20px;
-  /* 24px type size */
-  --size-800: 24px;
-  /* 32px type size */
-  --size-900: 32px;
-  --space-050: 2px;
-  /* 4px */
-  --space-100: 4px;
-  /* 64px */
-  --space-1000: 64px;
-  /* 80px */
-  --space-1100: 80px;
-  /* 96px */
-  --space-1200: 96px;
-  --space-1300: 120px;
-  /* 8px */
-  --space-200: 8px;
-  /* 12px */
-  --space-300: 12px;
-  /* 16px */
-  --space-400: 16px;
-  /* 20px */
-  --space-500: 20px;
-  /* 24px */
-  --space-600: 24px;
-  /* 32px */
-  --space-700: 32px;
-  /* 40px */
-  --space-800: 40px;
-  /* 48px */
-  --space-900: 48px;
-  /* Bold — display, strong emphasis */
-  --weight-bold: 700;
-  /* Medium — labels, navigation */
-  --weight-medium: 500;
-  /* Regular — body, captions */
-  --weight-regular: 400;
-  /* SemiBold — headings, emphasis */
-  --weight-semibold: 600;
+  /* Brand */
+  --primitive-brand-cobalt: #3A73A0;
+  --primitive-brand-granite-grey: #666666;
+  --primitive-brand-off-black: #121212;
+  --primitive-brand-off-white: #FAF9F6;
+  --primitive-brand-platinum-grey: #E8E8E8;
+
+  /* Cobalt scale */
+  --primitive-cobalt-50: #F0F6FA;
+  --primitive-cobalt-100: #D9ECF7;
+  --primitive-cobalt-200: #B8D8ED;
+  --primitive-cobalt-300: #88B0CD;
+  --primitive-cobalt-400: #5C91B5;
+  --primitive-cobalt-500: #3A73A0;
+  --primitive-cobalt-600: #2D5C82;
+  --primitive-cobalt-700: #224868;
+  --primitive-cobalt-800: #193651;
+  --primitive-cobalt-900: #10243A;
+  --primitive-cobalt-950: #081527;
+
+  /* Neutral scale */
+  --primitive-neutral-0: #FFFFFF;
+  --primitive-neutral-50: #FAF9F6;
+  --primitive-neutral-100: #F0EFEC;
+  --primitive-neutral-200: #E8E8E8;
+  --primitive-neutral-300: #D4D4D4;
+  --primitive-neutral-400: #ABABAB;
+  --primitive-neutral-500: #888888;
+  --primitive-neutral-550: #737373;
+  --primitive-neutral-600: #666666;
+  --primitive-neutral-700: #4A4A4A;
+  --primitive-neutral-800: #2E2E2E;
+  --primitive-neutral-900: #1A1A1A;
+  --primitive-neutral-950: #121212;
+  --primitive-neutral-1000: #000000;
+
+  /* Green scale */
+  --primitive-green-50: #F0FDF4;
+  --primitive-green-500: #22C55E;
+  --primitive-green-600: #16A34A;
+
+  /* Amber scale */
+  --primitive-amber-50: #FFFBEB;
+  --primitive-amber-500: #F59E0B;
+  --primitive-amber-700: #B45309;
+
+  /* Red scale */
+  --primitive-red-50: #FFF1F2;
+  --primitive-red-500: #F43F5E;
+  --primitive-red-600: #E11D48;
+  --primitive-red-700: #BE123C;
+  --primitive-red-950: #4C0519;
+
+  /* Radius scale */
+  --primitive-radius-100: 4px;
+  --primitive-radius-200: 8px;
+  --primitive-radius-300: 16px;
+  --primitive-radius-400: 0;
+  --primitive-radius-pill: 999px;
+
+  /* Space scale */
+  --primitive-space-050: 2px;
+  --primitive-space-100: 4px;
+  --primitive-space-200: 8px;
+  --primitive-space-300: 12px;
+  --primitive-space-400: 16px;
+  --primitive-space-500: 20px;
+  --primitive-space-600: 24px;
+  --primitive-space-700: 32px;
+  --primitive-space-800: 40px;
+  --primitive-space-900: 48px;
+  --primitive-space-1000: 64px;
+  --primitive-space-1100: 80px;
+  --primitive-space-1200: 96px;
+
+  /* Type size scale */
+  --primitive-size-100: 11px;
+  --primitive-size-200: 12px;
+  --primitive-size-300: 13px;
+  --primitive-size-400: 14px;
+  --primitive-size-500: 16px;
+  --primitive-size-600: 18px;
+  --primitive-size-700: 20px;
+  --primitive-size-800: 24px;
+  --primitive-size-900: 32px;
+  --primitive-size-1000: 40px;
+  --primitive-size-1100: 48px;
+
+  /* Type weight */
+  --primitive-weight-regular: 400;
+  --primitive-weight-medium: 500;
+  --primitive-weight-semibold: 600;
+  --primitive-weight-bold: 700;
+
+  /* Type family */
+  --primitive-family-primary: Eina04;
+  --primitive-family-semibold: Eina04-SemiBold;
+  --primitive-family-bold: Eina04-Bold;
+
+  /* Shadow */
+  --primitive-shadow-light-06: #0E16260F;
+  --primitive-shadow-light-08: #0E162614;
+  --primitive-shadow-light-10: #0E16261A;
+  --primitive-shadow-light-14: #0E162624;
+  --primitive-shadow-dark-24: #0000003D;
+  --primitive-shadow-dark-28: #00000047;
+  --primitive-shadow-dark-40: #00000066;
+  --primitive-shadow-dark-60: #00000099;
 }
