@@ -24,6 +24,12 @@
   --background-action-secondary: #121212;
   --background-action-secondary-hover: #2E2E2E;
   --background-action-secondary-pressed: #000000;
+  --background-action-ghost: #F0F6FA;
+  --background-action-ghost-hover: #D9ECF7;
+  --background-action-ghost-pressed: #B8D8ED;
+  --background-action-destructive: #E11D48;
+  --background-action-destructive-hover: #BE123C;
+  --background-action-destructive-pressed: #9F1239;
 
   /* --- Text --- */
   --text-primary: #121212;
@@ -44,6 +50,12 @@
   --border-focus: #3A73A0;
   --border-brand: #88B0CD;
   --border-separator: #E8E8E8;
+  --border-action: #081527;
+  --border-action-secondary: #000000;
+  --border-action-secondary-hover: #000000;
+  --border-ghost: #5C91B5;
+  --border-danger: #4C0519;
+  --text-on-danger: #FFFFFF;
 
   /* --- Icons --- */
   --icon-primary: #121212;

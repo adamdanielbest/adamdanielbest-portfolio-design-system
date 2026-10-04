@@ -25,7 +25,7 @@
   justify-content: center;
   gap: 8px;
   border: none;
-  border-radius: var(--radius-100);
+  border-radius: var(--radius-small);
   font-family: var(--type-family-primary), system-ui, sans-serif;
   font-weight: 600;
   cursor: pointer;

@@ -26,6 +26,12 @@
     --background-action-secondary: #121212;
     --background-action-secondary-hover: #000000;
     --background-action-secondary-pressed: #000000;
+    --background-action-ghost: #141C27;
+    --background-action-ghost-hover: #193651;
+    --background-action-ghost-pressed: #081527;
+    --background-action-destructive: #FDA4AF;
+    --background-action-destructive-hover: #FECDD3;
+    --background-action-destructive-pressed: #FB7185;
 
     /* --- Text --- */
     --text-primary: #FAF9F6;
@@ -46,6 +52,12 @@
     --border-focus: #88B0CD;
     --border-brand: #5C91B5;
     --border-separator: #2A3C52;
+    --border-action: #224868;
+    --border-action-secondary: #2E2E2E;
+    --border-action-secondary-hover: #2E2E2E;
+    --border-ghost: #88B0CD;
+    --border-danger: #BE123C;
+    --text-on-danger: #121212;
 
     /* --- Icons --- */
     --icon-primary: #FAF9F6;
@@ -81,6 +93,12 @@
   --background-action-secondary: #121212;
   --background-action-secondary-hover: #000000;
   --background-action-secondary-pressed: #000000;
+  --background-action-ghost: #141C27;
+  --background-action-ghost-hover: #193651;
+  --background-action-ghost-pressed: #081527;
+  --background-action-destructive: #FDA4AF;
+  --background-action-destructive-hover: #FECDD3;
+  --background-action-destructive-pressed: #FB7185;
 
   /* --- Text --- */
   --text-primary: #FAF9F6;
@@ -101,6 +119,12 @@
   --border-focus: #88B0CD;
   --border-brand: #5C91B5;
   --border-separator: #2A3C52;
+  --border-action: #224868;
+  --border-action-secondary: #2E2E2E;
+  --border-action-secondary-hover: #2E2E2E;
+  --border-ghost: #88B0CD;
+  --border-danger: #BE123C;
+  --text-on-danger: #121212;
 
   /* --- Icons --- */
   --icon-primary: #FAF9F6;
