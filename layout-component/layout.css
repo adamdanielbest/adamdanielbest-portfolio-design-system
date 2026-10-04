@@ -44,7 +44,7 @@
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   letter-spacing: var(--type-label-letter-spacing);
-  color: var(--text-accent);
+  color: var(--text-link);
   text-transform: uppercase;
   margin-bottom: var(--spacing-stack-gap);
 }
@@ -147,7 +147,7 @@
 
 .demo-section-gap span {
   background: var(--background-page);
-  padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
+  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
   font-size: var(--type-caption-size);
   color: var(--text-brand);
   font-weight: var(--type-label-weight);

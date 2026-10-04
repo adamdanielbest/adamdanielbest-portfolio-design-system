@@ -52,4 +52,8 @@
 
   /* --- Accent indicators (used on icon dots, progress fills, tags) --- */
   --accent-brand: #88B0CD;
+
+  /* --- Code blocks (reference sheets and case study inline code) --- */
+  --background-code: #1A1A1A;
+  --text-code: #F59E0B;
 }

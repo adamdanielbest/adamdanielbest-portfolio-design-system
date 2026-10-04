@@ -54,6 +54,10 @@
 
     /* --- Accent indicators --- */
     --accent-brand: #88B0CD;
+
+    /* --- Code blocks --- */
+    --background-code: #1A1A1A;
+    --text-code: #F59E0B;
   }
 }
 
@@ -105,4 +109,8 @@
 
   /* --- Accent indicators --- */
   --accent-brand: #88B0CD;
+
+  /* --- Code blocks --- */
+  --background-code: #1A1A1A;
+  --text-code: #F59E0B;
 }

@@ -60,7 +60,7 @@
   line-height: var(--type-overline-line-height);
   letter-spacing: var(--type-overline-letter-spacing);
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-link);
 }
 
 /* --------------------------------------------------------------------------
@@ -113,7 +113,7 @@
   line-height: var(--type-caption-line-height);
   background: var(--background-code);
   color: var(--text-code);
-  padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
+  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
   border-radius: var(--radius-small);
   white-space: nowrap;
   overflow: hidden;
@@ -188,7 +188,7 @@
   font-weight: var(--type-overline-weight);
   letter-spacing: var(--type-overline-letter-spacing);
   text-transform: uppercase;
-  color: var(--text-accent);
+  color: var(--text-link);
   padding: var(--spacing-inline-gap) var(--spacing-component-padding);
   border-bottom: 2px solid var(--border-default);
 }
@@ -204,7 +204,7 @@
 .token-table td:first-child {
   font-family: monospace;
   font-size: var(--type-caption-size);
-  color: var(--text-accent);
+  color: var(--text-link);
   white-space: nowrap;
   width: 280px;
 }
@@ -243,7 +243,7 @@
 }
 
 .type-row__sample--link {
-  color: var(--text-accent);
+  color: var(--text-link);
 }
 
 .type-row__meta {
@@ -259,7 +259,7 @@
 .type-row__token {
   font-family: monospace;
   font-size: var(--type-caption-size);
-  color: var(--text-accent);
+  color: var(--text-link);
   background: none;
   padding: 0;
   border-radius: 0;
@@ -370,7 +370,7 @@
   line-height: var(--type-caption-line-height);
   background: var(--background-code);
   color: var(--text-code);
-  padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
+  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
   border-radius: var(--radius-small);
 }
 
@@ -622,7 +622,7 @@
   line-height: var(--type-caption-line-height);
   color: var(--text-code);
   background: var(--background-code);
-  padding: var(--spacing-badge-padding) var(--spacing-inline-gap);
+  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
   border-radius: var(--radius-small);
   white-space: nowrap;
   overflow: hidden;

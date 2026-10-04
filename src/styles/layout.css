@@ -84,7 +84,7 @@
    -------------------------------------------------------------------------- */
 .reading-col {
   width: 100%;
-  max-width: var(--layout-reading-column-width);
+  max-width: 720px;
 }
 
 .reading-col--center {
@@ -98,7 +98,7 @@
    -------------------------------------------------------------------------- */
 .form-col {
   width: 100%;
-  max-width: var(--layout-form-max-width);
+  max-width: 600px;
 }
 
 .form-col--center {
