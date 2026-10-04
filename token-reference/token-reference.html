@@ -17,6 +17,7 @@
 <body>
 
   <script>
+    document.documentElement.dataset.theme = 'light';
     fetch('../src/icons/sprite.svg')
       .then(r => r.text())
       .then(svg => {
@@ -38,6 +39,15 @@
         <p class="meta" title="Font: Eina04 · Base unit: 4px · Colour: Cobalt #3A73A0 · AA contrast verified">Font: Eina04 · Base unit: 4px · Colour: Cobalt #3A73A0 · AA contrast verified</p>
         <p class="usage" title="All design tokens used across the system — colours, spacing, typography, radius, and layout.">All design tokens used across the system — colours, spacing, typography, radius, and layout.</p>
       </div>
+      <div class="demo-controls">
+        <span class="demo-controls__label">Demo controls</span>
+        <div class="demo-controls__divider"></div>
+        <fieldset class="theme-picker">
+          <legend class="sr-only">Theme</legend>
+          <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+          <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+        </fieldset>
+      </div>
     </header>
 
 
@@ -55,11 +65,11 @@
       <div class="token-group">
         <p class="token-group__label" title="Brand">Brand</p>
         <div class="prim-swatch-row">
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-cobalt)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="cobalt">cobalt</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-off-white);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-white">off-white</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-off-black)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-black">off-black</p><p class="prim-swatch__hex" title="#121212">#121212</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-platinum-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="platinum-grey">platinum-grey</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--brand-granite-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="granite-grey">granite-grey</p><p class="prim-swatch__hex" title="#666666">#666666</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-brand-cobalt)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="cobalt">cobalt</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-brand-off-white);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-white">off-white</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-brand-off-black)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="off-black">off-black</p><p class="prim-swatch__hex" title="#121212">#121212</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-brand-platinum-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="platinum-grey">platinum-grey</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-brand-granite-grey)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="granite-grey">granite-grey</p><p class="prim-swatch__hex" title="#666666">#666666</p></div></div>
         </div>
       </div>
 
@@ -67,17 +77,17 @@
       <div class="token-group">
         <p class="token-group__label" title="Cobalt">Cobalt</p>
         <div class="prim-swatch-row">
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0F6FA">#F0F6FA</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#D9ECF7">#D9ECF7</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#B8D8ED">#B8D8ED</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#88B0CD">#88B0CD</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#5C91B5">#5C91B5</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#2D5C82">#2D5C82</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#224868">#224868</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#193651">#193651</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#10243A">#10243A</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--cobalt-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#081527">#081527</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0F6FA">#F0F6FA</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#D9ECF7">#D9ECF7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#B8D8ED">#B8D8ED</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#88B0CD">#88B0CD</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#5C91B5">#5C91B5</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#3A73A0">#3A73A0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#2D5C82">#2D5C82</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#224868">#224868</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#193651">#193651</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#10243A">#10243A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-cobalt-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#081527">#081527</p></div></div>
         </div>
       </div>
 
@@ -85,15 +95,20 @@
       <div class="token-group">
         <p class="token-group__label" title="Neutral">Neutral</p>
         <div class="prim-swatch-row">
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-0);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="0">0</p><p class="prim-swatch__hex" title="#FFFFFF">#FFFFFF</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#F0EFEC">#F0EFEC</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#D4D4D4">#D4D4D4</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#ABABAB">#ABABAB</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#888888">#888888</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-550)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="550">550</p><p class="prim-swatch__hex" title="#737373">#737373</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--neutral-1000)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="1000">1000</p><p class="prim-swatch__hex" title="#000000">#000000</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-0);border-bottom:1px solid var(--border-subtle)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="0">0</p><p class="prim-swatch__hex" title="#FFFFFF">#FFFFFF</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FAF9F6">#FAF9F6</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#F0EFEC">#F0EFEC</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#E8E8E8">#E8E8E8</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#D4D4D4">#D4D4D4</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#ABABAB">#ABABAB</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#888888">#888888</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-550)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="550">550</p><p class="prim-swatch__hex" title="#737373">#737373</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#666666">#666666</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#4A4A4A">#4A4A4A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#2E2E2E">#2E2E2E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#1A1A1A">#1A1A1A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#121212">#121212</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--primitive-neutral-1000)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="1000">1000</p><p class="prim-swatch__hex" title="#000000">#000000</p></div></div>
         </div>
       </div>
 
@@ -101,17 +116,17 @@
       <div class="token-group">
         <p class="token-group__label" title="Green">Green</p>
         <div class="prim-swatch-row">
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0FDF4">#F0FDF4</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#DCFCE7">#DCFCE7</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#BBF7D0">#BBF7D0</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#86EFAC">#86EFAC</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#4ADE80">#4ADE80</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#22C55E">#22C55E</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#16A34A">#16A34A</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#15803D">#15803D</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#166534">#166534</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#14532D">#14532D</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--green-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#052E16">#052E16</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#F0FDF4"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#F0FDF4">#F0FDF4</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#DCFCE7"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#DCFCE7">#DCFCE7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#BBF7D0"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#BBF7D0">#BBF7D0</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#86EFAC"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#86EFAC">#86EFAC</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#4ADE80"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#4ADE80">#4ADE80</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#22C55E"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#22C55E">#22C55E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#16A34A"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#16A34A">#16A34A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#15803D"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#15803D">#15803D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#166534"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#166534">#166534</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#14532D"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#14532D">#14532D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#052E16"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#052E16">#052E16</p></div></div>
         </div>
       </div>
 
@@ -119,17 +134,17 @@
       <div class="token-group">
         <p class="token-group__label" title="Amber">Amber</p>
         <div class="prim-swatch-row">
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-50)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FFFBEB">#FFFBEB</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-100)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#FEF3C7">#FEF3C7</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-200)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#FDE68A">#FDE68A</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-300)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#FCD34D">#FCD34D</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-400)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#FBBF24">#FBBF24</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-500)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#F59E0B">#F59E0B</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-600)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#D97706">#D97706</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-700)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#B45309">#B45309</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-800)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#92400E">#92400E</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-900)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#78350F">#78350F</p></div></div>
-          <div class="prim-swatch"><div class="prim-swatch__block" style="background:var(--amber-950)"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#451A03">#451A03</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FFFBEB"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="50">50</p><p class="prim-swatch__hex" title="#FFFBEB">#FFFBEB</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FEF3C7"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="100">100</p><p class="prim-swatch__hex" title="#FEF3C7">#FEF3C7</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FDE68A"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="200">200</p><p class="prim-swatch__hex" title="#FDE68A">#FDE68A</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FCD34D"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="300">300</p><p class="prim-swatch__hex" title="#FCD34D">#FCD34D</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#FBBF24"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="400">400</p><p class="prim-swatch__hex" title="#FBBF24">#FBBF24</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#F59E0B"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="500">500</p><p class="prim-swatch__hex" title="#F59E0B">#F59E0B</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#D97706"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="600">600</p><p class="prim-swatch__hex" title="#D97706">#D97706</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#B45309"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="700">700</p><p class="prim-swatch__hex" title="#B45309">#B45309</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#92400E"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="800">800</p><p class="prim-swatch__hex" title="#92400E">#92400E</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#78350F"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="900">900</p><p class="prim-swatch__hex" title="#78350F">#78350F</p></div></div>
+          <div class="prim-swatch"><div class="prim-swatch__block" style="background:#451A03"></div><div class="prim-swatch__lb"><p class="prim-swatch__name" title="950">950</p><p class="prim-swatch__hex" title="#451A03">#451A03</p></div></div>
         </div>
       </div>
 
@@ -236,6 +251,50 @@
             <div class="swatch__block" style="background:var(--background-action-destructive)"></div>
             <div class="swatch__info"><p class="swatch__name" title="Danger button">Danger button</p><div class="swatch__code" title="--background-action-destructive">--background-action-destructive</div></div>
           </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Hover state">Hover state</p><div class="swatch__code" title="--background-hover">--background-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-selected)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Selected list item">Selected list item</p><div class="swatch__code" title="--background-selected">--background-selected</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-overlay)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Modal / drawer scrim">Modal / drawer scrim</p><div class="swatch__code" title="--background-overlay">--background-overlay</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-primary-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Primary hover">Primary hover</p><div class="swatch__code" title="--background-action-primary-hover">--background-action-primary-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-primary-pressed)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Primary pressed">Primary pressed</p><div class="swatch__code" title="--background-action-primary-pressed">--background-action-primary-pressed</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-secondary-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Secondary hover">Secondary hover</p><div class="swatch__code" title="--background-action-secondary-hover">--background-action-secondary-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-secondary-pressed)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Secondary pressed">Secondary pressed</p><div class="swatch__code" title="--background-action-secondary-pressed">--background-action-secondary-pressed</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-ghost-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Ghost hover">Ghost hover</p><div class="swatch__code" title="--background-action-ghost-hover">--background-action-ghost-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-ghost-pressed)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Ghost pressed">Ghost pressed</p><div class="swatch__code" title="--background-action-ghost-pressed">--background-action-ghost-pressed</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-destructive-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Destructive hover">Destructive hover</p><div class="swatch__code" title="--background-action-destructive-hover">--background-action-destructive-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--background-action-destructive-pressed)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Destructive pressed">Destructive pressed</p><div class="swatch__code" title="--background-action-destructive-pressed">--background-action-destructive-pressed</div></div>
+          </div>
         </div>
       </div>
 
@@ -322,6 +381,37 @@
             <div class="swatch__block" style="background:var(--text-warning)"></div>
             <div class="swatch__info"><p class="swatch__name" title="Caution text">Caution text</p><div class="swatch__code" title="--text-warning">--text-warning</div></div>
           </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-brand)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Brand cobalt text">Brand cobalt text</p><div class="swatch__code" title="--text-brand">--text-brand</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-on-action-secondary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Text on secondary button">Text on secondary button</p><div class="swatch__code" title="--text-on-action-secondary">--text-on-action-secondary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--text-on-danger)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Text on danger button">Text on danger button</p><div class="swatch__code" title="--text-on-danger">--text-on-danger</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Colour: Icon ── -->
+      <div class="token-group">
+        <p class="token-group__label" title="Icon">Icon</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--icon-primary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Default icon fill">Default icon fill</p><div class="swatch__code" title="--icon-primary">--icon-primary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--icon-secondary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Subdued icon fill">Subdued icon fill</p><div class="swatch__code" title="--icon-secondary">--icon-secondary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--icon-accent)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Brand cobalt icon">Brand cobalt icon</p><div class="swatch__code" title="--icon-accent">--icon-accent</div></div>
+          </div>
         </div>
       </div>
 
@@ -360,6 +450,30 @@
           <div class="swatch">
             <div class="swatch__block" style="background:var(--border-warning)"></div>
             <div class="swatch__info"><p class="swatch__name" title="Warning state">Warning state</p><div class="swatch__code" title="--border-warning">--border-warning</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-action)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Primary action button">Primary action button</p><div class="swatch__code" title="--border-action">--border-action</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-action-secondary)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Secondary action button">Secondary action button</p><div class="swatch__code" title="--border-action-secondary">--border-action-secondary</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-action-secondary-hover)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Secondary action hover">Secondary action hover</p><div class="swatch__code" title="--border-action-secondary-hover">--border-action-secondary-hover</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-ghost)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Ghost button outline">Ghost button outline</p><div class="swatch__code" title="--border-ghost">--border-ghost</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-danger)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Danger / destructive">Danger / destructive</p><div class="swatch__code" title="--border-danger">--border-danger</div></div>
+          </div>
+          <div class="swatch">
+            <div class="swatch__block" style="background:var(--border-separator)"></div>
+            <div class="swatch__info"><p class="swatch__name" title="Horizontal separator">Horizontal separator</p><div class="swatch__code" title="--border-separator">--border-separator</div></div>
           </div>
         </div>
       </div>
@@ -930,6 +1044,10 @@
   <script>
     document.querySelectorAll('.meta-date').forEach(el => {
       el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+
+    document.querySelectorAll('input[name="theme"]').forEach(r => {
+      r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
     });
   </script>
 

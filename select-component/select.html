@@ -15,85 +15,11 @@
   <link rel="stylesheet" href="select.css">
 <style>
 
-  /* ---- Demo controls ---- */
-
-  .demo-controls {
-    display: flex;
-    gap: var(--spacing-stack-gap);
-    align-items: center;
-    padding: var(--spacing-component-padding);
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-large);
-    background: var(--background-card);
-    margin-bottom: var(--spacing-content-gap);
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .demo-controls__label {
-    font-size: var(--type-label-size);
-    font-weight: var(--type-label-weight);
-    letter-spacing: var(--type-label-letter-spacing);
-    color: var(--text-primary);
-  }
-  .demo-controls__divider {
-    width: 1px;
-    align-self: stretch;
-    background: var(--border-default);
-    flex-shrink: 0;
-  }
-
-  /* ---- Toggle switch ---- */
-
-  .toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-inline-gap);
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: var(--type-label-size);
-    font-weight: var(--type-label-weight);
-    letter-spacing: var(--type-label-letter-spacing);
-    color: var(--text-primary);
-  }
-  .toggle__track {
-    position: relative;
-    width: 40px;
-    height: 24px;
-    flex-shrink: 0;
-    border-radius: var(--radius-pill);
-    background: var(--border-default);
-    transition: background-color 150ms ease;
-  }
-  .toggle__thumb {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: var(--radius-pill);
-    background: var(--background-card);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-    transition: transform 150ms ease;
-  }
-  .toggle[aria-checked="true"] .toggle__track {
-    background: var(--background-action-primary);
-  }
-  .toggle[aria-checked="true"] .toggle__thumb {
-    transform: translateX(16px);
-  }
-  .toggle:focus-visible .toggle__track {
-    box-shadow: 0 0 0 3px var(--border-focus);
-  }
-
   /* ---- Variant cards ---- */
 
   .variant-card {
     background: var(--background-card);
-    border: 1px solid var(--border-default);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-large);
     padding: var(--spacing-card-padding);
     margin-bottom: var(--spacing-content-gap);
@@ -201,25 +127,17 @@
 <div class="demo-controls">
   <span class="demo-controls__label">Demo controls</span>
   <span class="demo-controls__divider" aria-hidden="true"></span>
-  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="true">
-    <span class="toggle__track"><span class="toggle__thumb"></span></span>
-    <span class="toggle__text" id="theme-toggle-label">Light mode</span>
-  </button>
+  <fieldset class="theme-picker">
+    <legend class="sr-only">Theme</legend>
+    <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+    <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+  </fieldset>
 </div>
 
 <script>
-  function wireToggle(id, onChange) {
-    const el = document.getElementById(id);
-    el.addEventListener('click', () => {
-      const next = el.getAttribute('aria-checked') !== 'true';
-      el.setAttribute('aria-checked', String(next));
-      onChange(next);
-    });
-  }
   document.documentElement.dataset.theme = 'light';
-  wireToggle('theme-toggle', (on) => {
-    document.documentElement.dataset.theme = on ? 'light' : 'dark';
-    document.getElementById('theme-toggle-label').textContent = on ? 'Light mode' : 'Dark mode';
+  document.querySelectorAll('input[name="theme"]').forEach(r => {
+    r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
   });
 </script>
 
