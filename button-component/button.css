@@ -82,9 +82,8 @@
 .btn--primary:focus-visible {
   background-color: var(--background-action-primary);
   box-shadow:
-    0 1px 0 0 var(--border-action),
-    0 0 0 4px var(--border-focus),
-    0 0 0 6px var(--background-page);
+    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 4px var(--border-focus);
 }
 
 /* ---- Variant: Secondary ---- */
@@ -104,9 +103,8 @@
 .btn--secondary:focus-visible {
   background-color: var(--background-action-secondary);
   box-shadow:
-    0 1px 0 0 var(--border-action-secondary),
-    0 0 0 4px var(--border-focus),
-    0 0 0 6px var(--background-page);
+    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 4px var(--border-focus);
 }
 
 /* ---- Variant: Ghost ---- (no resting shadow in the source component) */
@@ -123,10 +121,10 @@
   background-color: var(--background-action-ghost-pressed);
 }
 .btn--ghost:focus-visible {
-  background-color: var(--background-page);
+  background-color: var(--background-action-ghost);
   box-shadow:
-    0 0 0 4px var(--border-focus),
-    0 0 0 6px var(--background-page);
+    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 4px var(--border-focus);
 }
 
 /* ---- Variant: Destructive ---- */
@@ -146,9 +144,8 @@
 .btn--destructive:focus-visible {
   background-color: var(--background-action-destructive);
   box-shadow:
-    0 1px 0 0 var(--border-danger),
-    0 0 0 4px var(--border-focus),
-    0 0 0 6px var(--background-page);
+    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 4px var(--border-focus);
 }
 
 /* ---- Disabled ---- (same across all four variants, per source component) */

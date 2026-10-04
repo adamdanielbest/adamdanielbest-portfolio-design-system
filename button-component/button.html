@@ -89,62 +89,93 @@
     box-shadow: 0 0 0 3px var(--border-focus);
   }
 
-  /* ---- Variant cards ---- (outer card radius-large, inner grid radius-medium — matches live Figma sheet's nested-card pattern) */
+  /* ---- Variant grid ---- */
 
-  .variant-card {
-    background: var(--background-card);
+  .content-card {
+    background-color: var(--background-card);
     border: 1px solid var(--border-default);
     border-radius: var(--radius-large);
+    overflow: hidden;
     padding: var(--spacing-card-padding);
-    margin-bottom: var(--spacing-content-gap);
-  }
-  .variant-card__title {
-    font-size: var(--type-heading-3-size);
-    line-height: var(--type-heading-3-line-height);
-    font-weight: var(--type-heading-3-weight);
-    margin: 0 0 var(--spacing-row-gap) 0;
+    display: flex;
+    flex-direction: column;
   }
   .variant-card__grid {
     border: 1px solid var(--border-default);
     border-radius: var(--radius-medium);
     overflow-x: auto;
+    overflow-y: hidden;
   }
   table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 640px;
+    min-width: 800px;
     margin: 0;
+  }
+  th[scope="row"] {
+    width: 168px;
+    min-width: 168px;
   }
   th, td {
     border-bottom: 1px solid var(--border-default);
     border-right: 1px solid var(--border-default);
-    padding-inline: var(--spacing-table-cell-padding);
-    padding-block: var(--spacing-table-cell-padding);
+    padding-left: var(--spacing-table-cell-padding);
+    padding-right: var(--spacing-table-cell-padding);
+    padding-top: var(--spacing-table-cell-padding);
+    padding-bottom: var(--spacing-table-cell-padding);
     text-align: left;
     vertical-align: middle;
+  }
+  th {
     background: var(--background-page);
-  }
-  td {
-    padding-block: var(--spacing-card-padding);
-  }
-  tr > :last-child { border-right: none; }
-  tbody tr:last-child td { border-bottom: none; }
-  th, td:first-child {
     font-size: var(--type-label-size);
     font-weight: var(--type-label-weight);
     line-height: var(--type-label-line-height);
     letter-spacing: var(--type-label-letter-spacing);
     color: var(--text-primary);
   }
+  td {
+    background: transparent;
+    padding-top: var(--spacing-card-padding);
+    padding-bottom: var(--spacing-card-padding);
+  }
+  tr > :last-child { border-right: none; }
+  tbody tr:last-child td,
+  tbody tr:last-child th { border-bottom: none; }
 
-  /* ---- "With Icon" section heading ---- */
+  /* ---- Static demo state simulation ---- */
+
+  .demo-hover .btn--primary:not(:disabled)         { background-color: var(--background-action-primary-hover); }
+  .demo-hover .btn--secondary:not(:disabled)       { background-color: var(--background-action-secondary-hover); }
+  .demo-hover .btn--ghost:not(:disabled)           { background-color: var(--background-action-ghost-hover); }
+  .demo-hover .btn--destructive:not(:disabled)     { background-color: var(--background-action-destructive-hover); }
+
+  .demo-pressed .btn--primary:not(:disabled)       { background-color: var(--background-action-primary-pressed); box-shadow: none; }
+  .demo-pressed .btn--secondary:not(:disabled)     { background-color: var(--background-action-secondary-pressed); box-shadow: none; }
+  .demo-pressed .btn--ghost:not(:disabled)         { background-color: var(--background-action-ghost-pressed); }
+  .demo-pressed .btn--destructive:not(:disabled)   { background-color: var(--background-action-destructive-pressed); box-shadow: none; }
+
+  .demo-focus .btn--primary:not(:disabled)         { outline: none; box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus .btn--secondary:not(:disabled)       { outline: none; box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus .btn--ghost:not(:disabled)           { outline: none; background-color: var(--background-action-ghost); box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus .btn--destructive:not(:disabled)     { outline: none; box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+
+  .demo-focus-hover .btn--primary:not(:disabled)   { outline: none; background-color: var(--background-action-primary-hover); box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus-hover .btn--secondary:not(:disabled) { outline: none; background-color: var(--background-action-secondary-hover); box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus-hover .btn--ghost:not(:disabled)     { outline: none; background-color: var(--background-action-ghost-hover); box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+  .demo-focus-hover .btn--destructive:not(:disabled){ outline: none; background-color: var(--background-action-destructive-hover); box-shadow: 0 0 0 1px var(--primitive-brand-off-white), 0 0 0 4px var(--border-focus); }
+
+  /* ---- Section heading ---- */
 
   .page-subheading {
     font-size: var(--type-heading-2-size);
     font-weight: var(--type-heading-2-weight);
     line-height: var(--type-heading-2-line-height);
     letter-spacing: var(--type-heading-2-letter-spacing);
-    margin: var(--spacing-content-gap) 0 var(--spacing-row-gap) 0;
+    margin: 0 0 var(--spacing-card-padding) 0;
+  }
+  .variant-card__grid + .page-subheading {
+    margin-top: var(--spacing-content-gap);
   }
 </style>
 </head>
@@ -168,22 +199,18 @@
   <h1>Button</h1>
   <hr class="page-header__divider" >
   <div class="page-header__metadata">
-    <p class="breadcrumb">adamdanielbest.com · Components · Button</p>
-    <p class="meta">Font-family: Eina04 · Units: 4px base unit · v1.1 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
-    <p class="usage">Primary for the main action per view · Secondary for alternative actions · Ghost for tertiary/low-emphasis actions · Destructive requires confirmation step · With-icon variant pairs the label with a supporting Material Icons SVG</p>
+    <p class="breadcrumb">adamdanielbest.com / Components / Button</p>
+    <p class="meta">Font-family: Eina04 / Units: 4px base unit / v1.1 Stable / Updated <span class="meta-date"></span> / Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage">Primary for the main action per view / Secondary for alternative actions / Ghost for tertiary/low-emphasis actions / Destructive requires confirmation step / With-icon variant pairs the label with a supporting Material Icons SVG</p>
   </div>
 </header>
 
 <div class="demo-controls">
   <span class="demo-controls__label">Demo controls</span>
   <span class="demo-controls__divider" aria-hidden="true"></span>
-  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="false">
+  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="true">
     <span class="toggle__track"><span class="toggle__thumb"></span></span>
     <span class="toggle__text" id="theme-toggle-label">Light mode</span>
-  </button>
-  <button type="button" class="toggle" id="density-toggle" role="switch" aria-checked="false">
-    <span class="toggle__track"><span class="toggle__thumb"></span></span>
-    <span class="toggle__text">Mobile density</span>
   </button>
 </div>
 
@@ -197,298 +224,274 @@
       onChange(next);
     });
   }
+  // Default to dark; toggle switches to light and back.
+  document.documentElement.dataset.theme = 'light';
   wireToggle('theme-toggle', (on) => {
-    document.documentElement.dataset.theme = on ? 'dark' : '';
-    document.getElementById('theme-toggle-label').textContent = on ? 'Dark mode' : 'Light mode';
-  });
-  wireToggle('density-toggle', (on) => {
-    document.documentElement.dataset.density = on ? 'mobile' : '';
+    document.documentElement.dataset.theme = on ? 'light' : 'dark';
+    document.getElementById('theme-toggle-label').textContent = on ? 'Light mode' : 'Dark mode';
   });
 </script>
 
+<div class="content-card">
+
 <h2 class="page-subheading">Button — Default</h2>
 
-<section class="variant-card">
-  <h2 class="variant-card__title">Primary</h2>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--primary btn--small">Button</button></td>
-          <td><button class="btn btn--primary btn--small">Hover me</button></td>
-          <td><button class="btn btn--primary btn--small">Click + hold</button></td>
-          <td><button class="btn btn--primary btn--small">Tab to me</button></td>
-          <td><button class="btn btn--primary btn--small" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--primary btn--medium">Button</button></td>
-          <td><button class="btn btn--primary btn--medium">Hover me</button></td>
-          <td><button class="btn btn--primary btn--medium">Click + hold</button></td>
-          <td><button class="btn btn--primary btn--medium">Tab to me</button></td>
-          <td><button class="btn btn--primary btn--medium" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--primary btn--large">Button</button></td>
-          <td><button class="btn btn--primary btn--large">Hover me</button></td>
-          <td><button class="btn btn--primary btn--large">Click + hold</button></td>
-          <td><button class="btn btn--primary btn--large">Tab to me</button></td>
-          <td><button class="btn btn--primary btn--large" disabled>Button</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="variant-card">
-  <h2 class="variant-card__title">Secondary</h2>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--secondary btn--small">Button</button></td>
-          <td><button class="btn btn--secondary btn--small">Hover me</button></td>
-          <td><button class="btn btn--secondary btn--small">Click + hold</button></td>
-          <td><button class="btn btn--secondary btn--small">Tab to me</button></td>
-          <td><button class="btn btn--secondary btn--small" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--secondary btn--medium">Button</button></td>
-          <td><button class="btn btn--secondary btn--medium">Hover me</button></td>
-          <td><button class="btn btn--secondary btn--medium">Click + hold</button></td>
-          <td><button class="btn btn--secondary btn--medium">Tab to me</button></td>
-          <td><button class="btn btn--secondary btn--medium" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--secondary btn--large">Button</button></td>
-          <td><button class="btn btn--secondary btn--large">Hover me</button></td>
-          <td><button class="btn btn--secondary btn--large">Click + hold</button></td>
-          <td><button class="btn btn--secondary btn--large">Tab to me</button></td>
-          <td><button class="btn btn--secondary btn--large" disabled>Button</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="variant-card">
-  <h2 class="variant-card__title">Ghost</h2>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--ghost btn--small">Button</button></td>
-          <td><button class="btn btn--ghost btn--small">Hover me</button></td>
-          <td><button class="btn btn--ghost btn--small">Click + hold</button></td>
-          <td><button class="btn btn--ghost btn--small">Tab to me</button></td>
-          <td><button class="btn btn--ghost btn--small" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--ghost btn--medium">Button</button></td>
-          <td><button class="btn btn--ghost btn--medium">Hover me</button></td>
-          <td><button class="btn btn--ghost btn--medium">Click + hold</button></td>
-          <td><button class="btn btn--ghost btn--medium">Tab to me</button></td>
-          <td><button class="btn btn--ghost btn--medium" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--ghost btn--large">Button</button></td>
-          <td><button class="btn btn--ghost btn--large">Hover me</button></td>
-          <td><button class="btn btn--ghost btn--large">Click + hold</button></td>
-          <td><button class="btn btn--ghost btn--large">Tab to me</button></td>
-          <td><button class="btn btn--ghost btn--large" disabled>Button</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="variant-card">
-  <h2 class="variant-card__title">Destructive</h2>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--destructive btn--small">Button</button></td>
-          <td><button class="btn btn--destructive btn--small">Hover me</button></td>
-          <td><button class="btn btn--destructive btn--small">Click + hold</button></td>
-          <td><button class="btn btn--destructive btn--small">Tab to me</button></td>
-          <td><button class="btn btn--destructive btn--small" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--destructive btn--medium">Button</button></td>
-          <td><button class="btn btn--destructive btn--medium">Hover me</button></td>
-          <td><button class="btn btn--destructive btn--medium">Click + hold</button></td>
-          <td><button class="btn btn--destructive btn--medium">Tab to me</button></td>
-          <td><button class="btn btn--destructive btn--medium" disabled>Button</button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--destructive btn--large">Button</button></td>
-          <td><button class="btn btn--destructive btn--large">Hover me</button></td>
-          <td><button class="btn btn--destructive btn--large">Click + hold</button></td>
-          <td><button class="btn btn--destructive btn--large">Tab to me</button></td>
-          <td><button class="btn btn--destructive btn--large" disabled>Button</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+<div class="variant-card__grid">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Default</th>
+        <th scope="col">Hover</th>
+        <th scope="col">Focus</th>
+        <th scope="col">Pressed</th>
+        <th scope="col">Disabled</th>
+        <th scope="col">Focus + Hover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Primary / Small</th>
+        <td><button type="button" class="btn btn--primary btn--small">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--primary btn--small">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--primary btn--small">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--primary btn--small">Button</button></td>
+        <td><button type="button" class="btn btn--primary btn--small" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--primary btn--small">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Primary / Medium</th>
+        <td><button type="button" class="btn btn--primary btn--medium">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--primary btn--medium">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--primary btn--medium">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--primary btn--medium">Button</button></td>
+        <td><button type="button" class="btn btn--primary btn--medium" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--primary btn--medium">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Primary / Large</th>
+        <td><button type="button" class="btn btn--primary btn--large">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--primary btn--large">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--primary btn--large">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--primary btn--large">Button</button></td>
+        <td><button type="button" class="btn btn--primary btn--large" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--primary btn--large">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Small</th>
+        <td><button type="button" class="btn btn--secondary btn--small">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--secondary btn--small">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--secondary btn--small">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--secondary btn--small">Button</button></td>
+        <td><button type="button" class="btn btn--secondary btn--small" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--secondary btn--small">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Medium</th>
+        <td><button type="button" class="btn btn--secondary btn--medium">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--secondary btn--medium">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--secondary btn--medium">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--secondary btn--medium">Button</button></td>
+        <td><button type="button" class="btn btn--secondary btn--medium" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--secondary btn--medium">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Large</th>
+        <td><button type="button" class="btn btn--secondary btn--large">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--secondary btn--large">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--secondary btn--large">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--secondary btn--large">Button</button></td>
+        <td><button type="button" class="btn btn--secondary btn--large" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--secondary btn--large">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Small</th>
+        <td><button type="button" class="btn btn--ghost btn--small">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--ghost btn--small">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--ghost btn--small">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--ghost btn--small">Button</button></td>
+        <td><button type="button" class="btn btn--ghost btn--small" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--ghost btn--small">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Medium</th>
+        <td><button type="button" class="btn btn--ghost btn--medium">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--ghost btn--medium">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--ghost btn--medium">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--ghost btn--medium">Button</button></td>
+        <td><button type="button" class="btn btn--ghost btn--medium" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--ghost btn--medium">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Large</th>
+        <td><button type="button" class="btn btn--ghost btn--large">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--ghost btn--large">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--ghost btn--large">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--ghost btn--large">Button</button></td>
+        <td><button type="button" class="btn btn--ghost btn--large" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--ghost btn--large">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Small</th>
+        <td><button type="button" class="btn btn--destructive btn--small">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--destructive btn--small">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--destructive btn--small">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--destructive btn--small">Button</button></td>
+        <td><button type="button" class="btn btn--destructive btn--small" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--destructive btn--small">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Medium</th>
+        <td><button type="button" class="btn btn--destructive btn--medium">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--destructive btn--medium">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--destructive btn--medium">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--destructive btn--medium">Button</button></td>
+        <td><button type="button" class="btn btn--destructive btn--medium" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--destructive btn--medium">Button</button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Large</th>
+        <td><button type="button" class="btn btn--destructive btn--large">Button</button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--destructive btn--large">Button</button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--destructive btn--large">Button</button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--destructive btn--large">Button</button></td>
+        <td><button type="button" class="btn btn--destructive btn--large" disabled>Button</button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--destructive btn--large">Button</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <h2 class="page-subheading">Button — With Icon</h2>
 
-<section class="variant-card">
-  <h3 class="variant-card__title">Primary</h3>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed (try clicking)</th><th>Focus (tab to it)</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--primary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 
-<section class="variant-card">
-  <h3 class="variant-card__title">Secondary</h3>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--secondary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+<div class="variant-card__grid">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Default</th>
+        <th scope="col">Hover</th>
+        <th scope="col">Focus</th>
+        <th scope="col">Pressed</th>
+        <th scope="col">Disabled</th>
+        <th scope="col">Focus + Hover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Primary / Small</th>
+        <td><button type="button" class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--primary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--primary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Primary / Medium</th>
+        <td><button type="button" class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--primary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--primary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Primary / Large</th>
+        <td><button type="button" class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--primary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--primary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Small</th>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--secondary btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Medium</th>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--secondary btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Secondary / Large</th>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--secondary btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--secondary btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Small</th>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Medium</th>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost / Large</th>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--ghost btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Small</th>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Medium</th>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">Destructive / Large</th>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-hover"><button type="button" class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus"><button type="button" class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-pressed"><button type="button" class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td><button type="button" class="btn btn--icon btn--destructive btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+        <td class="demo-focus-hover"><button type="button" class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<section class="variant-card">
-  <h3 class="variant-card__title">Ghost</h3>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--ghost btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="variant-card">
-  <h3 class="variant-card__title">Destructive</h3>
-  <div class="variant-card__grid">
-    <table>
-      <thead><tr><th>Size</th><th>Default</th><th>Hover</th><th>Pressed</th><th>Focus</th><th>Disabled</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Small</td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--small" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--medium" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-        <tr>
-          <td>Large</td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Hover me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Click + hold</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large"><span class="btn__label">Tab to me</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-          <td><button class="btn btn--icon btn--destructive btn--large" disabled><span class="btn__label">Button</span><span class="btn__divider"></span><span class="btn__icon-container"><svg class="btn__icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span></button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+</div><!-- /.content-card -->
 
 </div><!-- /.container -->
 
