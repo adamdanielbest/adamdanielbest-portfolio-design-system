@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Card component sheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Content card wrapper
+   -------------------------------------------------------------------------- */
+.content-card {
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  margin-bottom: var(--spacing-content-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Variant / token grid (nested table)
+   -------------------------------------------------------------------------- */
+.variant-card__grid {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-medium);
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: var(--spacing-card-padding);
+}
+
+.variant-card__grid table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+.variant-card__grid th,
+.variant-card__grid td {
+  border-bottom: 1px solid var(--border-default);
+  border-right: 1px solid var(--border-default);
+  padding: var(--spacing-table-cell-padding);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.variant-card__grid tr > :last-child {
+  border-right: none;
+}
+
+.variant-card__grid tbody tr:last-child th,
+.variant-card__grid tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.variant-card__grid th {
+  background: var(--background-page);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-label-size);
+  font-weight: 400;
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-primary);
+}
+
+.variant-card__grid th[scope="row"] {
+  width: 168px;
+  min-width: 168px;
+}
+
+.variant-card__grid td {
+  background: transparent;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  color: var(--text-primary);
+}
+
+/* Variant demo cells need more breathing room around the previews */
+.variant-card__grid .demo-cell {
+  padding-top: var(--spacing-card-padding);
+  padding-bottom: var(--spacing-card-padding);
+}
+
+/* Token table — fixed layout so columns share space predictably */
+.token-table {
+  table-layout: fixed;
+  min-width: 480px;
+}
+
+.token-table th:first-child,
+.token-table td:first-child { width: 50%; }
+.token-table th:nth-child(2),
+.token-table td:nth-child(2) { width: 25%; }
+.token-table th:nth-child(3),
+.token-table td:nth-child(3) { width: 25%; }
+
+/* --------------------------------------------------------------------------
+   Card demo atoms
+   -------------------------------------------------------------------------- */
+.card-demo {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--border-default);
+  background: var(--background-card);
+}
+
+.card-demo--hover {
+  background: var(--background-hover);
+  border-color: var(--border-strong);
+  box-shadow: 0px 4px 6px var(--primitive-shadow-light-08), 0px 1px 1.5px var(--primitive-shadow-light-06);
+}
+
+[data-theme="dark"] .card-demo--hover {
+  box-shadow: 0px 4px 6px var(--primitive-shadow-dark-28), 0px 1px 1.5px var(--primitive-shadow-dark-24);
+}
+
+/* Token labels use code.token-label — styles live in sheet.css */

@@ -46,6 +46,26 @@
       </div>
     </header>
 
+    <!-- Demo controls — always include after <header>, before content.
+         sheet.css provides all styles for .demo-controls, .theme-picker, .sr-only.
+         Add further controls (state toggles, size pickers) as extra fieldsets. -->
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
+      });
+    </script>
+
     <!-- =====================================================================
          Component content goes here
 

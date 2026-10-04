@@ -52,6 +52,21 @@ code {
   box-sizing: border-box;
 }
 
+/* Token label — inline text in cobalt, no code block chrome.
+   Use in token reference tables: <code class="token-label">background/card</code> */
+code.token-label {
+  display: inline;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--text-brand);
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: inherit;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 /* --------------------------------------------------------------------------
    Page header
    -------------------------------------------------------------------------- */

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Card – adamdanielbest Design System</title>
+
+  <!-- Tokens — order matters: primitives → semantic colour → dimensions -->
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <!-- Component styles -->
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Card">Card</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Card · Light">adamdanielbest.com · Card · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta" title="Eina04 · 4px base unit · v1.0 Stable · Updated 4 Oct 2026 · Contrast: WCAG 1.4.3 (AA) — verified">Eina04 · 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span></p>
+        <p class="usage" title="Base surface atom. Background, border, and radius token-bound. Padding applied at usage context via spacing tokens.">Base surface atom. Background, border, and radius token-bound. Padding applied at usage context via spacing tokens.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- Variant matrix -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" title="Default">Default</th>
+              <th scope="col" title="Hover">Hover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" title="Card">Card</th>
+              <td class="demo-cell">
+                <div class="card-demo card-demo--default" aria-label="Card default state"></div>
+              </td>
+              <td class="demo-cell">
+                <div class="card-demo card-demo--hover" aria-label="Card hover state"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="background/card">background/card</code></td>
+              <td title="Fill">Fill</td>
+              <td title="Default">Default</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="background/hover">background/hover</code></td>
+              <td title="Fill">Fill</td>
+              <td title="Hover">Hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/default">border/default</code></td>
+              <td title="Stroke">Stroke</td>
+              <td title="Default">Default</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/strong">border/strong</code></td>
+              <td title="Stroke">Stroke</td>
+              <td title="Hover">Hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="radius/medium">radius/medium</code></td>
+              <td title="Corner radius">Corner radius</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="spacing/card-padding">spacing/card-padding</code></td>
+              <td title="Padding">Padding</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="elevation/light/low">elevation/light/low</code></td>
+              <td title="Box shadow">Box shadow</td>
+              <td title="Hover">Hover</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>
