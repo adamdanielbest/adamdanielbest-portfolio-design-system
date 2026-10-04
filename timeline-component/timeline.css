@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Timeline component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Demo wrapper — card padding + constrain width so the list doesn't sprawl
+   -------------------------------------------------------------------------- */
+.timeline-demo-wrap {
+  padding: var(--spacing-card-padding);
+}
+
+/* --------------------------------------------------------------------------
+   Timeline list
+   Relative positioning creates the stacking context for the connector line.
+   -------------------------------------------------------------------------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+/* --------------------------------------------------------------------------
+   Timeline item
+   HORIZONTAL layout: icon (32×32) + body text, gap = spacing/inline-gap
+   Padding top/bottom = spacing/inline-gap (8px each side = 48px min-height)
+   -------------------------------------------------------------------------- */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-inline-gap);
+  padding-top: var(--spacing-inline-gap);
+  padding-bottom: var(--spacing-inline-gap);
+  min-height: 48px;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Icon dot — 32×32 outer container, 16×16 visual dot centred inside
+   The 32×32 outer size matches the Figma icon frame; the visible circle
+   is the 16×16 dot within it (8px padding on all sides in the component).
+   background/card fill hides the connector line behind the icon.
+   -------------------------------------------------------------------------- */
+.timeline-item__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 16×16 visual dot */
+.timeline-item__icon::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--icon-primary);
+}
+
+/* Connector drawn from this item's dot centre down to the next item's dot centre.
+   top: 24px  = padding-top (8) + half of 32px icon (16)
+   bottom: -24px extends 24px past this item's bottom edge; since items have no gap,
+   that puts the connector end exactly at the next item's dot centre (pad 8 + half dot 16). */
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px; /* (32px icon / 2) - (1px / 2) */
+  top: 24px;
+  bottom: -24px;
+  width: 1px;
+  background: var(--text-tertiary);
+  z-index: 0;
+}
+
+/* Current role — hollow circle; card background covers the connector line */
+.timeline-item--current .timeline-item__icon::before {
+  background: var(--background-card);
+  border: 2px solid var(--icon-primary);
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Body text — VERTICAL stack, gap = spacing/inline-gap
+   -------------------------------------------------------------------------- */
+.timeline-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-inline-gap);
+}
+
+.timeline-item__company {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: 1;
+  font-weight: var(--type-body-weight);
+  color: var(--text-primary);
+}
+
+.timeline-item__meta {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  font-weight: var(--type-caption-weight);
+  color: var(--text-secondary);
+}
