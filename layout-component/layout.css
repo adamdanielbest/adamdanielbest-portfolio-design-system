@@ -32,6 +32,16 @@
   line-height: var(--type-body-small-line-height);
 }
 
+.demo-meta code {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Keep the demo wrapper at 1200px even in mobile density mode */
+[data-density="mobile"] .container {
+  max-width: 1200px;
+}
+
 .demo-label--section {
   margin-top: var(--spacing-content-gap);
 }
