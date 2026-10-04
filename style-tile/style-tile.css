@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Style tile — page-specific styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Three-column tile grid
+   -------------------------------------------------------------------------- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-content-gap);
+  align-items: start;
+}
+
+.tile-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-content-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Cards
+   -------------------------------------------------------------------------- */
+.tile-card {
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+  padding: var(--spacing-card-padding);
+}
+
+.tile-heading {
+  margin: 0 0 var(--spacing-content-gap);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: var(--type-heading-1-line-height);
+  letter-spacing: var(--type-heading-1-letter-spacing);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Brand Colours
+   -------------------------------------------------------------------------- */
+.swatch-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+}
+
+.swatch-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-stack-gap);
+}
+
+.swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-small);
+  flex-shrink: 0;
+}
+
+.swatch--bordered {
+  border: 1px solid var(--border-subtle);
+}
+
+.swatch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.swatch-name {
+  font-size: var(--type-body-small-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-body-small-line-height);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.swatch-hex {
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Branding
+   -------------------------------------------------------------------------- */
+.brand-typographic {
+  margin: var(--spacing-stack-gap) 0 var(--spacing-content-gap);
+  font-family: var(--type-family-bold), system-ui, sans-serif;
+  font-size: var(--type-display-size);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: var(--type-display-letter-spacing);
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.brand-iconic {
+  margin: var(--spacing-stack-gap) 0 0;
+  font-family: var(--type-family-bold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: var(--type-heading-1-letter-spacing);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.glyph-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-stack-gap);
+  margin-bottom: var(--spacing-stack-gap);
+}
+
+.glyph-display {
+  font-family: var(--type-family-bold), system-ui, sans-serif;
+  font-size: var(--type-display-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.glyph-heading {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.glyph-caption {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.glyph-chars {
+  margin: 0 0 var(--spacing-content-gap);
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-primary);
+  font-weight: var(--type-label-weight);
+}
+
+.type-section-label {
+  margin-top: var(--spacing-content-gap);
+  margin-bottom: var(--spacing-stack-gap);
+}
+
+.type-sample {
+  margin: 0;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.type-sample--h1 {
+  font-family: var(--type-family-bold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: var(--type-heading-1-line-height);
+  letter-spacing: var(--type-heading-1-letter-spacing);
+}
+
+.type-sample--h2 {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-2-size);
+  font-weight: 400;
+  line-height: var(--type-heading-2-line-height);
+  letter-spacing: var(--type-heading-2-letter-spacing);
+}
+
+.type-sample--body {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+}
+
+.type-sample--caption {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Button preview
+   -------------------------------------------------------------------------- */
+.btn-row {
+  display: flex;
+  gap: var(--spacing-inline-gap);
+  margin-bottom: var(--spacing-content-gap);
+}
+
+.btn-row:last-child {
+  margin-bottom: 0;
+}
+
+.st-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-inline-gap);
+  height: var(--spacing-input-height);
+  padding-inline: var(--spacing-card-padding);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-label-size);
+  font-weight: 400;
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-on-action-primary);
+  background: var(--background-action-primary);
+  border: none;
+  border-radius: var(--radius-medium);
+  cursor: pointer;
+}
+
+.st-btn--icon {
+  width: var(--spacing-input-height);
+  padding-inline: 0;
+  flex-shrink: 0;
+}
+
+.st-btn svg {
+  fill: var(--text-on-action-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Icon grid
+   -------------------------------------------------------------------------- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-stack-gap) var(--spacing-inline-gap);
+  margin-bottom: var(--spacing-stack-gap);
+}
+
+.icon-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-text-stack-gap);
+}
+
+.icon-cell svg {
+  fill: var(--icon-primary);
+}
+
+.icon-label {
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.icon-attribution {
+  margin: 0;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+}
+
+.icon-attribution a {
+  color: var(--text-link);
+}

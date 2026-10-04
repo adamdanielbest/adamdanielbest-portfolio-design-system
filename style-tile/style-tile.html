@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundations – Style Tile – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="style-tile.css">
+</head>
+<body>
+
+  <script>
+    document.documentElement.dataset.theme = 'light';
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <main>
+    <div class="container">
+
+      <header class="page-header">
+        <h1>Style Tile</h1>
+        <hr class="page-header__divider">
+        <div class="page-header__metadata">
+          <p class="breadcrumb">adamdanielbest.com · Style Tile</p>
+          <p class="meta">Eina04 · 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) verified</p>
+          <p class="usage">Brand colours, typography, button preview and iconography reference for adamdanielbest.com</p>
+        </div>
+      </header>
+
+      <div class="demo-controls">
+        <span class="demo-controls__label">Demo controls</span>
+        <div class="demo-controls__divider" aria-hidden="true"></div>
+        <fieldset class="theme-picker">
+          <legend class="sr-only">Theme</legend>
+          <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+          <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+        </fieldset>
+      </div>
+
+      <script>
+        document.querySelectorAll('input[name="theme"]').forEach(r => {
+          r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
+        });
+      </script>
+
+      <!-- ===================================================================
+           Style tile grid
+           =================================================================== -->
+      <div class="tile-grid">
+
+        <!-- Column 1 -->
+        <div class="tile-col">
+
+          <!-- Brand Colours -->
+          <div class="tile-card">
+            <h2 class="tile-heading">Brand Colours</h2>
+            <div class="swatch-list">
+              <div class="swatch-row">
+                <div class="swatch" style="background: var(--primitive-cobalt-300)"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">cobalt/300</span>
+                  <span class="swatch-hex">#88B0CD</span>
+                </div>
+              </div>
+              <div class="swatch-row">
+                <div class="swatch" style="background: var(--primitive-neutral-950)"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">neutral/950</span>
+                  <span class="swatch-hex">#121212</span>
+                </div>
+              </div>
+              <div class="swatch-row">
+                <div class="swatch" style="background: var(--primitive-neutral-600)"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">neutral/600</span>
+                  <span class="swatch-hex">#666666</span>
+                </div>
+              </div>
+              <div class="swatch-row">
+                <div class="swatch" style="background: var(--primitive-neutral-200)"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">neutral/200</span>
+                  <span class="swatch-hex">#E8E8E8</span>
+                </div>
+              </div>
+              <div class="swatch-row">
+                <div class="swatch swatch--bordered" style="background: var(--primitive-neutral-50)"></div>
+                <div class="swatch-info">
+                  <span class="swatch-name">neutral/50</span>
+                  <span class="swatch-hex">#FAF9F6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branding -->
+          <div class="tile-card">
+            <h2 class="tile-heading">Branding</h2>
+            <p class="overline">Typographic</p>
+            <p class="brand-typographic">adamdanielbest</p>
+            <p class="overline">Iconic</p>
+            <p class="brand-iconic">adb</p>
+          </div>
+
+        </div>
+
+        <!-- Column 2 — Typography -->
+        <div class="tile-col">
+          <div class="tile-card">
+            <h2 class="tile-heading">Typography</h2>
+
+            <p class="overline">Glyphs</p>
+            <div class="glyph-row">
+              <span class="glyph-display">Aa</span>
+              <span class="glyph-heading">Aa</span>
+              <span class="glyph-caption">Aa</span>
+            </div>
+            <p class="glyph-chars">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ 013456789!@£$<br>%^&amp;*();:'",‹› / ? - = _ +</p>
+
+            <p class="overline type-section-label">Heading 1</p>
+            <p class="type-sample type-sample--h1">The quick brown fox jumps over the lazy dog.</p>
+
+            <p class="overline type-section-label">Heading 2</p>
+            <p class="type-sample type-sample--h2">The quick brown fox jumps over the lazy dog.</p>
+
+            <p class="overline type-section-label">Paragraph</p>
+            <p class="type-sample type-sample--body">The quick brown fox jumps over the lazy dog.</p>
+
+            <p class="overline type-section-label">Caption</p>
+            <p class="type-sample type-sample--caption">The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="tile-col">
+
+          <!-- Button -->
+          <div class="tile-card">
+            <h2 class="tile-heading">Button</h2>
+
+            <p class="overline">Default</p>
+            <div class="btn-row">
+              <button class="st-btn" type="button">Button</button>
+              <button class="st-btn st-btn--icon" type="button" aria-label="Download">
+                <svg aria-hidden="true" focusable="false" width="20" height="20"><use href="#icon-download"/></svg>
+              </button>
+            </div>
+
+            <p class="overline">Button with icon</p>
+            <div class="btn-row">
+              <button class="st-btn" type="button">Button</button>
+              <button class="st-btn st-btn--icon" type="button" aria-label="Download">
+                <svg aria-hidden="true" focusable="false" width="20" height="20"><use href="#icon-download"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Icons -->
+          <div class="tile-card">
+            <h2 class="tile-heading">Icons</h2>
+            <div class="icon-grid">
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-email"/></svg>
+                <span class="icon-label">Email</span>
+              </div>
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-download"/></svg>
+                <span class="icon-label">Download</span>
+              </div>
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-info"/></svg>
+                <span class="icon-label">Info</span>
+              </div>
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-mobile"/></svg>
+                <span class="icon-label">Mobile</span>
+              </div>
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-location"/></svg>
+                <span class="icon-label">Location</span>
+              </div>
+              <div class="icon-cell">
+                <svg aria-hidden="true" focusable="false" width="24" height="24"><use href="#icon-close"/></svg>
+                <span class="icon-label">Close</span>
+              </div>
+            </div>
+            <p class="icon-attribution">Icon sample is taken from Google's Material Design Library <a href="https://fonts.google.com/icons" target="_blank" rel="noopener">https://fonts.google.com/icons</a></p>
+          </div>
+
+        </div>
+      </div><!-- /.tile-grid -->
+
+    </div><!-- /.container -->
+  </main>
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>
