@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Architects+Daughter&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f2efe9;font-family:'Kalam',cursive}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:700 15px/1.2 'Kalam',cursive;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 'Kalam',cursive;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fdfcfa;border:2px solid #1a1a1a;border-radius:2px;box-shadow:3px 3px 0 rgba(0,0,0,.15);overflow:hidden}
+.dv-opt:target .dv-oid{background:#c8501f;color:#fff}
+.dv-next{margin:22px 0 0;font:13px/1.6 'Kalam',cursive;color:rgba(0,0,0,.55)}
+.wf-note{font:700 11px 'Architects Daughter',cursive;color:#c8501f;letter-spacing:.02em}
+.wf-label{font:400 11px 'Kalam',cursive;color:rgba(0,0,0,.55)}
+.wf-box{border:1.5px dashed rgba(0,0,0,.55)}
+.wf-img{background:repeating-linear-gradient(45deg,#e4e0d6,#e4e0d6 6px,#d8d3c5 6px,#d8d3c5 12px);display:flex;align-items:center;justify-content:center}
+.wf-pill{border:1.5px solid #1a1a1a;border-radius:20px;padding:2px 10px;font:400 10px 'Kalam',cursive;white-space:nowrap}
+.wf-line{border-bottom:2px solid #1a1a1a}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Level 2 pages + breadcrumb, and &lt;900px navigation</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Case study page — with breadcrumb</div>
+<div class="dv-card" style="width:440px">
+  <div style="display:flex;height:560px">
+    <div style="width:30%;border-right:1.5px solid #1a1a1a;padding:18px 14px;background:#f8f5ee;display:flex;flex-direction:column;gap:20px">
+      <div class="wf-box" style="width:22px;height:22px;border-radius:5px"></div>
+      <div class="wf-label" style="line-height:1.6;font-size:10px">Senior product designer, 15yrs...</div>
+      <div class="wf-note" style="font-size:9px">TIMELINE</div>
+      <div style="display:flex;flex-direction:column;gap:12px;padding-left:12px;border-left:1.5px solid #1a1a1a;flex:1">
+        <span class="wf-label" style="font-size:10px">● Burberry</span>
+        <span class="wf-label" style="font-size:10px">● Harrods</span>
+        <span class="wf-label" style="font-size:10px;color:#c8501f;font-weight:700">● giffgaff</span>
+        <span class="wf-label" style="font-size:10px">● Lickd</span>
+        <span class="wf-label" style="font-size:10px">● HubbleHQ</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:10px;border-top:1.5px dashed rgba(0,0,0,.35)">
+        <span class="wf-label" style="font-size:9px">Email</span><span class="wf-label" style="font-size:9px">LinkedIn</span><span class="wf-label" style="font-size:9px">CV</span>
+      </div>
+    </div>
+    <div style="width:70%;padding:16px;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <span class="wf-label" style="font-size:10px;text-decoration:underline">Home</span><span class="wf-label" style="font-size:10px;opacity:.5">/</span>
+        <span class="wf-label" style="font-size:10px;text-decoration:underline">giffgaff</span><span class="wf-label" style="font-size:10px;opacity:.5">/</span>
+        <span class="wf-label" style="font-size:10px;opacity:.7">Community support redesign</span>
+      </div>
+      <span class="wf-label" style="font-size:9px;opacity:.6">Lead Product Designer · 2017–2019</span>
+      <div class="wf-img" style="height:100px;display:flex;align-items:center;justify-content:center"><span class="wf-label">HOOK</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Context</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Role</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Approach</span></div>
+      <div class="wf-box" style="padding:8px;border-color:#c8501f"><span class="wf-label" style="color:#c8501f">Outcome</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:6px;border-top:1.5px dashed rgba(0,0,0,.35)">
+        <span class="wf-label" style="font-size:9px">← Burberry</span>
+        <span class="wf-label" style="font-size:9px;text-decoration:underline">Back to work</span>
+        <span class="wf-label" style="font-size:9px">HubbleHQ →</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="max-width:280px">
+  <div class="wf-label" style="line-height:1.6">Breadcrumb (Work / Company / Project) replaces a title-only header, so depth in the site is always legible. Current timeline item highlights in the sidebar to show "where you are" without a separate page nav.</div>
+</div>
+</div>
+
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Navigation at &lt;900px — closed → open</div>
+<div class="dv-card" style="width:460px">
+  <div style="display:flex;gap:0;height:520px">
+    <div style="width:50%;border-right:1.5px solid #1a1a1a;display:flex;flex-direction:column">
+      <div class="wf-note" style="padding:10px 12px 0;font-size:9px">CLOSED — default scroll state</div>
+      <div style="height:40px;border-bottom:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#f8f5ee">
+        <div style="display:flex;align-items:center;gap:8px"><div class="wf-box" style="width:16px;height:16px;border-radius:4px"></div><span class="wf-label" style="font-size:10px">Adam Daniel Best</span></div>
+        <span class="wf-label" style="font-size:9px">≡</span>
+      </div>
+      <div style="padding:6px 12px;border-bottom:1.5px dashed rgba(0,0,0,.35);background:#fff">
+        <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap"><span class="wf-label" style="font-size:8px;text-decoration:underline">Home</span><span class="wf-label" style="font-size:8px;opacity:.5">/</span><span class="wf-label" style="font-size:8px;opacity:.7">giffgaff</span></div>
+      </div>
+      <div style="padding:8px 12px;border-bottom:1.5px dashed rgba(0,0,0,.35);background:#f8f5ee">
+        <div style="display:flex;gap:6px;overflow:hidden"><span class="wf-pill" style="font-size:8px">Burberry</span><span class="wf-pill" style="font-size:8px">Harrods</span><span class="wf-pill" style="font-size:8px">giffgaff</span></div>
+      </div>
+      <div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:10px">
+        <div class="wf-box"><div class="wf-img" style="height:60px"></div></div>
+        <div class="wf-box" style="border-color:#c8501f"><div class="wf-img" style="height:60px"></div></div>
+      </div>
+    </div>
+    <div style="width:50%;display:flex;flex-direction:column;position:relative">
+      <div class="wf-note" style="padding:10px 12px 0;font-size:9px">OPEN — tap ≡, drawer overlays</div>
+      <div style="height:40px;border-bottom:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#f8f5ee">
+        <div style="display:flex;align-items:center;gap:8px"><div class="wf-box" style="width:16px;height:16px;border-radius:4px"></div><span class="wf-label" style="font-size:10px">Adam Daniel Best</span></div>
+        <span class="wf-label" style="font-size:9px">✕</span>
+      </div>
+      <div style="position:absolute;top:40px;left:0;right:0;bottom:0;background:#f8f5ee;padding:16px;display:flex;flex-direction:column;gap:16px;box-shadow:0 6px 12px rgba(0,0,0,.15)">
+        <span class="wf-label" style="line-height:1.5;font-size:10px">Full positioning statement, shown only in open drawer</span>
+        <div class="wf-note" style="font-size:9px">SITEMAP</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span class="wf-label" style="font-size:10px;text-decoration:underline">Home</span>
+          <span class="wf-label" style="font-size:10px;text-decoration:underline">giffgaff</span>
+          <span class="wf-label" style="font-size:10px;text-decoration:underline;color:#c8501f">Design system workflow</span>
+          <span class="wf-label" style="font-size:10px;text-decoration:underline">HubbleHQ</span>
+          <span class="wf-label" style="font-size:10px;text-decoration:underline">Burberry</span>
+        </div>
+        <div class="wf-note" style="font-size:9px">TIMELINE (full, vertical)</div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-left:10px;border-left:1.5px solid #1a1a1a">
+          <span class="wf-label" style="font-size:10px">● Burberry '11</span>
+          <span class="wf-label" style="font-size:10px">● Harrods '14</span>
+          <span class="wf-label" style="font-size:10px">● giffgaff '17</span>
+          <span class="wf-label" style="font-size:10px">● Lickd '20</span>
+          <span class="wf-label" style="font-size:10px">● HubbleHQ '23</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding-top:10px;border-top:1.5px dashed rgba(0,0,0,.35)">
+          <span class="wf-label" style="font-size:10px">Email</span><span class="wf-label" style="font-size:10px">LinkedIn</span><span class="wf-label" style="font-size:10px">CV</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="max-width:280px">
+  <div class="wf-label" style="line-height:1.6">Breadcrumb sits under the top bar at all times, even collapsed. ≡ opens a full sitemap (Home + every case study) plus full timeline and links — the drawer is the mobile equivalent of the sidebar, not just a menu icon.</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "show the drawer closing over a case study page too" · "try tabs instead of prev/next arrows on <a class="dv-oid" href="#3a">3a</a>"</p>
+</section>
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Developing <a class="dv-oid" href="#1a">1a</a> — refined sidebar, 70/30</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Desktop — quiet sidebar, visual main panel</div>
+<div class="dv-card" style="width:560px">
+  <div style="display:flex;height:720px">
+    <div style="width:30%;border-right:1.5px solid #1a1a1a;padding:22px 18px;display:flex;flex-direction:column;gap:26px;background:#f8f5ee">
+      <div class="wf-box" style="width:28px;height:28px;border-radius:6px"></div>
+      <div class="wf-label" style="line-height:1.6">Senior product designer, 15yrs — luxury heritage to consumer tech.</div>
+      <div class="wf-note">CAREER TIMELINE</div>
+      <div style="display:flex;flex-direction:column;gap:16px;padding-left:14px;border-left:1.5px solid #1a1a1a;flex:1">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="wf-label">● Burberry</span><span class="wf-label" style="font-size:9px;opacity:.6">'11</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="wf-label">● Harrods</span><span class="wf-label" style="font-size:9px;opacity:.6">'14</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="wf-label">● giffgaff</span><span class="wf-label" style="font-size:9px;opacity:.6">'17</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="wf-label">● Lickd</span><span class="wf-label" style="font-size:9px;opacity:.6">'20</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="wf-label">● HubbleHQ</span><span class="wf-label" style="font-size:9px;opacity:.6">'23</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1.5px dashed rgba(0,0,0,.35)">
+        <span class="wf-label">Email</span><span class="wf-label">LinkedIn</span><span class="wf-label">CV</span>
+      </div>
+    </div>
+    <div style="width:70%;padding:18px;display:flex;flex-direction:column;gap:16px;overflow:hidden">
+      <div class="wf-note">MAIN PANEL — scrolls independently, sidebar fixed</div>
+      <div class="wf-box" style="display:flex;flex-direction:column">
+        <div class="wf-img" style="height:150px"></div>
+        <div style="padding:12px">
+          <div style="font:700 15px 'Kalam',cursive">giffgaff</div>
+          <div class="wf-label">Community support redesign — Lead Product Designer</div>
+          <div class="wf-label" style="margin-top:4px;font-style:italic">Cut support ticket volume by rethinking the help flow end to end.</div>
+        </div>
+      </div>
+      <div class="wf-box" style="display:flex;flex-direction:column">
+        <div class="wf-img" style="height:150px"></div>
+        <div style="padding:12px">
+          <div style="font:700 15px 'Kalam',cursive">HubbleHQ</div>
+          <div class="wf-label">Office search platform, 0→1 — Senior Designer</div>
+          <div class="wf-label" style="margin-top:4px;font-style:italic">Took a search product from concept to first paying customers.</div>
+        </div>
+      </div>
+      <div class="wf-box" style="display:flex;flex-direction:column;border:2px solid #c8501f">
+        <div class="wf-img" style="height:150px;outline:2px dashed #c8501f;outline-offset:-6px"></div>
+        <div style="padding:12px;background:#fdf1ec">
+          <div style="font:700 15px 'Kalam',cursive;color:#c8501f">Design system workflow ★</div>
+          <div class="wf-label">AI-assisted token pipeline, Figma → code — self-directed</div>
+          <div class="wf-label" style="margin-top:4px;font-style:italic">This site's own build process, shown as a case study.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="max-width:400px">
+  <div class="wf-label" style="line-height:1.6">70/30 gives the work room to breathe. Timeline is reduced to brand + dot so it reads as a scannable proof strip, not competing copy. The differentiator card gets a border + tint rather than size — visual weight, not disruption.</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Tablet (≤900px) — sidebar collapses to top bar</div>
+<div class="dv-card" style="width:280px">
+  <div style="display:flex;flex-direction:column;height:560px">
+    <div style="height:40px;border-bottom:1.5px solid #1a1a1a;display:flex;align-items:center;gap:10px;padding:0 14px;flex:none;background:#f8f5ee">
+      <div class="wf-box" style="width:18px;height:18px;border-radius:4px"></div>
+      <span class="wf-label">Adam Daniel Best</span>
+    </div>
+    <div style="flex:none;padding:10px 14px;border-bottom:1.5px dashed rgba(0,0,0,.35);background:#f8f5ee">
+      <div class="wf-note" style="margin-bottom:6px;font-size:9px">TIMELINE — horizontal scroll</div>
+      <div style="display:flex;gap:8px;overflow:hidden">
+        <span class="wf-pill">Burberry</span><span class="wf-pill">Harrods</span><span class="wf-pill">giffgaff</span><span class="wf-pill">Lickd</span><span class="wf-pill">HubbleHQ</span>
+      </div>
+    </div>
+    <div style="flex:1;overflow:hidden;padding:14px;display:flex;flex-direction:column;gap:12px">
+      <div class="wf-box"><div class="wf-img" style="height:80px"></div><div style="padding:8px"><span class="wf-label">giffgaff — community support</span></div></div>
+      <div class="wf-box" style="border-color:#c8501f"><div class="wf-img" style="height:80px"></div><div style="padding:8px;background:#fdf1ec"><span class="wf-label" style="color:#c8501f">Design system workflow ★</span></div></div>
+      <div class="wf-box"><div class="wf-img" style="height:80px"></div><div style="padding:8px"><span class="wf-label">HubbleHQ — office search</span></div></div>
+    </div>
+  </div>
+</div>
+<div style="max-width:280px">
+  <div class="wf-label" style="line-height:1.6">Top bar keeps just logo + name — no positioning statement or links, to stay compact. Timeline strip sits between it and the cards, so it's still seen before scrolling into the work.</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2c">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Case study page — sidebar persists, no separate nav</div>
+<div class="dv-card" style="width:400px">
+  <div style="display:flex;height:500px">
+    <div style="width:30%;border-right:1.5px solid #1a1a1a;padding:18px 14px;background:#f8f5ee;display:flex;flex-direction:column;gap:20px">
+      <div class="wf-box" style="width:22px;height:22px;border-radius:5px"></div>
+      <div class="wf-label" style="font-size:9px">← back to work</div>
+      <div style="border-top:1.5px dashed rgba(0,0,0,.35);padding-top:12px">
+        <div class="wf-label" style="font-size:9px;opacity:.7">SAME SIDEBAR AS HOMEPAGE</div>
+        <div class="wf-label" style="margin-top:6px">Timeline, links unchanged — persists across every page</div>
+      </div>
+    </div>
+    <div style="width:70%;padding:14px;display:flex;flex-direction:column;gap:8px">
+      <span class="wf-label" style="font-size:9px">giffgaff · Lead Designer · 2017–2019</span>
+      <div class="wf-img" style="height:80px;display:flex;align-items:center;justify-content:center"><span class="wf-label">HOOK</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Context</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Role</span></div>
+      <div class="wf-box" style="padding:8px"><span class="wf-label">Approach</span></div>
+      <div class="wf-box" style="padding:8px;border-color:#c8501f"><span class="wf-label" style="color:#c8501f">Outcome</span></div>
+      <span class="wf-label" style="font-size:9px">↔ prev / next · back to index</span>
+    </div>
+  </div>
+</div>
+<div style="max-width:280px">
+  <div class="wf-label" style="line-height:1.6">No top nav to design or maintain separately — the sidebar's back-link and timeline are the only navigation, reinforcing that every page is part of one system.</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "make the timeline dots clickable-looking" · "try a two-column card grid on <a class="dv-oid" href="#2a">2a</a> for wider screens" · "add a filter by role/company"</p>
+</section>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage structures + case study template</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Fixed sidebar — context always visible</div>
+<div class="dv-card" style="width:520px">
+  <div style="display:flex;height:640px">
+    <div style="width:34%;border-right:2px solid #1a1a1a;padding:16px;display:flex;flex-direction:column;gap:14px;background:#f7f4ee">
+      <div>
+        <div style="font:700 18px 'Architects Daughter',cursive">Adam Daniel Best</div>
+        <div class="wf-label" style="margin-top:6px;line-height:1.5">"Senior product designer, 15yrs — luxury heritage to consumer tech." (positioning line)</div>
+      </div>
+      <div class="wf-note">↓ CAREER TIMELINE (vertical)</div>
+      <div style="display:flex;flex-direction:column;gap:10px;flex:1;position:relative;padding-left:14px;border-left:2px solid #1a1a1a">
+        <div class="wf-label">● Burberry</div>
+        <div class="wf-label">● Harrods</div>
+        <div class="wf-label">● giffgaff</div>
+        <div class="wf-label">● Lickd</div>
+        <div class="wf-label">● HubbleHQ</div>
+      </div>
+      <div style="border-top:1.5px dashed rgba(0,0,0,.4);padding-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <div class="wf-pill">email</div><div class="wf-pill">LinkedIn</div><div class="wf-pill">CV</div>
+      </div>
+    </div>
+    <div style="width:66%;padding:16px;overflow:hidden;display:flex;flex-direction:column;gap:14px">
+      <div class="wf-note">→ SCROLLS INDEPENDENTLY</div>
+      <div class="wf-box" style="padding:10px;display:flex;gap:10px">
+        <div class="wf-img" style="width:90px;height:64px;flex:none"></div>
+        <div style="flex:1;min-width:0">
+          <div style="font:700 13px 'Kalam',cursive">giffgaff</div>
+          <div class="wf-label">Redesigning the community support flow</div>
+          <div style="display:flex;gap:6px;margin-top:6px"><span class="wf-pill">Lead Product Designer</span></div>
+        </div>
+      </div>
+      <div class="wf-box" style="padding:10px;display:flex;gap:10px">
+        <div class="wf-img" style="width:90px;height:64px;flex:none"></div>
+        <div style="flex:1;min-width:0">
+          <div style="font:700 13px 'Kalam',cursive">HubbleHQ</div>
+          <div class="wf-label">Office search platform, 0→1</div>
+          <div style="display:flex;gap:6px;margin-top:6px"><span class="wf-pill">Senior Designer</span></div>
+        </div>
+      </div>
+      <div class="wf-box" style="padding:10px;display:flex;gap:10px;border-color:#c8501f">
+        <div class="wf-img" style="width:90px;height:64px;flex:none"></div>
+        <div style="flex:1;min-width:0">
+          <div style="font:700 13px 'Kalam',cursive;color:#c8501f">Design system workflow ★</div>
+          <div class="wf-label">AI-assisted token pipeline, Figma → code</div>
+          <div style="display:flex;gap:6px;margin-top:6px"><span class="wf-pill">This site, self-directed</span></div>
+        </div>
+      </div>
+      <div class="wf-box" style="padding:10px;display:flex;gap:10px">
+        <div class="wf-img" style="width:90px;height:64px;flex:none"></div>
+        <div style="flex:1;min-width:0">
+          <div style="font:700 13px 'Kalam',cursive">Burberry</div>
+          <div class="wf-label">Heritage e-commerce, project title</div>
+          <div style="display:flex;gap:6px;margin-top:6px"><span class="wf-pill">Product Designer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+  <div class="dv-card" style="width:140px">
+    <div style="padding:10px;display:flex;flex-direction:column;gap:8px">
+      <div class="wf-note" style="font-size:9px">MOBILE</div>
+      <div class="wf-box" style="height:34px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">name + statement, collapsed</span></div>
+      <div class="wf-box" style="height:20px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">timeline → horiz. scroll strip</span></div>
+      <div class="wf-img" style="height:30px"></div>
+      <div class="wf-img" style="height:30px"></div>
+      <div class="wf-img" style="height:30px;outline:1.5px solid #c8501f;outline-offset:-1.5px"></div>
+      <div class="wf-img" style="height:30px"></div>
+    </div>
+  </div>
+  <div style="max-width:280px;padding-top:6px">
+    <div class="wf-label" style="line-height:1.6">Strongest for signalling range immediately — timeline is never more than a glance away, but the sidebar competes for attention with the work itself, and eats real width on smaller laptop screens.</div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Top nav — full-bleed cards</div>
+<div class="dv-card" style="width:520px">
+  <div style="height:640px;display:flex;flex-direction:column">
+    <div style="height:44px;border-bottom:2px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 16px;flex:none">
+      <span style="font:700 13px 'Architects Daughter',cursive">Adam Daniel Best</span>
+      <div style="display:flex;gap:14px"><span class="wf-label">Work</span><span class="wf-label">Timeline</span><span class="wf-label">About</span><span class="wf-label">Contact</span></div>
+    </div>
+    <div style="flex:none;padding:26px 16px;border-bottom:1.5px dashed rgba(0,0,0,.4)">
+      <div style="font:700 22px 'Architects Daughter',cursive;line-height:1.3">Senior product designer.<br/>Luxury heritage → consumer tech.</div>
+      <div class="wf-label" style="margin-top:8px">One-line positioning statement sits directly under headline. ↓ scroll cue</div>
+    </div>
+    <div style="flex:none;padding:12px 16px;border-bottom:1.5px dashed rgba(0,0,0,.4)">
+      <div class="wf-note" style="margin-bottom:8px">CAREER TIMELINE — horizontal band</div>
+      <div style="display:flex;gap:10px;overflow:hidden">
+        <span class="wf-pill">Burberry '11</span><span class="wf-pill">Harrods '14</span><span class="wf-pill">giffgaff '17</span><span class="wf-pill">Lickd '20</span><span class="wf-pill">HubbleHQ '23</span>
+      </div>
+    </div>
+    <div style="flex:1;overflow:hidden;padding:14px 16px;display:flex;flex-direction:column;gap:12px">
+      <div class="wf-box" style="padding:10px">
+        <div class="wf-img" style="height:70px;margin-bottom:8px"></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:700 13px 'Kalam',cursive">giffgaff — Community support redesign</span><span class="wf-label">Lead Designer</span></div>
+        <div class="wf-label">One-liner on the problem solved →</div>
+      </div>
+      <div class="wf-box" style="padding:10px;border-color:#c8501f">
+        <div class="wf-img" style="height:70px;margin-bottom:8px"></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:700 13px 'Kalam',cursive;color:#c8501f">Design system workflow ★</span><span class="wf-label">Self-directed</span></div>
+        <div class="wf-label">AI-assisted token pipeline, Figma → code →</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+  <div class="dv-card" style="width:140px">
+    <div style="padding:8px;display:flex;flex-direction:column;gap:6px">
+      <div class="wf-note" style="font-size:9px">MOBILE</div>
+      <div class="wf-box" style="height:20px;display:flex;align-items:center;justify-content:space-between;padding:0 6px"><span class="wf-label" style="font-size:9px">logo</span><span class="wf-label" style="font-size:9px">☰</span></div>
+      <div class="wf-box" style="height:44px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">hero stacks</span></div>
+      <div class="wf-box" style="height:18px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">timeline scroll strip</span></div>
+      <div class="wf-img" style="height:44px"></div>
+      <div class="wf-img" style="height:44px;outline:1.5px solid #c8501f;outline-offset:-1.5px"></div>
+    </div>
+  </div>
+  <div style="max-width:280px;padding-top:6px">
+    <div class="wf-label" style="line-height:1.6">Most conventional and lowest-risk — familiar to any hiring manager. Timeline reads as a proof strip rather than a throughline, and cards need strong photography to avoid feeling like a template.</div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Expand-in-place index — editorial, restrained</div>
+<div class="dv-card" style="width:520px">
+  <div style="height:640px;display:flex;flex-direction:column">
+    <div style="height:30px;border-bottom:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 16px;flex:none">
+      <span style="font:700 12px 'Architects Daughter',cursive">Adam Daniel Best</span>
+      <span class="wf-label" style="font-size:9px">sticky mini-header, appears on scroll</span>
+    </div>
+    <div style="flex:none;padding:22px 16px;border-bottom:1.5px dashed rgba(0,0,0,.4)">
+      <div style="font:700 20px 'Architects Daughter',cursive;line-height:1.3">15 years designing for Burberry, giffgaff, HubbleHQ and others.</div>
+      <div class="wf-label" style="margin-top:6px">Positioning statement — no nav bar competing for attention</div>
+    </div>
+    <div style="flex:none;padding:10px 16px;border-bottom:1.5px dashed rgba(0,0,0,.4)">
+      <div class="wf-note" style="margin-bottom:6px">TIMELINE — inline strip, sets range before the work</div>
+      <div style="display:flex;gap:8px"><span class="wf-pill">'11 Burberry</span><span class="wf-pill">'14 Harrods</span><span class="wf-pill">'17 giffgaff</span><span class="wf-pill">'20 Lickd</span><span class="wf-pill">'23 HubbleHQ</span></div>
+    </div>
+    <div style="flex:1;padding:10px 16px;display:flex;flex-direction:column;gap:0;overflow:hidden">
+      <div class="wf-line" style="padding:10px 0;display:flex;justify-content:space-between;align-items:center"><span style="font:700 13px 'Kalam',cursive">giffgaff · Community support redesign</span><span class="wf-label">Lead Designer ＋</span></div>
+      <div class="wf-line" style="padding:14px 0;background:#f7f4ee;display:flex;gap:10px">
+        <div class="wf-img" style="width:80px;height:56px;flex:none"></div>
+        <div class="wf-label" style="line-height:1.5">expanded: hook line, approach summary, one outcome metric, "read full case study →" — no page navigation yet</div>
+      </div>
+      <div class="wf-line" style="padding:10px 0;display:flex;justify-content:space-between;align-items:center;border-color:#c8501f"><span style="font:700 13px 'Kalam',cursive;color:#c8501f">Design system workflow ★ · AI token pipeline</span><span class="wf-label">Self-directed ＋</span></div>
+      <div class="wf-line" style="padding:10px 0;display:flex;justify-content:space-between;align-items:center"><span style="font:700 13px 'Kalam',cursive">HubbleHQ · Office search 0→1</span><span class="wf-label">Senior Designer ＋</span></div>
+      <div style="padding:10px 0;display:flex;justify-content:space-between;align-items:center"><span style="font:700 13px 'Kalam',cursive">Burberry · project title</span><span class="wf-label">Product Designer ＋</span></div>
+    </div>
+  </div>
+</div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+  <div class="dv-card" style="width:140px">
+    <div style="padding:8px;display:flex;flex-direction:column;gap:6px">
+      <div class="wf-note" style="font-size:9px">MOBILE</div>
+      <div class="wf-box" style="height:30px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">headline stacks</span></div>
+      <div class="wf-box" style="height:16px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">timeline strip</span></div>
+      <div class="wf-box" style="height:18px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">row 1</span></div>
+      <div class="wf-box" style="height:40px;background:#f7f4ee;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">expanded — same accordion pattern, no change needed</span></div>
+      <div class="wf-box" style="height:18px;display:flex;align-items:center;justify-content:center"><span class="wf-label" style="font-size:9px">row 2</span></div>
+    </div>
+  </div>
+  <div style="max-width:280px;padding-top:6px">
+    <div class="wf-label" style="line-height:1.6">Signals restraint and editing — a quiet flex for a design-systems case study. Index reads before you touch anything, no page-loads to browse. Risk: one strong click target ("+") needs to feel obviously interactive, not decorative.</div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Case study page template — applies to all three</div>
+<div class="dv-card" style="width:320px">
+  <div style="display:flex;flex-direction:column">
+    <div class="wf-box" style="padding:10px"><span class="wf-label">← back to work · Company · Role · 2019–2020</span></div>
+    <div class="wf-img" style="height:110px;display:flex;align-items:center;justify-content:center"><span class="wf-label">HOOK — one strong statement or image, sets the stakes</span></div>
+    <div class="wf-box" style="padding:12px"><span class="wf-label"><b style="font-family:'Architects Daughter',cursive">Context —</b> the business situation, why this mattered, constraints</span></div>
+    <div class="wf-box" style="padding:12px"><span class="wf-label"><b style="font-family:'Architects Daughter',cursive">Role —</b> what you owned, team, scope, timeframe</span></div>
+    <div class="wf-box" style="padding:12px"><span class="wf-label"><b style="font-family:'Architects Daughter',cursive">Approach —</b> process, key decisions, artifacts — this is where depth lives</span></div>
+    <div class="wf-img" style="height:70px"></div>
+    <div class="wf-box" style="padding:12px;border-color:#c8501f"><span class="wf-label" style="color:#c8501f"><b style="font-family:'Architects Daughter',cursive">Outcome —</b> metric, impact, quote — the payoff</span></div>
+    <div class="wf-box" style="padding:10px"><span class="wf-label">↔ prev / next case study · back to index</span></div>
+  </div>
+</div>
+<div style="max-width:280px">
+  <div class="wf-label" style="line-height:1.6">Same five-beat rhythm every time (hook → context → role → approach → outcome) gives scanners a reliable place to jump in and deep-readers a consistent structure. Heading style + spacing scale repeats across all four studies so the site itself reads as one system.</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "combine <a class="dv-oid" href="#1a">1a</a>'s sidebar with <a class="dv-oid" href="#1c">1c</a>'s accordion cards" · "make <a class="dv-oid" href="#1b">1b</a>'s hero bigger" · "show the design-system case study expanded on <a class="dv-oid" href="#1c">1c</a>"</p>
+</section>
+
+</x-dc>
+</body>
+</html>
