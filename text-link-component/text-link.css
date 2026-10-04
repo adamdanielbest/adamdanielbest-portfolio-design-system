@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Text Link component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Link demo atoms
+   The component bounding box (hit area) is visible in all states.
+   Default/Hover/Visited/Disabled use a dashed border-default indicator;
+   Focus uses a solid border/focus stroke — no padding so the ring sits
+   flush with the bounding box edge, matching the Figma component.
+   -------------------------------------------------------------------------- */
+.link-demo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 2px;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-link);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+  pointer-events: none;
+}
+
+.link-demo--hover {
+  color: var(--text-link-hover);
+  text-decoration: none;
+}
+
+.link-demo--visited {
+  color: var(--text-link-visited);
+}
+
+.link-demo--focus,
+.link-demo--focus-hover {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  outline: 2px solid var(--border-focus);
+  outline-offset: 0;
+  border-radius: 2px;
+}
+
+.link-demo--focus {
+  color: var(--text-link);
+}
+
+.link-demo--focus-hover {
+  color: var(--text-link-hover);
+}
+
+.link-demo--disabled {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}

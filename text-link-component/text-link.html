@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Text Link – adamdanielbest Design System</title>
+
+  <!-- Tokens — order matters: primitives → semantic colour → dimensions -->
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <!-- Component styles -->
+  <link rel="stylesheet" href="text-link.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Text Link">Text Link</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Text Link · Light">adamdanielbest.com · Text Link · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta" title="Eina04 · 4px base unit · v1.0 Stable · Updated 4 Oct 2026 · WCAG 1.4.3 AA">Eina04 · 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage" title="Inline hyperlink atom. Fill colour driven by text/accent, text/link-hover, and text/link-visited tokens.">Inline hyperlink atom. Fill colour driven by <code class="token-label">text/accent</code>, <code class="token-label">text/link-hover</code>, and <code class="token-label">text/link-visited</code> tokens.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- Variant matrix -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" title="Default">Default</th>
+              <th scope="col" title="Hover">Hover</th>
+              <th scope="col" title="Visited">Visited</th>
+              <th scope="col" title="Focus">Focus</th>
+              <th scope="col" title="Disabled">Disabled</th>
+              <th scope="col" title="Focus hover">Focus hover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" title="Link">Link</th>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--default" href="#" tabindex="-1" aria-label="Default link">Link text</a>
+              </td>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--hover" href="#" tabindex="-1" aria-label="Hover link">Link text</a>
+              </td>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--visited" href="#" tabindex="-1" aria-label="Visited link">Link text</a>
+              </td>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--focus" href="#" tabindex="-1" aria-label="Focus link">Link text</a>
+              </td>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--disabled" href="#" tabindex="-1" aria-label="Disabled link" aria-disabled="true">Link text</a>
+              </td>
+              <td class="demo-cell">
+                <a class="link-demo link-demo--focus-hover" href="#" tabindex="-1" aria-label="Focus hover link">Link text</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="text/accent">text/accent</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Default + Focus + Focus hover">Default + Focus + Focus hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/link-hover">text/link-hover</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Hover + Focus hover">Hover + Focus hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/link-visited">text/link-visited</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Visited">Visited</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/disabled">text/disabled</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Disabled">Disabled</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/focus">border/focus</code></td>
+              <td title="Focus ring">Focus ring</td>
+              <td title="Focus + Focus hover">Focus + Focus hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="type/link">type/link</code></td>
+              <td title="Text style">Text style</td>
+              <td title="All">All</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

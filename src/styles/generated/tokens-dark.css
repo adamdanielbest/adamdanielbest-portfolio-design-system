@@ -42,6 +42,7 @@
     --text-brand: #88B0CD;
     --text-link: #88B0CD;
     --text-link-hover: #B8D8ED;
+    --text-link-visited: #D9ECF7;
     --text-on-action: #121212;
     --text-on-action-secondary: #FAF9F6;
 
@@ -109,6 +110,7 @@
   --text-brand: #88B0CD;
   --text-link: #88B0CD;
   --text-link-hover: #B8D8ED;
+  --text-link-visited: #D9ECF7;
   --text-on-action: #121212;
   --text-on-action-secondary: #FAF9F6;
 
