@@ -8,14 +8,18 @@
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-content-gap);
-  align-items: start;
+  gap: var(--spacing-stack-gap);
+  align-items: stretch;
 }
 
 .tile-col {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-content-gap);
+  gap: var(--spacing-stack-gap);
+}
+
+.tile-col > .tile-card:last-child {
+  flex: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -68,7 +72,7 @@
 .swatch-info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--spacing-text-stack-gap);
 }
 
 .swatch-name {
@@ -91,35 +95,32 @@
 /* --------------------------------------------------------------------------
    Branding
    -------------------------------------------------------------------------- */
-.brand-typographic {
+.brand-logo {
   margin: var(--spacing-stack-gap) 0 var(--spacing-content-gap);
-  font-family: var(--type-family-bold), system-ui, sans-serif;
-  font-size: var(--type-display-size);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: var(--type-display-letter-spacing);
   color: var(--text-primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+  line-height: 0;
 }
 
-.brand-iconic {
-  margin: var(--spacing-stack-gap) 0 0;
-  font-family: var(--type-family-bold), system-ui, sans-serif;
-  font-size: var(--type-heading-1-size);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: var(--type-heading-1-letter-spacing);
-  color: var(--text-primary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+.brand-logo--wordmark svg {
+  width: 100%;
+  height: auto;
+  max-width: 311px;
+}
+
+.brand-logo--mark svg {
+  width: 46px;
+  height: 24px;
 }
 
 /* --------------------------------------------------------------------------
    Typography
    -------------------------------------------------------------------------- */
+
+/* Overline → next element gap in all tile cards */
+.tile-card .overline {
+  margin-bottom: var(--spacing-stack-gap);
+}
+
 .glyph-row {
   display: flex;
   align-items: baseline;
@@ -213,34 +214,6 @@
   margin-bottom: 0;
 }
 
-.st-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-inline-gap);
-  height: var(--spacing-input-height);
-  padding-inline: var(--spacing-card-padding);
-  font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-label-size);
-  font-weight: 400;
-  letter-spacing: var(--type-label-letter-spacing);
-  color: var(--text-on-action-primary);
-  background: var(--background-action-primary);
-  border: none;
-  border-radius: var(--radius-medium);
-  cursor: pointer;
-}
-
-.st-btn--icon {
-  width: var(--spacing-input-height);
-  padding-inline: 0;
-  flex-shrink: 0;
-}
-
-.st-btn svg {
-  fill: var(--text-on-action-primary);
-}
-
 /* --------------------------------------------------------------------------
    Icon grid
    -------------------------------------------------------------------------- */
@@ -258,7 +231,17 @@
   gap: var(--spacing-text-stack-gap);
 }
 
-.icon-cell svg {
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--background-selected);
+  border-radius: var(--radius-small);
+}
+
+.icon-box svg {
   fill: var(--icon-primary);
 }
 
@@ -280,3 +263,4 @@
 .icon-attribution a {
   color: var(--text-link);
 }
+
