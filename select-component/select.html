@@ -142,11 +142,17 @@
     padding-bottom: var(--spacing-table-cell-padding);
     text-align: left;
     vertical-align: middle;
+  }
+  th {
     background: var(--background-page);
   }
   td {
+    background: var(--background-card);
     padding-top: var(--spacing-card-padding);
     padding-bottom: var(--spacing-card-padding);
+  }
+  td:first-child {
+    background: var(--background-page);
   }
   tr > :last-child { border-right: none; }
   tbody tr:last-child td { border-bottom: none; }
@@ -195,13 +201,9 @@
 <div class="demo-controls">
   <span class="demo-controls__label">Demo controls</span>
   <span class="demo-controls__divider" aria-hidden="true"></span>
-  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="false">
+  <button type="button" class="toggle" id="theme-toggle" role="switch" aria-checked="true">
     <span class="toggle__track"><span class="toggle__thumb"></span></span>
     <span class="toggle__text" id="theme-toggle-label">Light mode</span>
-  </button>
-  <button type="button" class="toggle" id="density-toggle" role="switch" aria-checked="false">
-    <span class="toggle__track"><span class="toggle__thumb"></span></span>
-    <span class="toggle__text">Mobile density</span>
   </button>
 </div>
 
@@ -214,12 +216,10 @@
       onChange(next);
     });
   }
+  document.documentElement.dataset.theme = 'light';
   wireToggle('theme-toggle', (on) => {
-    document.documentElement.dataset.theme = on ? 'dark' : '';
-    document.getElementById('theme-toggle-label').textContent = on ? 'Dark mode' : 'Light mode';
-  });
-  wireToggle('density-toggle', (on) => {
-    document.documentElement.dataset.density = on ? 'mobile' : '';
+    document.documentElement.dataset.theme = on ? 'light' : 'dark';
+    document.getElementById('theme-toggle-label').textContent = on ? 'Light mode' : 'Dark mode';
   });
 </script>
 
@@ -235,6 +235,7 @@
           <th title="Filled">Filled</th>
           <th title="Disabled">Disabled</th>
           <th title="Error">Error</th>
+          <th title="Focus hover">Focus hover</th>
         </tr>
       </thead>
       <tbody>
@@ -324,6 +325,21 @@
                 <span class="select__required" aria-hidden="true" title="Required">*</span>
               </div>
               <div class="select__field" role="combobox" aria-expanded="false" aria-invalid="true" tabindex="0">
+                <span class="select__value" title="Select option...">Select option...</span>
+                <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
+              </div>
+              <p class="select__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
+          <!-- Focus hover -->
+          <td class="demo-cell">
+            <div class="select select--focus-hover">
+              <div class="select__label-row">
+                <span class="select__label" title="Label">Label</span>
+                <span class="select__required" aria-hidden="true" title="Required">*</span>
+              </div>
+              <div class="select__field" role="combobox" aria-expanded="false" tabindex="0">
                 <span class="select__value" title="Select option...">Select option...</span>
                 <svg class="select__icon" viewBox="0 0 16 8" aria-hidden="true" focusable="false"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>
               </div>

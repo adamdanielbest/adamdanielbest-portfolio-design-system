@@ -47,7 +47,7 @@
 }
 
 .select__required {
-  color: var(--text-error);
+  color: var(--background-action-destructive);
   font-size: var(--type-label-size);
   line-height: var(--type-label-line-height);
   aria-hidden: true;
@@ -62,8 +62,8 @@
   display: flex;
   align-items: center;
   height: var(--spacing-input-height);
-  padding-inline: var(--spacing-input-padding);
-  gap: var(--spacing-input-padding);
+  padding-inline: var(--spacing-inline-gap);
+  gap: var(--spacing-inline-gap);
   background-color: var(--background-input);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-small);
@@ -129,6 +129,17 @@
 
 .select--open .select__icon {
   transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   State: focus-hover
+   Cursor is hovering while the field is focused — hover background + focus ring
+   -------------------------------------------------------------------------- */
+
+.select--focus-hover .select__field {
+  background-color: var(--background-hover);
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
 }
 
 /* --------------------------------------------------------------------------
@@ -201,7 +212,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-inline-gap);
-  padding: var(--spacing-inline-gap) var(--spacing-input-padding);
+  padding: var(--spacing-inline-gap) var(--spacing-inline-gap);
   font-size: var(--type-body-size);
   font-weight: var(--type-body-weight);
   line-height: var(--type-body-line-height);
