@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Table pattern sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Demo cells — fixed height for table row previews
+   -------------------------------------------------------------------------- */
+.demo-cell {
+  height: 56px;
+}
+
+.variant-card__grid td.demo-cell--hover {
+  background: var(--background-hover);
+}
