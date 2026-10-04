@@ -44,17 +44,10 @@
 .col-11 { grid-column: span 11; }
 .col-12 { grid-column: span 12; }
 
-/* Tablet (≤767px): 4-col grid, 16px gutter.
+/* Tablet (≤767px): 4-col grid.
+   Token overrides are handled by tokens-mobile.css — no duplication here.
    Spans map proportionally: 12-col thirds → 4-col quarters. */
 @media (max-width: 767px) {
-  :root {
-    --spacing-page-margin: 16px;
-    --spacing-page-margin-x: 16px;
-    --spacing-page-margin-y: 40px;
-    --layout-grid-gutter: 16px;
-    --spacing-section-gap: 48px;
-  }
-
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
