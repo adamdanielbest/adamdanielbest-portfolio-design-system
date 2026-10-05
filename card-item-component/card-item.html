@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Card Item – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <link rel="stylesheet" href="card-item.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Card Item">Card Item</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Card Item · Light">adamdanielbest.com · Card Item · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta" title="Eina04 · 4px base unit · v1.0 Stable · Organism · 2 states · Updated 5 Oct 2026 · WCAG 1.4.3 AA">Eina04 · 4px base unit · v1.0 Stable · Organism · 2 states · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage" title="Case study card — media, title, outcome and role.">Case study card — media, title, outcome and role. Shadow on hover; border remains <code class="token-label">border/subtle</code> throughout.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- Variant matrix -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" title="Default">Default</th>
+              <th scope="col" title="Hover">Hover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" title="Card Item">Card Item</th>
+              <td class="demo-cell">
+                <article class="card-grid-demo card-grid-demo--default" aria-label="Default card grid item">
+                  <div class="card-grid-demo__media" aria-hidden="true"></div>
+                  <div class="card-grid-demo__copy">
+                    <div class="card-grid-demo__top">
+                      <h2 class="card-grid-demo__title">Project title</h2>
+                      <p class="card-grid-demo__outcome">Brief outcome or project description</p>
+                    </div>
+                    <div class="card-grid-demo__bottom">
+                      <span class="card-grid-demo__role">Product Designer · Company · Year</span>
+                    </div>
+                  </div>
+                </article>
+              </td>
+              <td class="demo-cell">
+                <article class="card-grid-demo card-grid-demo--hover" aria-label="Hover card grid item">
+                  <div class="card-grid-demo__media" aria-hidden="true"></div>
+                  <div class="card-grid-demo__copy card-grid-demo__copy--hover">
+                    <div class="card-grid-demo__top">
+                      <h2 class="card-grid-demo__title">Project title</h2>
+                      <p class="card-grid-demo__outcome">Brief outcome or project description</p>
+                    </div>
+                    <div class="card-grid-demo__bottom">
+                      <span class="card-grid-demo__role">Product Designer · Company · Year</span>
+                    </div>
+                  </div>
+                </article>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="background/card">background/card</code></td>
+              <td title="Card background">Card background</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/subtle">border/subtle</code></td>
+              <td title="Card border">Card border</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/primary">text/primary</code></td>
+              <td title="Title + outcome">Title + outcome</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/secondary">text/secondary</code></td>
+              <td title="Role">Role</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="type/heading-1">type/heading-1</code></td>
+              <td title="Title text style">Title text style</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="type/body-small">type/body-small</code></td>
+              <td title="Outcome text style">Outcome text style</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="type/caption">type/caption</code></td>
+              <td title="Role text style">Role text style</td>
+              <td title="All">All</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

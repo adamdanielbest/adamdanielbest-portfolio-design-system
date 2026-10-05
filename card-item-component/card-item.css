@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Card Grid Item component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Demo cells — tall enough to show the full card
+   -------------------------------------------------------------------------- */
+.demo-cell {
+  vertical-align: top;
+  padding: var(--spacing-card-padding) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Card demo atom
+   Mirrors card-grid/item component: media area + copy area
+   -------------------------------------------------------------------------- */
+.card-grid-demo {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Hover state — accent border + shadow */
+.card-grid-demo--hover {
+  box-shadow:
+    0px 4px 6px var(--primitive-shadow-light-08),
+    0px 1px 1.5px var(--primitive-shadow-light-06);
+}
+
+[data-theme="dark"] .card-grid-demo--hover {
+  box-shadow:
+    0px 4px 6px var(--primitive-shadow-dark-28),
+    0px 1px 1.5px var(--primitive-shadow-dark-24);
+}
+
+/* --------------------------------------------------------------------------
+   Media placeholder — 16:9 aspect ratio
+   -------------------------------------------------------------------------- */
+.card-grid-demo__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--background-selected);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Copy area
+   -------------------------------------------------------------------------- */
+.card-grid-demo__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+  padding: var(--spacing-content-gap) var(--spacing-stack-gap);
+  flex: 1;
+}
+
+.card-grid-demo__copy--hover {
+  background: var(--background-hover);
+}
+
+.card-grid-demo__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+}
+
+/* Title — type/heading-1 */
+.card-grid-demo__title {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: var(--type-heading-1-letter-spacing);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.card-grid-demo__outcome {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-small-size);
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.card-grid-demo__bottom {
+  display: flex;
+  gap: var(--spacing-stack-gap);
+  margin-top: auto;
+}
+
+/* Role — type/caption */
+.card-grid-demo__role {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: 1;
+  color: var(--text-secondary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
