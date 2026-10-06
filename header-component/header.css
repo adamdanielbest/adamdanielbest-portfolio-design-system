@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Header component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers
+   -------------------------------------------------------------------------- */
+.header-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+  padding: var(--spacing-card-padding);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--spacing-content-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Header demo
+   48px tall, background/card, 1px border/subtle bottom
+   Padding left only — matches Figma (padding-right: 0)
+   -------------------------------------------------------------------------- */
+.header-demo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-inline-gap);
+  height: 48px;
+  padding-left: var(--spacing-stack-gap);
+  background: var(--background-card);
+  border-bottom: 1px solid var(--border-subtle);
+  pointer-events: none;
+}
+
+.header-demo--mobile {
+  max-width: 375px;
+}
+
+/* --------------------------------------------------------------------------
+   Logo
+   Mirrors logo/wordmark component: wordmark text + 2px accent underscore
+   -------------------------------------------------------------------------- */
+.header__logo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header__logo-wordmark {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-2-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.header__logo-underscore {
+  height: 2px;
+  background: var(--text-link);
+}
+
+/* --------------------------------------------------------------------------
+   Menu icon button
+   Touch target: 48×48. Icon glyph: 32×32. Pushed to far right by auto margin.
+   -------------------------------------------------------------------------- */
+.header__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: default;
+}
+
+.header__icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--icon-accent);
+}
