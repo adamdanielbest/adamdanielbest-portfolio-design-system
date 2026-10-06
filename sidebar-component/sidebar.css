@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Sidebar component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers
+   background/page + full border, 24px padding — mirrors Figma card frame
+   -------------------------------------------------------------------------- */
+.sidebar-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+  padding: var(--spacing-card-padding);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--spacing-content-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar — base
+   -------------------------------------------------------------------------- */
+.sidebar-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-content-gap);
+  background: var(--background-card);
+  pointer-events: none;
+}
+
+/* Mobile — no border, 24px top/bottom, 16px left/right */
+.sidebar-demo--mobile {
+  padding: var(--spacing-card-padding) var(--spacing-stack-gap);
+  max-width: 375px;
+}
+
+/* Tablet — bottom border only */
+.sidebar-demo--tablet {
+  padding: var(--spacing-card-padding) var(--spacing-stack-gap);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Desktop — right border only, 0 outer padding (inner frame handles it) */
+.sidebar-demo--desktop {
+  width: 360px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Desktop — inner padding frame
+   -------------------------------------------------------------------------- */
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-content-gap);
+  padding: var(--spacing-content-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Logo (desktop only)
+   Mirrors logo/wordmark component: wordmark text + 2px accent underscore bar
+   -------------------------------------------------------------------------- */
+.sidebar__logo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: flex-start;
+}
+
+.sidebar__logo-wordmark {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-1-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.sidebar__logo-underscore {
+  height: 2px;
+  background: var(--text-link);
+}
+
+/* --------------------------------------------------------------------------
+   Tablet — 2-column layout
+   -------------------------------------------------------------------------- */
+.sidebar__tablet-container {
+  display: flex;
+  gap: var(--spacing-content-gap);
+  align-items: flex-start;
+}
+
+.sidebar__tablet-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.sidebar__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+}
+
+/* --------------------------------------------------------------------------
+   Section headings — type/heading-3 (20px) in text/primary
+   -------------------------------------------------------------------------- */
+.sidebar__heading {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-3-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Bio
+   -------------------------------------------------------------------------- */
+.sidebar__bio {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Timeline
+   -------------------------------------------------------------------------- */
+.sidebar__timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sidebar__timeline-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-inline-gap);
+  padding-top: var(--spacing-inline-gap);
+  padding-bottom: var(--spacing-inline-gap);
+  position: relative;
+}
+
+.sidebar__timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 24px;
+  bottom: -24px;
+  width: 1px;
+  background: var(--text-tertiary);
+  z-index: 0;
+}
+
+.sidebar__timeline-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar__timeline-icon::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--icon-primary);
+}
+
+.sidebar__timeline-item--current .sidebar__timeline-icon::before {
+  background: var(--background-card);
+  border: 2px solid var(--icon-primary);
+  box-sizing: border-box;
+}
+
+.sidebar__timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-inline-gap);
+}
+
+.sidebar__timeline-company {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.sidebar__timeline-meta {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: 1;
+  color: var(--text-secondary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   CV section — text-link + button
+   -------------------------------------------------------------------------- */
+.sidebar__cv {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+
+/* --------------------------------------------------------------------------
+   Text-link — matches text-link component (4px top/bottom, 2px left/right)
+   -------------------------------------------------------------------------- */
+.sidebar__text-link {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-link);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  cursor: default;
+}
+
+/* --------------------------------------------------------------------------
+   Footer links
+   -------------------------------------------------------------------------- */
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+}
