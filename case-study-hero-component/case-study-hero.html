@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Case Study Hero – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <link rel="stylesheet" href="case-study-hero.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg?v=2')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Case Study Hero">Case Study Hero</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Case Study Hero · Light">adamdanielbest.com · Case Study Hero · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta">Eina04 · 4px base unit · v1.0 Stable · Organism · 3 breakpoints · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage">Hero card at the top of each case study — media + copy, responsive across 3 breakpoints. Built on the card atom.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- Desktop -->
+    <div class="hero-variant-card">
+      <p class="overline">Desktop · 1016px</p>
+      <article class="case-study-hero case-study-hero--desktop" aria-label="Case study hero, desktop">
+        <div class="case-study-hero__media" aria-hidden="true">
+          <span class="case-study-hero__media-label">Media</span>
+        </div>
+        <div class="case-study-hero__copy">
+          <div class="case-study-hero__top">
+            <div class="case-study-hero__title-group">
+              <h2 class="case-study-hero__title">Design to code pipeline</h2>
+              <p class="case-study-hero__outcome">Figma variables to production CSS, with a full component library built and documented using Claude.</p>
+            </div>
+            <div class="case-study-hero__hook">
+              <h3 class="case-study-hero__hook-heading">Hook</h3>
+              <p class="case-study-hero__hook-body">One strong statement that sets the stakes and makes the reader want to keep going.</p>
+            </div>
+          </div>
+          <div class="case-study-hero__bottom">
+            <p class="case-study-hero__role">Product Designer · adamdanielbest · 2026</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tablet -->
+    <div class="hero-variant-card">
+      <p class="overline">Tablet · 736px</p>
+      <article class="case-study-hero case-study-hero--tablet" aria-label="Case study hero, tablet">
+        <div class="case-study-hero__media" aria-hidden="true">
+          <span class="case-study-hero__media-label">Media</span>
+        </div>
+        <div class="case-study-hero__copy">
+          <div class="case-study-hero__top">
+            <div class="case-study-hero__title-group">
+              <h2 class="case-study-hero__title">Design to code pipeline</h2>
+              <p class="case-study-hero__outcome">Figma variables to production CSS, with a full component library built and documented using Claude.</p>
+            </div>
+            <div class="case-study-hero__hook">
+              <h3 class="case-study-hero__hook-heading">Hook</h3>
+              <p class="case-study-hero__hook-body">One strong statement that sets the stakes and makes the reader want to keep going.</p>
+            </div>
+          </div>
+          <div class="case-study-hero__bottom">
+            <p class="case-study-hero__role">Product Designer · adamdanielbest · 2026</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Mobile -->
+    <div class="hero-variant-card">
+      <p class="overline">Mobile · 343px</p>
+      <article class="case-study-hero case-study-hero--mobile" aria-label="Case study hero, mobile">
+        <div class="case-study-hero__media" aria-hidden="true">
+          <span class="case-study-hero__media-label">Media</span>
+        </div>
+        <div class="case-study-hero__copy">
+          <div class="case-study-hero__top">
+            <h2 class="case-study-hero__title">Design to code pipeline</h2>
+            <p class="case-study-hero__outcome">Figma variables to production CSS, with a full component library built and documented using Claude.</p>
+            <div class="case-study-hero__hook">
+              <h3 class="case-study-hero__hook-heading">Hook</h3>
+              <p class="case-study-hero__hook-body">One strong statement that sets the stakes and makes the reader want to keep going.</p>
+            </div>
+          </div>
+          <div class="case-study-hero__bottom">
+            <p class="case-study-hero__role">Product Designer · adamdanielbest · 2026</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="background/card">background/card</code></td>
+              <td title="Card fill">Card fill</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="background/hover">background/hover</code></td>
+              <td title="Media placeholder">Media placeholder</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/subtle">border/subtle</code></td>
+              <td title="Card stroke">Card stroke</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="radius/medium">radius/medium</code></td>
+              <td title="Corner radius">Corner radius</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/primary">text/primary</code></td>
+              <td title="Title, outcome">Title, outcome</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/secondary">text/secondary</code></td>
+              <td title="Hook body, role">Hook body, role</td>
+              <td title="All">All</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Case Study Hero component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers — background/page fill, full border, 16px radius
+   -------------------------------------------------------------------------- */
+.hero-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+  padding: var(--spacing-card-padding);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--spacing-content-gap);
+  overflow-x: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Case study hero — card atom
+   background/card, border/default, radius/medium
+   Desktop/tablet: horizontal. Mobile: vertical.
+   -------------------------------------------------------------------------- */
+.case-study-hero {
+  display: flex;
+  border-radius: var(--radius-medium);
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.case-study-hero--desktop {
+  flex-direction: row;
+  width: 100%;
+  height: 360px;
+}
+
+.case-study-hero--tablet {
+  flex-direction: row;
+  width: 100%;
+  height: 300px;
+}
+
+.case-study-hero--mobile {
+  flex-direction: column;
+  width: 343px;
+}
+
+/* --------------------------------------------------------------------------
+   Media panel — image placeholder
+   -------------------------------------------------------------------------- */
+.case-study-hero__media {
+  flex-shrink: 0;
+  background: var(--background-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-hero--desktop .case-study-hero__media {
+  width: 47%;
+  height: 100%;
+}
+
+.case-study-hero--tablet .case-study-hero__media {
+  width: 46%;
+  height: 100%;
+}
+
+.case-study-hero--mobile .case-study-hero__media {
+  width: 100%;
+  height: 192px;
+  flex-shrink: 0;
+}
+
+.case-study-hero__media-label {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   Copy panel
+   -------------------------------------------------------------------------- */
+.case-study-hero__copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.case-study-hero--desktop .case-study-hero__copy {
+  padding: 32px var(--spacing-card-padding);
+  gap: var(--spacing-stack-gap);
+}
+
+.case-study-hero--tablet .case-study-hero__copy,
+.case-study-hero--mobile .case-study-hero__copy {
+  padding: var(--spacing-card-padding) var(--spacing-stack-gap);
+  gap: var(--spacing-stack-gap);
+}
+
+.case-study-hero--mobile .case-study-hero__copy {
+  gap: var(--spacing-card-padding);
+}
+
+/* --------------------------------------------------------------------------
+   Hero copy — top block (title + outcome + hook)
+   -------------------------------------------------------------------------- */
+.case-study-hero__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+}
+
+.case-study-hero__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-card-padding);
+}
+
+.case-study-hero__title {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.case-study-hero--desktop .case-study-hero__title {
+  font-size: var(--type-heading-1-size);
+}
+
+.case-study-hero--tablet .case-study-hero__title,
+.case-study-hero--mobile .case-study-hero__title {
+  font-size: var(--type-heading-2-size);
+}
+
+.case-study-hero__outcome {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Hook section
+   -------------------------------------------------------------------------- */
+.case-study-hero__hook {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+}
+
+.case-study-hero__hook-heading {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-3-size);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.case-study-hero__hook-body {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Bottom — role / meta line
+   -------------------------------------------------------------------------- */
+.case-study-hero__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-stack-gap);
+}
+
+.case-study-hero__role {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+}
