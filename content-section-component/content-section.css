@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Content Section component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Content section — heading + body + optional media block
+   -------------------------------------------------------------------------- */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+}
+
+.content-section__heading {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-2-size);
+  font-weight: 400;
+  line-height: var(--type-heading-2-line-height);
+  letter-spacing: var(--type-heading-2-letter-spacing);
+  color: var(--text-primary);
+}
+
+.content-section__body {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Nested media block — reused from media-block-component
+   -------------------------------------------------------------------------- */
+.media-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+  margin: 0;
+}
+
+.media-block__image {
+  width: 100%;
+  background: var(--background-hover);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-medium);
+}
+
+.media-block__image--16-9 { aspect-ratio: 16 / 9; }
+.media-block__image--4-3  { aspect-ratio: 4 / 3; }
+
+.media-block__caption {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+}
