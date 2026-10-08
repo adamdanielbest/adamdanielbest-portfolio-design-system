@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Icon – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <link rel="stylesheet" href="icon.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg?v=4')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Icon">Icon</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Icon · Light">adamdanielbest.com · Icon · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta">Eina04 · 4px base unit · v1.0 Stable · Atom · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage">Single-property icon set. Fill colour driven by icon/primary, icon/secondary, and icon/accent tokens. 49 icons · 24px base.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- Colour tokens -->
+    <div class="icon-colour-card">
+      <div class="icon-colour-card__header">
+        <p class="overline">Colour tokens</p>
+      </div>
+      <div class="icon-colour-grid-inset">
+      <div class="icon-colour-grid">
+        <!-- Header row -->
+        <div class="icon-colour-grid__cell icon-colour-grid__cell--corner icon-colour-grid__cell--header"></div>
+        <div class="icon-colour-grid__cell icon-colour-grid__cell--header">Icon / Primary</div>
+        <div class="icon-colour-grid__cell icon-colour-grid__cell--header">Icon / Secondary</div>
+        <div class="icon-colour-grid__cell icon-colour-grid__cell--header">Icon / Accent</div>
+        <!-- Demo row -->
+        <div class="icon-colour-grid__cell icon-colour-grid__cell--header">Icon</div>
+        <div class="icon-colour-grid__cell">
+          <span aria-hidden="true" style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;">
+            <svg width="32" height="32" focusable="false" style="fill:var(--icon-primary)"><use href="#icon-menu"></use></svg>
+          </span>
+        </div>
+        <div class="icon-colour-grid__cell">
+          <span aria-hidden="true" style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;">
+            <svg width="32" height="32" focusable="false" style="fill:var(--icon-secondary)"><use href="#icon-menu"></use></svg>
+          </span>
+        </div>
+        <div class="icon-colour-grid__cell">
+          <span aria-hidden="true" style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;">
+            <svg width="32" height="32" focusable="false" style="fill:var(--icon-accent)"><use href="#icon-menu"></use></svg>
+          </span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Icon categories -->
+    <div class="content-card">
+      <div class="icon-categories">
+
+        <!-- Navigation -->
+        <div class="icon-category">
+          <p class="icon-category__label">Navigation</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-menu"></use></svg></span>
+                <p class="icon-grid__label">menu</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-menu-open"></use></svg></span>
+                <p class="icon-grid__label">menu-open</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-left-panel-open"></use></svg></span>
+                <p class="icon-grid__label">left-panel-open</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-left-panel-close"></use></svg></span>
+                <p class="icon-grid__label">left-panel-close</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-top-panel-open"></use></svg></span>
+                <p class="icon-grid__label">top-panel-open</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-top-panel-close"></use></svg></span>
+                <p class="icon-grid__label">top-panel-close</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-close"></use></svg></span>
+                <p class="icon-grid__label">close</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-search"></use></svg></span>
+                <p class="icon-grid__label">search</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-arrow-backwards"></use></svg></span>
+                <p class="icon-grid__label">arrow-backwards</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-chevron-backward"></use></svg></span>
+                <p class="icon-grid__label">chevron-backward</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-chevron-forward"></use></svg></span>
+                <p class="icon-grid__label">chevron-forward</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-arrow-forward"></use></svg></span>
+                <p class="icon-grid__label">arrow-forward</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-arrow-upward"></use></svg></span>
+                <p class="icon-grid__label">arrow-upward</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-arrow-drop-down"></use></svg></span>
+                <p class="icon-grid__label">arrow-drop-down</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-arrow-drop-up"></use></svg></span>
+                <p class="icon-grid__label">arrow-drop-up</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-vertical-align-top"></use></svg></span>
+                <p class="icon-grid__label">vertical-align-top</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="icon-category">
+          <p class="icon-category__label">Actions</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-add"></use></svg></span>
+                <p class="icon-grid__label">add</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-edit"></use></svg></span>
+                <p class="icon-grid__label">edit</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-upload"></use></svg></span>
+                <p class="icon-grid__label">upload</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-download"></use></svg></span>
+                <p class="icon-grid__label">download</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-export"></use></svg></span>
+                <p class="icon-grid__label">export</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-cancel"></use></svg></span>
+                <p class="icon-grid__label">cancel</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-browse"></use></svg></span>
+                <p class="icon-grid__label">browse</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-drag-handle"></use></svg></span>
+                <p class="icon-grid__label">drag-handle</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-view-source"></use></svg></span>
+                <p class="icon-grid__label">view-source</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-metadata"></use></svg></span>
+                <p class="icon-grid__label">metadata</p>
+              </div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- State / Feedback -->
+        <div class="icon-category">
+          <p class="icon-category__label">State / Feedback</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-success"></use></svg></span>
+                <p class="icon-grid__label">success</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-success-filled"></use></svg></span>
+                <p class="icon-grid__label">success-filled</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-error"></use></svg></span>
+                <p class="icon-grid__label">error</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-warning"></use></svg></span>
+                <p class="icon-grid__label">warning</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-info"></use></svg></span>
+                <p class="icon-grid__label">info</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-help"></use></svg></span>
+                <p class="icon-grid__label">help</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-lock"></use></svg></span>
+                <p class="icon-grid__label">lock</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-unlock"></use></svg></span>
+                <p class="icon-grid__label">unlock</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-visibility"></use></svg></span>
+                <p class="icon-grid__label">visibility</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-visibility-off"></use></svg></span>
+                <p class="icon-grid__label">visibility-off</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-check-box"></use></svg></span>
+                <p class="icon-grid__label">check-box</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-check-box-checked"></use></svg></span>
+                <p class="icon-grid__label">check-box-checked</p>
+              </div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media -->
+        <div class="icon-category">
+          <p class="icon-category__label">Media</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-play"></use></svg></span>
+                <p class="icon-grid__label">play</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-pause"></use></svg></span>
+                <p class="icon-grid__label">pause</p>
+              </div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="icon-category">
+          <p class="icon-category__label">Content</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-tag"></use></svg></span>
+                <p class="icon-grid__label">tag</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-explore"></use></svg></span>
+                <p class="icon-grid__label">explore</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-mobile"></use></svg></span>
+                <p class="icon-grid__label">mobile</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-location"></use></svg></span>
+                <p class="icon-grid__label">location</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-timeline-past"></use></svg></span>
+                <p class="icon-grid__label">timeline-past</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-timeline-current"></use></svg></span>
+                <p class="icon-grid__label">timeline-current</p>
+              </div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="icon-category">
+          <p class="icon-category__label">Social</p>
+          <div class="icon-grid-inset">
+            <div class="icon-grid">
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-instagram"></use></svg></span>
+                <p class="icon-grid__label">instagram</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-linkedin"></use></svg></span>
+                <p class="icon-grid__label">linkedin</p>
+              </div>
+              <div class="icon-grid__cell">
+                <span class="icon-grid__icon" aria-hidden="true"><svg focusable="false"><use href="#icon-email"></use></svg></span>
+                <p class="icon-grid__label">email</p>
+              </div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+              <div class="icon-grid__cell" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="icon/primary">icon/primary</code></td>
+              <td title="Icon fill">Icon fill</td>
+              <td title="Default">Default</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="icon/secondary">icon/secondary</code></td>
+              <td title="Icon fill — reduced emphasis">Icon fill — reduced emphasis</td>
+              <td title="Default">Default</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="icon/accent">icon/accent</code></td>
+              <td title="Icon fill — brand accent">Icon fill — brand accent</td>
+              <td title="Default">Default</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

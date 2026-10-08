@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Icon component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Colour token demo
+   -------------------------------------------------------------------------- */
+.icon-colour-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+  margin-bottom: var(--spacing-content-gap);
+  overflow: hidden;
+}
+
+.icon-colour-card__header {
+  padding: var(--spacing-card-padding);
+  padding-bottom: 0;
+}
+
+.icon-colour-grid-inset {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  margin: var(--spacing-card-padding);
+}
+
+.icon-colour-grid {
+  display: grid;
+  grid-template-columns: 168px repeat(3, 1fr);
+  grid-template-rows: 40px 96px;
+}
+
+.icon-colour-grid__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-inline-gap);
+  padding: var(--spacing-table-cell-padding);
+  border-right: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.icon-colour-grid__cell:nth-child(4n),
+.icon-colour-grid__cell:last-child {
+  border-right: none;
+}
+
+.icon-colour-grid__cell:nth-last-child(-n+4) {
+  border-bottom: none;
+}
+
+.icon-colour-grid__cell--header {
+  flex-direction: row;
+  justify-content: flex-start;
+  background: var(--background-page);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-label-size);
+  font-weight: 400;
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-primary);
+}
+
+.icon-colour-grid__cell--corner {
+  background: var(--background-page);
+}
+
+/* --------------------------------------------------------------------------
+   Category section
+   -------------------------------------------------------------------------- */
+.icon-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-content-gap);
+  padding: var(--spacing-card-padding);
+}
+
+.icon-categories .icon-category {
+  margin-bottom: 0;
+}
+
+.icon-categories .icon-grid-inset {
+  margin: 0;
+}
+
+.icon-category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-gap);
+  margin-bottom: var(--spacing-content-gap);
+}
+
+.icon-category__label {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-label-size);
+  font-weight: 400;
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Icon grid
+   -------------------------------------------------------------------------- */
+.icon-grid-inset {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  margin: var(--spacing-card-padding);
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.icon-grid__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-inline-gap);
+  padding-top: var(--spacing-table-cell-padding);
+  padding-bottom: var(--spacing-media-gap);
+  padding-left: var(--spacing-padding-compact);
+  padding-right: var(--spacing-padding-compact);
+  border-right: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+  min-height: 96px;
+}
+
+/* Remove right border on every 8th cell (last in each row) */
+.icon-grid__cell:nth-child(8n) {
+  border-right: none;
+}
+
+/* Remove bottom border on last row (last 8 cells) */
+.icon-grid__cell:nth-last-child(-n+8) {
+  border-bottom: none;
+}
+
+.icon-grid__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.icon-grid__icon svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--icon-primary);
+}
+
+.icon-grid__label {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+  text-align: center;
+  word-break: break-word;
+  text-box-trim: none;
+}
