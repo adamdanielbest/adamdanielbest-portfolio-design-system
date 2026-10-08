@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Media Block – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+
+  <link rel="stylesheet" href="media-block.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Media Block">Media Block</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Media Block · Light">adamdanielbest.com · Media Block · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta">Eina04 · 4px base unit · v1.0 Stable · Atom · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage">Image placeholder with optional caption. Supports 16:9 and 4:3 aspect ratios. Nested inside content-section.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <fieldset class="theme-picker">
+        <legend class="sr-only">Theme</legend>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
+        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </fieldset>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      document.querySelectorAll('input[name="theme"]').forEach(r => {
+        r.addEventListener('change', () => {
+          document.documentElement.dataset.theme = r.value;
+          const bt = document.querySelector('.breadcrumb-theme');
+          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+        });
+      });
+    </script>
+
+    <!-- 16:9 -->
+    <div class="media-block-variant-card">
+      <p class="overline">16:9</p>
+      <figure class="media-block">
+        <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+        <figcaption class="media-block__caption">Caption text</figcaption>
+      </figure>
+    </div>
+
+    <!-- 4:3 -->
+    <div class="media-block-variant-card">
+      <p class="overline">4:3</p>
+      <figure class="media-block">
+        <div class="media-block__image media-block__image--4-3" role="img" aria-label="Image placeholder"></div>
+        <figcaption class="media-block__caption">Caption text</figcaption>
+      </figure>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="background/hover">background/hover</code></td>
+              <td title="Image placeholder fill">Image placeholder fill</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/default">border/default</code></td>
+              <td title="Image border">Image border</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="radius/medium">radius/medium</code></td>
+              <td title="Image corner radius">Image corner radius</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/secondary">text/secondary</code></td>
+              <td title="Caption text">Caption text</td>
+              <td title="All">All</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>
