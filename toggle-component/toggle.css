@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Toggle — segmented pill control
+   ========================================================================== */
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 2px;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-subtle);
+  background: var(--background-input);
+}
+
+.toggle__option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.toggle__option:first-child {
+  border-radius: var(--radius-x-small) 0 0 var(--radius-x-small);
+}
+
+.toggle__option:last-child {
+  border-radius: 0 var(--radius-x-small) var(--radius-x-small) 0;
+}
+
+.toggle__option:not(.toggle__option--selected):hover {
+  background: var(--background-control-hover);
+  color: var(--text-inverse);
+}
+
+.toggle__option--selected {
+  background: var(--background-control);
+  color: var(--text-inverse);
+}
+
+.toggle__option--selected:hover {
+  background: var(--background-control-hover);
+}
+
+.toggle:focus-within {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.toggle__option:focus,
+.toggle__option:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.toggle[data-no-transition] .toggle__option {
+  transition: none;
+}
+
+.toggle__option--selected:active {
+  background: var(--background-control-pressed);
+}

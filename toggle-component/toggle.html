@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components – Toggle – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="toggle.css">
+<style>
+  .variant-card {
+    background: var(--background-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-card-padding);
+    margin-bottom: var(--spacing-content-gap);
+  }
+  .variant-card--table {
+    padding: 0;
+    overflow: hidden;
+  }
+  .variant-card__demo {
+    padding: var(--spacing-card-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-inline-gap);
+  }
+  .variant-card__grid {
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    padding: var(--spacing-table-cell-padding);
+    text-align: left;
+    vertical-align: middle;
+  }
+  th { background: var(--background-page); }
+  td { background: var(--background-card); }
+  td:first-child { background: var(--background-page); }
+  tr > :last-child { border-right: none; }
+  tbody tr:last-child td { border-bottom: none; }
+  th, td:first-child {
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+  }
+  td.demo-cell {
+    min-width: 160px;
+    width: 200px;
+  }
+  .token-table td:first-child { font-weight: normal; }
+  .token-label {
+    font-size: var(--type-caption-size);
+    font-family: monospace;
+    background: var(--background-code);
+    color: var(--text-code);
+    padding: 2px 6px;
+    border-radius: var(--radius-small);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="page-header">
+  <h1>Toggle</h1>
+  <hr class="page-header__divider">
+  <div class="page-header__metadata">
+    <p class="breadcrumb" title="adamdanielbest.com · Components · Toggle">adamdanielbest.com · Components · Toggle</p>
+    <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage" title="Segmented control for selecting one of two or more labelled options · Used for Light/Dark theme switching in the design system reference sheets · Selected option receives a filled pill; unselected options are plain text">Segmented control for selecting one of two or more labelled options · Used for Light/Dark theme switching in the design system reference sheets · Selected option receives a filled pill; unselected options are plain text</p>
+  </div>
+</header>
+
+<div class="demo-controls">
+  <span class="demo-controls__label">Demo controls</span>
+  <span class="demo-controls__divider" aria-hidden="true"></span>
+  <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
+    <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+    <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+  </div>
+</div>
+
+<script>
+  document.documentElement.dataset.theme = 'light';
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeButtons = [...themeToggle.querySelectorAll('button')];
+
+  function selectTheme(btn) {
+    themeButtons.forEach(b => {
+      const selected = b === btn;
+      b.classList.toggle('toggle__option--selected', selected);
+      b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      b.tabIndex = selected ? 0 : -1;
+    });
+    document.documentElement.dataset.theme = btn.textContent.toLowerCase();
+  }
+
+  themeToggle.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) selectTheme(btn);
+  });
+
+  themeToggle.addEventListener('keydown', e => {
+    const currentIndex = themeButtons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = themeButtons[(currentIndex + 1) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(next);
+      next.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = themeButtons[(currentIndex - 1 + themeButtons.length) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(prev);
+      prev.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    }
+  });
+</script>
+
+<!-- States table + demo -->
+<div class="variant-card variant-card--table">
+  <div class="variant-card__grid">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th title="Selected">Selected</th>
+          <th title="Hover">Hover</th>
+          <th title="Focus">Focus</th>
+          <th title="Focus + hover">Focus + hover</th>
+          <th title="Pressed">Pressed</th>
+          <th title="Option + hover">Option + hover</th>
+          <th title="Option + focus">Option + focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Toggle">Toggle</td>
+
+          <!-- Selected (a-selected) -->
+          <td class="demo-cell">
+            <div class="toggle" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Hover (a-hover) — selected pill hover -->
+          <td class="demo-cell">
+            <div class="toggle" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected toggle__option--demo-hover" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Focus (a-focus) — track focus ring only -->
+          <td class="demo-cell">
+            <div class="toggle toggle--demo-focus" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Focus + hover (a-focus-hover) — track focused, unselected hovered -->
+          <td class="demo-cell">
+            <div class="toggle toggle--demo-focus" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option toggle__option--demo-option-hover" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Pressed (a-pressed) — selected pill pressed -->
+          <td class="demo-cell">
+            <div class="toggle" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected toggle__option--demo-pressed" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Option + hover (option-hover) — unselected option hovered -->
+          <td class="demo-cell">
+            <div class="toggle" role="group" aria-label="Theme">
+              <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true">A</button>
+              <button class="toggle__option toggle__option--demo-option-hover" type="button" aria-pressed="false">B</button>
+            </div>
+          </td>
+
+          <!-- Option + focus (a-option-focus) — track focused, A unselected, B selected -->
+          <td class="demo-cell">
+            <div class="toggle toggle--demo-focus" role="group" aria-label="Theme">
+              <button class="toggle__option" type="button" aria-pressed="false">A</button>
+              <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true">B</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="variant-card__demo">
+    <p class="overline">Demo</p>
+    <div class="toggle" role="group" aria-label="Theme" id="live-demo">
+      <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+      <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const liveDemoToggle = document.getElementById('live-demo');
+
+  function selectOption(target) {
+    const buttons = [...liveDemoToggle.querySelectorAll('button')];
+    buttons.forEach(b => {
+      const selected = b === target;
+      b.classList.toggle('toggle__option--selected', selected);
+      b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      b.tabIndex = selected ? 0 : -1;
+    });
+  }
+
+  liveDemoToggle.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) selectOption(btn);
+  });
+
+  liveDemoToggle.addEventListener('keydown', e => {
+    const buttons = [...liveDemoToggle.querySelectorAll('button')];
+    const currentIndex = buttons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = buttons[(currentIndex + 1) % buttons.length];
+      liveDemoToggle.dataset.noTransition = '';
+      selectOption(next);
+      next.focus();
+      requestAnimationFrame(() => delete liveDemoToggle.dataset.noTransition);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = buttons[(currentIndex - 1 + buttons.length) % buttons.length];
+      liveDemoToggle.dataset.noTransition = '';
+      selectOption(prev);
+      prev.focus();
+      requestAnimationFrame(() => delete liveDemoToggle.dataset.noTransition);
+    }
+  });
+</script>
+
+<style>
+  .toggle__option--demo-hover { background: var(--background-control-hover) !important; }
+  .toggle--demo-focus { outline: 3px solid var(--border-focus) !important; border-color: transparent !important; }
+  .toggle__option--demo-option-hover { background: var(--background-control-hover) !important; color: var(--text-inverse) !important; }
+  .toggle__option--demo-pressed { background: var(--background-control-pressed) !important; }
+  .overline {
+    font-size: var(--type-overline-size);
+    font-weight: var(--type-overline-weight);
+    line-height: var(--type-overline-line-height);
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-link);
+    text-transform: uppercase;
+    margin: 0;
+  }
+</style>
+
+<!-- Token table -->
+<div class="variant-card variant-card--table">
+  <div class="variant-card__grid">
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th scope="col" title="Token">Token</th>
+          <th scope="col" title="Property">Property</th>
+          <th scope="col" title="State">State</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class="token-label" title="background/control">background/control</code></td>
+          <td title="Selected option pill fill">Selected option pill fill</td>
+          <td title="Selected (default)">Selected (default)</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="background/control-hover">background/control-hover</code></td>
+          <td title="Selected option pill fill">Selected option pill fill</td>
+          <td title="Selected (hover)">Selected (hover)</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="background/control-pressed">background/control-pressed</code></td>
+          <td title="Selected option pill fill">Selected option pill fill</td>
+          <td title="Selected (pressed)">Selected (pressed)</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="background/input">background/input</code></td>
+          <td title="Track background">Track background</td>
+          <td title="All">All</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="border/subtle">border/subtle</code></td>
+          <td title="Track border">Track border</td>
+          <td title="Default, hover, pressed, option-hover">Default, hover, pressed, option-hover</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="border/focus">border/focus</code></td>
+          <td title="Track focus ring">Track focus ring</td>
+          <td title="Focus, focus + hover">Focus, focus + hover</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="text/inverse">text/inverse</code></td>
+          <td title="Option label">Option label</td>
+          <td title="Selected (default/hover/pressed), unselected hover">Selected (default/hover/pressed), unselected hover</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="text/secondary">text/secondary</code></td>
+          <td title="Unselected option label">Unselected option label</td>
+          <td title="Default">Default</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.meta-date').forEach(el => {
+    el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  });
+</script>
+
+</body>
+</html>
