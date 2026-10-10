@@ -243,3 +243,4 @@
   color: var(--text-primary);
   fill: currentColor;
 }
+.select--demo { max-width: 320px; }

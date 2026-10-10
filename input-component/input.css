@@ -212,3 +212,9 @@
 .input--error .input__helper {
   color: var(--text-error);
 }
+
+/* Demo helpers */
+.input--demo { max-width: 320px; }
+.input__leading-icon--hidden,
+.input__trailing-icon--hidden { display: none; }
+.demo-type-picker { border: none; padding: 0; margin: 0; }

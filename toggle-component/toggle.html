@@ -74,6 +74,19 @@
     padding: 2px 6px;
     border-radius: var(--radius-small);
   }
+  .toggle__option--demo-hover { background: var(--background-control-hover) !important; }
+  .toggle--demo-focus { outline: 3px solid var(--border-focus) !important; border-color: transparent !important; }
+  .toggle__option--demo-option-hover { background: var(--background-control-hover) !important; color: var(--text-inverse) !important; }
+  .toggle__option--demo-pressed { background: var(--background-control-pressed) !important; }
+  .overline {
+    font-size: var(--type-overline-size);
+    font-weight: var(--type-overline-weight);
+    line-height: var(--type-overline-line-height);
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-link);
+    text-transform: uppercase;
+    margin: 0;
+  }
 </style>
 </head>
 <body>
@@ -269,22 +282,6 @@
     }
   });
 </script>
-
-<style>
-  .toggle__option--demo-hover { background: var(--background-control-hover) !important; }
-  .toggle--demo-focus { outline: 3px solid var(--border-focus) !important; border-color: transparent !important; }
-  .toggle__option--demo-option-hover { background: var(--background-control-hover) !important; color: var(--text-inverse) !important; }
-  .toggle__option--demo-pressed { background: var(--background-control-pressed) !important; }
-  .overline {
-    font-size: var(--type-overline-size);
-    font-weight: var(--type-overline-weight);
-    line-height: var(--type-overline-line-height);
-    letter-spacing: var(--type-overline-letter-spacing);
-    color: var(--text-link);
-    text-transform: uppercase;
-    margin: 0;
-  }
-</style>
 
 <!-- Token table -->
 <div class="variant-card variant-card--table">

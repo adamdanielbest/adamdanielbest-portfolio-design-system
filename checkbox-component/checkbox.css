@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Checkbox component
+   ========================================================================== */
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-inline-gap);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox__box {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-small);
+  border: 1.5px solid var(--border-strong);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.checkbox__mark {
+  display: none;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--text-on-action);
+}
+
+/* Checkmark SVG path for checked state */
+.checkbox__check {
+  display: none;
+  width: 10px;
+  height: 8px;
+  color: var(--text-on-action);
+}
+
+.checkbox__label {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+}
+
+/* --- Checked --- */
+.checkbox--checked .checkbox__box,
+.checkbox--checked-hover .checkbox__box,
+.checkbox--checked-focus .checkbox__box,
+.checkbox--indeterminate .checkbox__box {
+  background: var(--background-control);
+  border-color: var(--background-control);
+}
+
+.checkbox--checked .checkbox__check,
+.checkbox--checked-hover .checkbox__check,
+.checkbox--checked-focus .checkbox__check {
+  display: block;
+}
+
+.checkbox--indeterminate .checkbox__mark {
+  display: block;
+}
+
+/* --- Hover --- */
+.checkbox--hover .checkbox__box {
+  border-color: var(--text-primary);
+}
+
+/* --- Focus --- */
+.checkbox--focus .checkbox__box,
+.checkbox--checked-focus .checkbox__box {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* --- Disabled --- */
+.checkbox--disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+.checkbox--disabled .checkbox__box {
+  border-color: var(--border-strong);
+  background: transparent;
+  opacity: 0.4;
+}
+.checkbox--disabled .checkbox__label {
+  color: var(--text-disabled);
+}
+
+/* --- Error --- */
+.checkbox--error .checkbox__box {
+  border-color: var(--border-danger);
+}
