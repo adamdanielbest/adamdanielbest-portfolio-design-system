@@ -9,13 +9,13 @@
   cursor: pointer;
   user-select: none;
   border-radius: var(--radius-small);
-  border: 3px solid transparent;
+  border: none;
   background: transparent;
   min-height: 48px;
   padding-inline-start: 0;
   padding-inline-end: var(--spacing-inline-gap);
   box-sizing: border-box;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s;
 }
 
 .radio__icon-wrap {
@@ -62,7 +62,8 @@
 .radio--focus-hover,
 .radio--checked-focus,
 .radio--checked-focus-hover {
-  border-color: var(--border-focus);
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
 }
 
 /* --- Pressed — dark bg, inverse content --- */
@@ -80,7 +81,7 @@
 
 /* --- Error --- */
 .radio--error {
-  border-color: var(--border-error);
+  border: 3px solid var(--border-error);
 }
 
 .radio--error .radio__icon {
