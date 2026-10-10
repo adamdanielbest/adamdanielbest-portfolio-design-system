@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components – Radio – adamdanielbest Design System</title>
+
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="../toggle-component/toggle.css">
+  <link rel="stylesheet" href="radio.css">
+<style>
+  .variant-card {
+    background: var(--background-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-card-padding);
+    margin-bottom: var(--spacing-content-gap);
+  }
+  .variant-card__grid {
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 800px;
+    margin: 0;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-default);
+    padding: var(--spacing-table-cell-padding);
+    text-align: left;
+    vertical-align: middle;
+  }
+  th { background: var(--background-page); }
+  td { background: var(--background-card); }
+  td:first-child { background: var(--background-page); }
+  tr > :last-child { border-right: none; }
+  tbody tr:last-child td { border-bottom: none; }
+  th, td:first-child {
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--text-primary);
+  }
+  td.demo-cell {
+    min-width: 140px;
+    width: 160px;
+  }
+  .token-table td:first-child { font-weight: normal; }
+  .token-label {
+    font-size: var(--type-caption-size);
+    font-family: monospace;
+    background: var(--background-code);
+    color: var(--text-code);
+    padding: 2px 6px;
+    border-radius: var(--radius-small);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="page-header">
+  <h1>Radio</h1>
+  <hr class="page-header__divider">
+  <div class="page-header__metadata">
+    <p class="breadcrumb" title="adamdanielbest.com · Components · Radio">adamdanielbest.com · Components · Radio</p>
+    <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage" title="Single selection from a mutually exclusive set · Always show all options at once · Group with a fieldset and legend · Prefer radio over select when there are 4 or fewer options">Single selection from a mutually exclusive set · Always show all options at once · Group with a fieldset and legend · Prefer radio over select when there are 4 or fewer options</p>
+  </div>
+</header>
+
+<div class="demo-controls">
+  <span class="demo-controls__label">Demo controls</span>
+  <span class="demo-controls__divider" aria-hidden="true"></span>
+  <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
+    <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+    <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+  </div>
+</div>
+
+<script>
+  document.documentElement.dataset.theme = 'light';
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeButtons = [...themeToggle.querySelectorAll('button')];
+  function selectTheme(btn) {
+    themeButtons.forEach(b => {
+      const selected = b === btn;
+      b.classList.toggle('toggle__option--selected', selected);
+      b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      b.tabIndex = selected ? 0 : -1;
+    });
+    document.documentElement.dataset.theme = btn.textContent.toLowerCase();
+  }
+  themeToggle.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) selectTheme(btn);
+  });
+  themeToggle.addEventListener('keydown', e => {
+    const currentIndex = themeButtons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = themeButtons[(currentIndex + 1) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(next);
+      next.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = themeButtons[(currentIndex - 1 + themeButtons.length) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(prev);
+      prev.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    }
+  });
+</script>
+
+<!-- States table -->
+<div class="variant-card">
+  <div class="variant-card__grid">
+    <table>
+      <thead>
+        <tr>
+          <th title="State">State</th>
+          <th title="Default">Default</th>
+          <th title="Hover">Hover</th>
+          <th title="Focus">Focus</th>
+          <th title="Checked">Checked</th>
+          <th title="Checked hover">Checked hover</th>
+          <th title="Checked focus">Checked focus</th>
+          <th title="Disabled">Disabled</th>
+          <th title="Error">Error</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td title="Radio">Radio</td>
+
+          <!-- Default -->
+          <td class="demo-cell">
+            <label class="radio radio--default">
+              <span class="radio__box"></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Hover -->
+          <td class="demo-cell">
+            <label class="radio radio--hover">
+              <span class="radio__box"></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Focus -->
+          <td class="demo-cell">
+            <label class="radio radio--focus">
+              <span class="radio__box"></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Checked -->
+          <td class="demo-cell">
+            <label class="radio radio--checked">
+              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Checked hover -->
+          <td class="demo-cell">
+            <label class="radio radio--checked-hover">
+              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Checked focus -->
+          <td class="demo-cell">
+            <label class="radio radio--checked-focus">
+              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Disabled -->
+          <td class="demo-cell">
+            <label class="radio radio--disabled">
+              <span class="radio__box"></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <!-- Error -->
+          <td class="demo-cell">
+            <label class="radio radio--error">
+              <span class="radio__box"></span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Token table -->
+<div class="variant-card">
+  <div class="variant-card__grid">
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th scope="col" title="Token">Token</th>
+          <th scope="col" title="Property">Property</th>
+          <th scope="col" title="State">State</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class="token-label" title="background/control">background/control</code></td>
+          <td title="Box fill">Box fill</td>
+          <td title="Checked, checked-hover, checked-focus">Checked, checked-hover, checked-focus</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="border/strong">border/strong</code></td>
+          <td title="Box border">Box border</td>
+          <td title="Default, hover">Default, hover</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="border/focus">border/focus</code></td>
+          <td title="Box outline">Box outline</td>
+          <td title="Focus, checked-focus">Focus, checked-focus</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="border/danger">border/danger</code></td>
+          <td title="Box border">Box border</td>
+          <td title="Error">Error</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="text/on-action">text/on-action</code></td>
+          <td title="Dot colour">Dot colour</td>
+          <td title="Checked">Checked</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="text/primary">text/primary</code></td>
+          <td title="Label colour">Label colour</td>
+          <td title="All except disabled">All except disabled</td>
+        </tr>
+        <tr>
+          <td><code class="token-label" title="text/disabled">text/disabled</code></td>
+          <td title="Label colour">Label colour</td>
+          <td title="Disabled">Disabled</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.meta-date').forEach(el => {
+    el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  });
+</script>
+
+</body>
+</html>

@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="../src/styles/layout.css">
   <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="../toggle-component/toggle.css">
 
   <link rel="stylesheet" href="card-item.css">
 </head>
@@ -45,11 +46,13 @@
     <div class="demo-controls">
       <span class="demo-controls__label">Demo controls</span>
       <span class="demo-controls__divider" aria-hidden="true"></span>
-      <fieldset class="theme-picker">
-        <legend class="sr-only">Theme</legend>
-        <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
-        <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
-      </fieldset>
+      <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
+
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+
+      </div>
     </div>
 
     <script>

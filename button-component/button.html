@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
   <link rel="stylesheet" href="../src/styles/layout.css">
   <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="../toggle-component/toggle.css">
   <link rel="stylesheet" href="button.css">
 <style>
 
@@ -134,17 +135,47 @@
 <div class="demo-controls">
   <span class="demo-controls__label">Demo controls</span>
   <span class="demo-controls__divider" aria-hidden="true"></span>
-  <fieldset class="theme-picker">
-    <legend class="sr-only">Theme</legend>
-    <label class="theme-picker__option"><input type="radio" name="theme" value="light" checked><span>Light</span></label>
-    <label class="theme-picker__option"><input type="radio" name="theme" value="dark"><span>Dark</span></label>
-  </fieldset>
+  <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
+    <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+    <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+  </div>
 </div>
 
 <script>
   document.documentElement.dataset.theme = 'light';
-  document.querySelectorAll('input[name="theme"]').forEach(r => {
-    r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeButtons = [...themeToggle.querySelectorAll('button')];
+  function selectTheme(btn) {
+    themeButtons.forEach(b => {
+      const selected = b === btn;
+      b.classList.toggle('toggle__option--selected', selected);
+      b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      b.tabIndex = selected ? 0 : -1;
+    });
+    document.documentElement.dataset.theme = btn.textContent.toLowerCase();
+  }
+  themeToggle.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) selectTheme(btn);
+  });
+  themeToggle.addEventListener('keydown', e => {
+    const currentIndex = themeButtons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = themeButtons[(currentIndex + 1) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(next);
+      next.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = themeButtons[(currentIndex - 1 + themeButtons.length) % themeButtons.length];
+      themeToggle.dataset.noTransition = '';
+      selectTheme(prev);
+      prev.focus();
+      requestAnimationFrame(() => delete themeToggle.dataset.noTransition);
+    }
   });
 </script>
 
