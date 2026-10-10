@@ -61,9 +61,14 @@
 .radio--focus,
 .radio--focus-hover,
 .radio--checked-focus,
-.radio--checked-focus-hover {
+.radio--checked-focus-hover,
+.radio:focus-visible {
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
+}
+
+.radio:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* --- Pressed — dark bg, inverse content --- */
