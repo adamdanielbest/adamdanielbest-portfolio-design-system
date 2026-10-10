@@ -4,6 +4,7 @@
     "require-sri": "off",
     "void-style": ["error", { "style": "omit" }],
     "no-implicit-button-type": "off",
-    "prefer-native-element": "off"
+    "prefer-native-element": "off",
+    "aria-label-misuse": "off"
   }
 }
