@@ -404,7 +404,7 @@
 
 .spacing-item__bar {
   width: 16px;
-  background: var(--primitive-cobalt-300);
+  background: var(--cobalt-300);
   border-radius: var(--radius-small);
   flex-shrink: 0;
 }
@@ -492,7 +492,7 @@
 .radius-item__rect {
   width: 64px;
   height: 48px;
-  background: var(--primitive-cobalt-300);
+  background: var(--cobalt-300);
 }
 
 .radius-item__token-name {

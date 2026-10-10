@@ -23,11 +23,11 @@
 .card-demo--hover {
   background: var(--background-hover);
   border-color: var(--border-strong);
-  box-shadow: 0px 4px 6px var(--primitive-shadow-light-08), 0px 1px 1.5px var(--primitive-shadow-light-06);
+  box-shadow: 0px 4px 6px var(--shadow-light-08), 0px 1px 1.5px var(--shadow-light-06);
 }
 
 [data-theme="dark"] .card-demo--hover {
-  box-shadow: 0px 4px 6px var(--primitive-shadow-dark-28), 0px 1px 1.5px var(--primitive-shadow-dark-24);
+  box-shadow: 0px 4px 6px var(--shadow-dark-28), 0px 1px 1.5px var(--shadow-dark-24);
 }
 
 /* Token labels use code.token-label — styles live in sheet.css */

@@ -171,3 +171,15 @@
   word-break: break-word;
   text-box-trim: none;
 }
+
+.icon-colour-grid__swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-colour-grid__icon--primary   { fill: var(--icon-primary); }
+.icon-colour-grid__icon--secondary { fill: var(--icon-secondary); }
+.icon-colour-grid__icon--accent    { fill: var(--icon-accent); }
