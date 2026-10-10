@@ -58,22 +58,24 @@
 }
 
 /* --- Focus ring on whole component --- */
+.radio:focus {
+  outline: none;
+}
+
 .radio--focus,
 .radio--focus-hover,
 .radio:focus-visible {
-  outline: 3px solid var(--border-focus);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--border-focus);
+  border-radius: var(--radius-small);
 }
 
 /* Checked + focus: white inner gap separates the selected background from the ring */
 .radio--checked-focus,
-.radio--checked-focus-hover {
+.radio--checked-focus-hover,
+.radio--checked:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--background-card), 0 0 0 5px var(--border-focus);
-}
-
-.radio:focus:not(:focus-visible) {
-  outline: none;
 }
 
 /* --- Pressed — dark bg, inverse content --- */

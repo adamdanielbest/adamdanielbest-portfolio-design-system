@@ -19,12 +19,10 @@
     background: var(--background-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-large);
-    padding: var(--spacing-card-padding);
+    overflow: hidden;
     margin-bottom: var(--spacing-content-gap);
   }
   .variant-card__grid {
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-medium);
     overflow-x: auto;
   }
   table {
@@ -56,7 +54,46 @@
     min-width: 140px;
     width: 160px;
   }
+  td.na-cell {
+    color: var(--text-tertiary);
+    font-size: var(--type-caption-size);
+    min-width: 140px;
+    width: 160px;
+  }
   .token-table td:first-child { font-weight: normal; }
+  .variant-card--table {
+    padding: 0;
+    overflow: hidden;
+  }
+  .variant-card__grid {
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  .variant-card__demo {
+    padding: var(--spacing-card-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-inline-gap);
+  }
+  .overline {
+    font-size: var(--type-overline-size);
+    font-weight: var(--type-overline-weight);
+    line-height: var(--type-overline-line-height);
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-info);
+    text-transform: uppercase;
+    padding-bottom: var(--spacing-text-stack-gap);
+  }
+  .checkbox-demo-group {
+    display: flex;
+    gap: var(--spacing-inline-gap);
+    flex-wrap: wrap;
+  }
+  .checkbox-demo-group .checkbox__label {
+    white-space: nowrap;
+  }
   .token-label {
     font-size: var(--type-caption-size);
     font-family: monospace;
@@ -75,9 +112,9 @@
   <h1>Checkbox</h1>
   <hr class="page-header__divider">
   <div class="page-header__metadata">
-    <p class="breadcrumb" title="adamdanielbest.com · Components · Checkbox">adamdanielbest.com · Components · Checkbox</p>
-    <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
-    <p class="usage" title="Binary toggle for a single option · Pair with a visible label · Indeterminate state for partially selected groups · Never use for mutually exclusive choices — use radio for that">Binary toggle for a single option · Pair with a visible label · Indeterminate state for partially selected groups · Never use for mutually exclusive choices — use radio for that</p>
+    <p class="breadcrumb">adamdanielbest.com · Components · Checkbox</p>
+    <p class="meta">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage">Boolean selection — toggles a single option on or off · Unlike radio, each checkbox is independent · Group related checkboxes with a fieldset and legend</p>
   </div>
 </header>
 
@@ -129,115 +166,159 @@
 </script>
 
 <!-- States table -->
-<div class="variant-card">
+<div class="variant-card variant-card--table">
   <div class="variant-card__grid">
     <table>
       <thead>
         <tr>
-          <th title="State">State</th>
-          <th title="Default">Default</th>
-          <th title="Hover">Hover</th>
-          <th title="Focus">Focus</th>
-          <th title="Checked">Checked</th>
-          <th title="Checked hover">Checked hover</th>
-          <th title="Checked focus">Checked focus</th>
-          <th title="Indeterminate">Indeterminate</th>
-          <th title="Disabled">Disabled</th>
-          <th title="Error">Error</th>
+          <th></th>
+          <th>Default</th>
+          <th>Hover</th>
+          <th>Focus</th>
+          <th>Focus + hover</th>
+          <th>Pressed</th>
+          <th>Error</th>
         </tr>
       </thead>
       <tbody>
+
+        <!-- Checked row -->
         <tr>
-          <td title="Checkbox">Checkbox</td>
+          <td>Checked</td>
 
-          <!-- Default -->
-          <td class="demo-cell">
-            <label class="checkbox checkbox--default">
-              <span class="checkbox__box"></span>
-              <span class="checkbox__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Hover -->
-          <td class="demo-cell">
-            <label class="checkbox checkbox--hover">
-              <span class="checkbox__box"></span>
-              <span class="checkbox__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Focus -->
-          <td class="demo-cell">
-            <label class="checkbox checkbox--focus">
-              <span class="checkbox__box"></span>
-              <span class="checkbox__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Checked -->
           <td class="demo-cell">
             <label class="checkbox checkbox--checked">
-              <span class="checkbox__box">
-                <svg class="checkbox__check" viewBox="0 0 10 8" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M1 4L3.5 6.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
               </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
 
-          <!-- Checked hover -->
           <td class="demo-cell">
             <label class="checkbox checkbox--checked-hover">
-              <span class="checkbox__box">
-                <svg class="checkbox__check" viewBox="0 0 10 8" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M1 4L3.5 6.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
               </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
 
-          <!-- Checked focus -->
           <td class="demo-cell">
             <label class="checkbox checkbox--checked-focus">
-              <span class="checkbox__box">
-                <svg class="checkbox__check" viewBox="0 0 10 8" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M1 4L3.5 6.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
               </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
 
-          <!-- Indeterminate -->
           <td class="demo-cell">
-            <label class="checkbox checkbox--indeterminate">
-              <span class="checkbox__box">
-                <span class="checkbox__mark"></span>
+            <label class="checkbox checkbox--checked-focus-hover">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
               </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
 
-          <!-- Disabled -->
           <td class="demo-cell">
-            <label class="checkbox checkbox--disabled">
-              <span class="checkbox__box"></span>
+            <label class="checkbox checkbox--checked-pressed">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
+              </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
 
-          <!-- Error -->
+          <td class="na-cell">N/A</td>
+        </tr>
+
+        <!-- Unchecked row -->
+        <tr>
+          <td>Unchecked</td>
+
+          <td class="demo-cell">
+            <label class="checkbox">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
+              <span class="checkbox__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="checkbox checkbox--hover">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
+              <span class="checkbox__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="checkbox checkbox--focus">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
+              <span class="checkbox__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="checkbox checkbox--focus-hover">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
+              <span class="checkbox__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="checkbox checkbox--unchecked-pressed">
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
+              <span class="checkbox__label">Label</span>
+            </label>
+          </td>
+
           <td class="demo-cell">
             <label class="checkbox checkbox--error">
-              <span class="checkbox__box"></span>
+              <span class="checkbox__icon-wrap">
+                <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+              </span>
               <span class="checkbox__label">Label</span>
             </label>
           </td>
         </tr>
+
       </tbody>
     </table>
+  </div>
+
+  <div class="variant-card__demo">
+    <p class="overline">Demo</p>
+    <div class="checkbox-demo-group" role="group" aria-label="Options">
+      <label class="checkbox checkbox--checked" role="checkbox" aria-checked="true" tabindex="0" id="demo-checkbox-a">
+        <span class="checkbox__icon-wrap">
+          <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
+        </span>
+        <span class="checkbox__label">Notifications</span>
+      </label>
+      <label class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="demo-checkbox-b">
+        <span class="checkbox__icon-wrap">
+          <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box"/></svg>
+        </span>
+        <span class="checkbox__label">Auto-save</span>
+      </label>
+      <label class="checkbox checkbox--checked" role="checkbox" aria-checked="true" tabindex="0" id="demo-checkbox-c">
+        <span class="checkbox__icon-wrap">
+          <svg class="checkbox__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-check-box-checked"/></svg>
+        </span>
+        <span class="checkbox__label">Dark mode</span>
+      </label>
+    </div>
   </div>
 </div>
 
@@ -247,51 +328,56 @@
     <table class="token-table">
       <thead>
         <tr>
-          <th scope="col" title="Token">Token</th>
-          <th scope="col" title="Property">Property</th>
-          <th scope="col" title="State">State</th>
+          <th scope="col">Token</th>
+          <th scope="col">Property</th>
+          <th scope="col">State</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><code class="token-label" title="background/control">background/control</code></td>
-          <td title="Box fill">Box fill</td>
-          <td title="Checked, checked-hover, checked-focus, indeterminate">Checked, checked-hover, checked-focus, indeterminate</td>
+          <td><code class="token-label">icon/size/medium</code></td>
+          <td>Icon width &amp; height</td>
+          <td>All</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/strong">border/strong</code></td>
-          <td title="Box border">Box border</td>
-          <td title="Default, hover">Default, hover</td>
+          <td><code class="token-label">background/selected</code></td>
+          <td>Component background</td>
+          <td>Checked (default, hover, focus, focus + hover)</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/focus">border/focus</code></td>
-          <td title="Box outline">Box outline</td>
-          <td title="Focus, checked-focus">Focus, checked-focus</td>
+          <td><code class="token-label">background/action/secondary-pressed</code></td>
+          <td>Component background</td>
+          <td>Checked pressed, unchecked pressed</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/danger">border/danger</code></td>
-          <td title="Box border">Box border</td>
-          <td title="Error">Error</td>
+          <td><code class="token-label">icon/primary</code></td>
+          <td>Icon colour</td>
+          <td>All except pressed, error</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/on-action">text/on-action</code></td>
-          <td title="Checkmark / dash colour">Checkmark / dash colour</td>
-          <td title="Checked, indeterminate">Checked, indeterminate</td>
+          <td><code class="token-label">text/on-action/secondary</code></td>
+          <td>Icon colour, label colour</td>
+          <td>Pressed</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/primary">text/primary</code></td>
-          <td title="Label colour">Label colour</td>
-          <td title="All except disabled">All except disabled</td>
+          <td><code class="token-label">text/error</code></td>
+          <td>Icon colour</td>
+          <td>Error</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/disabled">text/disabled</code></td>
-          <td title="Label colour">Label colour</td>
-          <td title="Disabled">Disabled</td>
+          <td><code class="token-label">border/error</code></td>
+          <td>Component border</td>
+          <td>Error</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="radius/small">radius/small</code></td>
-          <td title="Box corner radius">Box corner radius</td>
-          <td title="All">All</td>
+          <td><code class="token-label">border/focus</code></td>
+          <td>Focus ring</td>
+          <td>All focus states</td>
+        </tr>
+        <tr>
+          <td><code class="token-label">text/primary</code></td>
+          <td>Label colour</td>
+          <td>All except pressed</td>
         </tr>
       </tbody>
     </table>
@@ -304,6 +390,44 @@
   document.querySelectorAll('.meta-date').forEach(el => {
     el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   });
+
+  // Live checkbox demo — each is an independent boolean
+  const demoCheckboxes = [...document.querySelectorAll('.checkbox-demo-group .checkbox')];
+
+  function toggleCheckbox(el) {
+    const checked = el.getAttribute('aria-checked') === 'true';
+    const nowChecked = !checked;
+    el.setAttribute('aria-checked', nowChecked ? 'true' : 'false');
+    el.classList.toggle('checkbox--checked', nowChecked);
+    el.querySelector('use').setAttribute('href', nowChecked ? '#icon-check-box-checked' : '#icon-check-box');
+  }
+
+  demoCheckboxes.forEach(cb => {
+    cb.addEventListener('click', () => { toggleCheckbox(cb); });
+    cb.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        toggleCheckbox(cb);
+      }
+    });
+    cb.addEventListener('mouseenter', () => {
+      const checked = cb.getAttribute('aria-checked') === 'true';
+      cb.classList.add(checked ? 'checkbox--checked-hover' : 'checkbox--hover');
+    });
+    cb.addEventListener('mouseleave', () => {
+      cb.classList.remove('checkbox--hover', 'checkbox--checked-hover');
+    });
+  });
+
+  fetch('/src/icons/sprite.svg')
+    .then(r => r.text())
+    .then(svg => {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.setAttribute('aria-hidden', 'true');
+      div.innerHTML = svg;
+      document.body.insertBefore(div, document.body.firstChild);
+    });
 </script>
 
 </body>

@@ -5,38 +5,34 @@
 .checkbox {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-inline-gap);
+  gap: 4px;
   cursor: pointer;
   user-select: none;
+  border-radius: var(--radius-small);
+  border: none;
+  background: transparent;
+  min-height: 48px;
+  padding-inline-start: 0;
+  padding-inline-end: var(--spacing-inline-gap);
+  box-sizing: border-box;
+  transition: background 0.15s;
 }
 
-.checkbox__box {
+.checkbox__icon-wrap {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: var(--radius-small);
-  border: 1.5px solid var(--border-strong);
-  background: transparent;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.15s, background 0.15s;
 }
 
-.checkbox__mark {
-  display: none;
-  width: 10px;
-  height: 2px;
-  border-radius: 1px;
-  background: var(--text-on-action);
-}
-
-/* Checkmark SVG path for checked state */
-.checkbox__check {
-  display: none;
-  width: 10px;
-  height: 8px;
-  color: var(--text-on-action);
+.checkbox__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--icon-primary);
+  fill: currentColor;
+  transition: color 0.15s;
 }
 
 .checkbox__label {
@@ -44,54 +40,75 @@
   font-size: var(--type-body-size);
   line-height: var(--type-body-line-height);
   color: var(--text-primary);
+  transition: color 0.15s;
 }
 
-/* --- Checked --- */
-.checkbox--checked .checkbox__box,
-.checkbox--checked-hover .checkbox__box,
-.checkbox--checked-focus .checkbox__box,
-.checkbox--indeterminate .checkbox__box {
-  background: var(--background-control);
-  border-color: var(--background-control);
+/* --- Selected background (checked states) --- */
+.checkbox--checked,
+.checkbox--checked-hover,
+.checkbox--checked-focus,
+.checkbox--checked-focus-hover {
+  background: var(--background-selected);
 }
 
-.checkbox--checked .checkbox__check,
-.checkbox--checked-hover .checkbox__check,
-.checkbox--checked-focus .checkbox__check {
-  display: block;
+/* --- Hover background (unchecked) --- */
+.checkbox--hover,
+.checkbox--focus-hover {
+  background: var(--background-selected);
 }
 
-.checkbox--indeterminate .checkbox__mark {
-  display: block;
+/* --- Focus ring on whole component --- */
+.checkbox:focus {
+  outline: none;
 }
 
-/* --- Hover --- */
-.checkbox--hover .checkbox__box {
-  border-color: var(--text-primary);
+.checkbox--focus,
+.checkbox--focus-hover,
+.checkbox:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--border-focus);
+  border-radius: var(--radius-small);
 }
 
-/* --- Focus --- */
-.checkbox--focus .checkbox__box,
-.checkbox--checked-focus .checkbox__box {
-  outline: 3px solid var(--border-focus);
-  outline-offset: 2px;
+/* Checked + focus: white inner gap separates the selected background from the ring */
+.checkbox--checked-focus,
+.checkbox--checked-focus-hover,
+.checkbox--checked:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background-card), 0 0 0 5px var(--border-focus);
+}
+
+/* --- Pressed — dark bg, inverse content --- */
+.checkbox--checked-pressed,
+.checkbox--unchecked-pressed {
+  background: var(--background-action-secondary-pressed);
+}
+
+.checkbox--checked-pressed .checkbox__icon,
+.checkbox--unchecked-pressed .checkbox__icon,
+.checkbox--checked-pressed .checkbox__label,
+.checkbox--unchecked-pressed .checkbox__label {
+  color: var(--text-on-action-secondary);
+}
+
+/* --- Error --- */
+.checkbox--error {
+  border: 3px solid var(--border-error);
+}
+
+.checkbox--error .checkbox__icon {
+  color: var(--text-error);
 }
 
 /* --- Disabled --- */
 .checkbox--disabled {
   cursor: not-allowed;
-  opacity: 1;
-}
-.checkbox--disabled .checkbox__box {
-  border-color: var(--border-strong);
-  background: transparent;
-  opacity: 0.4;
-}
-.checkbox--disabled .checkbox__label {
-  color: var(--text-disabled);
 }
 
-/* --- Error --- */
-.checkbox--error .checkbox__box {
-  border-color: var(--border-error);
+.checkbox--disabled .checkbox__icon {
+  opacity: 0.4;
+}
+
+.checkbox--disabled .checkbox__label {
+  color: var(--text-disabled);
 }
