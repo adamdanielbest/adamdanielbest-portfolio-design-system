@@ -82,7 +82,7 @@
 .btn--primary:focus-visible {
   background-color: var(--background-action-primary);
   box-shadow:
-    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 1px var(--brand-off-white),
     0 0 0 4px var(--border-focus);
 }
 
@@ -103,7 +103,7 @@
 .btn--secondary:focus-visible {
   background-color: var(--background-action-secondary);
   box-shadow:
-    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 1px var(--brand-off-white),
     0 0 0 4px var(--border-focus);
 }
 
@@ -123,7 +123,7 @@
 .btn--ghost:focus-visible {
   background-color: var(--background-action-ghost);
   box-shadow:
-    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 1px var(--brand-off-white),
     0 0 0 4px var(--border-focus);
 }
 
@@ -144,7 +144,7 @@
 .btn--destructive:focus-visible {
   background-color: var(--background-action-destructive);
   box-shadow:
-    0 0 0 1px var(--primitive-brand-off-white),
+    0 0 0 1px var(--brand-off-white),
     0 0 0 4px var(--border-focus);
 }
 
