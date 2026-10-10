@@ -2,7 +2,7 @@
   /* Cobalt indicator dots, progress fills, icon fills, tag backgrounds. */
   --accent-brand: #88B0CD;
   /* X icons, negative indicators. */
-  --accent-error: #4C0519;
+  --accent-error: #BE123C;
   /* Information icons. Aliases brand cobalt. */
   --accent-info: #3A73A0;
   /* Check icons, progress success, positive metric indicators. */
@@ -65,7 +65,7 @@
   /* Standard card edges, input borders, content dividers. */
   --border-default: #E8E8E8;
   /* Error state border — error banners, invalid inputs. */
-  --border-error: #4C0519;
+  --border-error: #BE123C;
   /* Keyboard focus ring — 2px outline. Always visible for accessibility. */
   --border-focus: #3A73A0;
   --border-ghost: #5C91B5;
@@ -89,7 +89,7 @@
   /* Disabled text and icons. Never on interactive elements. */
   --text-disabled: #ABABAB;
   /* Error text and icons — validation messages. */
-  --text-error: #4C0519;
+  --text-error: #BE123C;
   /* Info text and icons. Aliases brand cobalt. */
   --text-info: #3A73A0;
   /* Text on inverted/dark surfaces in light mode. */
