@@ -93,5 +93,5 @@
 
 /* --- Error --- */
 .checkbox--error .checkbox__box {
-  border-color: var(--border-danger);
+  border-color: var(--border-error);
 }
