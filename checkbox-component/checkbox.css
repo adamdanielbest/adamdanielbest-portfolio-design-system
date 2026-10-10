@@ -73,7 +73,7 @@
 /* --- Focus --- */
 .checkbox--focus .checkbox__box,
 .checkbox--checked-focus .checkbox__box {
-  outline: 2px solid var(--border-focus);
+  outline: 3px solid var(--border-focus);
   outline-offset: 2px;
 }
 
