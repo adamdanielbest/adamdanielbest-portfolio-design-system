@@ -1,105 +1,153 @@
-/* ==========================================================================
-   DIMENSION TOKENS — desktop (default)
-   Applied in :root. Overridden by tokens-mobile.css at narrow viewports.
-   ========================================================================== */
-
 :root {
-  /* --- Typography --- */
-  --type-family-primary: Eina04;
-  --type-family-semibold: Eina04-SemiBold;
-  --type-family-bold: Eina04-Bold;
-
-  --type-display-size: 48px;
-  --type-display-line-height: 56px;
-  --type-display-letter-spacing: -0.5px;
-  --type-display-weight: 700;
-
-  --type-heading-1-size: 32px;
-  --type-heading-1-line-height: 40px;
-  --type-heading-1-letter-spacing: -0.3px;
-  --type-heading-1-weight: 600;
-
-  --type-heading-2-size: 24px;
-  --type-heading-2-line-height: 32px;
-  --type-heading-2-letter-spacing: -0.2px;
-  --type-heading-2-weight: 600;
-
-  --type-heading-3-size: 20px;
-  --type-heading-3-line-height: 28px;
-  --type-heading-3-weight: 600;
-
-  --type-body-size: 16px;
-  --type-body-line-height: 26px;
-  --type-body-weight: 400;
-
-  --type-body-small-size: 14px;
-  --type-body-small-line-height: 20px;
-  --type-body-small-weight: 400;
-
-  --type-label-size: 12px;
-  --type-label-line-height: 16px;
-  --type-label-letter-spacing: 0.01px;
-  --type-label-weight: 600;
-
-  --type-caption-size: 12px;
-  --type-caption-line-height: 16px;
-  --type-caption-weight: 400;
-
-  --type-overline-size: 12px;
-  --type-overline-line-height: 16px;
-  --type-overline-letter-spacing: 0.08px;
-  --type-overline-weight: 600;
-
-  --type-button-lg-size: 16px;
-  --type-button-lg-line-height: 24px;
-  --type-button-lg-letter-spacing: 0.5px;
-  --type-button-lg-weight: 600;
-
-  --type-button-md-size: 14px;
-  --type-button-md-line-height: 20px;
-  --type-button-md-letter-spacing: 0.5px;
-  --type-button-md-weight: 600;
-
-  --type-button-sm-size: 12px;
-  --type-button-sm-line-height: 16px;
-  --type-button-sm-letter-spacing: 0.5px;
-  --type-button-sm-weight: 600;
-
-  /* --- Spacing --- */
+  --border-width-default: 1px;
+  --border-width-focus: 3px;
+  --border-width-strong: 2px;
+  --icon-size-medium: 32;
+  --icon-size-small: 24;
+  /* Breakpoint at which sidebar collapses to top bar. ≤900px triggers tablet layout. */
+  --layout-breakpoint-tablet: 900px;
+  /* Max width for form layouts. Keeps fields readable and connected. */
+  --layout-form-max-width: 600px;
+  /* Number of grid columns. 12 desktop. */
+  --layout-grid-columns: 12px;
+  /* Gap between grid columns. 24px desktop. */
+  --layout-grid-gutter: 24px;
+  /* Inner container padding. Matches spacing/page-margin. 32px desktop. */
+  --layout-grid-margin: 32px;
+  /* Maximum content width — container centred at this width. 1200px desktop. */
+  --layout-max-content-width: 1200px;
+  /* Max width for long-form body text. Optimal reading measure. 720px desktop. */
+  --layout-reading-column-width: 720px;
+  /* Fixed sidebar width on desktop. 30% of 1200px content width. */
+  --layout-sidebar-width: 360px;
+  /* Grandparent — project cards, thumbnails. 16px. */
+  --radius-large: 16px;
+  /* Parent level — buttons, inputs, tooltips. 8px. */
+  --radius-medium: 8px;
+  /* Fully rounded — badges, toggles. 999px. */
+  --radius-pill: 999px;
+  /* Deepest nested — tags, chips, indicators inside a card. 4px. */
+  --radius-small: 4px;
+  --radius-x-small: 2px;
+  /* Outermost containers — currently sharp (0px). Update primitive when needed. */
+  --radius-xl: 0;
+  --spacing-badge-padding: 4px;
+  --spacing-button-padding-md: 16px;
+  --spacing-button-padding-sm: 8px;
+  /* Internal padding for project cards. 24px desktop. */
+  --spacing-card-padding: 24px;
+  /* Buttons, inputs, chips. 16px desktop. */
+  --spacing-component-padding: 16px;
+  /* Between content blocks within a section. 32px desktop. */
+  --spacing-content-gap: 32px;
+  --spacing-group-gap: 48px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-inline-gap: 8px;
+  --spacing-inline-padding-x: 2px;
+  --spacing-inline-padding-y: 4px;
+  --spacing-input-height: 40px;
+  --spacing-input-padding: 8px;
+  --spacing-list-gap: 2px;
+  /* Image to caption gap. 12px desktop. */
+  --spacing-media-gap: 12px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-overline-gap: 4px;
+  --spacing-padding-compact: 8px;
+  /* Inner padding of the max-width container. 32px desktop. */
   --spacing-page-margin-x: 32px;
   --spacing-page-margin-y: 80px;
-  --spacing-section-gap: 96px;
-  --spacing-content-gap: 32px;
-  --spacing-card-padding: 24px;
-  --spacing-component-padding: 16px;
   --spacing-panel-padding: 4px;
+  /* Between body paragraphs. 24px desktop. */
   --spacing-paragraph-gap: 24px;
-  --spacing-stack-gap: 16px;
+  /* Between sibling elements in a row. 16px desktop. */
   --spacing-row-gap: 16px;
-  --spacing-inline-gap: 8px;
-  --spacing-text-stack-gap: 8px;
-  --spacing-overline-gap: 4px;
-  --spacing-media-gap: 12px;
-  --spacing-padding-compact: 8px;
-  --spacing-group-gap: 48px;
-  --spacing-list-gap: 2px;
+  /* Between major page sections — hero/work/about. 96px desktop. */
+  --spacing-section-gap: 48px;
+  --spacing-section-padding-x: 32px;
+  --spacing-section-padding-y: 32px;
+  /* Between stacked elements in a column. 16px desktop. */
+  --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;
-  --spacing-button-padding-sm: 8px;
-  --spacing-button-padding-md: 16px;
-  --spacing-input-height: 40px;
-
-  /* --- Layout --- */
-  --layout-max-content-width: 1200px;
-  --layout-grid-columns: 12;
-  --layout-grid-gutter: 24px;
-  --layout-grid-margin: 32px;
-  --layout-sidebar-width: 240px;
-  --layout-breakpoint-tablet: 768px;
-
-  /* --- Radius --- */
-  --radius-small: 4px;
-  --radius-medium: 8px;
-  --radius-large: 16px;
-  --radius-xl: 0;
-  --radius-pill: 999px;
+  /* Vertical rhythm between stacked text lines (title + caption). 8px desktop. */
+  --spacing-text-stack-gap: 8px;
+  /* Body small line height. 20px desktop. */
+  --type-body-small-line-height: 20px;
+  /* Supporting content, image captions, metadata. 14px. */
+  --type-body-small-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-small-weight: 400;
+  /* Body line height — generous for readability. 26px desktop. */
+  --type-body-line-height: 26px;
+  /* Default long-form reading text. Case study content. 16px both viewports. */
+  --type-body-size: 16px;
+  /* Body weight — regular. */
+  --type-body-weight: 400;
+  --type-button-lg-letter-spacing: 0.5px;
+  --type-button-lg-line-height: 24px;
+  --type-button-lg-size: 16px;
+  --type-button-lg-weight: 600;
+  --type-button-md-letter-spacing: 0.5px;
+  --type-button-md-line-height: 20px;
+  --type-button-md-size: 14px;
+  --type-button-md-weight: 600;
+  --type-button-sm-letter-spacing: 0.5px;
+  --type-button-sm-line-height: 16px;
+  --type-button-sm-size: 12px;
+  --type-button-sm-weight: 600;
+  /* Caption line height. */
+  --type-caption-line-height: 16px;
+  /* Timestamps, tags, helper text. 13px. */
+  --type-caption-size: 12px;
+  /* Caption weight — regular. */
+  --type-caption-weight: 400;
+  /* Display letter spacing — slightly tight. */
+  --type-display-letter-spacing: -0.5px;
+  /* Display line height — tight for large type. */
+  --type-display-line-height: 56px;
+  /* Homepage hero, case study titles at full scale. 48px desktop. */
+  --type-display-size: 48px;
+  /* Display weight — bold. */
+  --type-display-weight: 700;
+  --type-family-bold: Eina04-Bold;
+  /* Primary typeface — Eina04, all text. */
+  --type-family-primary: Eina04;
+  --type-family-semibold: Eina04-SemiBold;
+  /* Heading 1 letter spacing. */
+  --type-heading-1-letter-spacing: -0.30000001192092896px;
+  /* Heading 1 line height. */
+  --type-heading-1-line-height: 40px;
+  /* Page-level titles. 32px desktop. */
+  --type-heading-1-size: 32px;
+  /* Heading 1 weight — semibold. */
+  --type-heading-1-weight: 600;
+  /* Heading 2 letter spacing. */
+  --type-heading-2-letter-spacing: -0.20000000298023224px;
+  /* Heading 2 line height. */
+  --type-heading-2-line-height: 32px;
+  /* Case study section headers. 24px desktop. */
+  --type-heading-2-size: 24px;
+  /* Heading 2 weight — semibold. */
+  --type-heading-2-weight: 600;
+  /* Heading 3 line height. */
+  --type-heading-3-line-height: 28px;
+  /* Subsections, callout labels. 20px desktop. */
+  --type-heading-3-size: 20px;
+  /* Heading 3 weight — semibold. */
+  --type-heading-3-weight: 600;
+  /* Label letter spacing — slightly open. */
+  --type-label-letter-spacing: 0.009999999776482582px;
+  /* Label line height. */
+  --type-label-line-height: 16px;
+  /* Navigation, buttons, input labels. 14px. */
+  --type-label-size: 12px;
+  /* Label weight — medium. Distinguishes UI text from body copy. */
+  --type-label-weight: 600;
+  /* Overline letter spacing — wide, adds visual texture. */
+  --type-overline-letter-spacing: 0.07999999821186066px;
+  /* Overline line height. */
+  --type-overline-line-height: 16px;
+  /* Category labels, project tags above a heading. 12px. */
+  --type-overline-size: 12px;
+  /* Overline weight — semibold. */
+  --type-overline-weight: 600;
 }

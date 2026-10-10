@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Radio component
+   ========================================================================== */
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--radius-small);
+  border: 2px solid transparent;
+  background: transparent;
+  min-height: 48px;
+  padding-inline-start: 0;
+  padding-inline-end: var(--spacing-inline-gap);
+  box-sizing: border-box;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.radio__icon-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--icon-primary);
+  fill: currentColor;
+  transition: color 0.15s;
+}
+
+.radio__label {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line-height);
+  color: var(--text-primary);
+  transition: color 0.15s;
+}
+
+/* --- Selected background (checked states) --- */
+.radio--checked,
+.radio--checked-hover,
+.radio--checked-focus,
+.radio--checked-focus-hover {
+  background: var(--background-selected);
+}
+
+/* --- Hover background (unchecked) --- */
+.radio--hover,
+.radio--focus-hover {
+  background: var(--background-selected);
+}
+
+/* --- Focus ring on whole component --- */
+.radio--focus,
+.radio--focus-hover,
+.radio--checked-focus,
+.radio--checked-focus-hover {
+  border-color: var(--border-focus);
+}
+
+/* --- Pressed — dark bg, inverse content --- */
+.radio--checked-pressed,
+.radio--unchecked-pressed {
+  background: var(--background-action-secondary-pressed);
+}
+
+.radio--checked-pressed .radio__icon,
+.radio--unchecked-pressed .radio__icon,
+.radio--checked-pressed .radio__label,
+.radio--unchecked-pressed .radio__label {
+  color: var(--text-on-action-secondary);
+}
+
+/* --- Error --- */
+.radio--error {
+  border-color: var(--border-error);
+}
+
+.radio--error .radio__icon {
+  color: var(--text-error);
+}
+
+/* --- Disabled --- */
+.radio--disabled {
+  cursor: not-allowed;
+}
+
+.radio--disabled .radio__icon {
+  opacity: 0.4;
+}
+
+.radio--disabled .radio__label {
+  color: var(--text-disabled);
+}

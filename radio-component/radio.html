@@ -19,18 +19,16 @@
     background: var(--background-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-large);
-    padding: var(--spacing-card-padding);
+    overflow: hidden;
     margin-bottom: var(--spacing-content-gap);
   }
   .variant-card__grid {
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-medium);
     overflow-x: auto;
   }
   table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 800px;
+    min-width: 900px;
     margin: 0;
   }
   th, td {
@@ -56,14 +54,59 @@
     min-width: 140px;
     width: 160px;
   }
-  .token-table td:first-child { font-weight: normal; }
-  .token-label {
+  td.na-cell {
+    color: var(--text-tertiary);
     font-size: var(--type-caption-size);
-    font-family: monospace;
-    background: var(--background-code);
-    color: var(--text-code);
-    padding: 2px 6px;
-    border-radius: var(--radius-small);
+    min-width: 140px;
+    width: 160px;
+  }
+  .token-table td:first-child { font-weight: normal; }
+  .variant-card--table {
+    padding: 0;
+    overflow: hidden;
+  }
+  .variant-card__grid {
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-medium);
+    overflow-x: auto;
+  }
+  .variant-card__demo {
+    padding: var(--spacing-card-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-inline-gap);
+  }
+  .overline {
+    font-size: var(--type-overline-size);
+    font-weight: var(--type-overline-weight);
+    line-height: var(--type-overline-line-height);
+    letter-spacing: var(--type-overline-letter-spacing);
+    color: var(--text-info);
+    text-transform: uppercase;
+    padding-bottom: var(--spacing-text-stack-gap);
+  }
+  .radio-demo-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--spacing-inline-gap);
+    flex-wrap: wrap;
+  }
+  .radio-demo-group .radio__label {
+    white-space: nowrap;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
 </head>
@@ -75,9 +118,9 @@
   <h1>Radio</h1>
   <hr class="page-header__divider">
   <div class="page-header__metadata">
-    <p class="breadcrumb" title="adamdanielbest.com · Components · Radio">adamdanielbest.com · Components · Radio</p>
-    <p class="meta" title="Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated [date] · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
-    <p class="usage" title="Single selection from a mutually exclusive set · Always show all options at once · Group with a fieldset and legend · Prefer radio over select when there are 4 or fewer options">Single selection from a mutually exclusive set · Always show all options at once · Group with a fieldset and legend · Prefer radio over select when there are 4 or fewer options</p>
+    <p class="breadcrumb">adamdanielbest.com · Components · Radio</p>
+    <p class="meta">Font-family: Eina04 · Units: 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · Contrast: WCAG 1.4.3 (AA) + 2.4.7 focus visible — verified</p>
+    <p class="usage">Single selection from a mutually exclusive set · Always show all options at once · Group with a fieldset and legend · Prefer radio over select when there are 4 or fewer options</p>
   </div>
 </header>
 
@@ -129,92 +172,154 @@
 </script>
 
 <!-- States table -->
-<div class="variant-card">
+<div class="variant-card variant-card--table">
   <div class="variant-card__grid">
     <table>
       <thead>
         <tr>
-          <th title="State">State</th>
-          <th title="Default">Default</th>
-          <th title="Hover">Hover</th>
-          <th title="Focus">Focus</th>
-          <th title="Checked">Checked</th>
-          <th title="Checked hover">Checked hover</th>
-          <th title="Checked focus">Checked focus</th>
-          <th title="Disabled">Disabled</th>
-          <th title="Error">Error</th>
+          <th></th>
+          <th>Default</th>
+          <th>Hover</th>
+          <th>Focus</th>
+          <th>Focus + hover</th>
+          <th>Pressed</th>
+          <th>Error</th>
         </tr>
       </thead>
       <tbody>
+
+        <!-- Checked row -->
         <tr>
-          <td title="Radio">Radio</td>
+          <td>Checked</td>
 
-          <!-- Default -->
-          <td class="demo-cell">
-            <label class="radio radio--default">
-              <span class="radio__box"></span>
-              <span class="radio__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Hover -->
-          <td class="demo-cell">
-            <label class="radio radio--hover">
-              <span class="radio__box"></span>
-              <span class="radio__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Focus -->
-          <td class="demo-cell">
-            <label class="radio radio--focus">
-              <span class="radio__box"></span>
-              <span class="radio__label">Label</span>
-            </label>
-          </td>
-
-          <!-- Checked -->
           <td class="demo-cell">
             <label class="radio radio--checked">
-              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+              </span>
               <span class="radio__label">Label</span>
             </label>
           </td>
 
-          <!-- Checked hover -->
           <td class="demo-cell">
             <label class="radio radio--checked-hover">
-              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+              </span>
               <span class="radio__label">Label</span>
             </label>
           </td>
 
-          <!-- Checked focus -->
           <td class="demo-cell">
             <label class="radio radio--checked-focus">
-              <span class="radio__box"><span class="radio__dot"></span></span>
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+              </span>
               <span class="radio__label">Label</span>
             </label>
           </td>
 
-          <!-- Disabled -->
           <td class="demo-cell">
-            <label class="radio radio--disabled">
-              <span class="radio__box"></span>
+            <label class="radio radio--checked-focus-hover">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+              </span>
               <span class="radio__label">Label</span>
             </label>
           </td>
 
-          <!-- Error -->
+          <td class="demo-cell">
+            <label class="radio radio--checked-pressed">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <td class="na-cell">N/A</td>
+        </tr>
+
+        <!-- Unchecked row -->
+        <tr>
+          <td>Unchecked</td>
+
+          <td class="demo-cell">
+            <label class="radio">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="radio radio--hover">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="radio radio--focus">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="radio radio--focus-hover">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
+          <td class="demo-cell">
+            <label class="radio radio--unchecked-pressed">
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
+              <span class="radio__label">Label</span>
+            </label>
+          </td>
+
           <td class="demo-cell">
             <label class="radio radio--error">
-              <span class="radio__box"></span>
+              <span class="radio__icon-wrap">
+                <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+              </span>
               <span class="radio__label">Label</span>
             </label>
           </td>
         </tr>
+
       </tbody>
     </table>
+  </div>
+
+  <div class="variant-card__demo">
+    <p class="overline">Demo</p>
+    <fieldset class="radio-demo-group" id="live-demo" role="radiogroup" aria-label="Choose an option">
+      <legend class="sr-only">Choose an option</legend>
+      <label class="radio radio--checked" id="demo-option-a">
+        <span class="radio__icon-wrap">
+          <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-checked"/></svg>
+        </span>
+        <span class="radio__label">Option A</span>
+      </label>
+      <label class="radio" id="demo-option-b">
+        <span class="radio__icon-wrap">
+          <svg class="radio__icon" width="48" height="48" aria-hidden="true" focusable="false"><use href="#icon-radio-button-unchecked"/></svg>
+        </span>
+        <span class="radio__label">Option B</span>
+      </label>
+    </fieldset>
   </div>
 </div>
 
@@ -224,46 +329,56 @@
     <table class="token-table">
       <thead>
         <tr>
-          <th scope="col" title="Token">Token</th>
-          <th scope="col" title="Property">Property</th>
-          <th scope="col" title="State">State</th>
+          <th scope="col">Token</th>
+          <th scope="col">Property</th>
+          <th scope="col">State</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><code class="token-label" title="background/control">background/control</code></td>
-          <td title="Box fill">Box fill</td>
-          <td title="Checked, checked-hover, checked-focus">Checked, checked-hover, checked-focus</td>
+          <td><code class="token-label">icon/size/medium</code></td>
+          <td>Icon width &amp; height</td>
+          <td>All</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/strong">border/strong</code></td>
-          <td title="Box border">Box border</td>
-          <td title="Default, hover">Default, hover</td>
+          <td><code class="token-label">background/selected</code></td>
+          <td>Component background</td>
+          <td>Checked (default, hover, focus, focus + hover)</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/focus">border/focus</code></td>
-          <td title="Box outline">Box outline</td>
-          <td title="Focus, checked-focus">Focus, checked-focus</td>
+          <td><code class="token-label">background/action/secondary-pressed</code></td>
+          <td>Component background</td>
+          <td>Checked pressed, unchecked pressed</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/danger">border/danger</code></td>
-          <td title="Box border">Box border</td>
-          <td title="Error">Error</td>
+          <td><code class="token-label">icon/primary</code></td>
+          <td>Icon colour</td>
+          <td>All except pressed, error</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/on-action">text/on-action</code></td>
-          <td title="Dot colour">Dot colour</td>
-          <td title="Checked">Checked</td>
+          <td><code class="token-label">text/on-action/secondary</code></td>
+          <td>Icon colour, label colour</td>
+          <td>Pressed</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/primary">text/primary</code></td>
-          <td title="Label colour">Label colour</td>
-          <td title="All except disabled">All except disabled</td>
+          <td><code class="token-label">text/error</code></td>
+          <td>Icon colour</td>
+          <td>Error</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="text/disabled">text/disabled</code></td>
-          <td title="Label colour">Label colour</td>
-          <td title="Disabled">Disabled</td>
+          <td><code class="token-label">border/error</code></td>
+          <td>Component border</td>
+          <td>Error</td>
+        </tr>
+        <tr>
+          <td><code class="token-label">border/focus</code></td>
+          <td>Focus ring</td>
+          <td>All focus states</td>
+        </tr>
+        <tr>
+          <td><code class="token-label">text/primary</code></td>
+          <td>Label colour</td>
+          <td>All except pressed</td>
         </tr>
       </tbody>
     </table>
@@ -276,6 +391,65 @@
   document.querySelectorAll('.meta-date').forEach(el => {
     el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   });
+
+  // Live radio demo
+  const demoGroup = document.getElementById('live-demo');
+  const demoOptions = [...demoGroup.querySelectorAll('.radio')];
+
+  function selectDemo(target) {
+    demoOptions.forEach(opt => {
+      const checked = opt === target;
+      opt.classList.toggle('radio--checked', checked);
+      opt.querySelector('use').setAttribute('href', checked ? '#icon-radio-button-checked' : '#icon-radio-button-unchecked');
+      opt.setAttribute('tabindex', checked ? '0' : '-1');
+    });
+  }
+
+  demoOptions.forEach(opt => {
+    opt.setAttribute('tabindex', opt.classList.contains('radio--checked') ? '0' : '-1');
+    opt.setAttribute('role', 'radio');
+    opt.setAttribute('aria-checked', opt.classList.contains('radio--checked') ? 'true' : 'false');
+  });
+
+  demoGroup.addEventListener('click', e => {
+    const opt = e.target.closest('.radio');
+    if (opt) { selectDemo(opt); opt.focus(); }
+  });
+
+  demoGroup.addEventListener('keydown', e => {
+    const idx = demoOptions.indexOf(document.activeElement);
+    if (idx === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = demoOptions[(idx + 1) % demoOptions.length];
+      selectDemo(next); next.focus();
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = demoOptions[(idx - 1 + demoOptions.length) % demoOptions.length];
+      selectDemo(prev); prev.focus();
+    } else if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      selectDemo(document.activeElement); document.activeElement.focus();
+    }
+  });
+
+  // Focus/blur states for demo
+  demoOptions.forEach(opt => {
+    opt.addEventListener('focus', () => opt.classList.add(opt.classList.contains('radio--checked') ? 'radio--checked-focus' : 'radio--focus'));
+    opt.addEventListener('blur',  () => { opt.classList.remove('radio--focus', 'radio--checked-focus'); });
+    opt.addEventListener('mouseenter', () => opt.classList.add(opt.classList.contains('radio--checked') ? 'radio--checked-hover' : 'radio--hover'));
+    opt.addEventListener('mouseleave', () => { opt.classList.remove('radio--hover', 'radio--checked-hover'); });
+  });
+
+  fetch('/src/icons/sprite.svg')
+    .then(r => r.text())
+    .then(svg => {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.setAttribute('aria-hidden', 'true');
+      div.innerHTML = svg;
+      document.body.insertBefore(div, document.body.firstChild);
+    });
 </script>
 
 </body>
