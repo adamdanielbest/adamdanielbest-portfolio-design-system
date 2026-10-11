@@ -32,6 +32,7 @@ const preview = {
       const wrapper = document.createElement('div');
       wrapper.setAttribute('data-theme', theme);
       wrapper.style.background = 'var(--background-page)';
+      wrapper.style.fontFamily = "var(--type-family-regular, 'Eina04'), Arial, sans-serif";
       wrapper.style.padding = '24px';
       wrapper.style.minHeight = '100px';
       wrapper.innerHTML = story();
