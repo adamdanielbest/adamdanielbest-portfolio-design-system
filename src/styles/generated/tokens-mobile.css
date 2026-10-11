@@ -4,8 +4,12 @@
   --border-width-strong: 2px;
   --button-padding-default: 16px;
   --button-padding-sm: 8px;
-  --icon-size-medium: 32px;
-  --icon-size-small: 24px;
+  /* Icon size lg. 48px. */
+  --icon-size-lg: 48px;
+  --icon-size-md: 32px;
+  --icon-size-sm: 24px;
+  /* Icon size xs. 16px. */
+  --icon-size-xs: 16px;
   /* Max width for form layouts. Full-width on mobile. */
   --layout-form-max-width: 430px;
   /* Grid columns — 4 mobile. */

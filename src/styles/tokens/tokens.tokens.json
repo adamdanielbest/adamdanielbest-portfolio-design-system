@@ -5205,7 +5205,25 @@
     },
     "icon": {
       "size": {
-        "medium": {
+        "sm": {
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3694",
+              "figmaResolvedType": "FLOAT",
+              "lastSyncedAt": "2026-10-11T13:40:57.977Z",
+              "lastSyncedValue": {
+                "Desktop": {
+                  "literal": 24
+                }
+              },
+              "primaryMode": "Desktop",
+              "variableId": "VariableID:3048:7400"
+            }
+          },
+          "$type": "dimension",
+          "$value": 24
+        },
+        "md": {
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
@@ -5223,23 +5241,15 @@
           "$type": "dimension",
           "$value": 32
         },
-        "small": {
-          "$extensions": {
-            "figma-console-mcp": {
-              "collectionId": "VariableCollectionId:2612:3694",
-              "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-11T13:40:57.977Z",
-              "lastSyncedValue": {
-                "Desktop": {
-                  "literal": 24
-                }
-              },
-              "primaryMode": "Desktop",
-              "variableId": "VariableID:3048:7400"
-            }
-          },
+        "xs": {
           "$type": "dimension",
-          "$value": 24
+          "$value": 16,
+          "$description": "Icon size xs. 16px."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": 48,
+          "$description": "Icon size lg. 48px."
         }
       }
     },
@@ -7186,7 +7196,25 @@
     },
     "icon": {
       "size": {
-        "medium": {
+        "sm": {
+          "$extensions": {
+            "figma-console-mcp": {
+              "collectionId": "VariableCollectionId:2612:3747",
+              "figmaResolvedType": "FLOAT",
+              "lastSyncedAt": "2026-10-11T13:40:57.977Z",
+              "lastSyncedValue": {
+                "Mobile": {
+                  "literal": 24
+                }
+              },
+              "primaryMode": "Mobile",
+              "variableId": "VariableID:3048:7401"
+            }
+          },
+          "$type": "dimension",
+          "$value": 24
+        },
+        "md": {
           "$extensions": {
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
@@ -7204,23 +7232,15 @@
           "$type": "dimension",
           "$value": 32
         },
-        "small": {
-          "$extensions": {
-            "figma-console-mcp": {
-              "collectionId": "VariableCollectionId:2612:3747",
-              "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-11T13:40:57.977Z",
-              "lastSyncedValue": {
-                "Mobile": {
-                  "literal": 24
-                }
-              },
-              "primaryMode": "Mobile",
-              "variableId": "VariableID:3048:7401"
-            }
-          },
+        "xs": {
           "$type": "dimension",
-          "$value": 24
+          "$value": 16,
+          "$description": "Icon size xs. 16px."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": 48,
+          "$description": "Icon size lg. 48px."
         }
       }
     },
