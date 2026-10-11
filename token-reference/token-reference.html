@@ -1061,8 +1061,16 @@
       el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
     });
 
-    document.querySelectorAll('input[name="theme"]').forEach(r => {
-      r.addEventListener('change', () => { document.documentElement.dataset.theme = r.value; });
+    document.querySelectorAll('#theme-toggle .toggle__option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.textContent.trim().toLowerCase();
+        document.documentElement.dataset.theme = theme;
+        document.querySelectorAll('#theme-toggle .toggle__option').forEach(b => {
+          b.classList.toggle('toggle__option--selected', b === btn);
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          b.tabIndex = b === btn ? 0 : -1;
+        });
+      });
     });
   </script>
 
