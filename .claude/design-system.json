@@ -12,7 +12,16 @@
     "iconNodeId": "2601:3955",
     "boilerplateNodeId": "2663:7530"
   },
-  "components": ".",
+  "components": [
+    {
+      "name": "button",
+      "figmaNodeId": "2624:6375",
+      "cssFile": "button-component/button.css",
+      "htmlFile": "button-component/button.html",
+      "storiesDir": "stories/Button",
+      "sharedFile": "stories/button.shared.js"
+    }
+  ],
   "templates": "src/templates/",
   "preview": {
     "script": "preview.sh",
