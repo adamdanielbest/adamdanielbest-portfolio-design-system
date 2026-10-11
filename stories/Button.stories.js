@@ -54,7 +54,7 @@ const render = ({ label, type, size, state, showIcon }) => {
 
   const inner = showIcon
     ? `<span class="btn__label">${label}</span><span class="btn__divider" aria-hidden="true"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span>`
-    : label;
+    : `<span class="btn__label">${label}</span>`;
 
   const btn = `<button type="button" class="btn btn--${type} btn--${size}${showIcon ? ' btn--icon' : ''}"${disabled ? ' disabled' : ''}>${inner}</button>`;
   return wrapperClass ? `<div class="${wrapperClass}">${btn}</div>` : btn;
