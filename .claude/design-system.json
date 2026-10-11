@@ -20,6 +20,14 @@
       "htmlFile": "button-component/button.html",
       "storiesDir": "stories/Button",
       "sharedFile": "stories/button.shared.js"
+    },
+    {
+      "name": "input",
+      "figmaNodeId": "2687:1994",
+      "cssFile": "input-component/input.css",
+      "htmlFile": "input-component/input.html",
+      "storiesDir": "stories/Input",
+      "sharedFile": "stories/input.shared.js"
     }
   ],
   "templates": "src/templates/",
