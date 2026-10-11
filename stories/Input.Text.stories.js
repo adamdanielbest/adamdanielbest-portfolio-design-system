@@ -9,6 +9,7 @@ export default {
 const render = (args) => renderInput(args);
 
 export const Default  = { args: { state: 'default'  }, render };
+export const Hover    = { args: { state: 'hover'     }, render };
 export const Focus    = { args: { state: 'focus'     }, render };
 export const Filled   = { args: { state: 'filled'    }, render };
 export const Disabled = { args: { state: 'disabled'  }, render };

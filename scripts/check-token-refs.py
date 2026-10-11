@@ -28,7 +28,7 @@ for f in token_files:
 # Scan all CSS files outside the generated directory for var() references.
 css_files = sorted(
     f for f in REPO_ROOT.rglob("*.css")
-    if "generated" not in f.parts and ".git" not in f.parts
+    if "generated" not in f.parts and ".git" not in f.parts and "node_modules" not in f.parts
 )
 
 missing: dict[str, list[str]] = {}

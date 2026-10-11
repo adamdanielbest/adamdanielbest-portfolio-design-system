@@ -157,7 +157,6 @@
 .input--focus .input__field,
 .input__field:focus-within {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
 }
 
 /* --------------------------------------------------------------------------
@@ -168,7 +167,6 @@
 .input--focus-hover .input__field {
   background-color: var(--background-hover);
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
 }
 
 /* --------------------------------------------------------------------------
