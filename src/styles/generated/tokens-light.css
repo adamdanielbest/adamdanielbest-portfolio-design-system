@@ -64,6 +64,7 @@
   --border-brand: #88B0CD;
   /* Standard card edges, input borders, content dividers. */
   --border-default: #E8E8E8;
+  --border-divider: #E8E8E8;
   /* Error state border — error banners, invalid inputs. */
   --border-error: #BE123C;
   /* Keyboard focus ring — 2px outline. Always visible for accessibility. */
@@ -71,7 +72,6 @@
   --border-ghost: #5C91B5;
   /* Info state border — informational banners. */
   --border-info: #3A73A0;
-  --border-separator: #E8E8E8;
   /* Prominent edge — selected/active states, strong dividers. */
   --border-strong: #ABABAB;
   /* Barely-there dividers — section separators, list rules. */

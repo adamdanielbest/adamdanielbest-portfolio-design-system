@@ -2,6 +2,8 @@
   --border-width-default: 1px;
   --border-width-focus: 3px;
   --border-width-strong: 2px;
+  --icon-size-medium: 32px;
+  --icon-size-small: 24px;
   /* Breakpoint at which sidebar collapses to top bar. ≤900px triggers tablet layout. */
   --layout-breakpoint-tablet: 900px;
   /* Max width for form layouts. Keeps fields readable and connected. */
