@@ -26,8 +26,10 @@
   gap: 8px;
   border: none;
   border-radius: var(--radius-sm);
-  font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-weight: 600;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-weight: 400;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 120ms ease, box-shadow 120ms ease;
@@ -165,6 +167,8 @@
 }
 .btn--icon .btn__label {
   padding: 0 var(--spacing-component-padding);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 .btn__divider {
   width: 1px;

@@ -1,5 +1,19 @@
 import '../button-component/button.css';
 
+// Inject the SVG sprite so icon <use> references resolve
+fetch('/src/icons/sprite.svg')
+  .then(r => r.text())
+  .then(svg => {
+    if (document.getElementById('sb-icon-sprite')) return;
+    const div = document.createElement('div');
+    div.id = 'sb-icon-sprite';
+    div.style.display = 'none';
+    div.setAttribute('aria-hidden', 'true');
+    div.innerHTML = svg;
+    document.body.insertBefore(div, document.body.firstChild);
+  })
+  .catch(() => {}); // sprite missing in some envs — icons degrade gracefully
+
 export default {
   title: 'Components/Button',
   parameters: {
@@ -22,7 +36,11 @@ export default {
     state: {
       control: 'select',
       options: ['default', 'hover', 'focus', 'focus-hover', 'pressed', 'disabled'],
-      description: 'Simulated interaction state (mirrors demo-* classes from the reference sheet)',
+      description: 'Simulated interaction state',
+    },
+    showIcon: {
+      control: 'boolean',
+      description: 'Adds a trailing icon + divider (btn--icon variant)',
     },
   },
   args: {
@@ -30,59 +48,35 @@ export default {
     type: 'primary',
     size: 'medium',
     state: 'default',
+    showIcon: false,
   },
 };
 
-const render = ({ label, type, size, state }) => {
+const render = ({ label, type, size, state, showIcon }) => {
   const disabled = state === 'disabled';
   const wrapperClass = !disabled && state !== 'default' ? `demo-${state}` : '';
-  const btn = `<button type="button" class="btn btn--${type} btn--${size}"${disabled ? ' disabled' : ''}>${label}</button>`;
+
+  const inner = showIcon
+    ? `<span class="btn__label">${label}</span><span class="btn__divider" aria-hidden="true"></span><span class="btn__icon-container"><svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg></span>`
+    : label;
+
+  const btn = `<button type="button" class="btn btn--${type} btn--${size}${showIcon ? ' btn--icon' : ''}"${disabled ? ' disabled' : ''}>${inner}</button>`;
   return wrapperClass ? `<div class="${wrapperClass}">${btn}</div>` : btn;
 };
 
-export const Primary = {
-  args: { type: 'primary' },
-  render,
-};
+export const Primary = { args: { type: 'primary' }, render };
+export const Secondary = { args: { type: 'secondary' }, render };
+export const Ghost = { args: { type: 'ghost' }, render };
+export const Destructive = { args: { label: 'Delete', type: 'destructive' }, render };
+export const Small = { args: { size: 'small' }, render };
+export const Large = { args: { size: 'large' }, render };
+export const Focus = { args: { state: 'focus' }, render };
+export const FocusHover = { name: 'Focus + Hover', args: { state: 'focus-hover' }, render };
+export const Disabled = { args: { state: 'disabled' }, render };
 
-export const Secondary = {
-  args: { type: 'secondary' },
-  render,
-};
-
-export const Ghost = {
-  args: { type: 'ghost' },
-  render,
-};
-
-export const Destructive = {
-  args: { label: 'Delete', type: 'destructive' },
-  render,
-};
-
-export const Small = {
-  args: { size: 'small' },
-  render,
-};
-
-export const Large = {
-  args: { size: 'large' },
-  render,
-};
-
-export const Focus = {
-  args: { state: 'focus' },
-  render,
-};
-
-export const FocusHover = {
-  name: 'Focus + Hover',
-  args: { state: 'focus-hover' },
-  render,
-};
-
-export const Disabled = {
-  args: { state: 'disabled' },
+export const WithIcon = {
+  name: 'With Icon',
+  args: { showIcon: true },
   render,
 };
 
