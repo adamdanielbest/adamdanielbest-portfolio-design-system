@@ -66,18 +66,18 @@
   /* Vertical text rhythm. 8px mobile. */
   --spacing-text-stack-gap: 8px;
   --spacing-tight-padding: 8px;
-  /* Body small line height mobile. 22px. */
-  --type-body-small-line-height: 22px;
-  /* Supporting content, captions. 14px. */
-  --type-body-small-size: 14px;
-  /* Body small weight — regular. */
-  --type-body-small-weight: 400;
   /* Body line height mobile — more generous for narrow screens. 28px. */
-  --type-body-line-height: 28px;
+  --type-body-md-line-height: 28px;
   /* Body text. 16px — consistent with desktop for scale cohesion. */
-  --type-body-size: 16px;
+  --type-body-md-size: 16px;
   /* Body weight — regular. */
-  --type-body-weight: 400;
+  --type-body-md-weight: 400;
+  /* Body small line height mobile. 22px. */
+  --type-body-sm-line-height: 22px;
+  /* Supporting content, captions. 14px. */
+  --type-body-sm-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-sm-weight: 400;
   --type-button-lg-letter-spacing: 0.5px;
   --type-button-lg-line-height: 24px;
   --type-button-lg-size: 16px;

@@ -75,9 +75,9 @@
 .select__value {
   flex: 1;
   min-width: 0;
-  font-size: var(--type-body-size);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-weight);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-tertiary);
   white-space: nowrap;
   overflow: hidden;
@@ -213,9 +213,9 @@
   justify-content: space-between;
   gap: var(--spacing-inline-gap);
   padding: var(--spacing-inline-gap) var(--spacing-inline-gap);
-  font-size: var(--type-body-size);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-weight);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-primary);
   cursor: pointer;
   user-select: none;

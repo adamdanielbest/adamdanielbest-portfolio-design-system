@@ -76,9 +76,9 @@
 }
 
 .swatch-name {
-  font-size: var(--type-body-small-size);
+  font-size: var(--type-body-sm-size);
   font-weight: var(--type-label-weight);
-  line-height: var(--type-body-small-line-height);
+  line-height: var(--type-body-sm-line-height);
   color: var(--text-primary);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
@@ -190,8 +190,8 @@
 
 .type-sample--body {
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-size);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
 }
 
 .type-sample--caption {

@@ -97,9 +97,9 @@
 .timeline-item__company {
   display: block;
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-size);
+  font-size: var(--type-body-md-size);
   line-height: 1;
-  font-weight: var(--type-body-weight);
+  font-weight: var(--type-body-md-weight);
   color: var(--text-primary);
 }
 

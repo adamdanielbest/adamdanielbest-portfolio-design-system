@@ -32,13 +32,19 @@ PATCHES = [
     ("02-dimensions-mobile",  ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px."),
 ]
 
-# The exporter expands abbreviations in token names (sm→small, md→medium).
+# The exporter expands abbreviations and strips suffixes from token names.
 # Each entry: (collection_key, parent_path_tuple, old_key, new_key)
 RENAMES = [
+    # icon/size: sm→small, md→medium expanded by exporter
     ("02-dimensions-desktop", ("icon", "size"), "small",  "sm"),
     ("02-dimensions-desktop", ("icon", "size"), "medium", "md"),
     ("02-dimensions-mobile",  ("icon", "size"), "small",  "sm"),
     ("02-dimensions-mobile",  ("icon", "size"), "medium", "md"),
+    # type/body: exporter strips -md suffix and expands body-sm → body-small
+    ("02-dimensions-desktop", ("type",), "body",       "body-md"),
+    ("02-dimensions-desktop", ("type",), "body-small", "body-sm"),
+    ("02-dimensions-mobile",  ("type",), "body",       "body-md"),
+    ("02-dimensions-mobile",  ("type",), "body-small", "body-sm"),
 ]
 
 

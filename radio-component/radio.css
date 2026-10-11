@@ -37,8 +37,8 @@
 
 .radio__label {
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-size);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-primary);
   transition: color 0.15s;
 }

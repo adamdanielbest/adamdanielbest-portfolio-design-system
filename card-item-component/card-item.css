@@ -85,7 +85,7 @@
 .card-grid-demo__outcome {
   margin: 0;
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-small-size);
+  font-size: var(--type-body-sm-size);
   line-height: 1;
   color: var(--text-primary);
   text-box-trim: trim-both;

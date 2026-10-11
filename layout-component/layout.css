@@ -27,9 +27,9 @@
 
 .demo-meta {
   margin: 0 0 var(--spacing-stack-gap);
-  font-size: var(--type-body-small-size);
+  font-size: var(--type-body-sm-size);
   color: var(--text-secondary);
-  line-height: var(--type-body-small-line-height);
+  line-height: var(--type-body-sm-line-height);
 }
 
 .demo-meta code {

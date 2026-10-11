@@ -146,8 +146,8 @@
 .case-study-hero__outcome {
   margin: 0;
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-size);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-primary);
 }
 
@@ -174,8 +174,8 @@
 .case-study-hero__hook-body {
   margin: 0;
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-size);
-  line-height: var(--type-body-line-height);
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-secondary);
 }
 

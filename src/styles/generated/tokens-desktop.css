@@ -74,18 +74,18 @@
   --spacing-table-cell-padding: 16px;
   /* Vertical rhythm between stacked text lines (title + caption). 8px desktop. */
   --spacing-text-stack-gap: 8px;
-  /* Body small line height. 20px desktop. */
-  --type-body-small-line-height: 20px;
-  /* Supporting content, image captions, metadata. 14px. */
-  --type-body-small-size: 14px;
-  /* Body small weight — regular. */
-  --type-body-small-weight: 400;
   /* Body line height — generous for readability. 26px desktop. */
-  --type-body-line-height: 26px;
+  --type-body-md-line-height: 26px;
   /* Default long-form reading text. Case study content. 16px both viewports. */
-  --type-body-size: 16px;
+  --type-body-md-size: 16px;
   /* Body weight — regular. */
-  --type-body-weight: 400;
+  --type-body-md-weight: 400;
+  /* Body small line height. 20px desktop. */
+  --type-body-sm-line-height: 20px;
+  /* Supporting content, image captions, metadata. 14px. */
+  --type-body-sm-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-sm-weight: 400;
   --type-button-lg-letter-spacing: 0.5px;
   --type-button-lg-line-height: 24px;
   --type-button-lg-size: 16px;
