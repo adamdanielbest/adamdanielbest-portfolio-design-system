@@ -1,4 +1,5 @@
 node_modules/
+storybook/
 .DS_Store
 *.log
 .claude/design-system-errors.log

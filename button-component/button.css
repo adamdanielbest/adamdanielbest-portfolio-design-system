@@ -192,3 +192,27 @@
   display: block;
   flex-shrink: 0;
 }
+
+/* --------------------------------------------------------------------------
+   Demo state simulation — used by Storybook stories and the reference sheet
+   to force hover/focus/pressed states without real interaction.
+   -------------------------------------------------------------------------- */
+.demo-hover .btn--primary:not(:disabled)         { background-color: var(--background-action-primary-hover); }
+.demo-hover .btn--secondary:not(:disabled)       { background-color: var(--background-action-secondary-hover); }
+.demo-hover .btn--ghost:not(:disabled)           { background-color: var(--background-action-ghost-hover); }
+.demo-hover .btn--destructive:not(:disabled)     { background-color: var(--background-action-destructive-hover); }
+
+.demo-pressed .btn--primary:not(:disabled)       { background-color: var(--background-action-primary-pressed); box-shadow: none; }
+.demo-pressed .btn--secondary:not(:disabled)     { background-color: var(--background-action-secondary-pressed); box-shadow: none; }
+.demo-pressed .btn--ghost:not(:disabled)         { background-color: var(--background-action-ghost-pressed); box-shadow: none; }
+.demo-pressed .btn--destructive:not(:disabled)   { background-color: var(--background-action-destructive-pressed); box-shadow: none; }
+
+.demo-focus .btn--primary:not(:disabled),
+.demo-focus .btn--secondary:not(:disabled),
+.demo-focus .btn--ghost:not(:disabled),
+.demo-focus .btn--destructive:not(:disabled)     { outline: none; box-shadow: 0 0 0 1px var(--brand-off-white), 0 0 0 4px var(--border-focus); }
+
+.demo-focus-hover .btn--primary:not(:disabled)   { outline: none; background-color: var(--background-action-primary-hover); box-shadow: 0 0 0 1px var(--brand-off-white), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--secondary:not(:disabled) { outline: none; background-color: var(--background-action-secondary-hover); box-shadow: 0 0 0 1px var(--brand-off-white), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--ghost:not(:disabled)     { outline: none; background-color: var(--background-action-ghost-hover); box-shadow: 0 0 0 1px var(--brand-off-white), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--destructive:not(:disabled){ outline: none; background-color: var(--background-action-destructive-hover); box-shadow: 0 0 0 1px var(--brand-off-white), 0 0 0 4px var(--border-focus); }

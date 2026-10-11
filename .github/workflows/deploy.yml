@@ -25,6 +25,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Storybook
+        # Outputs to storybook/ at repo root — picked up by the Pages artifact below.
+        run: npm run build-storybook -- --output-dir storybook
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -32,6 +44,7 @@ jobs:
       # from button-component/button.html is preserved because both directories
       # sit at the artifact root, so the published URL structure matches the
       # local file layout exactly.
+      # Storybook is at /storybook on the same Pages site.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

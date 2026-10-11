@@ -1,0 +1,32 @@
+{
+  "name": "adamdanielbest-portfolio-design-system",
+  "version": "1.0.0",
+  "description": "Design tokens exported from the Figma source of truth for [adamdanielbest.com](https://adamdanielbest.com), Adam Daniel Best's product design portfolio.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamdanielbest/adamdanielbest-portfolio-design-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/adamdanielbest/adamdanielbest-portfolio-design-system/issues"
+  },
+  "homepage": "https://github.com/adamdanielbest/adamdanielbest-portfolio-design-system#readme",
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1",
+    "@storybook/html-vite": "^10.6.1",
+    "storybook": "^10.6.1"
+  }
+}
