@@ -30,6 +30,32 @@ PATCHES = [
     ("02-dimensions-mobile",  ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px."),
     ("02-dimensions-desktop", ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px."),
     ("02-dimensions-mobile",  ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px."),
+
+    # spacing t-shirt scale — dropped by cross-collection alias bug (aliases size/* primitives)
+    ("02-dimensions-desktop", ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px."),
+    ("02-dimensions-desktop", ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px."),
+    ("02-dimensions-desktop", ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px."),
+    ("02-dimensions-desktop", ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px."),
+    ("02-dimensions-desktop", ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px."),
+    ("02-dimensions-desktop", ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px."),
+    ("02-dimensions-desktop", ("spacing", "xl"),   40,  "dimension", "Form input height. 40px."),
+    ("02-dimensions-desktop", ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px."),
+    ("02-dimensions-desktop", ("spacing", "3xl"),  64,  "dimension", "64px."),
+    ("02-dimensions-desktop", ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px."),
+    ("02-dimensions-desktop", ("spacing", "5xl"),  96,  "dimension", "96px."),
+    ("02-dimensions-desktop", ("spacing", "6xl"),  120, "dimension", "120px."),
+    ("02-dimensions-mobile",  ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px."),
+    ("02-dimensions-mobile",  ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px."),
+    ("02-dimensions-mobile",  ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px."),
+    ("02-dimensions-mobile",  ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px."),
+    ("02-dimensions-mobile",  ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px."),
+    ("02-dimensions-mobile",  ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px."),
+    ("02-dimensions-mobile",  ("spacing", "xl"),   40,  "dimension", "Form input height. 40px."),
+    ("02-dimensions-mobile",  ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px."),
+    ("02-dimensions-mobile",  ("spacing", "3xl"),  64,  "dimension", "64px."),
+    ("02-dimensions-mobile",  ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px."),
+    ("02-dimensions-mobile",  ("spacing", "5xl"),  96,  "dimension", "96px."),
+    ("02-dimensions-mobile",  ("spacing", "6xl"),  120, "dimension", "120px."),
 ]
 
 # The exporter expands abbreviations and strips suffixes from token names.
@@ -45,6 +71,15 @@ RENAMES = [
     ("02-dimensions-desktop", ("type",), "body-small", "body-sm"),
     ("02-dimensions-mobile",  ("type",), "body",       "body-md"),
     ("02-dimensions-mobile",  ("type",), "body-small", "body-sm"),
+    # radius: exporter expands xs→x-small, sm→small, md→medium, lg→large
+    ("02-dimensions-desktop", ("radius",), "x-small", "xs"),
+    ("02-dimensions-desktop", ("radius",), "small",   "sm"),
+    ("02-dimensions-desktop", ("radius",), "medium",  "md"),
+    ("02-dimensions-desktop", ("radius",), "large",   "lg"),
+    ("02-dimensions-mobile",  ("radius",), "x-small", "xs"),
+    ("02-dimensions-mobile",  ("radius",), "small",   "sm"),
+    ("02-dimensions-mobile",  ("radius",), "medium",  "md"),
+    ("02-dimensions-mobile",  ("radius",), "large",   "lg"),
 ]
 
 

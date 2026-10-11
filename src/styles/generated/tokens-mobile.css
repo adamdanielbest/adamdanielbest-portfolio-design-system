@@ -23,16 +23,30 @@
   /* Full-width reading on mobile — uses frame width. */
   --layout-reading-column-width: 430px;
   /* Grandparent — cards. 16px. */
-  --radius-large: 16px;
+  --radius-lg: 16px;
   /* Parent level — buttons, inputs. 8px. */
-  --radius-medium: 8px;
+  --radius-md: 8px;
   /* Fully rounded — badges. 999px. */
   --radius-pill: 999px;
   /* Deepest nested — tags, chips. 4px. */
-  --radius-small: 4px;
-  --radius-x-small: 2px;
+  --radius-sm: 4px;
   /* Outermost containers — sharp (0px). */
   --radius-xl: 0;
+  --radius-xs: 2px;
+  /* Section gap. 48px. */
+  --spacing-2xl: 48px;
+  /* Icon padding, badge padding. 4px. */
+  --spacing-2xs: 4px;
+  /* 64px. */
+  --spacing-3xl: 64px;
+  /* Hairline gaps, tight inline. 2px. */
+  --spacing-3xs: 2px;
+  /* Sheet margin y. 80px. */
+  --spacing-4xl: 80px;
+  /* 96px. */
+  --spacing-5xl: 96px;
+  /* 120px. */
+  --spacing-6xl: 120px;
   --spacing-badge-padding: 4px;
   /* Project card internal padding. 16px mobile. */
   --spacing-card-padding: 16px;
@@ -46,7 +60,11 @@
   /* Icon + label. 8px both viewports. */
   --spacing-inline-gap: 8px;
   --spacing-input-height: 48px;
+  /* Content gap, sheet margin x. 32px. */
+  --spacing-lg: 32px;
   --spacing-list-gap: 2px;
+  /* Card padding, paragraph gap. 24px. */
+  --spacing-md: 24px;
   --spacing-overline-gap: 4px;
   /* Inner container padding. 16px mobile. */
   --spacing-page-margin-x: 16px;
@@ -60,12 +78,18 @@
   --spacing-section-gap: 48px;
   --spacing-section-padding-x: 16px;
   --spacing-section-padding-y: 24px;
+  /* Default stack/row gap, cell padding. 16px. */
+  --spacing-sm: 16px;
   /* Stacked elements. 16px mobile. */
   --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;
   /* Vertical text rhythm. 8px mobile. */
   --spacing-text-stack-gap: 8px;
   --spacing-tight-padding: 8px;
+  /* Form input height. 40px. */
+  --spacing-xl: 40px;
+  /* Input padding, inline gaps. 8px. */
+  --spacing-xs: 8px;
   /* Body line height mobile — more generous for narrow screens. 28px. */
   --type-body-md-line-height: 28px;
   /* Body text. 16px — consistent with desktop for scale cohesion. */

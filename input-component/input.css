@@ -66,7 +66,7 @@
   gap: var(--spacing-inline-gap);
   background-color: var(--background-input);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   cursor: text;
   transition: border-color 120ms ease, box-shadow 120ms ease;
   box-sizing: border-box;

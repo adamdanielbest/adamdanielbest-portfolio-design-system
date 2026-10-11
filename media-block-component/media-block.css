@@ -13,7 +13,7 @@
   padding: var(--spacing-card-padding);
   background: var(--background-card);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   margin-bottom: var(--spacing-content-gap);
 }
 
@@ -34,7 +34,7 @@
   width: 100%;
   background: var(--background-hover);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
 }
 
 .media-block__image--16-9 {

@@ -25,16 +25,30 @@
   /* Fixed sidebar width on desktop. 30% of 1200px content width. */
   --layout-sidebar-width: 360px;
   /* Grandparent — project cards, thumbnails. 16px. */
-  --radius-large: 16px;
+  --radius-lg: 16px;
   /* Parent level — buttons, inputs, tooltips. 8px. */
-  --radius-medium: 8px;
+  --radius-md: 8px;
   /* Fully rounded — badges, toggles. 999px. */
   --radius-pill: 999px;
   /* Deepest nested — tags, chips, indicators inside a card. 4px. */
-  --radius-small: 4px;
-  --radius-x-small: 2px;
+  --radius-sm: 4px;
   /* Outermost containers — currently sharp (0px). Update primitive when needed. */
   --radius-xl: 0;
+  --radius-xs: 2px;
+  /* Section gap. 48px. */
+  --spacing-2xl: 48px;
+  /* Icon padding, badge padding. 4px. */
+  --spacing-2xs: 4px;
+  /* 64px. */
+  --spacing-3xl: 64px;
+  /* Hairline gaps, tight inline. 2px. */
+  --spacing-3xs: 2px;
+  /* Sheet margin y. 80px. */
+  --spacing-4xl: 80px;
+  /* 96px. */
+  --spacing-5xl: 96px;
+  /* 120px. */
+  --spacing-6xl: 120px;
   --spacing-badge-padding: 4px;
   --spacing-button-padding-md: 16px;
   --spacing-button-padding-sm: 8px;
@@ -51,7 +65,11 @@
   --spacing-inline-padding-y: 4px;
   --spacing-input-height: 40px;
   --spacing-input-padding: 8px;
+  /* Content gap, sheet margin x. 32px. */
+  --spacing-lg: 32px;
   --spacing-list-gap: 2px;
+  /* Card padding, paragraph gap. 24px. */
+  --spacing-md: 24px;
   /* Image to caption gap. 12px desktop. */
   --spacing-media-gap: 12px;
   /* Between inline elements — icon + label. 8px both. */
@@ -69,11 +87,17 @@
   --spacing-section-gap: 48px;
   --spacing-section-padding-x: 32px;
   --spacing-section-padding-y: 32px;
+  /* Default stack/row gap, cell padding. 16px. */
+  --spacing-sm: 16px;
   /* Between stacked elements in a column. 16px desktop. */
   --spacing-stack-gap: 16px;
   --spacing-table-cell-padding: 16px;
   /* Vertical rhythm between stacked text lines (title + caption). 8px desktop. */
   --spacing-text-stack-gap: 8px;
+  /* Form input height. 40px. */
+  --spacing-xl: 40px;
+  /* Input padding, inline gaps. 8px. */
+  --spacing-xs: 8px;
   /* Body line height — generous for readability. 26px desktop. */
   --type-body-md-line-height: 26px;
   /* Default long-form reading text. Case study content. 16px both viewports. */

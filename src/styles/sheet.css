@@ -45,7 +45,7 @@ code {
   background: var(--background-code);
   color: var(--text-code);
   padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -134,7 +134,7 @@ code.token-label {
   align-items: center;
   padding: var(--spacing-component-padding);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-lg);
   background: var(--background-card);
   margin-block: var(--spacing-content-gap);
   overflow-x: auto;
@@ -228,7 +228,7 @@ code.token-label {
 .content-card {
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: var(--spacing-content-gap);
 }
@@ -238,7 +238,7 @@ code.token-label {
    -------------------------------------------------------------------------- */
 .variant-card__grid {
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   overflow-x: auto;
   overflow-y: hidden;
   margin: var(--spacing-card-padding);

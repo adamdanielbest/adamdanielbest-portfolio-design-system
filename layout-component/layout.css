@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   padding: var(--spacing-card-padding);
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
@@ -95,7 +95,7 @@
 .demo-col {
   background: var(--background-card);
   border: 1px dashed var(--border-default);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   padding: var(--spacing-component-padding) var(--spacing-inline-gap);
   font-size: var(--type-caption-size);
   font-weight: var(--type-label-weight);
@@ -129,7 +129,7 @@
   display: block;
   background: var(--background-elevated);
   border: 1px dashed var(--border-default);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   padding: var(--spacing-component-padding);
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);

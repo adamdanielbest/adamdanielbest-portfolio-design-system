@@ -28,7 +28,7 @@
 .tile-card {
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-lg);
   padding: var(--spacing-card-padding);
 }
 
@@ -61,7 +61,7 @@
 .swatch {
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
 }
 
@@ -238,7 +238,7 @@
   width: 56px;
   height: 56px;
   background: var(--background-selected);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
 }
 
 .icon-box svg {

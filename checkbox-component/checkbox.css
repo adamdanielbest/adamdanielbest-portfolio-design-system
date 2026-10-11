@@ -8,7 +8,7 @@
   gap: 4px;
   cursor: pointer;
   user-select: none;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   border: none;
   background: transparent;
   min-height: 48px;
@@ -67,7 +67,7 @@
 .checkbox:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--border-focus);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
 }
 
 /* Checked + focus: white inner gap separates the selected background from the ring */

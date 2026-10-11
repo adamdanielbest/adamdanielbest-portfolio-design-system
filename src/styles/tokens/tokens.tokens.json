@@ -5422,50 +5422,6 @@
       }
     },
     "radius": {
-      "large": {
-        "$description": "Grandparent — project cards, thumbnails. 16px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{01-primitives.radius.300}"
-              }
-            },
-            "primaryMode": "Desktop",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3739"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.300}"
-      },
-      "medium": {
-        "$description": "Parent level — buttons, inputs, tooltips. 8px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{01-primitives.radius.200}"
-              }
-            },
-            "primaryMode": "Desktop",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3738"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.200}"
-      },
       "pill": {
         "$description": "Fully rounded — badges, toggles. 999px.",
         "$extensions": {
@@ -5488,46 +5444,6 @@
         "$type": "dimension",
         "$value": "{01-primitives.radius.pill}"
       },
-      "small": {
-        "$description": "Deepest nested — tags, chips, indicators inside a card. 4px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{01-primitives.radius.100}"
-              }
-            },
-            "primaryMode": "Desktop",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3737"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.100}"
-      },
-      "x-small": {
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3694",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Desktop": {
-                "reference": "{01-primitives.radius.50}"
-              }
-            },
-            "primaryMode": "Desktop",
-            "variableId": "VariableID:3034:6603"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.50}"
-      },
       "xl": {
         "$description": "Outermost containers — currently sharp (0px). Update primitive when needed.",
         "$extensions": {
@@ -5549,6 +5465,90 @@
         },
         "$type": "dimension",
         "$value": "{01-primitives.radius.400}"
+      },
+      "xs": {
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3694",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Desktop": {
+                "reference": "{01-primitives.radius.50}"
+              }
+            },
+            "primaryMode": "Desktop",
+            "variableId": "VariableID:3034:6603"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.50}"
+      },
+      "sm": {
+        "$description": "Deepest nested — tags, chips, indicators inside a card. 4px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3694",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Desktop": {
+                "reference": "{01-primitives.radius.100}"
+              }
+            },
+            "primaryMode": "Desktop",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3737"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.100}"
+      },
+      "md": {
+        "$description": "Parent level — buttons, inputs, tooltips. 8px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3694",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Desktop": {
+                "reference": "{01-primitives.radius.200}"
+              }
+            },
+            "primaryMode": "Desktop",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3738"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.200}"
+      },
+      "lg": {
+        "$description": "Grandparent — project cards, thumbnails. 16px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3694",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Desktop": {
+                "reference": "{01-primitives.radius.300}"
+              }
+            },
+            "primaryMode": "Desktop",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3739"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.300}"
       }
     },
     "spacing": {
@@ -6082,6 +6082,66 @@
         },
         "$type": "dimension",
         "$value": "{01-primitives.space.200}"
+      },
+      "3xs": {
+        "$type": "dimension",
+        "$value": 2,
+        "$description": "Hairline gaps, tight inline. 2px."
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": 4,
+        "$description": "Icon padding, badge padding. 4px."
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": 8,
+        "$description": "Input padding, inline gaps. 8px."
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": 16,
+        "$description": "Default stack/row gap, cell padding. 16px."
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": 24,
+        "$description": "Card padding, paragraph gap. 24px."
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": 32,
+        "$description": "Content gap, sheet margin x. 32px."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": 40,
+        "$description": "Form input height. 40px."
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": 48,
+        "$description": "Section gap. 48px."
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": 64,
+        "$description": "64px."
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": 80,
+        "$description": "Sheet margin y. 80px."
+      },
+      "5xl": {
+        "$type": "dimension",
+        "$value": 96,
+        "$description": "96px."
+      },
+      "6xl": {
+        "$type": "dimension",
+        "$value": 120,
+        "$description": "120px."
       }
     },
     "type": {
@@ -7373,50 +7433,6 @@
       }
     },
     "radius": {
-      "large": {
-        "$description": "Grandparent — cards. 16px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{01-primitives.radius.300}"
-              }
-            },
-            "primaryMode": "Mobile",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3792"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.300}"
-      },
-      "medium": {
-        "$description": "Parent level — buttons, inputs. 8px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{01-primitives.radius.200}"
-              }
-            },
-            "primaryMode": "Mobile",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3791"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.200}"
-      },
       "pill": {
         "$description": "Fully rounded — badges. 999px.",
         "$extensions": {
@@ -7439,46 +7455,6 @@
         "$type": "dimension",
         "$value": "{02-dimensions-desktop.radius.pill}"
       },
-      "small": {
-        "$description": "Deepest nested — tags, chips. 4px.",
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{01-primitives.radius.100}"
-              }
-            },
-            "primaryMode": "Mobile",
-            "scopes": [
-              "CORNER_RADIUS"
-            ],
-            "variableId": "VariableID:2612:3790"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.100}"
-      },
-      "x-small": {
-        "$extensions": {
-          "figma-console-mcp": {
-            "collectionId": "VariableCollectionId:2612:3747",
-            "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-11T14:01:16.553Z",
-            "lastSyncedValue": {
-              "Mobile": {
-                "reference": "{01-primitives.radius.50}"
-              }
-            },
-            "primaryMode": "Mobile",
-            "variableId": "VariableID:3034:6604"
-          }
-        },
-        "$type": "dimension",
-        "$value": "{01-primitives.radius.50}"
-      },
       "xl": {
         "$description": "Outermost containers — sharp (0px).",
         "$extensions": {
@@ -7500,6 +7476,90 @@
         },
         "$type": "dimension",
         "$value": "{01-primitives.radius.400}"
+      },
+      "xs": {
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3747",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.553Z",
+            "lastSyncedValue": {
+              "Mobile": {
+                "reference": "{01-primitives.radius.50}"
+              }
+            },
+            "primaryMode": "Mobile",
+            "variableId": "VariableID:3034:6604"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.50}"
+      },
+      "sm": {
+        "$description": "Deepest nested — tags, chips. 4px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3747",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Mobile": {
+                "reference": "{01-primitives.radius.100}"
+              }
+            },
+            "primaryMode": "Mobile",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3790"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.100}"
+      },
+      "md": {
+        "$description": "Parent level — buttons, inputs. 8px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3747",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Mobile": {
+                "reference": "{01-primitives.radius.200}"
+              }
+            },
+            "primaryMode": "Mobile",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3791"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.200}"
+      },
+      "lg": {
+        "$description": "Grandparent — cards. 16px.",
+        "$extensions": {
+          "figma-console-mcp": {
+            "collectionId": "VariableCollectionId:2612:3747",
+            "figmaResolvedType": "FLOAT",
+            "lastSyncedAt": "2026-10-11T14:01:16.552Z",
+            "lastSyncedValue": {
+              "Mobile": {
+                "reference": "{01-primitives.radius.300}"
+              }
+            },
+            "primaryMode": "Mobile",
+            "scopes": [
+              "CORNER_RADIUS"
+            ],
+            "variableId": "VariableID:2612:3792"
+          }
+        },
+        "$type": "dimension",
+        "$value": "{01-primitives.radius.300}"
       }
     },
     "spacing": {
@@ -7936,6 +7996,66 @@
         },
         "$type": "dimension",
         "$value": "{01-primitives.space.200}"
+      },
+      "3xs": {
+        "$type": "dimension",
+        "$value": 2,
+        "$description": "Hairline gaps, tight inline. 2px."
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": 4,
+        "$description": "Icon padding, badge padding. 4px."
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": 8,
+        "$description": "Input padding, inline gaps. 8px."
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": 16,
+        "$description": "Default stack/row gap, cell padding. 16px."
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": 24,
+        "$description": "Card padding, paragraph gap. 24px."
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": 32,
+        "$description": "Content gap, sheet margin x. 32px."
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": 40,
+        "$description": "Form input height. 40px."
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": 48,
+        "$description": "Section gap. 48px."
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": 64,
+        "$description": "64px."
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": 80,
+        "$description": "Sheet margin y. 80px."
+      },
+      "5xl": {
+        "$type": "dimension",
+        "$value": 96,
+        "$description": "96px."
+      },
+      "6xl": {
+        "$type": "dimension",
+        "$value": 120,
+        "$description": "120px."
       }
     },
     "type": {

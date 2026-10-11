@@ -14,7 +14,7 @@
   padding: var(--spacing-card-padding);
   background: var(--background-page);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   margin-bottom: var(--spacing-content-gap);
 }
 

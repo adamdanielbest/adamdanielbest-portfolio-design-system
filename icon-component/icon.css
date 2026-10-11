@@ -12,7 +12,7 @@
   gap: 0;
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-content-gap);
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
 
 .icon-colour-grid-inset {
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   overflow: hidden;
   margin: var(--spacing-card-padding);
 }
@@ -111,7 +111,7 @@
    -------------------------------------------------------------------------- */
 .icon-grid-inset {
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   overflow: hidden;
   margin: var(--spacing-card-padding);
 }

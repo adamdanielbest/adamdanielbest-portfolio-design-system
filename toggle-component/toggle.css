@@ -7,7 +7,7 @@
   align-items: center;
   gap: 0;
   padding: 2px;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border-subtle);
   background: var(--background-input);
 }
@@ -37,11 +37,11 @@
 }
 
 .toggle__option:first-child {
-  border-radius: var(--radius-x-small) 0 0 var(--radius-x-small);
+  border-radius: var(--radius-xs) 0 0 var(--radius-xs);
 }
 
 .toggle__option:last-child {
-  border-radius: 0 var(--radius-x-small) var(--radius-x-small) 0;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
 }
 
 .toggle__option:not(.toggle__option--selected):hover {

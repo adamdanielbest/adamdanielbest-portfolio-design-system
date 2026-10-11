@@ -66,7 +66,7 @@
   gap: var(--spacing-inline-gap);
   background-color: var(--background-input);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: border-color 120ms ease, box-shadow 120ms ease;
   box-sizing: border-box;
@@ -192,7 +192,7 @@
   right: 0;
   background-color: var(--background-card);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   list-style: none;
   margin: 0;
@@ -219,7 +219,7 @@
   color: var(--text-primary);
   cursor: pointer;
   user-select: none;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   text-box-trim: none;
 }
 

@@ -20,7 +20,7 @@
   flex-direction: column;
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-md);
   overflow: hidden;
   pointer-events: none;
 }
