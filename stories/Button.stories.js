@@ -1,18 +1,14 @@
 import '../button-component/button.css';
+import spriteSvg from '../src/icons/sprite.svg?raw';
 
-// Inject the SVG sprite so icon <use> references resolve
-fetch('/src/icons/sprite.svg')
-  .then(r => r.text())
-  .then(svg => {
-    if (document.getElementById('sb-icon-sprite')) return;
-    const div = document.createElement('div');
-    div.id = 'sb-icon-sprite';
-    div.style.display = 'none';
-    div.setAttribute('aria-hidden', 'true');
-    div.innerHTML = svg;
-    document.body.insertBefore(div, document.body.firstChild);
-  })
-  .catch(() => {}); // sprite missing in some envs — icons degrade gracefully
+// Inject the SVG sprite once so icon <use> references resolve
+if (!document.getElementById('sb-icon-sprite')) {
+  const div = document.createElement('div');
+  div.id = 'sb-icon-sprite';
+  div.setAttribute('aria-hidden', 'true');
+  div.innerHTML = spriteSvg;
+  document.body.insertBefore(div, document.body.firstChild);
+}
 
 export default {
   title: 'Components/Button',
@@ -64,21 +60,20 @@ const render = ({ label, type, size, state, showIcon }) => {
   return wrapperClass ? `<div class="${wrapperClass}">${btn}</div>` : btn;
 };
 
-export const Primary = { args: { type: 'primary' }, render };
+export const Primary   = { args: { type: 'primary' }, render };
 export const Secondary = { args: { type: 'secondary' }, render };
-export const Ghost = { args: { type: 'ghost' }, render };
+export const Ghost     = { args: { type: 'ghost' }, render };
 export const Destructive = { args: { label: 'Delete', type: 'destructive' }, render };
-export const Small = { args: { size: 'small' }, render };
-export const Large = { args: { size: 'large' }, render };
-export const Focus = { args: { state: 'focus' }, render };
-export const FocusHover = { name: 'Focus + Hover', args: { state: 'focus-hover' }, render };
-export const Disabled = { args: { state: 'disabled' }, render };
 
-export const WithIcon = {
-  name: 'With Icon',
-  args: { showIcon: true },
-  render,
-};
+export const Small  = { args: { size: 'small' }, render };
+export const Medium = { args: { size: 'medium' }, render };
+export const Large  = { args: { size: 'large' }, render };
+
+export const Focus     = { args: { state: 'focus' }, render };
+export const FocusHover = { name: 'Focus + Hover', args: { state: 'focus-hover' }, render };
+export const Disabled  = { args: { state: 'disabled' }, render };
+
+export const WithIcon = { name: 'With Icon', args: { showIcon: true }, render };
 
 export const AllTypes = {
   name: 'All Types',

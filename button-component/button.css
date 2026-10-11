@@ -190,8 +190,8 @@
 .btn--icon.btn--medium .btn__icon-container { width: 40px; height: 40px; }
 .btn--icon.btn--large .btn__icon-container  { width: 48px; height: 48px; }
 .btn__icon {
-  width: 16px;
-  height: 16px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   fill: currentColor;
   display: block;
   flex-shrink: 0;
