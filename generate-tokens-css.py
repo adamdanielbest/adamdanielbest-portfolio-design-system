@@ -93,11 +93,17 @@ def format_value(token_type, resolved):
     return str(resolved)
 
 
+# Token path prefixes to exclude from CSS output (stale collections still present in DTCG export).
+SKIP_PREFIXES = ("space.",)
+
+
 def build_collection_css(collection_name, collection_node, all_tokens_flat_global, selector):
     flat = {}
     walk_tokens(collection_node, [], flat)
     lines = [f"{selector} {{"]
     for dotted_path, token in sorted(flat.items()):
+        if any(dotted_path.startswith(p) for p in SKIP_PREFIXES):
+            continue
         try:
             resolved = resolve_value(token["$value"], all_tokens_flat_global)
         except KeyError as e:

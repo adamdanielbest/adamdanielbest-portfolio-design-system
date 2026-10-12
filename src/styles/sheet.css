@@ -14,7 +14,7 @@ body {
   font-family: var(--type-family-primary), system-ui, sans-serif;
   font-size: var(--type-body-md-size);
   line-height: var(--type-body-md-line-height);
-  padding-block: var(--spacing-page-margin-y);
+  padding-block: var(--spacing-4xl);
 }
 
 :focus-visible {
@@ -32,7 +32,7 @@ blockquote, figcaption {
 }
 
 @media (max-width: 767px) {
-  body { padding-block: var(--spacing-page-margin-y); }
+  body { padding-block: var(--spacing-4xl); }
   code { margin-block: 2px; } /* small optical nudge — no token at this scale */
 }
 
@@ -44,7 +44,7 @@ code {
   font-size: var(--type-caption-size);
   background: var(--background-code);
   color: var(--text-code);
-  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
+  padding: var(--spacing-2xs) var(--spacing-xs);
   border-radius: var(--radius-sm);
   white-space: nowrap;
   overflow: hidden;
@@ -79,7 +79,7 @@ code.token-label {
 
 .page-header h1 {
   margin: 0;
-  padding-bottom: var(--spacing-card-padding);
+  padding-bottom: var(--spacing-md);
   font-family: var(--type-family-bold), system-ui, sans-serif;
   font-size: var(--type-display-size);
   font-weight: 400;
@@ -92,8 +92,8 @@ code.token-label {
 .page-header__metadata {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-text-stack-gap);
-  margin-top: var(--spacing-stack-gap);
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
 }
 
 .page-header__divider {
@@ -130,13 +130,13 @@ code.token-label {
    -------------------------------------------------------------------------- */
 .demo-controls {
   display: flex;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
   align-items: center;
-  padding: var(--spacing-component-padding);
+  padding: var(--spacing-md);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   background: var(--background-card);
-  margin-block: var(--spacing-content-gap);
+  margin-block: var(--spacing-lg);
   overflow-x: auto;
   white-space: nowrap;
 }
@@ -190,7 +190,7 @@ code.token-label {
 .theme-picker__option {
   display: flex;
   align-items: center;
-  padding: 8px var(--spacing-inline-gap);
+  padding: 8px var(--spacing-xs);
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   letter-spacing: var(--type-label-letter-spacing);
@@ -230,7 +230,7 @@ code.token-label {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-bottom: var(--spacing-content-gap);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* --------------------------------------------------------------------------
@@ -241,7 +241,7 @@ code.token-label {
   border-radius: var(--radius-md);
   overflow-x: auto;
   overflow-y: hidden;
-  margin: var(--spacing-card-padding);
+  margin: var(--spacing-md);
 }
 
 .variant-card__grid table {
@@ -254,7 +254,7 @@ code.token-label {
 .variant-card__grid td {
   border-bottom: 1px solid var(--border-default);
   border-right: 1px solid var(--border-default);
-  padding: var(--spacing-table-cell-padding);
+  padding: var(--spacing-sm);
   text-align: left;
   vertical-align: middle;
 }
@@ -293,8 +293,8 @@ code.token-label {
 
 /* Demo cells — extra vertical breathing room for component previews */
 .variant-card__grid .demo-cell {
-  padding-top: var(--spacing-card-padding);
-  padding-bottom: var(--spacing-card-padding);
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
 }
 
 /* --------------------------------------------------------------------------

@@ -13,7 +13,7 @@
   background: transparent;
   min-height: 48px;
   padding-inline-start: 0;
-  padding-inline-end: var(--spacing-inline-gap);
+  padding-inline-end: var(--spacing-xs);
   box-sizing: border-box;
   transition: background 0.15s;
 }

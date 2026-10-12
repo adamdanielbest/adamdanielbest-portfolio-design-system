@@ -23,7 +23,7 @@
 .select {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-inline-gap);
+  gap: var(--spacing-xs);
   width: 100%;
 }
 
@@ -34,7 +34,7 @@
 .select__label-row {
   display: flex;
   align-items: center;
-  gap: var(--spacing-overline-gap);
+  gap: var(--spacing-2xs);
 }
 
 .select__label {
@@ -61,9 +61,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: var(--spacing-input-height);
-  padding-inline: var(--spacing-inline-gap);
-  gap: var(--spacing-inline-gap);
+  height: var(--form-input-height);
+  padding-inline: var(--spacing-xs);
+  gap: var(--spacing-xs);
   background-color: var(--background-input);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-sm);
@@ -187,7 +187,7 @@
 
 .select__dropdown {
   position: absolute;
-  top: calc(100% + var(--spacing-inline-gap));
+  top: calc(100% + var(--spacing-xs));
   left: 0;
   right: 0;
   background-color: var(--background-card);
@@ -211,8 +211,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-inline-gap);
-  padding: var(--spacing-inline-gap) var(--spacing-inline-gap);
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-xs);
   font-size: var(--type-body-md-size);
   font-weight: var(--type-body-md-weight);
   line-height: var(--type-body-md-line-height);

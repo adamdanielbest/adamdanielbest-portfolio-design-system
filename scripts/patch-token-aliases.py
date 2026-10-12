@@ -11,51 +11,53 @@ from pathlib import Path
 TOKENS_PATH = Path("src/styles/tokens/tokens.tokens.json")
 
 # Tokens missing due to cross-collection alias bug — injected after every export.
-# Each entry: (collection_key, token_path_tuple, alias_or_value, type, description)
+# Each entry: (collection_key, token_path_tuple, alias_or_value, type, description, overwrite)
+# overwrite=True: always write (token exists but Figma exports it with a stale alias that can't resolve)
+# overwrite=False (default): only insert if absent
 PATCHES = [
-    # spacing/badge-padding — aliases space.100 (4px) in both desktop and mobile
-    ("02-dimensions-desktop", ("spacing", "badge-padding"), "{space.100}", "dimension", "Badge padding. 4px."),
-    ("02-dimensions-mobile",  ("spacing", "badge-padding"), "{space.100}", "dimension", "Badge padding. 4px."),
+    # spacing/badge-padding — exported with stale {space.100}; overwrite with correct size primitive
+    ("02-dimensions-desktop", ("spacing", "badge-padding"), "{01-primitives.size.200}", "dimension", "Badge padding. 4px.", True),
+    ("02-dimensions-mobile",  ("spacing", "badge-padding"), "{01-primitives.size.200}", "dimension", "Badge padding. 4px.", True),
 
-    # spacing/page-margin-x — min horizontal page padding (32px desktop, 16px mobile)
-    ("02-dimensions-desktop", ("spacing", "page-margin-x"), "{space.800}", "dimension", "Min horizontal page padding. 32px desktop."),
-    ("02-dimensions-mobile",  ("spacing", "page-margin-x"), "{space.400}", "dimension", "Min horizontal page padding. 16px mobile."),
+    # spacing/page-margin-x — exported with stale {space.*}; overwrite with correct size primitive
+    ("02-dimensions-desktop", ("spacing", "page-margin-x"), "{01-primitives.size.1200}", "dimension", "Min horizontal page padding. 32px desktop.", True),
+    ("02-dimensions-mobile",  ("spacing", "page-margin-x"), "{01-primitives.size.800}",  "dimension", "Min horizontal page padding. 16px mobile.",  True),
 
-    # spacing/page-margin-y — vertical page padding (80px desktop, 40px mobile)
-    ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{space.1100}", "dimension", "Page vertical padding. 80px desktop."),
-    ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{space.800}",  "dimension", "Page vertical padding. 40px mobile."),
+    # spacing/page-margin-y — exported with stale {space.*}; overwrite with correct size primitive
+    ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{01-primitives.size.1600}", "dimension", "Page vertical padding. 80px desktop.", True),
+    ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{01-primitives.size.1300}", "dimension", "Page vertical padding. 40px mobile.",  True),
 
     # icon/size/xs and icon/size/lg — export tool drops these entirely
-    ("02-dimensions-desktop", ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px."),
-    ("02-dimensions-mobile",  ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px."),
-    ("02-dimensions-desktop", ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px."),
-    ("02-dimensions-mobile",  ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px."),
+    ("02-dimensions-desktop", ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px.", False),
+    ("02-dimensions-mobile",  ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px.", False),
+    ("02-dimensions-desktop", ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px.", False),
+    ("02-dimensions-mobile",  ("icon", "size", "lg"), 48, "dimension", "Icon size lg. 48px.", False),
 
     # spacing t-shirt scale — dropped by cross-collection alias bug (aliases size/* primitives)
-    ("02-dimensions-desktop", ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px."),
-    ("02-dimensions-desktop", ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px."),
-    ("02-dimensions-desktop", ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px."),
-    ("02-dimensions-desktop", ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px."),
-    ("02-dimensions-desktop", ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px."),
-    ("02-dimensions-desktop", ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px."),
-    ("02-dimensions-desktop", ("spacing", "xl"),   40,  "dimension", "Form input height. 40px."),
-    ("02-dimensions-desktop", ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px."),
-    ("02-dimensions-desktop", ("spacing", "3xl"),  64,  "dimension", "64px."),
-    ("02-dimensions-desktop", ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px."),
-    ("02-dimensions-desktop", ("spacing", "5xl"),  96,  "dimension", "96px."),
-    ("02-dimensions-desktop", ("spacing", "6xl"),  120, "dimension", "120px."),
-    ("02-dimensions-mobile",  ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px."),
-    ("02-dimensions-mobile",  ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px."),
-    ("02-dimensions-mobile",  ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px."),
-    ("02-dimensions-mobile",  ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px."),
-    ("02-dimensions-mobile",  ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px."),
-    ("02-dimensions-mobile",  ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px."),
-    ("02-dimensions-mobile",  ("spacing", "xl"),   40,  "dimension", "Form input height. 40px."),
-    ("02-dimensions-mobile",  ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px."),
-    ("02-dimensions-mobile",  ("spacing", "3xl"),  64,  "dimension", "64px."),
-    ("02-dimensions-mobile",  ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px."),
-    ("02-dimensions-mobile",  ("spacing", "5xl"),  96,  "dimension", "96px."),
-    ("02-dimensions-mobile",  ("spacing", "6xl"),  120, "dimension", "120px."),
+    ("02-dimensions-desktop", ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px.", False),
+    ("02-dimensions-desktop", ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px.", False),
+    ("02-dimensions-desktop", ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px.", False),
+    ("02-dimensions-desktop", ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px.", False),
+    ("02-dimensions-desktop", ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px.", False),
+    ("02-dimensions-desktop", ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px.", False),
+    ("02-dimensions-desktop", ("spacing", "xl"),   40,  "dimension", "Form input height. 40px.", False),
+    ("02-dimensions-desktop", ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px.", False),
+    ("02-dimensions-desktop", ("spacing", "3xl"),  64,  "dimension", "64px.", False),
+    ("02-dimensions-desktop", ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px.", False),
+    ("02-dimensions-desktop", ("spacing", "5xl"),  96,  "dimension", "96px.", False),
+    ("02-dimensions-desktop", ("spacing", "6xl"),  120, "dimension", "120px.", False),
+    ("02-dimensions-mobile",  ("spacing", "3xs"),  2,   "dimension", "Hairline gaps, tight inline. 2px.", False),
+    ("02-dimensions-mobile",  ("spacing", "2xs"),  4,   "dimension", "Icon padding, badge padding. 4px.", False),
+    ("02-dimensions-mobile",  ("spacing", "xs"),   8,   "dimension", "Input padding, inline gaps. 8px.", False),
+    ("02-dimensions-mobile",  ("spacing", "sm"),   16,  "dimension", "Default stack/row gap, cell padding. 16px.", False),
+    ("02-dimensions-mobile",  ("spacing", "md"),   24,  "dimension", "Card padding, paragraph gap. 24px.", False),
+    ("02-dimensions-mobile",  ("spacing", "lg"),   32,  "dimension", "Content gap, sheet margin x. 32px.", False),
+    ("02-dimensions-mobile",  ("spacing", "xl"),   40,  "dimension", "Form input height. 40px.", False),
+    ("02-dimensions-mobile",  ("spacing", "2xl"),  48,  "dimension", "Section gap. 48px.", False),
+    ("02-dimensions-mobile",  ("spacing", "3xl"),  64,  "dimension", "64px.", False),
+    ("02-dimensions-mobile",  ("spacing", "4xl"),  80,  "dimension", "Sheet margin y. 80px.", False),
+    ("02-dimensions-mobile",  ("spacing", "5xl"),  96,  "dimension", "96px.", False),
+    ("02-dimensions-mobile",  ("spacing", "6xl"),  120, "dimension", "120px.", False),
 ]
 
 # The exporter expands abbreviations and strips suffixes from token names.
@@ -91,13 +93,16 @@ def get_nested(d, keys):
     return d
 
 
-def set_nested(d, keys, value):
+def set_nested(d, keys, value, overwrite=False):
     for key in keys[:-1]:
         d = d.setdefault(key, {})
     if keys[-1] not in d:
         d[keys[-1]] = value
-        return True
-    return False
+        return "inserted"
+    if overwrite:
+        d[keys[-1]] = value
+        return "overwritten"
+    return "skipped"
 
 
 def main():
@@ -120,16 +125,19 @@ def main():
         else:
             print(f"  ! {coll_key} / {'/'.join(parent_path)}/{old_key} not found — skipping rename")
 
-    # Inject missing tokens
-    for coll_key, path, value, token_type, desc in PATCHES:
+    # Inject missing tokens (or overwrite stale ones)
+    for coll_key, path, value, token_type, desc, overwrite in PATCHES:
         if coll_key not in data:
             print(f"  ! collection '{coll_key}' not found — skipping {'/'.join(path)}")
             continue
 
         token_node = {"$type": token_type, "$value": value, "$description": desc}
-        inserted = set_nested(data[coll_key], path, token_node)
-        if inserted:
+        result = set_nested(data[coll_key], path, token_node, overwrite=overwrite)
+        if result == "inserted":
             print(f"  + patched {coll_key} / {'/'.join(path)} = {value}")
+            patched += 1
+        elif result == "overwritten":
+            print(f"  ~ overwrite {coll_key} / {'/'.join(path)} = {value}")
             patched += 1
         else:
             print(f"  = {coll_key} / {'/'.join(path)} already present — skipping")

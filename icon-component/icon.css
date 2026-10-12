@@ -13,12 +13,12 @@
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  margin-bottom: var(--spacing-content-gap);
+  margin-bottom: var(--spacing-lg);
   overflow: hidden;
 }
 
 .icon-colour-card__header {
-  padding: var(--spacing-card-padding);
+  padding: var(--spacing-md);
   padding-bottom: 0;
 }
 
@@ -26,7 +26,7 @@
   border: 1px solid var(--border-default);
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin: var(--spacing-card-padding);
+  margin: var(--spacing-md);
 }
 
 .icon-colour-grid {
@@ -40,8 +40,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-inline-gap);
-  padding: var(--spacing-table-cell-padding);
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
   border-right: 1px solid var(--border-default);
   border-bottom: 1px solid var(--border-default);
 }
@@ -77,8 +77,8 @@
 .icon-categories {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-content-gap);
-  padding: var(--spacing-card-padding);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
 .icon-categories .icon-category {
@@ -92,8 +92,8 @@
 .icon-category {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
-  margin-bottom: var(--spacing-content-gap);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
 }
 
 .icon-category__label {
@@ -113,7 +113,7 @@
   border: 1px solid var(--border-default);
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin: var(--spacing-card-padding);
+  margin: var(--spacing-md);
 }
 
 .icon-grid {
@@ -126,11 +126,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--spacing-inline-gap);
-  padding-top: var(--spacing-table-cell-padding);
-  padding-bottom: var(--spacing-media-gap);
-  padding-left: var(--spacing-padding-compact);
-  padding-right: var(--spacing-padding-compact);
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
   border-right: 1px solid var(--border-default);
   border-bottom: 1px solid var(--border-default);
   min-height: 96px;

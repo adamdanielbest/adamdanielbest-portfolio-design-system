@@ -8,14 +8,14 @@
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
   align-items: stretch;
 }
 
 .tile-col {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
 }
 
 .tile-col > .tile-card:last-child {
@@ -29,16 +29,16 @@
   background: var(--background-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-card-padding);
+  padding: var(--spacing-md);
 }
 
 .tile-heading {
-  margin: 0 0 var(--spacing-content-gap);
+  margin: 0 0 var(--spacing-lg);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-1-size);
+  font-size: var(--type-heading-lg-size);
   font-weight: 400;
-  line-height: var(--type-heading-1-line-height);
-  letter-spacing: var(--type-heading-1-letter-spacing);
+  line-height: var(--type-heading-lg-line-height);
+  letter-spacing: var(--type-heading-lg-letter-spacing);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
@@ -49,13 +49,13 @@
 .swatch-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
 }
 
 .swatch-row {
   display: flex;
   align-items: center;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
 }
 
 .swatch {
@@ -72,7 +72,7 @@
 .swatch-info {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-text-stack-gap);
+  gap: var(--spacing-xs);
 }
 
 .swatch-name {
@@ -96,7 +96,7 @@
    Branding
    -------------------------------------------------------------------------- */
 .brand-logo {
-  margin: var(--spacing-stack-gap) 0 var(--spacing-content-gap);
+  margin: var(--spacing-sm) 0 var(--spacing-lg);
   color: var(--text-primary);
   line-height: 0;
 }
@@ -118,14 +118,14 @@
 
 /* Overline → next element gap in all tile cards */
 .tile-card .overline {
-  margin-bottom: var(--spacing-stack-gap);
+  margin-bottom: var(--spacing-sm);
 }
 
 .glyph-row {
   display: flex;
   align-items: baseline;
-  gap: var(--spacing-stack-gap);
-  margin-bottom: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .glyph-display {
@@ -138,7 +138,7 @@
 
 .glyph-heading {
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-1-size);
+  font-size: var(--type-heading-lg-size);
   font-weight: 400;
   line-height: 1;
   color: var(--text-primary);
@@ -152,7 +152,7 @@
 }
 
 .glyph-chars {
-  margin: 0 0 var(--spacing-content-gap);
+  margin: 0 0 var(--spacing-lg);
   font-family: var(--type-family-primary), system-ui, sans-serif;
   font-size: var(--type-caption-size);
   line-height: var(--type-caption-line-height);
@@ -161,8 +161,8 @@
 }
 
 .type-section-label {
-  margin-top: var(--spacing-content-gap);
-  margin-bottom: var(--spacing-stack-gap);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
 }
 
 .type-sample {
@@ -174,18 +174,18 @@
 
 .type-sample--h1 {
   font-family: var(--type-family-bold), system-ui, sans-serif;
-  font-size: var(--type-heading-1-size);
+  font-size: var(--type-heading-lg-size);
   font-weight: 400;
-  line-height: var(--type-heading-1-line-height);
-  letter-spacing: var(--type-heading-1-letter-spacing);
+  line-height: var(--type-heading-lg-line-height);
+  letter-spacing: var(--type-heading-lg-letter-spacing);
 }
 
 .type-sample--h2 {
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-2-size);
+  font-size: var(--type-heading-md-size);
   font-weight: 400;
-  line-height: var(--type-heading-2-line-height);
-  letter-spacing: var(--type-heading-2-letter-spacing);
+  line-height: var(--type-heading-md-line-height);
+  letter-spacing: var(--type-heading-md-letter-spacing);
 }
 
 .type-sample--body {
@@ -206,8 +206,8 @@
    -------------------------------------------------------------------------- */
 .btn-row {
   display: flex;
-  gap: var(--spacing-inline-gap);
-  margin-bottom: var(--spacing-content-gap);
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
 }
 
 .btn-row:last-child {
@@ -220,15 +220,15 @@
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-stack-gap) var(--spacing-inline-gap);
-  margin-bottom: var(--spacing-stack-gap);
+  gap: var(--spacing-sm) var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .icon-cell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-text-stack-gap);
+  gap: var(--spacing-xs);
 }
 
 .icon-box {

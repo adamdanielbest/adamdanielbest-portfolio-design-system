@@ -88,15 +88,15 @@
   --neutral-900: #1A1A1A;
   /* Off Black — brand near-black */
   --neutral-950: #121212;
+  --radius-100: 2px;
   /* Deepest nested — tags, chips, indicators */
-  --radius-100: 4px;
+  --radius-200: 4px;
   /* Parent level — buttons, inputs, tooltips */
-  --radius-200: 8px;
+  --radius-300: 8px;
   /* Grandparent — project cards, thumbnails */
-  --radius-300: 16px;
+  --radius-400: 16px;
   /* Outermost containers — currently sharp, update when needed */
-  --radius-400: 0;
-  --radius-50: 2px;
+  --radius-500: 0;
   /* Fully rounded — badges, toggles */
   --radius-pill: 999px;
   --red-100: #FFE4E6;
@@ -120,54 +120,29 @@
   --shadow-light-08: #0E162614;
   --shadow-light-10: #0E16261A;
   --shadow-light-14: #0E162624;
-  /* 11px type size */
-  --size-100: 11px;
-  /* 40px type size */
-  --size-1000: 40px;
-  /* 48px type size */
-  --size-1100: 48px;
-  /* 12px type size */
-  --size-200: 12px;
-  /* 13px type size */
-  --size-300: 13px;
-  /* 14px type size */
-  --size-400: 14px;
-  /* 16px type size */
-  --size-500: 16px;
-  /* 18px type size */
-  --size-600: 18px;
+  --size-100: 2px;
   /* 20px type size */
-  --size-700: 20px;
+  --size-1000: 20px;
   /* 24px type size */
-  --size-800: 24px;
+  --size-1100: 24px;
   /* 32px type size */
-  --size-900: 32px;
-  --space-050: 2px;
-  /* 4px */
-  --space-100: 4px;
-  /* 64px */
-  --space-1000: 64px;
-  /* 80px */
-  --space-1100: 80px;
-  /* 96px */
-  --space-1200: 96px;
-  --space-1300: 120px;
-  /* 8px */
-  --space-200: 8px;
-  /* 12px */
-  --space-300: 12px;
-  /* 16px */
-  --space-400: 16px;
-  /* 20px */
-  --space-500: 20px;
-  /* 24px */
-  --space-600: 24px;
-  /* 32px */
-  --space-700: 32px;
-  /* 40px */
-  --space-800: 40px;
-  /* 48px */
-  --space-900: 48px;
+  --size-1200: 32px;
+  /* 40px type size */
+  --size-1300: 40px;
+  /* 48px type size */
+  --size-1400: 48px;
+  --size-1500: 64px;
+  --size-1600: 80px;
+  --size-1700: 96px;
+  --size-1800: 120px;
+  --size-200: 4px;
+  --size-300: 8px;
+  /* 12px type size */
+  --size-500: 12px;
+  /* 14px type size */
+  --size-700: 14px;
+  /* 16px type size */
+  --size-800: 16px;
   /* Bold — display, strong emphasis */
   --weight-bold: 700;
   /* Medium — labels, navigation */

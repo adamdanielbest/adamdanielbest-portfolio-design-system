@@ -2,11 +2,10 @@
   --border-width-default: 1px;
   --border-width-focus: 3px;
   --border-width-strong: 2px;
-  /* Icon size lg. 48px. */
+  --form-input-height: 40px;
   --icon-size-lg: 48px;
   --icon-size-md: 32px;
   --icon-size-sm: 24px;
-  /* Icon size xs. 16px. */
   --icon-size-xs: 16px;
   /* Breakpoint at which sidebar collapses to top bar. ≤900px triggers tablet layout. */
   --layout-breakpoint-tablet: 900px;
@@ -35,68 +34,28 @@
   /* Outermost containers — currently sharp (0px). Update primitive when needed. */
   --radius-xl: 0;
   --radius-xs: 2px;
-  /* Section gap. 48px. */
   --spacing-2xl: 48px;
-  /* Icon padding, badge padding. 4px. */
+  /* Between inline elements — icon + label. 8px both. */
   --spacing-2xs: 4px;
-  /* 64px. */
   --spacing-3xl: 64px;
-  /* Hairline gaps, tight inline. 2px. */
   --spacing-3xs: 2px;
-  /* Sheet margin y. 80px. */
   --spacing-4xl: 80px;
-  /* 96px. */
   --spacing-5xl: 96px;
-  /* 120px. */
   --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
   --spacing-badge-padding: 4px;
-  --spacing-button-padding-md: 16px;
-  --spacing-button-padding-sm: 8px;
-  /* Internal padding for project cards. 24px desktop. */
-  --spacing-card-padding: 24px;
-  /* Buttons, inputs, chips. 16px desktop. */
-  --spacing-component-padding: 16px;
   /* Between content blocks within a section. 32px desktop. */
-  --spacing-content-gap: 32px;
-  --spacing-group-gap: 48px;
-  /* Between inline elements — icon + label. 8px both. */
-  --spacing-inline-gap: 8px;
-  --spacing-inline-padding-x: 2px;
-  --spacing-inline-padding-y: 4px;
-  --spacing-input-height: 40px;
-  --spacing-input-padding: 8px;
-  /* Content gap, sheet margin x. 32px. */
   --spacing-lg: 32px;
-  --spacing-list-gap: 2px;
-  /* Card padding, paragraph gap. 24px. */
+  /* Internal padding for project cards. 24px desktop. */
   --spacing-md: 24px;
-  /* Image to caption gap. 12px desktop. */
-  --spacing-media-gap: 12px;
-  /* Between inline elements — icon + label. 8px both. */
-  --spacing-overline-gap: 4px;
-  --spacing-padding-compact: 8px;
-  /* Inner padding of the max-width container. 32px desktop. */
+  /* Min horizontal page padding. 32px desktop. */
   --spacing-page-margin-x: 32px;
+  /* Page vertical padding. 80px desktop. */
   --spacing-page-margin-y: 80px;
-  --spacing-panel-padding: 4px;
-  /* Between body paragraphs. 24px desktop. */
-  --spacing-paragraph-gap: 24px;
-  /* Between sibling elements in a row. 16px desktop. */
-  --spacing-row-gap: 16px;
-  /* Between major page sections — hero/work/about. 96px desktop. */
-  --spacing-section-gap: 48px;
-  --spacing-section-padding-x: 32px;
-  --spacing-section-padding-y: 32px;
-  /* Default stack/row gap, cell padding. 16px. */
-  --spacing-sm: 16px;
   /* Between stacked elements in a column. 16px desktop. */
-  --spacing-stack-gap: 16px;
-  --spacing-table-cell-padding: 16px;
-  /* Vertical rhythm between stacked text lines (title + caption). 8px desktop. */
-  --spacing-text-stack-gap: 8px;
-  /* Form input height. 40px. */
+  --spacing-sm: 16px;
   --spacing-xl: 40px;
-  /* Input padding, inline gaps. 8px. */
+  /* Between inline elements — icon + label. 8px both. */
   --spacing-xs: 8px;
   /* Body line height — generous for readability. 26px desktop. */
   --type-body-md-line-height: 26px;
@@ -141,27 +100,27 @@
   --type-family-primary: Eina04;
   --type-family-semibold: Eina04-SemiBold;
   /* Heading 1 letter spacing. */
-  --type-heading-1-letter-spacing: -0.30000001192092896px;
+  --type-heading-lg-letter-spacing: -0.30000001192092896px;
   /* Heading 1 line height. */
-  --type-heading-1-line-height: 40px;
+  --type-heading-lg-line-height: 40px;
   /* Page-level titles. 32px desktop. */
-  --type-heading-1-size: 32px;
+  --type-heading-lg-size: 32px;
   /* Heading 1 weight — semibold. */
-  --type-heading-1-weight: 600;
+  --type-heading-lg-weight: 600;
   /* Heading 2 letter spacing. */
-  --type-heading-2-letter-spacing: -0.20000000298023224px;
+  --type-heading-md-letter-spacing: -0.20000000298023224px;
   /* Heading 2 line height. */
-  --type-heading-2-line-height: 32px;
+  --type-heading-md-line-height: 32px;
   /* Case study section headers. 24px desktop. */
-  --type-heading-2-size: 24px;
+  --type-heading-md-size: 24px;
   /* Heading 2 weight — semibold. */
-  --type-heading-2-weight: 600;
+  --type-heading-md-weight: 600;
   /* Heading 3 line height. */
-  --type-heading-3-line-height: 28px;
+  --type-heading-sm-line-height: 28px;
   /* Subsections, callout labels. 20px desktop. */
-  --type-heading-3-size: 20px;
+  --type-heading-sm-size: 20px;
   /* Heading 3 weight — semibold. */
-  --type-heading-3-weight: 600;
+  --type-heading-sm-weight: 600;
   /* Label letter spacing — slightly open. */
   --type-label-letter-spacing: 0.009999999776482582px;
   /* Label line height. */

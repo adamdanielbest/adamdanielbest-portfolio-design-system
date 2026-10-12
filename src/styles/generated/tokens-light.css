@@ -48,7 +48,7 @@
   /* Inverted surface — dark chip/badge on light mode. */
   --background-inverse: #121212;
   /* Modal scrim — darkens page to focus attention on elevated content. */
-  --background-overlay: #0000007A;
+  --background-overlay: #000000;
   /* Page background — Off White outermost surface. */
   --background-page: #FAF9F6;
   --background-selected: #E8E8E8;

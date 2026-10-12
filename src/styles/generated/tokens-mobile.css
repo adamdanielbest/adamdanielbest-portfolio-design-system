@@ -4,11 +4,10 @@
   --border-width-strong: 2px;
   --button-padding-default: 16px;
   --button-padding-sm: 8px;
-  /* Icon size lg. 48px. */
+  --form-input-height: 48px;
   --icon-size-lg: 48px;
   --icon-size-md: 32px;
   --icon-size-sm: 24px;
-  /* Icon size xs. 16px. */
   --icon-size-xs: 16px;
   /* Max width for form layouts. Full-width on mobile. */
   --layout-form-max-width: 430px;
@@ -33,62 +32,27 @@
   /* Outermost containers — sharp (0px). */
   --radius-xl: 0;
   --radius-xs: 2px;
-  /* Section gap. 48px. */
-  --spacing-2xl: 48px;
-  /* Icon padding, badge padding. 4px. */
-  --spacing-2xs: 4px;
-  /* 64px. */
-  --spacing-3xl: 64px;
-  /* Hairline gaps, tight inline. 2px. */
-  --spacing-3xs: 2px;
-  /* Sheet margin y. 80px. */
-  --spacing-4xl: 80px;
-  /* 96px. */
-  --spacing-5xl: 96px;
-  /* 120px. */
-  --spacing-6xl: 120px;
-  --spacing-badge-padding: 4px;
-  /* Project card internal padding. 16px mobile. */
-  --spacing-card-padding: 16px;
-  /* Buttons, inputs. 16px mobile — minimum, no smaller. */
-  --spacing-component-padding: 16px;
-  /* Between content blocks. 16px mobile. */
-  --spacing-content-gap: 24px;
-  /* Image to caption. 8px mobile. */
-  --spacing-figure-gap: 8px;
-  --spacing-group-gap: 48px;
-  /* Icon + label. 8px both viewports. */
-  --spacing-inline-gap: 8px;
-  --spacing-input-height: 48px;
-  /* Content gap, sheet margin x. 32px. */
-  --spacing-lg: 32px;
-  --spacing-list-gap: 2px;
-  /* Card padding, paragraph gap. 24px. */
-  --spacing-md: 24px;
-  --spacing-overline-gap: 4px;
-  /* Inner container padding. 16px mobile. */
-  --spacing-page-margin-x: 16px;
-  --spacing-page-margin-y: 24px;
-  --spacing-panel-padding: 4px;
-  /* Between paragraphs. 16px mobile. */
-  --spacing-paragraph-gap: 16px;
-  /* Sibling row elements. 16px mobile. */
-  --spacing-row-gap: 16px;
   /* Between major sections. 48px mobile. */
-  --spacing-section-gap: 48px;
-  --spacing-section-padding-x: 16px;
-  --spacing-section-padding-y: 24px;
-  /* Default stack/row gap, cell padding. 16px. */
-  --spacing-sm: 16px;
+  --spacing-2xl: 48px;
+  --spacing-2xs: 4px;
+  --spacing-3xl: 64px;
+  --spacing-3xs: 2px;
+  --spacing-4xl: 80px;
+  --spacing-5xl: 96px;
+  --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
+  --spacing-badge-padding: 4px;
+  --spacing-lg: 32px;
+  /* Between content blocks. 16px mobile. */
+  --spacing-md: 24px;
+  /* Min horizontal page padding. 16px mobile. */
+  --spacing-page-margin-x: 16px;
+  /* Page vertical padding. 40px mobile. */
+  --spacing-page-margin-y: 40px;
   /* Stacked elements. 16px mobile. */
-  --spacing-stack-gap: 16px;
-  --spacing-table-cell-padding: 16px;
-  /* Vertical text rhythm. 8px mobile. */
-  --spacing-text-stack-gap: 8px;
-  --spacing-tight-padding: 8px;
-  /* Form input height. 40px. */
+  --spacing-sm: 16px;
   --spacing-xl: 40px;
-  /* Input padding, inline gaps. 8px. */
+  /* Icon + label. 8px both viewports. */
   --spacing-xs: 8px;
   /* Body line height mobile — more generous for narrow screens. 28px. */
   --type-body-md-line-height: 28px;
@@ -116,8 +80,6 @@
   --type-button-sm-weight: 600;
   /* Caption line height mobile. */
   --type-caption-line-height: 18px;
-  /* Timestamps, tags, helper text. 13px. */
-  --type-caption-size: 13px;
   /* Caption weight — regular. */
   --type-caption-weight: 400;
   /* Display letter spacing. */
@@ -133,27 +95,25 @@
   --type-family-primary: Eina04;
   --type-family-semibold: Eina04-SemiBold;
   /* Heading 1 letter spacing. */
-  --type-heading-1-letter-spacing: -0.30000001192092896px;
+  --type-heading-lg-letter-spacing: -0.30000001192092896px;
   /* Heading 1 line height mobile. */
-  --type-heading-1-line-height: 30px;
+  --type-heading-lg-line-height: 30px;
   /* Page-level titles. 24px mobile. */
-  --type-heading-1-size: 24px;
+  --type-heading-lg-size: 24px;
   /* Heading 1 weight — semibold. */
-  --type-heading-1-weight: 600;
+  --type-heading-lg-weight: 600;
   /* Heading 2 letter spacing. */
-  --type-heading-2-letter-spacing: -0.20000000298023224px;
+  --type-heading-md-letter-spacing: -0.20000000298023224px;
   /* Heading 2 line height mobile. */
-  --type-heading-2-line-height: 28px;
+  --type-heading-md-line-height: 28px;
   /* Section headers. 20px mobile. */
-  --type-heading-2-size: 20px;
+  --type-heading-md-size: 20px;
   /* Heading 2 weight — semibold. */
-  --type-heading-2-weight: 600;
+  --type-heading-md-weight: 600;
   /* Heading 3 line height mobile. */
-  --type-heading-3-line-height: 26px;
-  /* Subsections. 18px mobile. */
-  --type-heading-3-size: 18px;
+  --type-heading-sm-line-height: 26px;
   /* Heading 3 weight — semibold. */
-  --type-heading-3-weight: 600;
+  --type-heading-sm-weight: 600;
   /* Label letter spacing. */
   --type-label-letter-spacing: 0.009999999776482582px;
   /* Label line height. */

@@ -12,7 +12,7 @@
   --background-action-destructive: #FDA4AF;
   --background-action-destructive-hover: #FECDD3;
   --background-action-destructive-pressed: #FB7185;
-  --background-action-ghost: #141C27;
+  --background-action-ghost: #10243A;
   --background-action-ghost-hover: #193651;
   --background-action-ghost-pressed: #081527;
   /* Primary CTA button — light cobalt on dark. Pair with foreground/on-action. */
@@ -27,30 +27,30 @@
   /* Brand cobalt surface — deeper cobalt for dark branded sections. */
   --background-brand: #2D5C82;
   /* Subtle brand surface — dark card with blue cast for soft brand accents. */
-  --background-brand-subtle: #141C27;
+  --background-brand-subtle: #10243A;
   /* Card surfaces — slightly lifted from page. Pair with border/default. */
-  --background-card: #141C27;
+  --background-card: #10243A;
   --background-code: #1A1A1A;
   --background-control: #FAF9F6;
   --background-control-hover: #F0EFEC;
   --background-control-pressed: #E8E8E8;
   /* Disabled state — inactive elements in dark mode. */
-  --background-disabled: #1B2537;
+  --background-disabled: #10243A;
   /* Elevated surface — dropdowns, popovers, sticky headers. */
-  --background-elevated: #1B2537;
+  --background-elevated: #10243A;
   /* Error background — dark red tint. */
   --background-error: #4C0519;
   --background-hover: #2E2E2E;
   /* Info background — dark cobalt tint. Aliases brand. */
-  --background-info: #0D1117;
+  --background-info: #081527;
   /* Form inputs — same as card in dark mode. */
-  --background-input: #141C27;
+  --background-input: #10243A;
   /* Inverted surface — light chip/badge on dark. */
   --background-inverse: #FAF9F6;
   /* Modal scrim — deep black at high opacity. */
-  --background-overlay: #00000080;
+  --background-overlay: #000000;
   /* Page background — near-black blue-grey. Reduces eye strain in low light. */
-  --background-page: #0D1117;
+  --background-page: #081527;
   --background-selected: #4A4A4A;
   /* Success background — dark green tint. */
   --background-success: #052E16;
@@ -63,7 +63,7 @@
   /* Brand cobalt border in dark. */
   --border-brand: #5C91B5;
   /* Standard card edges and dividers — blue-grey tinted. */
-  --border-default: #2A3C52;
+  --border-default: #193651;
   --border-divider: #2E2E2E;
   /* Error border in dark. */
   --border-error: #E11D48;
@@ -75,7 +75,7 @@
   /* Prominent edge — selected states, strong dividers in dark. */
   --border-strong: #888888;
   /* Barely-there dividers — section separators in dark. */
-  --border-subtle: #1D2B3F;
+  --border-subtle: #10243A;
   /* Success border in dark. */
   --border-success: #16A34A;
   /* Warning border in dark. */

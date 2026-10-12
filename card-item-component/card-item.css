@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 .demo-cell {
   vertical-align: top;
-  padding: var(--spacing-card-padding) !important;
+  padding: var(--spacing-md) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -54,8 +54,8 @@
 .card-grid-demo__copy {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
-  padding: var(--spacing-content-gap) var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-sm);
   flex: 1;
 }
 
@@ -66,17 +66,17 @@
 .card-grid-demo__top {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
 }
 
 /* Title — type/heading-1 */
 .card-grid-demo__title {
   margin: 0;
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-1-size);
+  font-size: var(--type-heading-lg-size);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: var(--type-heading-1-letter-spacing);
+  letter-spacing: var(--type-heading-lg-letter-spacing);
   color: var(--text-primary);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
@@ -94,7 +94,7 @@
 
 .card-grid-demo__bottom {
   display: flex;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
   margin-top: auto;
 }
 

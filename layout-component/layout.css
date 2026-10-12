@@ -7,7 +7,7 @@
 
 /* Demo sections */
 .demo-section {
-  margin-bottom: var(--spacing-section-gap);
+  margin-bottom: var(--spacing-5xl);
 }
 
 .demo-section:last-child {
@@ -15,18 +15,18 @@
 }
 
 .demo-heading {
-  margin: 0 0 var(--spacing-stack-gap);
+  margin: 0 0 var(--spacing-sm);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-2-size);
+  font-size: var(--type-heading-md-size);
   font-weight: 400;
-  line-height: var(--type-heading-2-line-height);
-  letter-spacing: var(--type-heading-2-letter-spacing);
+  line-height: var(--type-heading-md-line-height);
+  letter-spacing: var(--type-heading-md-letter-spacing);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
 
 .demo-meta {
-  margin: 0 0 var(--spacing-stack-gap);
+  margin: 0 0 var(--spacing-sm);
   font-size: var(--type-body-sm-size);
   color: var(--text-secondary);
   line-height: var(--type-body-sm-line-height);
@@ -43,11 +43,11 @@
 }
 
 .demo-label--section {
-  margin-top: var(--spacing-content-gap);
+  margin-top: var(--spacing-lg);
 }
 
 .demo-grid--stacked {
-  margin-top: var(--spacing-stack-gap);
+  margin-top: var(--spacing-sm);
 }
 
 .demo-label {
@@ -56,7 +56,7 @@
   letter-spacing: var(--type-label-letter-spacing);
   color: var(--text-link);
   text-transform: uppercase;
-  margin-bottom: var(--spacing-stack-gap);
+  margin-bottom: var(--spacing-sm);
 }
 
 /* Container demo */
@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  padding: var(--spacing-card-padding);
+  padding: var(--spacing-md);
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   letter-spacing: var(--type-label-letter-spacing);
@@ -96,7 +96,7 @@
   background: var(--background-card);
   border: 1px dashed var(--border-default);
   border-radius: var(--radius-sm);
-  padding: var(--spacing-component-padding) var(--spacing-inline-gap);
+  padding: var(--spacing-md) var(--spacing-xs);
   font-size: var(--type-caption-size);
   font-weight: var(--type-label-weight);
   color: var(--text-secondary);
@@ -130,7 +130,7 @@
   background: var(--background-elevated);
   border: 1px dashed var(--border-default);
   border-radius: var(--radius-sm);
-  padding: var(--spacing-component-padding);
+  padding: var(--spacing-md);
   font-size: var(--type-label-size);
   font-weight: var(--type-label-weight);
   color: var(--text-secondary);
@@ -138,7 +138,7 @@
 }
 
 .demo-section-gap {
-  height: var(--spacing-section-gap);
+  height: var(--spacing-5xl);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +157,7 @@
 
 .demo-section-gap span {
   background: var(--background-page);
-  padding: var(--spacing-overline-gap) var(--spacing-inline-gap);
+  padding: var(--spacing-2xs) var(--spacing-xs);
   font-size: var(--type-caption-size);
   color: var(--text-brand);
   font-weight: var(--type-label-weight);

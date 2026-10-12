@@ -9,16 +9,16 @@
 .content-section {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
 }
 
 .content-section__heading {
   margin: 0;
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-2-size);
+  font-size: var(--type-heading-md-size);
   font-weight: 400;
-  line-height: var(--type-heading-2-line-height);
-  letter-spacing: var(--type-heading-2-letter-spacing);
+  line-height: var(--type-heading-md-line-height);
+  letter-spacing: var(--type-heading-md-letter-spacing);
   color: var(--text-primary);
 }
 
@@ -36,7 +36,7 @@
 .media-block {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-gap);
+  gap: var(--spacing-sm);
   margin: 0;
 }
 

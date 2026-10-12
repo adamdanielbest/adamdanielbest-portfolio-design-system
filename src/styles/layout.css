@@ -15,7 +15,7 @@
   width: 100%;
   max-width: var(--layout-max-content-width);
   margin-inline: auto;
-  padding-inline: var(--spacing-page-margin-x);
+  padding-inline: var(--spacing-lg);
 }
 
 /* --------------------------------------------------------------------------
@@ -103,7 +103,7 @@
    Vertical rhythm between major page sections.
    -------------------------------------------------------------------------- */
 .section {
-  padding-block: var(--spacing-section-gap);
+  padding-block: var(--spacing-5xl);
 }
 
 .section + .section {

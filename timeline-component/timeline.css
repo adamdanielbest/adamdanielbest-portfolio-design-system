@@ -7,7 +7,7 @@
    Demo wrapper — card padding + constrain width so the list doesn't sprawl
    -------------------------------------------------------------------------- */
 .timeline-demo-wrap {
-  padding: var(--spacing-card-padding);
+  padding: var(--spacing-md);
 }
 
 /* --------------------------------------------------------------------------
@@ -30,9 +30,9 @@
 .timeline-item {
   display: flex;
   align-items: flex-start;
-  gap: var(--spacing-inline-gap);
-  padding-top: var(--spacing-inline-gap);
-  padding-bottom: var(--spacing-inline-gap);
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
   min-height: 48px;
   position: relative;
 }
@@ -91,7 +91,7 @@
 .timeline-item__body {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-inline-gap);
+  gap: var(--spacing-xs);
 }
 
 .timeline-item__company {
