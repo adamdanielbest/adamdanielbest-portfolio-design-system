@@ -66,16 +66,16 @@
 .checkbox--focus-hover,
 .checkbox:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px var(--border-focus);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
   border-radius: var(--radius-sm);
 }
 
-/* Checked + focus: white inner gap separates the selected background from the ring */
+/* Checked + focus: inner ring separates the selected background from the outer ring */
 .checkbox--checked-focus,
 .checkbox--checked-focus-hover,
 .checkbox--checked:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--background-card), 0 0 0 5px var(--border-focus);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
 }
 
 /* --- Pressed — dark bg, inverse content --- */

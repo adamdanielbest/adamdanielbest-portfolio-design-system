@@ -76,3 +76,9 @@
 .toggle__option--selected:active {
   background: var(--background-control-pressed);
 }
+
+/* Mobile density — 48px touch targets */
+.toggle--density-mobile .toggle__option {
+  min-width: 48px;
+  min-height: 48px;
+}

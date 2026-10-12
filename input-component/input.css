@@ -157,6 +157,7 @@
 .input--focus .input__field,
 .input__field:focus-within {
   border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
 }
 
 /* --------------------------------------------------------------------------
@@ -167,6 +168,7 @@
 .input--focus-hover .input__field {
   background-color: var(--background-hover);
   border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
 }
 
 /* --------------------------------------------------------------------------

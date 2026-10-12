@@ -124,7 +124,7 @@
 
 .select--open .select__field {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
 }
 
 .select--open .select__icon {
@@ -139,7 +139,7 @@
 .select--focus-hover .select__field {
   background-color: var(--background-hover);
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border-focus) 20%, transparent);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
 }
 
 /* --------------------------------------------------------------------------
