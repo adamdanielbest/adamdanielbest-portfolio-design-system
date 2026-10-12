@@ -73,7 +73,7 @@
     },
     {
       "name": "content-section",
-      "figmaNodeId": "2980:17088",
+      "figmaNodeId": "2934:4669",
       "cssFile": "content-section-component/content-section.css",
       "htmlFile": "content-section-component/content-section.html"
     },
@@ -118,6 +118,14 @@
       "htmlFile": "table-component/table.html"
     },
     {
+      "name": "nav-link",
+      "figmaNodeId": "2925:10113"
+    },
+    {
+      "name": "card-grid",
+      "figmaNodeId": "2984:19828"
+    },
+    {
       "name": "text-link",
       "figmaNodeId": "2925:8973",
       "cssFile": "text-link-component/text-link.css",
@@ -125,9 +133,13 @@
     },
     {
       "name": "timeline",
-      "figmaNodeId": "2925:9686",
+      "figmaNodeId": "2933:21667",
       "cssFile": "timeline-component/timeline.css",
       "htmlFile": "timeline-component/timeline.html"
+    },
+    {
+      "name": "timeline-item",
+      "figmaNodeId": "2925:9686"
     }
   ],
   "templates": "src/templates/",

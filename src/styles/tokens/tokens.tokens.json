@@ -1,7 +1,7 @@
 {
   "$extensions": {
     "figma-console-mcp": {
-      "exportedAt": "2026-10-12T18:29:32.408Z",
+      "exportedAt": "2026-10-12T19:20:43.049Z",
       "figmaFileKey": "3VlrPuBG0g8fBUb3YL6T4k",
       "mcpVersion": "1.40.9"
     }
@@ -19,7 +19,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFFBEB"
@@ -37,7 +37,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FEF3C7"
@@ -55,7 +55,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FDE68A"
@@ -73,7 +73,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FCD34D"
@@ -91,7 +91,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FBBF24"
@@ -110,7 +110,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F59E0B"
@@ -128,7 +128,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D97706"
@@ -147,7 +147,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#B45309"
@@ -165,7 +165,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#92400E"
@@ -183,7 +183,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#78350F"
@@ -201,7 +201,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#451A03"
@@ -222,7 +222,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#3A73A0"
@@ -247,7 +247,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#666666"
@@ -272,7 +272,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#121212"
@@ -297,7 +297,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FAF9F6"
@@ -321,7 +321,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E8E8E8"
@@ -348,7 +348,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0F6FA"
@@ -367,7 +367,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D9ECF7"
@@ -386,7 +386,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#B8D8ED"
@@ -405,7 +405,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#88B0CD"
@@ -424,7 +424,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#5C91B5"
@@ -443,7 +443,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#3A73A0"
@@ -462,7 +462,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#2D5C82"
@@ -481,7 +481,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#224868"
@@ -500,7 +500,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#193651"
@@ -519,7 +519,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#10243A"
@@ -538,7 +538,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#081527"
@@ -558,7 +558,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "STRING",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "Eina04-Bold"
@@ -577,7 +577,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "STRING",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "Eina04"
@@ -595,7 +595,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "STRING",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "Eina04-SemiBold"
@@ -615,7 +615,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0FDF4"
@@ -633,7 +633,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#DCFCE7"
@@ -651,7 +651,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#BBF7D0"
@@ -669,7 +669,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#86EFAC"
@@ -687,7 +687,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4ADE80"
@@ -706,7 +706,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#22C55E"
@@ -725,7 +725,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#16A34A"
@@ -743,7 +743,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#15803D"
@@ -761,7 +761,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#166534"
@@ -779,7 +779,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#14532D"
@@ -797,7 +797,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#052E16"
@@ -818,7 +818,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFFFFF"
@@ -837,7 +837,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FAF9F6"
@@ -856,7 +856,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F0EFEC"
@@ -875,7 +875,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E8E8E8"
@@ -894,7 +894,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#D4D4D4"
@@ -913,7 +913,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#ABABAB"
@@ -932,7 +932,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#888888"
@@ -950,7 +950,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#737373"
@@ -969,7 +969,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#666666"
@@ -988,7 +988,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4A4A4A"
@@ -1007,7 +1007,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#2E2E2E"
@@ -1026,7 +1026,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#1A1A1A"
@@ -1045,7 +1045,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#121212"
@@ -1064,7 +1064,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.405Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.047Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#000000"
@@ -1084,7 +1084,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 2
@@ -1103,7 +1103,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 4
@@ -1122,7 +1122,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 8
@@ -1141,7 +1141,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 16
@@ -1160,7 +1160,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 0
@@ -1179,7 +1179,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 999
@@ -1199,7 +1199,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFF1F2"
@@ -1217,7 +1217,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FFE4E6"
@@ -1235,7 +1235,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FECDD3"
@@ -1253,7 +1253,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FDA4AF"
@@ -1271,7 +1271,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#FB7185"
@@ -1290,7 +1290,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#F43F5E"
@@ -1309,7 +1309,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#E11D48"
@@ -1327,7 +1327,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#BE123C"
@@ -1345,7 +1345,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#9F1239"
@@ -1363,7 +1363,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#881337"
@@ -1381,7 +1381,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#4C0519"
@@ -1401,7 +1401,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0000003D"
@@ -1419,7 +1419,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000047"
@@ -1437,7 +1437,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000066"
@@ -1455,7 +1455,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#00000099"
@@ -1473,7 +1473,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E16260F"
@@ -1491,7 +1491,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E162614"
@@ -1509,7 +1509,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E16261A"
@@ -1527,7 +1527,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": "#0E162624"
@@ -1547,7 +1547,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 2
@@ -1565,7 +1565,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 4
@@ -1583,7 +1583,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 8
@@ -1602,7 +1602,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 12
@@ -1621,7 +1621,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 14
@@ -1640,7 +1640,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 16
@@ -1659,7 +1659,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 20
@@ -1678,7 +1678,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 24
@@ -1697,7 +1697,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 32
@@ -1716,7 +1716,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 40
@@ -1735,7 +1735,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 48
@@ -1753,7 +1753,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 64
@@ -1771,7 +1771,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 80
@@ -1789,7 +1789,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 96
@@ -1807,7 +1807,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 120
@@ -1828,7 +1828,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 700
@@ -1847,7 +1847,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 500
@@ -1866,7 +1866,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 400
@@ -1885,7 +1885,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3512",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Value": {
                 "literal": 600
@@ -1914,7 +1914,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -1937,7 +1937,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.red.500}"
@@ -1960,7 +1960,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -1983,7 +1983,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.green.500}"
@@ -2006,7 +2006,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.amber.500}"
@@ -2031,7 +2031,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.red.300}"
@@ -2049,7 +2049,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.red.200}"
@@ -2067,7 +2067,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.red.400}"
@@ -2085,7 +2085,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.900}"
@@ -2103,7 +2103,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.800}"
@@ -2121,7 +2121,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.950}"
@@ -2140,7 +2140,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.300}"
@@ -2163,7 +2163,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.200}"
@@ -2186,7 +2186,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.cobalt.400}"
@@ -2208,7 +2208,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.brand.off-black}"
@@ -2226,7 +2226,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.neutral.1000}"
@@ -2244,7 +2244,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3652",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Dark": {
                   "reference": "{01-primitives.neutral.1000}"
@@ -2264,7 +2264,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.600}"
@@ -2287,7 +2287,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2310,7 +2310,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2332,7 +2332,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.900}"
@@ -2350,7 +2350,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.brand.off-white}"
@@ -2368,7 +2368,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.100}"
@@ -2386,7 +2386,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.200}"
@@ -2405,7 +2405,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2428,7 +2428,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2451,7 +2451,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.red.950}"
@@ -2473,7 +2473,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.800}"
@@ -2492,7 +2492,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.950}"
@@ -2515,7 +2515,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2538,7 +2538,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.50}"
@@ -2561,7 +2561,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.1000}"
@@ -2584,7 +2584,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.950}"
@@ -2606,7 +2606,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.700}"
@@ -2625,7 +2625,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.green.950}"
@@ -2648,7 +2648,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.amber.950}"
@@ -2672,7 +2672,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.700}"
@@ -2690,7 +2690,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.800}"
@@ -2708,7 +2708,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.800}"
@@ -2726,7 +2726,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.800}"
@@ -2745,7 +2745,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.400}"
@@ -2767,7 +2767,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.800}"
@@ -2788,7 +2788,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.800}"
@@ -2807,7 +2807,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.red.600}"
@@ -2829,7 +2829,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -2850,7 +2850,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.brand.off-white}"
@@ -2871,7 +2871,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -2890,7 +2890,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.400}"
@@ -2912,7 +2912,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.500}"
@@ -2934,7 +2934,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.900}"
@@ -2956,7 +2956,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.green.600}"
@@ -2978,7 +2978,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.amber.600}"
@@ -3001,7 +3001,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3019,7 +3019,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{02-color-dark.text.error}"
@@ -3037,7 +3037,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.50}"
@@ -3055,7 +3055,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.400}"
@@ -3076,7 +3076,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3098,7 +3098,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.amber.500}"
@@ -3117,7 +3117,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.600}"
@@ -3140,7 +3140,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.red.400}"
@@ -3163,7 +3163,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3186,7 +3186,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.950}"
@@ -3209,7 +3209,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3232,7 +3232,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.200}"
@@ -3251,7 +3251,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.cobalt.100}"
@@ -3270,7 +3270,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.950}"
@@ -3293,7 +3293,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.50}"
@@ -3311,7 +3311,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.950}"
@@ -3330,7 +3330,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.50}"
@@ -3352,7 +3352,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.red.400}"
@@ -3371,7 +3371,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.400}"
@@ -3394,7 +3394,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.green.400}"
@@ -3417,7 +3417,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.neutral.500}"
@@ -3440,7 +3440,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3652",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Dark": {
                 "reference": "{01-primitives.amber.300}"
@@ -3473,7 +3473,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3496,7 +3496,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.red.700}"
@@ -3519,7 +3519,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -3542,7 +3542,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.green.500}"
@@ -3565,7 +3565,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.amber.500}"
@@ -3590,7 +3590,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.red.600}"
@@ -3608,7 +3608,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.red.700}"
@@ -3626,7 +3626,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.red.800}"
@@ -3644,7 +3644,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.50}"
@@ -3662,7 +3662,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.100}"
@@ -3680,7 +3680,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.200}"
@@ -3699,7 +3699,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.500}"
@@ -3722,7 +3722,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.600}"
@@ -3745,7 +3745,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.cobalt.700}"
@@ -3767,7 +3767,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.brand.off-black}"
@@ -3785,7 +3785,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.neutral.800}"
@@ -3803,7 +3803,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3610",
               "figmaResolvedType": "COLOR",
-              "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.048Z",
               "lastSyncedValue": {
                 "Light": {
                   "reference": "{01-primitives.neutral.1000}"
@@ -3823,7 +3823,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -3846,7 +3846,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.50}"
@@ -3869,7 +3869,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.0}"
@@ -3891,7 +3891,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.900}"
@@ -3909,7 +3909,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.brand.off-black}"
@@ -3927,7 +3927,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.800}"
@@ -3945,7 +3945,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.1000}"
@@ -3964,7 +3964,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.200}"
@@ -3987,7 +3987,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.0}"
@@ -4010,7 +4010,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.red.50}"
@@ -4032,7 +4032,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.100}"
@@ -4051,7 +4051,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.50}"
@@ -4074,7 +4074,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.0}"
@@ -4097,7 +4097,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.950}"
@@ -4120,7 +4120,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.1000}"
@@ -4143,7 +4143,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.50}"
@@ -4165,7 +4165,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.200}"
@@ -4184,7 +4184,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.green.50}"
@@ -4207,7 +4207,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.amber.50}"
@@ -4231,7 +4231,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.950}"
@@ -4249,7 +4249,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.1000}"
@@ -4267,7 +4267,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.1000}"
@@ -4285,7 +4285,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{02-color-light.border.strong}"
@@ -4304,7 +4304,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.300}"
@@ -4326,7 +4326,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.200}"
@@ -4347,7 +4347,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.200}"
@@ -4366,7 +4366,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.red.700}"
@@ -4388,7 +4388,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4409,7 +4409,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.brand.off-white}"
@@ -4430,7 +4430,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.400}"
@@ -4449,7 +4449,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4471,7 +4471,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.400}"
@@ -4493,7 +4493,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.100}"
@@ -4515,7 +4515,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.green.500}"
@@ -4537,7 +4537,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.amber.500}"
@@ -4560,7 +4560,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4578,7 +4578,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{02-color-light.text.error}"
@@ -4596,7 +4596,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.950}"
@@ -4614,7 +4614,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.600}"
@@ -4635,7 +4635,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4657,7 +4657,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.amber.500}"
@@ -4676,7 +4676,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.400}"
@@ -4699,7 +4699,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.red.700}"
@@ -4722,7 +4722,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4745,7 +4745,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.50}"
@@ -4768,7 +4768,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.500}"
@@ -4791,7 +4791,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.700}"
@@ -4810,7 +4810,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.cobalt.700}"
@@ -4829,7 +4829,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.0}"
@@ -4852,7 +4852,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.50}"
@@ -4870,7 +4870,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.0}"
@@ -4889,7 +4889,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.950}"
@@ -4911,7 +4911,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.red.600}"
@@ -4930,7 +4930,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.600}"
@@ -4953,7 +4953,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.green.600}"
@@ -4976,7 +4976,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.neutral.550}"
@@ -4999,7 +4999,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3610",
             "figmaResolvedType": "COLOR",
-            "lastSyncedAt": "2026-10-12T18:29:32.406Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.048Z",
             "lastSyncedValue": {
               "Light": {
                 "reference": "{01-primitives.amber.700}"
@@ -5032,7 +5032,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 1
@@ -5050,7 +5050,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 3
@@ -5068,7 +5068,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 2
@@ -5089,7 +5089,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{02-dimensions-desktop.spacing.xl}"
@@ -5110,7 +5110,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 48
@@ -5128,7 +5128,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 32
@@ -5146,7 +5146,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 24
@@ -5164,7 +5164,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -5187,7 +5187,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 900
@@ -5207,7 +5207,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 600
@@ -5226,7 +5226,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 12
@@ -5245,7 +5245,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1100}"
@@ -5267,7 +5267,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1200}"
@@ -5289,7 +5289,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 1200
@@ -5311,7 +5311,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 720
@@ -5333,7 +5333,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "literal": 360
@@ -5354,7 +5354,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.400}"
@@ -5376,7 +5376,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.300}"
@@ -5398,7 +5398,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.pill}"
@@ -5420,7 +5420,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.200}"
@@ -5442,7 +5442,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.500}"
@@ -5463,7 +5463,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.radius.100}"
@@ -5483,7 +5483,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1400}"
@@ -5502,7 +5502,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.200}"
@@ -5523,7 +5523,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1500}"
@@ -5541,7 +5541,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.100}"
@@ -5559,7 +5559,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1600}"
@@ -5577,7 +5577,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1700}"
@@ -5595,7 +5595,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1800}"
@@ -5614,7 +5614,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1200}"
@@ -5636,7 +5636,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1100}"
@@ -5658,7 +5658,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.800}"
@@ -5679,7 +5679,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.1300}"
@@ -5698,7 +5698,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3694",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Desktop": {
                 "reference": "{01-primitives.size.300}"
@@ -5738,7 +5738,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 26
@@ -5760,7 +5760,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.800}"
@@ -5782,7 +5782,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.regular}"
@@ -5806,7 +5806,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 20
@@ -5828,7 +5828,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.700}"
@@ -5850,7 +5850,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.regular}"
@@ -5873,7 +5873,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.5
@@ -5891,7 +5891,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 24
@@ -5909,7 +5909,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -5927,7 +5927,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 600
@@ -5947,7 +5947,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.5
@@ -5965,7 +5965,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 20
@@ -5983,7 +5983,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 14
@@ -6001,7 +6001,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 600
@@ -6021,7 +6021,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.5
@@ -6039,7 +6039,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -6057,7 +6057,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 12
@@ -6075,7 +6075,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 600
@@ -6096,7 +6096,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -6118,7 +6118,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.500}"
@@ -6140,7 +6140,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.regular}"
@@ -6164,7 +6164,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.5
@@ -6186,7 +6186,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 56
@@ -6208,7 +6208,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.1400}"
@@ -6230,7 +6230,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.bold}"
@@ -6253,7 +6253,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.family.bold}"
@@ -6272,7 +6272,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.family.primary}"
@@ -6293,7 +6293,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.family.semibold}"
@@ -6314,7 +6314,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.30000001192092896
@@ -6336,7 +6336,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 40
@@ -6358,7 +6358,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.1200}"
@@ -6380,7 +6380,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -6404,7 +6404,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": -0.20000000298023224
@@ -6426,7 +6426,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 32
@@ -6448,7 +6448,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.1100}"
@@ -6470,7 +6470,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -6494,7 +6494,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 28
@@ -6516,7 +6516,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.1000}"
@@ -6538,7 +6538,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -6562,7 +6562,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.009999999776482582
@@ -6584,7 +6584,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -6606,7 +6606,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.500}"
@@ -6628,7 +6628,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -6652,7 +6652,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 0.07999999821186066
@@ -6674,7 +6674,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "literal": 16
@@ -6696,7 +6696,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.size.500}"
@@ -6718,7 +6718,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3694",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Desktop": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -6751,7 +6751,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 1
@@ -6769,7 +6769,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 3
@@ -6787,7 +6787,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 2
@@ -6808,7 +6808,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.800}"
@@ -6826,7 +6826,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.300}"
@@ -6846,7 +6846,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{02-dimensions-mobile.spacing.2xl}"
@@ -6867,7 +6867,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 48
@@ -6885,7 +6885,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 32
@@ -6903,7 +6903,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 24
@@ -6921,7 +6921,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 16
@@ -6943,7 +6943,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 430
@@ -6962,7 +6962,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 4
@@ -6981,7 +6981,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.800}"
@@ -7003,7 +7003,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.800}"
@@ -7025,7 +7025,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 430
@@ -7047,7 +7047,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "literal": 430
@@ -7071,7 +7071,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.radius.400}"
@@ -7093,7 +7093,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.radius.300}"
@@ -7115,7 +7115,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{02-dimensions-desktop.radius.pill}"
@@ -7137,7 +7137,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.radius.200}"
@@ -7159,7 +7159,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.radius.500}"
@@ -7180,7 +7180,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.radius.100}"
@@ -7201,7 +7201,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1400}"
@@ -7222,7 +7222,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.200}"
@@ -7240,7 +7240,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1500}"
@@ -7258,7 +7258,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.100}"
@@ -7276,7 +7276,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1600}"
@@ -7294,7 +7294,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1700}"
@@ -7312,7 +7312,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1800}"
@@ -7330,7 +7330,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1200}"
@@ -7349,7 +7349,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1100}"
@@ -7371,7 +7371,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.800}"
@@ -7392,7 +7392,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.1300}"
@@ -7411,7 +7411,7 @@
           "figma-console-mcp": {
             "collectionId": "VariableCollectionId:2612:3747",
             "figmaResolvedType": "FLOAT",
-            "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+            "lastSyncedAt": "2026-10-12T19:20:43.049Z",
             "lastSyncedValue": {
               "Mobile": {
                 "reference": "{01-primitives.size.300}"
@@ -7451,7 +7451,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 28
@@ -7473,7 +7473,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.800}"
@@ -7495,7 +7495,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.regular}"
@@ -7519,7 +7519,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 22
@@ -7541,7 +7541,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.700}"
@@ -7563,7 +7563,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.regular}"
@@ -7586,7 +7586,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.5
@@ -7604,7 +7604,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 24
@@ -7622,7 +7622,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 16
@@ -7640,7 +7640,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 600
@@ -7660,7 +7660,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.5
@@ -7678,7 +7678,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 20
@@ -7696,7 +7696,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 14
@@ -7714,7 +7714,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 600
@@ -7734,7 +7734,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.5
@@ -7752,7 +7752,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 16
@@ -7770,7 +7770,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 12
@@ -7788,7 +7788,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 600
@@ -7809,7 +7809,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 18
@@ -7831,7 +7831,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{__library:VariableID:2613:1247}"
@@ -7853,7 +7853,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.regular}"
@@ -7877,7 +7877,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.5
@@ -7899,7 +7899,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 38
@@ -7921,7 +7921,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.1200}"
@@ -7943,7 +7943,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.bold}"
@@ -7966,7 +7966,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.family.bold}"
@@ -7985,7 +7985,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.family.primary}"
@@ -8006,7 +8006,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "STRING",
-              "lastSyncedAt": "2026-10-12T18:29:32.408Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.family.semibold}"
@@ -8027,7 +8027,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.30000001192092896
@@ -8049,7 +8049,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 30
@@ -8071,7 +8071,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.1100}"
@@ -8093,7 +8093,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -8117,7 +8117,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": -0.20000000298023224
@@ -8139,7 +8139,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 28
@@ -8161,7 +8161,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.1000}"
@@ -8183,7 +8183,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -8207,7 +8207,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 26
@@ -8229,7 +8229,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{__library:VariableID:2613:1250}"
@@ -8251,7 +8251,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.semibold}"
@@ -8275,7 +8275,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.009999999776482582
@@ -8297,7 +8297,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 20
@@ -8319,7 +8319,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.700}"
@@ -8341,7 +8341,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.medium}"
@@ -8365,7 +8365,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 0.07999999821186066
@@ -8387,7 +8387,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "literal": 16
@@ -8409,7 +8409,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.size.500}"
@@ -8431,7 +8431,7 @@
             "figma-console-mcp": {
               "collectionId": "VariableCollectionId:2612:3747",
               "figmaResolvedType": "FLOAT",
-              "lastSyncedAt": "2026-10-12T18:29:32.407Z",
+              "lastSyncedAt": "2026-10-12T19:20:43.049Z",
               "lastSyncedValue": {
                 "Mobile": {
                   "reference": "{01-primitives.weight.semibold}"
