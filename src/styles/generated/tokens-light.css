@@ -69,6 +69,7 @@
   --border-error: #BE123C;
   /* Keyboard focus ring — 2px outline. Always visible for accessibility. */
   --border-focus: #3A73A0;
+  --border-focus-inner: #FAF9F6;
   --border-ghost: #5C91B5;
   /* Info state border — informational banners. */
   --border-info: #3A73A0;
@@ -81,6 +82,7 @@
   /* Warning state border — caution banners. */
   --border-warning: #F59E0B;
   --icon-accent: #3A73A0;
+  --icon-error: #BE123C;
   --icon-primary: #121212;
   --icon-secondary: #666666;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels. */

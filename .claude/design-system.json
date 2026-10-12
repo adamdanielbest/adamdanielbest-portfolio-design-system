@@ -28,6 +28,106 @@
       "htmlFile": "input-component/input.html",
       "storiesDir": "stories/Input",
       "sharedFile": "stories/input.shared.js"
+    },
+    {
+      "name": "select",
+      "figmaNodeId": "2695:1564",
+      "cssFile": "select-component/select.css",
+      "htmlFile": "select-component/select.html"
+    },
+    {
+      "name": "radio",
+      "figmaNodeId": "3033:11737",
+      "cssFile": "radio-component/radio.css",
+      "htmlFile": "radio-component/radio.html"
+    },
+    {
+      "name": "checkbox",
+      "figmaNodeId": "3049:12401",
+      "cssFile": "checkbox-component/checkbox.css",
+      "htmlFile": "checkbox-component/checkbox.html"
+    },
+    {
+      "name": "toggle",
+      "figmaNodeId": "3033:11748",
+      "cssFile": "toggle-component/toggle.css",
+      "htmlFile": "toggle-component/toggle.html"
+    },
+    {
+      "name": "card",
+      "figmaNodeId": "2925:8244",
+      "cssFile": "card-component/card.css",
+      "htmlFile": "card-component/card.html"
+    },
+    {
+      "name": "card-item",
+      "figmaNodeId": "2932:21027",
+      "cssFile": "card-item-component/card-item.css",
+      "htmlFile": "card-item-component/card-item.html"
+    },
+    {
+      "name": "case-study-hero",
+      "figmaNodeId": "2933:30526",
+      "cssFile": "case-study-hero-component/case-study-hero.css",
+      "htmlFile": "case-study-hero-component/case-study-hero.html"
+    },
+    {
+      "name": "content-section",
+      "figmaNodeId": "2980:17088",
+      "cssFile": "content-section-component/content-section.css",
+      "htmlFile": "content-section-component/content-section.html"
+    },
+    {
+      "name": "header",
+      "figmaNodeId": "2933:30176",
+      "cssFile": "header-component/header.css",
+      "htmlFile": "header-component/header.html"
+    },
+    {
+      "name": "icon",
+      "figmaNodeId": "2601:3955",
+      "cssFile": "icon-component/icon.css",
+      "htmlFile": "icon-component/icon.html"
+    },
+    {
+      "name": "layout",
+      "cssFile": "layout-component/layout.css",
+      "htmlFile": "layout-component/layout.html"
+    },
+    {
+      "name": "media-block",
+      "figmaNodeId": "2936:4906",
+      "cssFile": "media-block-component/media-block.css",
+      "htmlFile": "media-block-component/media-block.html"
+    },
+    {
+      "name": "page-nav",
+      "figmaNodeId": "2933:31146",
+      "cssFile": "page-nav-component/page-nav.css",
+      "htmlFile": "page-nav-component/page-nav.html"
+    },
+    {
+      "name": "sidebar",
+      "figmaNodeId": "2933:22572",
+      "cssFile": "sidebar-component/sidebar.css",
+      "htmlFile": "sidebar-component/sidebar.html"
+    },
+    {
+      "name": "table",
+      "cssFile": "table-component/table.css",
+      "htmlFile": "table-component/table.html"
+    },
+    {
+      "name": "text-link",
+      "figmaNodeId": "2925:8973",
+      "cssFile": "text-link-component/text-link.css",
+      "htmlFile": "text-link-component/text-link.html"
+    },
+    {
+      "name": "timeline",
+      "figmaNodeId": "2925:9686",
+      "cssFile": "timeline-component/timeline.css",
+      "htmlFile": "timeline-component/timeline.html"
     }
   ],
   "templates": "src/templates/",

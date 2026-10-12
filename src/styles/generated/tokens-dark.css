@@ -69,6 +69,7 @@
   --border-error: #E11D48;
   /* Keyboard focus ring — cobalt/300 in dark. Always visible. */
   --border-focus: #88B0CD;
+  --border-focus-inner: #FAF9F6;
   --border-ghost: #88B0CD;
   /* Info border in dark. */
   --border-info: #5C91B5;
@@ -81,6 +82,7 @@
   /* Warning border in dark. */
   --border-warning: #D97706;
   --icon-accent: #88B0CD;
+  --icon-error: #FB7185;
   --icon-primary: #FAF9F6;
   --icon-secondary: #ABABAB;
   /* Brand cobalt text in dark — links, active nav items. */
