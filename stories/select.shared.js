@@ -79,9 +79,18 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const useEl = field.querySelector('.select__icon use');
-    if (!useEl) return;
-    useEl.setAttribute('href', open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
+    const svg = field.querySelector('.select__icon');
+    if (!svg) return;
+    const id = open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down';
+    const useEl = svg.querySelector('use');
+    if (useEl) {
+      useEl.setAttribute('href', id);
+    } else {
+      const u = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      u.setAttribute('href', id);
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      svg.appendChild(u);
+    }
   }
 
   function openDropdown() {
