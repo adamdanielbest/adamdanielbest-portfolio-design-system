@@ -1,11 +1,11 @@
 import '../input-component/input.css';
 import spriteSvg from '../src/icons/sprite.svg?raw';
 
-if (!document.getElementById('sb-icon-sprite')) {
+if (!document.getElementById('sb-sprite')) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(spriteSvg, 'image/svg+xml');
   const svg = doc.documentElement;
-  svg.id = 'sb-icon-sprite';
+  svg.id = 'sb-sprite';
   svg.setAttribute('aria-hidden', 'true');
   svg.style.display = 'none';
   document.body.insertBefore(svg, document.body.firstChild);
