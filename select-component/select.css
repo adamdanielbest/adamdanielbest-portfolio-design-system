@@ -47,10 +47,9 @@
 }
 
 .select__required {
-  color: var(--background-action-destructive);
+  color: var(--text-required);
   font-size: var(--type-label-size);
   line-height: var(--type-label-line-height);
-  aria-hidden: true;
 }
 
 /* --------------------------------------------------------------------------
@@ -65,7 +64,7 @@
   padding-inline: var(--spacing-xs);
   gap: var(--spacing-xs);
   background-color: var(--background-input);
-  border: 1px solid var(--border-default);
+  border: var(--border-width-default) solid var(--border-default);
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: border-color 120ms ease, box-shadow 120ms ease;
@@ -90,7 +89,7 @@
 .select__icon {
   width: 16px;
   height: 16px;
-  fill: var(--text-secondary);
+  fill: var(--icon-primary);
   flex-shrink: 0;
   pointer-events: none;
   transition: none;
@@ -191,7 +190,7 @@
   left: 0;
   right: 0;
   background-color: var(--background-card);
-  border: 1px solid var(--border-default);
+  border: var(--border-width-default) solid var(--border-default);
   border-radius: var(--radius-sm);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   list-style: none;
