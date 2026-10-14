@@ -84,6 +84,7 @@
   outline: none;
   appearance: none;
   padding: 0;
+  padding-top: 2px;
   margin: 0;
   font-family: inherit;
   font-size: var(--type-body-md-size);
