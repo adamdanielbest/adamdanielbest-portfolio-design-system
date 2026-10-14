@@ -148,6 +148,11 @@
   border-color: var(--border-action-secondary-hover);
 }
 
+.input:not(.input--focus):not(.input--disabled) .input__field:hover .input__value,
+.input--hover .input__value {
+  color: var(--text-secondary);
+}
+
 /* --------------------------------------------------------------------------
    State: focus
    Simulated with .input--focus class for the reference sheet;
@@ -169,6 +174,10 @@
   background-color: var(--background-hover);
   border-color: var(--border-focus);
   box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+}
+
+.input--focus-hover .input__value {
+  color: var(--text-secondary);
 }
 
 /* --------------------------------------------------------------------------
