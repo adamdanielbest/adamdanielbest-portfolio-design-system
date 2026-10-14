@@ -116,6 +116,11 @@
   border-color: var(--border-action-secondary-hover);
 }
 
+.select:not(.select--open):not(.select--disabled) .select__field:hover .select__value,
+.select--hover .select__value {
+  color: var(--text-secondary);
+}
+
 /* --------------------------------------------------------------------------
    State: open
    Simulated with .select--open class for the reference sheet
@@ -136,6 +141,10 @@
   background-color: var(--background-hover);
   border-color: var(--border-focus);
   box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+}
+
+.select--focus-hover .select__value {
+  color: var(--text-secondary);
 }
 
 /* --------------------------------------------------------------------------
