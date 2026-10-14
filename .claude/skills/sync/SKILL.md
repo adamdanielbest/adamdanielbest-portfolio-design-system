@@ -159,7 +159,7 @@ grep -oE 'id="icon-[^"]*"' "$REPO_ROOT/src/icons/sprite.svg" | sed 's/id="//;s/"
 grep -roh 'href="#icon-[^"]*"' "$REPO_ROOT/stories/" | sed 's/href="#//;s/"//' | sort -u > /tmp/use-refs.txt
 ```
 
-### 2.5c — Compare
+### 2.5c — Compare stale refs
 
 ```bash
 comm -23 /tmp/use-refs.txt /tmp/sprite-ids.txt
@@ -180,6 +180,32 @@ Example output:
    Suggested replacement: #icon-visibility-off
    → Auto-updated ✅
 ```
+
+### 2.5d — Check for inline SVGs that should use the sprite
+
+Icons must always be referenced from the sprite via `<use href="#icon-*"/>`. Scan all `*.shared.js` files and `*-component/*.html` files for SVG elements that carry an icon class name (`*__icon`, `*__check`) but contain an inline `<path>` or `<polygon>` instead of a sprite ref — these bypass the sprite and can't be updated centrally.
+
+```bash
+grep -rn 'class="[^"]*__icon[^"]*"\|class="[^"]*__check[^"]*"' \
+  "$REPO_ROOT/stories/"*.shared.js \
+  "$REPO_ROOT"/*-component/*.html \
+  2>/dev/null | grep '<path\|<polygon' | grep -v 'use href="#icon-'
+```
+
+For each match found:
+1. Note the file, line, and class name.
+2. Search the sprite for the likely correct ID based on the icon's role (e.g. `.select__icon` used as a chevron → `#icon-arrow-drop-down` / `#icon-arrow-drop-up`).
+3. Report as ❌ — do not auto-fix (replacing inline SVG paths requires understanding context). Ask the user to update manually before committing.
+
+Example output:
+```
+❌ Inline SVG found — should use sprite:
+   stories/select.shared.js line 12: <svg class="select__icon"> uses inline <path>
+   Suggested: #icon-arrow-drop-down / #icon-arrow-drop-up
+   → Fix manually before committing
+```
+
+If any inline SVG issues are found, warn before the final commit step and ask the user to confirm they want to proceed anyway.
 
 ---
 
