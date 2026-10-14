@@ -71,7 +71,7 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    swapIcon(field.querySelector('.select__icon'), open ? CHEVRON_UP : CHEVRON_DOWN);
+    swapIcon(field.querySelector('.select__icon'), open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
   }
 
   function openDropdown() {
