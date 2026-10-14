@@ -79,18 +79,18 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const svg = field.querySelector('.select__icon');
-    if (!svg) return;
+    const old = field.querySelector('.select__icon');
+    if (!old) return;
     const id = open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down';
-    const useEl = svg.querySelector('use');
-    if (useEl) {
-      useEl.setAttribute('href', id);
-    } else {
-      const u = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-      u.setAttribute('href', id);
-      while (svg.firstChild) svg.removeChild(svg.firstChild);
-      svg.appendChild(u);
-    }
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'select__icon');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    svg.setAttribute('viewBox', '0 0 16 16');
+    const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+    use.setAttribute('href', id);
+    svg.appendChild(use);
+    old.parentNode.replaceChild(svg, old);
   }
 
   function openDropdown() {
