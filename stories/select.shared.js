@@ -79,10 +79,13 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    if (!iconEl) return;
-    iconEl.innerHTML = open
-      ? `<path d="M 8 0 L 16 8 L 0 8 Z" fill="currentColor"/>`
-      : `<path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/>`;
+    const svg = field.querySelector('.select__icon');
+    if (!svg) return;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', open ? 'M 8 0 L 16 8 L 0 8 Z' : 'M 8 8 L 0 0 L 16 0 Z');
+    path.setAttribute('fill', 'currentColor');
+    svg.appendChild(path);
   }
 
   function openDropdown() {
