@@ -20,12 +20,8 @@ const OPTIONS = ['Option one', 'Option two', 'Option three', 'Option four', 'Opt
 function buildDropdown(mode) {
   const isMulti = mode === 'multi';
   const items = OPTIONS.map((label, i) => {
-    const selected = isMulti && i === 0;
-    const check = isMulti
-      ? (selected ? CHECK_ICON : UNCHECK_ICON)
-      : '';
-    const selectedClass = selected ? ' select__option--selected' : '';
-    return `<li class="select__option${selectedClass}" role="option" aria-selected="${selected}"><span>${label}</span>${check}</li>`;
+    const check = isMulti ? UNCHECK_ICON : '';
+    return `<li class="select__option" role="option" aria-selected="false"><span>${label}</span>${check}</li>`;
   }).join('\n        ');
   return `
       <ul class="select__dropdown" role="listbox"${isMulti ? ' aria-multiselectable="true"' : ''}>

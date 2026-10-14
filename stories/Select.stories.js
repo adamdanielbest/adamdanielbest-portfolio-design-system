@@ -17,4 +17,30 @@ export const Disabled     = { args: { state: 'disabled'             }, render };
 export const Error        = { args: { state: 'error'                }, render };
 export const Required     = { args: { state: 'default', required: true }, render };
 export const SingleSelect = { args: { state: 'select-single-select' }, render };
-export const Multiselect  = { args: { state: 'select-multiselect'   }, render };
+export const Multiselect = {
+  args: { state: 'select-multiselect' },
+  render,
+  play: ({ canvasElement }) => {
+    const valueEl  = canvasElement.querySelector('.select__value');
+    const options  = canvasElement.querySelectorAll('.select__option');
+
+    function updateFieldValue() {
+      const selected = [...options]
+        .filter(o => o.classList.contains('select__option--selected'))
+        .map(o => o.querySelector('span').textContent);
+      valueEl.textContent = selected.length ? selected.join(', ') : 'Select option...';
+      valueEl.classList.toggle('select--filled', selected.length > 0);
+    }
+
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const isNowSelected = !opt.classList.contains('select__option--selected');
+        opt.classList.toggle('select__option--selected', isNowSelected);
+        opt.setAttribute('aria-selected', String(isNowSelected));
+        const useEl = opt.querySelector('use');
+        if (useEl) useEl.setAttribute('href', isNowSelected ? '#icon-checkbox-checked' : '#icon-checkbox');
+        updateFieldValue();
+      });
+    });
+  },
+};
