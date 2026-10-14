@@ -33,25 +33,37 @@
       "name": "select",
       "figmaNodeId": "2695:1564",
       "cssFile": "select-component/select.css",
-      "htmlFile": "select-component/select.html"
+      "htmlFile": "select-component/select.html",
+      "sharedFile": "stories/select.shared.js"
+    },
+    {
+      "name": "select-item",
+      "figmaNodeId": "2695:1588"
+    },
+    {
+      "name": "dropdown-panel",
+      "figmaNodeId": "3078:6747"
     },
     {
       "name": "radio",
       "figmaNodeId": "3033:11737",
       "cssFile": "radio-component/radio.css",
-      "htmlFile": "radio-component/radio.html"
+      "htmlFile": "radio-component/radio.html",
+      "sharedFile": "stories/radio.shared.js"
     },
     {
       "name": "checkbox",
       "figmaNodeId": "3049:12401",
       "cssFile": "checkbox-component/checkbox.css",
-      "htmlFile": "checkbox-component/checkbox.html"
+      "htmlFile": "checkbox-component/checkbox.html",
+      "sharedFile": "stories/checkbox.shared.js"
     },
     {
       "name": "toggle",
       "figmaNodeId": "3033:11748",
       "cssFile": "toggle-component/toggle.css",
-      "htmlFile": "toggle-component/toggle.html"
+      "htmlFile": "toggle-component/toggle.html",
+      "sharedFile": "stories/toggle.shared.js"
     },
     {
       "name": "card",
