@@ -16,7 +16,28 @@ export const Filled       = { args: { state: 'filled'               }, render };
 export const Disabled     = { args: { state: 'disabled'             }, render };
 export const Error        = { args: { state: 'error'                }, render };
 export const Required     = { args: { state: 'default', required: true }, render };
-export const SingleSelect = { args: { state: 'select-single-select' }, render };
+export const SingleSelect = {
+  args: { state: 'select-single-select' },
+  render,
+  play: ({ canvasElement }) => {
+    const valueEl  = canvasElement.querySelector('.select__value');
+    const options  = canvasElement.querySelectorAll('.select__option');
+    const dropdown = canvasElement.querySelector('.select__dropdown');
+
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        options.forEach(o => {
+          o.classList.remove('select__option--selected');
+          o.setAttribute('aria-selected', 'false');
+        });
+        opt.classList.add('select__option--selected');
+        opt.setAttribute('aria-selected', 'true');
+        valueEl.textContent = opt.querySelector('span').textContent;
+        dropdown.style.display = 'none';
+      });
+    });
+  },
+};
 export const Multiselect = {
   args: { state: 'select-multiselect' },
   render,
