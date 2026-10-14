@@ -218,8 +218,12 @@
   color: var(--text-primary);
   cursor: pointer;
   user-select: none;
-  border-radius: var(--radius-sm);
+  border-bottom: var(--border-width-default) solid var(--border-subtle);
   text-box-trim: none;
+}
+
+.select__option:last-child {
+  border-bottom: none;
 }
 
 .select__option span {
