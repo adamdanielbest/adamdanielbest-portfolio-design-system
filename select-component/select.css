@@ -56,8 +56,11 @@
    Field
    -------------------------------------------------------------------------- */
 
-.select__field {
+.select__field-wrap {
   position: relative;
+}
+
+.select__field {
   display: flex;
   align-items: center;
   height: var(--form-input-height);

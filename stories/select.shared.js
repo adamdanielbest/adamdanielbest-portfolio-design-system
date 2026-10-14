@@ -47,9 +47,11 @@ export const renderSelect = ({ state = 'default', label = 'Label', required = fa
       <div class="select__label-row">
         <span class="select__label" id="select-label">${label}</span>${required ? '<span class="select__required" aria-hidden="true">*</span>' : ''}
       </div>
-      <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}" aria-labelledby="select-label" aria-controls="select-listbox" tabindex="0">
-        <span class="select__value">${displayValue}</span>
-        ${icon}
+      <div class="select__field-wrap">
+        <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}" aria-labelledby="select-label" aria-controls="select-listbox" tabindex="0">
+          <span class="select__value">${displayValue}</span>
+          ${icon}
+        </div>
         ${buildDropdown(mode, isOpen, preSelected)}
       </div>
       ${helperText}
