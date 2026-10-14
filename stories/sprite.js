@@ -9,18 +9,23 @@ if (!document.getElementById('sb-sprite')) {
 }
 
 /**
- * Swaps the sprite symbol on an icon SVG element.
+ * Swaps the sprite symbol on an icon SVG element by replacing the element.
  *
  * Usage:
- *   swapIcon(containerEl.querySelector('.component__icon'), '#icon-name');
+ *   swapIcon(containerEl.querySelector('.component__icon'), newSvgHtmlString);
  *
- * Why: SVG <use> elements must be swapped by setAttribute on the <use> child,
- * not by replacing the SVG's innerHTML. Query the parent SVG first, then find
- * the <use> within it — compound selectors like '.icon use' can fail across
- * the SVG namespace boundary.
+ * Why element replacement instead of setAttribute: when the sprite is injected
+ * via div.innerHTML the symbols land in HTML namespace. Changing href on an
+ * existing <use> element doesn't trigger a browser repaint in that case —
+ * the visual stays stuck on the original symbol. Replacing the SVG element
+ * entirely forces a fresh render with the correct symbol resolved.
+ *
+ * Pass the full SVG HTML string (e.g. a CHEVRON_UP / CHEVRON_DOWN constant),
+ * not just an icon ID.
  */
-export function swapIcon(svgEl, iconId) {
+export function swapIcon(svgEl, newSvgHtml) {
   if (!svgEl) return;
-  const useEl = svgEl.querySelector('use');
-  if (useEl) useEl.setAttribute('href', iconId);
+  const tmp = document.createElement('div');
+  tmp.innerHTML = newSvgHtml;
+  svgEl.replaceWith(tmp.firstChild);
 }
