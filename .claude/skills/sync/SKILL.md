@@ -285,15 +285,9 @@ export const Disabled = { args: { size: 'medium', state: 'disabled' }, render };
 **Shared file template** (only written if the file does not already exist):
 ```js
 import '../<name>-component/<name>.css';
-import spriteSvg from '../src/icons/sprite.svg?raw';
-
-if (!document.getElementById('sb-icon-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-icon-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
-}
+import { swapIcon } from './sprite.js';
+// swapIcon(svgEl, '#icon-name') — use this whenever an icon needs to change at runtime.
+// Never swap icons by replacing innerHTML or href directly; always use swapIcon.
 
 // TODO: implement render<ComponentName> for this component's HTML structure
 export const render<ComponentName> = (args) => {

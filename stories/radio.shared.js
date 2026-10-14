@@ -1,13 +1,5 @@
 import '../radio-component/radio.css';
-import spriteSvg from '../src/icons/sprite.svg?raw';
-
-if (!document.getElementById('sb-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
-}
+import './sprite.js';
 
 // TODO: implement renderRadio
 // Figma state axis: checked, checked-hover, checked-focus, checked-focus-hover,

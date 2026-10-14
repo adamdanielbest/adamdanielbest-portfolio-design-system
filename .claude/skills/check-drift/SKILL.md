@@ -163,6 +163,18 @@ grep -oE 'id="icon-[^"]*"' "$REPO_ROOT/src/icons/sprite.svg" | sed 's/id="//;s/"
 comm -23 /tmp/use-refs.txt /tmp/sprite-ids.txt
 ```
 
+### 2.5d — Check that runtime icon swaps use swapIcon
+
+All runtime icon changes (e.g. open/close chevron, show/hide password eye) must go through `swapIcon` from `stories/sprite.js`. Direct `setAttribute('href', ...)` calls on `<use>` elements are not wrong but must not appear outside of `swapIcon` itself — if they do, they should be refactored to use `swapIcon` so the pattern stays centralised.
+
+```bash
+# Flag direct href swaps on <use> elements that happen outside sprite.js
+grep -rn 'querySelector.*use.*setAttribute.*href\|\.setAttribute.*href.*icon-' \
+  "$REPO_ROOT/stories/"*.shared.js 2>/dev/null | grep -v 'sprite.js'
+```
+
+For each match, flag as ⚠️ — not broken, but should use `swapIcon(svgEl, '#icon-name')` instead.
+
 Add to report under **Icon audit**:
 
 ```
@@ -173,6 +185,8 @@ Add to report under **Icon audit**:
    - stories/input.shared.js: <svg class="input__icon"> uses inline <path> — suggested: #icon-visibility / #icon-visibility-off
 ⚠️ 1 stale sprite ref:
    - stories/input.shared.js: href="#icon-eye" — not in sprite (renamed to #icon-visibility?)
+⚠️ 1 direct href swap bypassing swapIcon:
+   - stories/input.shared.js: useEl.setAttribute('href', ...) — use swapIcon(svgEl, '#icon-name') instead
 ```
 
 ---

@@ -1,13 +1,5 @@
 import '../input-component/input.css';
-import spriteSvg from '../src/icons/sprite.svg?raw';
-
-if (!document.getElementById('sb-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
-}
+import './sprite.js';
 
 const ICON_EYE_SLASH = `<svg aria-hidden="true" focusable="false"><use href="#icon-visibility-off"/></svg>`;
 const ICON_MAGNIFIER = `<svg aria-hidden="true" focusable="false"><use href="#icon-search"/></svg>`;

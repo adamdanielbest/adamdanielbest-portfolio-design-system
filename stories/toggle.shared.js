@@ -1,13 +1,5 @@
 import '../toggle-component/toggle.css';
-import spriteSvg from '../src/icons/sprite.svg?raw';
-
-if (!document.getElementById('sb-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
-}
+import './sprite.js';
 
 // TODO: implement renderToggle
 // Figma axes:

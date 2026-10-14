@@ -1,13 +1,5 @@
 import '../select-component/select.css';
-import spriteSvg from '../src/icons/sprite.svg?raw';
-
-if (!document.getElementById('sb-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
-}
+import { swapIcon } from './sprite.js';
 
 const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
 const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
@@ -79,10 +71,7 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const svg = field.querySelector('.select__icon');
-    if (!svg) return;
-    const useEl = svg.querySelector('use');
-    if (useEl) useEl.setAttribute('href', open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
+    swapIcon(field.querySelector('.select__icon'), open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
   }
 
   function openDropdown() {
