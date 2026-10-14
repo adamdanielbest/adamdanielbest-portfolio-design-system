@@ -9,7 +9,7 @@ if (!document.getElementById('sb-sprite')) {
   document.body.insertBefore(div, document.body.firstChild);
 }
 
-const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16" style="transform:rotate(180deg)"><use href="#icon-arrow-drop-down"/></svg>`;
+const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
 const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
 
 const CHECK_ICON   = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox-checked"/></svg>`;
@@ -80,7 +80,9 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
 
   function setIcon(open) {
     const svg = field.querySelector('.select__icon');
-    if (svg) svg.style.transform = open ? 'rotate(180deg)' : '';
+    if (!svg) return;
+    const useEl = svg.querySelector('use');
+    if (useEl) useEl.setAttribute('href', open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
   }
 
   function openDropdown() {
