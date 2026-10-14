@@ -4,7 +4,7 @@ const ICON_EYE_SLASH = `<svg viewBox="0 0 16 13.825" fill="currentColor" aria-hi
 
 const ICON_MAGNIFIER = `<svg viewBox="0 0 15.836 15.836" fill="currentColor" aria-hidden="true" focusable="false"><path d="M 14.603 15.835 L 9.061 10.293 C 8.621 10.645 8.115 10.923 7.544 11.129 C 6.972 11.334 6.363 11.436 5.718 11.436 C 4.12 11.436 2.767 10.883 1.66 9.776 C 0.553 8.669 0 7.316 0 5.718 C 0 4.12 0.553 2.767 1.66 1.66 C 2.767 0.553 4.12 0 5.718 0 C 7.316 0 8.669 0.553 9.776 1.66 C 10.883 2.767 11.436 4.12 11.436 5.718 C 11.436 6.363 11.334 6.972 11.129 7.544 C 10.923 8.115 10.645 8.621 10.293 9.061 L 15.835 14.603 L 14.603 15.835 Z M 5.718 9.677 C 6.818 9.677 7.753 9.292 8.522 8.522 C 9.292 7.753 9.677 6.818 9.677 5.718 C 9.677 4.619 9.292 3.684 8.522 2.914 C 7.753 2.144 6.818 1.759 5.718 1.759 C 4.619 1.759 3.684 2.144 2.914 2.914 C 2.144 3.684 1.759 4.619 1.759 5.718 C 1.759 6.818 2.144 7.753 2.914 8.522 C 3.684 9.292 4.619 9.677 5.718 9.677 Z"/></svg>`;
 
-export const renderInput = ({ type = 'text', state = 'default', label = 'Label', placeholder, value }) => {
+export const renderInput = ({ type = 'text', state = 'default', label = 'Label', placeholder, value, required = false }) => {
   const disabled  = state === 'disabled';
   const filled    = state === 'filled';
   const stateClass = state !== 'default' ? ` input--${state}` : '';
@@ -29,7 +29,7 @@ export const renderInput = ({ type = 'text', state = 'default', label = 'Label',
   return `
     <div class="input input--${type}${stateClass}" style="max-width:320px">
       <div class="input__label-row">
-        <span class="input__label">${label}</span>
+        <span class="input__label">${label}</span>${required ? '<span class="input__required" aria-hidden="true">*</span>' : ''}
       </div>
       <div class="input__field">${fieldInner}</div>
       ${helperText}
@@ -39,6 +39,7 @@ export const renderInput = ({ type = 'text', state = 'default', label = 'Label',
 
 export const stateArgTypes = {
   label: { control: 'text' },
+  required: { control: 'boolean' },
   state: {
     control: 'select',
     options: ['default', 'hover', 'focus', 'filled', 'disabled', 'error', 'focus-hover'],
