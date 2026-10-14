@@ -57,6 +57,33 @@ grep -rh '^\s*--' "$REPO_ROOT/src/styles/generated/" | \
 - **In CSS, missing from Figma** → stale token; was renamed or deleted in Figma
 - **Used in component CSS (`var(--x)`) but not defined** → broken reference (blocks component rendering)
 
+### 1d — HTML page token audit
+
+Scan all component HTML pages and the template for `var(--x)` references that aren't in the generated token files. These cause silent layout breakage (elements collapse to zero spacing, invisible borders, etc.) and are distinct from component CSS issues because they live in page-level `<style>` blocks rather than component stylesheets.
+
+```bash
+# Collect all var() references from HTML files (inline <style> blocks)
+grep -roh 'var(--[a-zA-Z0-9-]*)' \
+  "$REPO_ROOT"/*-component/*.html \
+  "$REPO_ROOT"/src/templates/*.html \
+  2>/dev/null | grep -oE '\-\-[a-zA-Z0-9-]+' | sort -u > /tmp/html-used.txt
+
+# Compare against defined tokens
+comm -23 /tmp/html-used.txt /tmp/css-defined.txt
+```
+
+Any token in the output is used in an HTML page but undefined — flag as ❌ with the token name and suggest the current equivalent from the t-shirt scale.
+
+Add to report under **Token drift**:
+```
+### HTML page token audit
+✅ No stale tokens in HTML pages  (or)
+❌ 3 undefined tokens in HTML pages:
+   - --spacing-card-padding (not defined — use --spacing-md)
+   - --spacing-content-gap (not defined — use --spacing-lg)
+   - --spacing-table-cell-padding (not defined — use --spacing-sm)
+```
+
 ---
 
 ## Step 2 — Story drift
