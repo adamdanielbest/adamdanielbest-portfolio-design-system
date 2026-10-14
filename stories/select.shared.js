@@ -2,14 +2,16 @@ import '../select-component/select.css';
 import spriteSvg from '../src/icons/sprite.svg?raw';
 
 if (!document.getElementById('sb-icon-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-icon-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(spriteSvg, 'image/svg+xml');
+  const svg = doc.documentElement;
+  svg.id = 'sb-icon-sprite';
+  svg.setAttribute('aria-hidden', 'true');
+  svg.style.display = 'none';
+  document.body.insertBefore(svg, document.body.firstChild);
 }
 
-const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16" style="transform:rotate(180deg)"><use href="#icon-arrow-drop-down"/></svg>`;
+const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
 const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
 
 const CHECK_ICON   = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox-checked"/></svg>`;
@@ -79,9 +81,9 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const svg = field.querySelector('.select__icon');
-    if (!svg) return;
-    svg.style.transform = open ? 'rotate(180deg)' : '';
+    const use = field.querySelector('.select__icon use');
+    if (!use) return;
+    use.setAttribute('href', open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
   }
 
   function openDropdown() {

@@ -2,11 +2,13 @@ import '../checkbox-component/checkbox.css';
 import spriteSvg from '../src/icons/sprite.svg?raw';
 
 if (!document.getElementById('sb-icon-sprite')) {
-  const div = document.createElement('div');
-  div.id = 'sb-icon-sprite';
-  div.setAttribute('aria-hidden', 'true');
-  div.innerHTML = spriteSvg;
-  document.body.insertBefore(div, document.body.firstChild);
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(spriteSvg, 'image/svg+xml');
+  const svg = doc.documentElement;
+  svg.id = 'sb-icon-sprite';
+  svg.setAttribute('aria-hidden', 'true');
+  svg.style.display = 'none';
+  document.body.insertBefore(svg, document.body.firstChild);
 }
 
 // TODO: implement renderCheckbox
