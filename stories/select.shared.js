@@ -18,7 +18,7 @@ function buildDropdown(mode, visible, preSelected) {
     return `<li class="select__option${cls}" role="option" aria-selected="${selected}" tabindex="0"><span>${label}</span>${check}</li>`;
   }).join('\n        ');
   return `
-      <ul class="select__dropdown" role="listbox"${isMulti ? ' aria-multiselectable="true"' : ''}${!visible ? ' style="display:none"' : ''}>
+      <ul class="select__dropdown" id="select-listbox" role="listbox" aria-labelledby="select-label"${isMulti ? ' aria-multiselectable="true"' : ''}${!visible ? ' style="display:none"' : ''}>
         ${items}
       </ul>`;
 }
@@ -47,7 +47,7 @@ export const renderSelect = ({ state = 'default', label = 'Label', required = fa
       <div class="select__label-row">
         <span class="select__label" id="select-label">${label}</span>${required ? '<span class="select__required" aria-hidden="true">*</span>' : ''}
       </div>
-      <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}" aria-labelledby="select-label">
+      <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}" aria-labelledby="select-label" aria-controls="select-listbox" tabindex="0">
         <span class="select__value">${displayValue}</span>
         ${icon}
         ${buildDropdown(mode, isOpen, preSelected)}
