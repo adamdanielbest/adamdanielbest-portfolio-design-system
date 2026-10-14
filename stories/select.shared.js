@@ -9,7 +9,7 @@ if (!document.getElementById('sb-icon-sprite')) {
   document.body.insertBefore(div, document.body.firstChild);
 }
 
-const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
+const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16" style="transform:rotate(180deg)"><use href="#icon-arrow-drop-down"/></svg>`;
 const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
 
 const CHECK_ICON   = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox-checked"/></svg>`;
@@ -79,18 +79,9 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const old = field.querySelector('.select__icon');
-    if (!old) return;
-    const id = open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down';
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('class', 'select__icon');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('focusable', 'false');
-    svg.setAttribute('viewBox', '0 0 16 16');
-    const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-    use.setAttribute('href', id);
-    svg.appendChild(use);
-    old.parentNode.replaceChild(svg, old);
+    const svg = field.querySelector('.select__icon');
+    if (!svg) return;
+    svg.style.transform = open ? 'rotate(180deg)' : '';
   }
 
   function openDropdown() {
