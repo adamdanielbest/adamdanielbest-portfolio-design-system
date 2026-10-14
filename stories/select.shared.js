@@ -1,8 +1,7 @@
 import '../select-component/select.css';
-import { swapIcon } from './sprite.js';
+import './sprite.js';
 
-const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
-const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
+const CHEVRON = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
 
 const CHECK_ICON   = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox-checked"/></svg>`;
 const UNCHECK_ICON = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox"/></svg>`;
@@ -36,7 +35,7 @@ export const renderSelect = ({ state = 'default', label = 'Label', required = fa
   const filledClass     = filled ? ' select--filled' : '';
   const disabledAttr    = disabled ? ' aria-disabled="true"' : '';
   const displayValue    = filled ? (value || 'Option one') : 'Select option...';
-  const icon            = isOpen ? CHEVRON_UP : CHEVRON_DOWN;
+  const icon            = CHEVRON;
 
   const helperText = state === 'error'
     ? `<p class="select__helper">Error message</p>`
@@ -70,9 +69,7 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
 
   let isOpen = dropdown.style.display !== 'none';
 
-  function setIcon(open) {
-    swapIcon(field.querySelector('.select__icon'), open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
-  }
+  // No icon swap needed — CSS handles rotation via .select--open .select__icon { transform: rotate(180deg) }
 
   function openDropdown() {
     // Strip transient state classes so open ring shows cleanly
@@ -80,7 +77,6 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
     wrap.classList.add('select--open');
     dropdown.style.display = '';
     field.setAttribute('aria-expanded', 'true');
-    setIcon(true);
     isOpen = true;
   }
 
@@ -88,7 +84,6 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
     wrap.classList.remove('select--open');
     dropdown.style.display = 'none';
     field.setAttribute('aria-expanded', 'false');
-    setIcon(false);
     isOpen = false;
   }
 
