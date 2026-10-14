@@ -73,7 +73,8 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   const options  = canvasElement.querySelectorAll('.select__option');
   const iconEl   = canvasElement.querySelector('.select__icon');
 
-  if (!field || wrap.classList.contains('select--disabled')) return;
+  if (!wrap || !field || !dropdown) return;
+  if (wrap.classList.contains('select--disabled')) return;
 
   let isOpen = dropdown.style.display !== 'none';
 
