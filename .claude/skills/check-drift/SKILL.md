@@ -121,6 +121,62 @@ Map Figma `type` values → story files. For each:
 
 ---
 
+## Step 2.5 — Inline SVG icon audit
+
+Icons must always be referenced from the sprite via `<use href="#icon-*"/>`. Inline `<path>` or `<polygon>` elements inside SVGs that carry a design-system icon class (e.g. `.select__icon`, `.input__icon`, `.button__icon`, `*__icon`, `*__check`) are a mistake — they bypass the sprite, can't be updated centrally, and ignore the naming convention.
+
+### 2.5a — Find icon-class SVGs using inline paths instead of sprite refs
+
+Scan all `*.shared.js` files and `*-component/*.html` files:
+
+```bash
+# Find SVG elements with an icon-like class that contain <path> or <polygon>
+# but NOT a <use href="#icon-"> reference
+grep -rn 'class="[^"]*__icon[^"]*"' \
+  "$REPO_ROOT/stories/"*.shared.js \
+  "$REPO_ROOT"/*-component/*.html \
+  2>/dev/null | grep -v 'use href="#icon-' | grep '<path\|<polygon'
+```
+
+For each match, extract:
+- The file and line number
+- The class name (e.g. `select__icon`)
+- What icon it appears to represent (from context — adjacent label text, variable name, or path shape description)
+
+### 2.5b — Cross-reference against sprite
+
+For each inline SVG found, suggest the correct sprite ID by searching for likely matches:
+
+```bash
+grep -o 'id="icon-[^"]*"' "$REPO_ROOT/src/icons/sprite.svg" | sed 's/id="//;s/"//' | sort
+```
+
+Match by role name (e.g. `select__icon` used as a chevron → `icon-arrow-drop-down` / `icon-arrow-drop-up`). If an obvious match exists, name it. If ambiguous, list the candidates.
+
+### 2.5c — Also check for stale sprite refs (existing check)
+
+Cross-reference `href="#icon-*"` references already in the codebase against sprite symbol IDs, as a reminder that this check also catches renamed icons:
+
+```bash
+grep -roh 'href="#icon-[^"]*"' "$REPO_ROOT/stories/" | sed 's/href="#//;s/"//' | sort -u > /tmp/use-refs.txt
+grep -oE 'id="icon-[^"]*"' "$REPO_ROOT/src/icons/sprite.svg" | sed 's/id="//;s/"//' | sort > /tmp/sprite-ids.txt
+comm -23 /tmp/use-refs.txt /tmp/sprite-ids.txt
+```
+
+Add to report under **Icon audit**:
+
+```
+### Icon audit
+✅ All icon SVGs use sprite references  (or)
+❌ 2 inline SVGs found — should use sprite:
+   - stories/select.shared.js: <svg class="select__icon"> uses inline <path> — use #icon-arrow-drop-down / #icon-arrow-drop-up
+   - stories/input.shared.js: <svg class="input__icon"> uses inline <path> — suggested: #icon-visibility / #icon-visibility-off
+⚠️ 1 stale sprite ref:
+   - stories/input.shared.js: href="#icon-eye" — not in sprite (renamed to #icon-visibility?)
+```
+
+---
+
 ## Step 3 — Component parity
 
 Runs `scripts/check-component-parity.py` for each component in the registry.
@@ -248,6 +304,11 @@ Skip this step for components without a `figmaNodeId` or `cssFile` in the regist
 ✅ No story drift  (or)
 ❌ Primary variant: missing Icon export
 ⚠️ Ghost variant: story file exists but Figma type 'ghost' not found in component set
+
+### Icon audit
+✅ All icon SVGs use sprite references  (or)
+❌ 1 inline SVG found — should use sprite:
+   - stories/select.shared.js: .select__icon uses inline <path>
 
 ### Component parity
 ✅ button: 0 issues  (or)
