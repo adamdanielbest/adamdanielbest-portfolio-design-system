@@ -15,7 +15,7 @@ function buildDropdown(mode, visible, preSelected) {
     const selected = preSelected === label;
     const check    = isMulti ? (selected ? CHECK_ICON : UNCHECK_ICON) : '';
     const cls      = selected ? ' select__option--selected' : '';
-    return `<li class="select__option${cls}" role="option" aria-selected="${selected}"><span>${label}</span>${check}</li>`;
+    return `<li class="select__option${cls}" role="option" aria-selected="${selected}" tabindex="0"><span>${label}</span>${check}</li>`;
   }).join('\n        ');
   return `
       <ul class="select__dropdown" role="listbox"${isMulti ? ' aria-multiselectable="true"' : ''}${!visible ? ' style="display:none"' : ''}>
@@ -45,9 +45,9 @@ export const renderSelect = ({ state = 'default', label = 'Label', required = fa
   return `
     <div class="select${fieldStateClass}${filledClass}" style="max-width:320px;padding-bottom:220px;"${disabledAttr}>
       <div class="select__label-row">
-        <span class="select__label">${label}</span>${required ? '<span class="select__required" aria-hidden="true">*</span>' : ''}
+        <span class="select__label" id="select-label">${label}</span>${required ? '<span class="select__required" aria-hidden="true">*</span>' : ''}
       </div>
-      <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}">
+      <div class="select__field" role="combobox" aria-haspopup="listbox" aria-expanded="${isOpen}" aria-labelledby="select-label">
         <span class="select__value">${displayValue}</span>
         ${icon}
         ${buildDropdown(mode, isOpen, preSelected)}
@@ -105,24 +105,61 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
     isOpen ? closeDropdown() : openDropdown();
   });
 
+  field.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!isOpen) {
+        openDropdown();
+        const first = dropdown.querySelector('.select__option:not([aria-disabled="true"])');
+        if (first) first.focus();
+      }
+    }
+    if (e.key === 'Escape' && isOpen) closeDropdown();
+  });
+
+  const optionList = [...options];
+
+  function selectOption(opt) {
+    if (multi) {
+      const nowSelected = !opt.classList.contains('select__option--selected');
+      opt.classList.toggle('select__option--selected', nowSelected);
+      opt.setAttribute('aria-selected', String(nowSelected));
+      const useEl = opt.querySelector('use');
+      if (useEl) useEl.setAttribute('href', nowSelected ? '#icon-checkbox-checked' : '#icon-checkbox');
+      updateFieldValue();
+    } else {
+      optionList.forEach(o => { o.classList.remove('select__option--selected'); o.setAttribute('aria-selected', 'false'); });
+      opt.classList.add('select__option--selected');
+      opt.setAttribute('aria-selected', 'true');
+      valueEl.textContent = opt.querySelector('span').textContent;
+      wrap.classList.add('select--filled');
+      closeDropdown();
+      field.focus();
+    }
+  }
+
   options.forEach(opt => {
+    opt.addEventListener('keydown', e => {
+      const idx = optionList.indexOf(opt);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = optionList[idx + 1];
+        if (next) next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (idx === 0) { field.focus(); } else { optionList[idx - 1].focus(); }
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectOption(opt);
+      } else if (e.key === 'Escape' || e.key === 'Tab') {
+        closeDropdown();
+        field.focus();
+      }
+    });
+
     opt.addEventListener('click', e => {
       e.stopPropagation();
-      if (multi) {
-        const nowSelected = !opt.classList.contains('select__option--selected');
-        opt.classList.toggle('select__option--selected', nowSelected);
-        opt.setAttribute('aria-selected', String(nowSelected));
-        const useEl = opt.querySelector('use');
-        if (useEl) useEl.setAttribute('href', nowSelected ? '#icon-checkbox-checked' : '#icon-checkbox');
-        updateFieldValue();
-      } else {
-        options.forEach(o => { o.classList.remove('select__option--selected'); o.setAttribute('aria-selected', 'false'); });
-        opt.classList.add('select__option--selected');
-        opt.setAttribute('aria-selected', 'true');
-        valueEl.textContent = opt.querySelector('span').textContent;
-        wrap.classList.add('select--filled');
-        closeDropdown();
-      }
+      selectOption(opt);
     });
   });
 

@@ -65,7 +65,7 @@
   gap: var(--spacing-xs);
   background-color: var(--background-input);
   border: var(--border-width-default) solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   cursor: pointer;
   transition: border-color 120ms ease, box-shadow 120ms ease;
   box-sizing: border-box;
@@ -188,7 +188,7 @@
   right: 0;
   background-color: var(--background-card);
   border: var(--border-width-default) solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   list-style: none;
   margin: 0;
@@ -217,7 +217,7 @@
   user-select: none;
   background-color: var(--background-input);
   border: var(--border-width-default) solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   text-box-trim: none;
 }
 
@@ -228,12 +228,32 @@
 
 .select__option:hover {
   background-color: var(--background-hover);
-  border-color: var(--border-default);
+  border-color: var(--border-action-secondary-hover);
 }
 
 .select__option--selected {
   background-color: var(--background-selected);
   border-color: var(--border-default);
+}
+
+/* --------------------------------------------------------------------------
+   Option: keyboard focus ring
+   Two-layer ring: outer border/focus + inner border/focus-inner via box-shadow
+   -------------------------------------------------------------------------- */
+
+.select__option:focus-visible {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+  background-color: var(--background-input);
+}
+
+.select__option:focus-visible:hover {
+  background-color: var(--background-hover);
+}
+
+.select__option--selected:focus-visible {
+  background-color: var(--background-selected);
 }
 
 .select__option-check {
