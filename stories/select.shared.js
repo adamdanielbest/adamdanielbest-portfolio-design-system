@@ -9,8 +9,8 @@ if (!document.getElementById('sb-icon-sprite')) {
   document.body.insertBefore(div, document.body.firstChild);
 }
 
-const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 8"><path d="M 8 0 L 16 8 L 0 8 Z" fill="currentColor"/></svg>`;
-const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 8"><path d="M 8 8 L 0 0 L 16 0 Z" fill="currentColor"/></svg>`;
+const CHEVRON_UP   = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-up"/></svg>`;
+const CHEVRON_DOWN = `<svg class="select__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16"><use href="#icon-arrow-drop-down"/></svg>`;
 
 const CHECK_ICON   = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox-checked"/></svg>`;
 const UNCHECK_ICON = `<svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox"/></svg>`;
@@ -79,13 +79,9 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
   let isOpen = dropdown.style.display !== 'none';
 
   function setIcon(open) {
-    const svg = field.querySelector('.select__icon');
-    if (!svg) return;
-    while (svg.firstChild) svg.removeChild(svg.firstChild);
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', open ? 'M 8 0 L 16 8 L 0 8 Z' : 'M 8 8 L 0 0 L 16 0 Z');
-    path.setAttribute('fill', 'currentColor');
-    svg.appendChild(path);
+    const useEl = field.querySelector('.select__icon use');
+    if (!useEl) return;
+    useEl.setAttribute('href', open ? '#icon-arrow-drop-up' : '#icon-arrow-drop-down');
   }
 
   function openDropdown() {
