@@ -5,31 +5,30 @@
 .radio {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: var(--spacing-xs);
   cursor: pointer;
   user-select: none;
   border-radius: var(--radius-sm);
   border: none;
   background: transparent;
   min-height: 48px;
-  padding-inline-start: 0;
-  padding-inline-end: var(--spacing-xs);
+  padding: var(--spacing-xs);
   box-sizing: border-box;
   transition: background 0.15s;
 }
 
 .radio__icon-wrap {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .radio__icon {
-  width: 48px;
-  height: 48px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   color: var(--icon-primary);
   fill: currentColor;
   transition: color 0.15s;
