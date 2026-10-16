@@ -45,6 +45,10 @@
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
+.toggle__option + .toggle__option {
+  border-left: 1px solid var(--border-default);
+}
+
 .toggle__option:not(.toggle__option--selected):hover {
   background: var(--background-control-hover);
   color: var(--text-inverse);
