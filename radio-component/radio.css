@@ -54,13 +54,15 @@
 
 /* --- Hover background (unchecked) --- */
 .radio--hover,
-.radio--focus-hover {
+.radio--focus-hover,
+.radio:hover:not(.radio--disabled):not(.radio--checked):not(.radio--checked-hover) {
   background: var(--background-hover);
 }
 
 /* --- Hover background (checked) --- */
 .radio--checked-hover,
-.radio--checked-focus-hover {
+.radio--checked-focus-hover,
+.radio--checked:hover:not(.radio--disabled) {
   background: var(--background-hover);
 }
 

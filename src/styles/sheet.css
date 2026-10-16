@@ -4,6 +4,8 @@
    Not part of the component or page — purely for the reference sheet UI.
    ========================================================================== */
 
+@import url('./fonts.css');
+
 /* --------------------------------------------------------------------------
    Base
    -------------------------------------------------------------------------- */
@@ -23,13 +25,6 @@ body {
               0 0 0 1.5px var(--border-focus);
 }
 
-h1, h2, h3, h4, h5, h6,
-p, span, a, li, dt, dd,
-code, pre, label, caption,
-blockquote, figcaption {
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-}
 
 @media (max-width: 767px) {
   body { padding-block: var(--spacing-4xl); }
@@ -85,8 +80,7 @@ code.token-label {
   font-weight: 400;
   line-height: 1;
   letter-spacing: var(--type-display-letter-spacing);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+  text-box: trim-start cap;
 }
 
 .page-header__metadata {

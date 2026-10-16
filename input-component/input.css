@@ -84,7 +84,6 @@
   outline: none;
   appearance: none;
   padding: 0;
-  padding-top: 2px;
   margin: 0;
   font-family: inherit;
   font-size: var(--type-body-md-size);
@@ -92,6 +91,7 @@
   line-height: var(--type-body-md-line-height);
   color: var(--text-tertiary);
   cursor: inherit;
+  padding-top: 1px;
 }
 
 .input__value::placeholder {
@@ -161,8 +161,8 @@
 
 .input--focus .input__field,
 .input__field:focus-within {
-  border-color: var(--border-focus);
-  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------
@@ -172,8 +172,8 @@
 
 .input--focus-hover .input__field {
   background-color: var(--background-hover);
-  border-color: var(--border-focus);
-  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
 }
 
 .input--focus-hover .input__value {

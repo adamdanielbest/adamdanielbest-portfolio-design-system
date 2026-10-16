@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../src/styles/layout.css">
   <link rel="stylesheet" href="../src/styles/sheet.css">
   <link rel="stylesheet" href="../toggle-component/toggle.css">
+  <link rel="stylesheet" href="../radio-component/radio.css">
   <link rel="stylesheet" href="select.css">
 <style>
 
@@ -121,22 +122,6 @@
     display: flex;
     gap: var(--spacing-sm);
   }
-  .radio-option {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2xs);
-    cursor: pointer;
-    font-size: var(--type-label-size);
-    font-weight: var(--type-label-weight);
-    line-height: var(--type-label-line-height);
-    letter-spacing: var(--type-label-letter-spacing);
-    color: var(--text-primary);
-  }
-  .radio-option input[type="radio"] { display: none; }
-  .radio-icon { width: 16px; height: 16px; flex-shrink: 0; }
-  .radio-icon--checked { display: none; }
-  .radio-option input[type="radio"]:checked ~ .radio-icon--unchecked { display: none; }
-  .radio-option input[type="radio"]:checked ~ .radio-icon--checked { display: inline-block; }
 
 </style>
 </head>
@@ -365,19 +350,19 @@
     <div class="demo-type-picker-wrapper">
       <fieldset class="demo-type-picker">
         <legend class="demo-type-picker__legend">Mode</legend>
-        <div class="demo-type-picker__options">
-          <label class="radio-option">
-            <input type="radio" name="demo-select-mode" value="single" checked>
-            <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
-            <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
-            Single select
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="demo-select-mode" value="multi">
-            <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
-            <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
-            Multi select
-          </label>
+        <div class="demo-type-picker__options" role="radiogroup" aria-label="Mode">
+          <button type="button" class="radio radio--checked" data-mode="single" aria-checked="true" role="radio">
+            <span class="radio__icon-wrap" aria-hidden="true">
+              <svg class="radio__icon" viewBox="0 0 16 16"><use href="#icon-radio-button-checked"/></svg>
+            </span>
+            <span class="radio__label">Single select</span>
+          </button>
+          <button type="button" class="radio" data-mode="multi" aria-checked="false" role="radio">
+            <span class="radio__icon-wrap" aria-hidden="true">
+              <svg class="radio__icon" viewBox="0 0 16 16"><use href="#icon-radio-button-unchecked"/></svg>
+            </span>
+            <span class="radio__label">Multi select</span>
+          </button>
         </div>
       </fieldset>
     </div>
@@ -482,8 +467,16 @@
       });
     });
 
-    document.querySelectorAll('input[name="demo-select-mode"]').forEach(radio => {
-      radio.addEventListener('change', () => applyMode(radio.value));
+    document.querySelectorAll('[data-mode]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-mode]').forEach(b => {
+          const isSelected = b === btn;
+          b.classList.toggle('radio--checked', isSelected);
+          b.setAttribute('aria-checked', String(isSelected));
+          b.querySelector('use').setAttribute('href', isSelected ? '#icon-radio-button-checked' : '#icon-radio-button-unchecked');
+        });
+        applyMode(btn.dataset.mode);
+      });
     });
 
     // Initialise in single mode
