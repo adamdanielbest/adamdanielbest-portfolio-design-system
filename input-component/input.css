@@ -142,13 +142,13 @@
    State: hover
    -------------------------------------------------------------------------- */
 
-.input:not(.input--focus):not(.input--disabled) .input__field:hover,
+.input:not(.input--disabled) .input__field:hover,
 .input--hover .input__field {
   background-color: var(--background-hover);
   border-color: var(--border-action-secondary-hover);
 }
 
-.input:not(.input--focus):not(.input--disabled) .input__field:hover .input__value,
+.input:not(.input--disabled) .input__field:hover .input__value,
 .input--hover .input__value {
   color: var(--text-secondary);
 }
