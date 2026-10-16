@@ -161,6 +161,7 @@
 
 .input--focus .input__field,
 .input__field:focus-within {
+  border-color: var(--border-focus-inner);
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
 }
@@ -172,6 +173,7 @@
 
 .input--focus-hover .input__field {
   background-color: var(--background-hover);
+  border-color: var(--border-focus-inner);
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
 }
