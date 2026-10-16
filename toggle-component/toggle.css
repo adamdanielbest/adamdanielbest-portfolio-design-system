@@ -36,13 +36,6 @@
   white-space: nowrap;
 }
 
-.toggle__option:first-child {
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-}
-
-.toggle__option:last-child {
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-}
 
 .toggle__option:not(.toggle__option--selected):hover {
   background: var(--background-control-hover);
