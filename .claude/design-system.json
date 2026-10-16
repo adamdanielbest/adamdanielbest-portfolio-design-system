@@ -161,5 +161,8 @@
   },
   "log": {
     "path": "docs/progress.md"
+  },
+  "storybook": {
+    "url": "https://adamdanielbest.github.io/adamdanielbest-portfolio-design-system/storybook"
   }
 }

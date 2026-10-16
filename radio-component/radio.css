@@ -42,18 +42,25 @@
   transition: color 0.15s;
 }
 
-/* --- Selected background (checked states) --- */
+/* --- Selected background + inner border (checked states) --- */
 .radio--checked,
 .radio--checked-hover,
 .radio--checked-focus,
 .radio--checked-focus-hover {
   background: var(--background-selected);
+  box-shadow: 0 0 0 1px var(--border-subtle);
 }
 
 /* --- Hover background (unchecked) --- */
 .radio--hover,
 .radio--focus-hover {
-  background: var(--background-selected);
+  background: var(--background-hover);
+}
+
+/* --- Hover background (checked) --- */
+.radio--checked-hover,
+.radio--checked-focus-hover {
+  background: var(--background-hover);
 }
 
 /* --- Focus ring on whole component --- */
@@ -69,12 +76,12 @@
   border-radius: var(--radius-sm);
 }
 
-/* Checked + focus: inner ring separates the selected background from the outer ring */
+/* Checked + focus: inner border-subtle + focus ring layered */
 .radio--checked-focus,
 .radio--checked-focus-hover,
 .radio--checked:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--border-focus-inner), 0 0 0 5px var(--border-focus);
+  box-shadow: 0 0 0 1px var(--border-subtle), 0 0 0 3px var(--border-focus-inner), 0 0 0 6px var(--border-focus);
 }
 
 /* --- Pressed — dark bg, inverse content --- */
