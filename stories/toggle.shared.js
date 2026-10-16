@@ -10,8 +10,8 @@ export const renderToggle = ({ selected = 'a', state = 'default', density = 'des
   // Per-option state modifiers
   const aHover   = (state === 'hover' && selected === 'a') || state === 'option-hover' ? ' toggle__option--hover' : '';
   const bHover   = (state === 'hover' && selected === 'b') ? ' toggle__option--hover' : '';
-  const aFocus   = state === 'option-focus' && selected === 'a' ? ' toggle__option--focus' : '';
-  const bFocus   = state === 'option-focus' && selected === 'b' ? ' toggle__option--focus' : '';
+  const aFocus   = (state === 'focus' || state === 'focus-hover' || (state === 'option-focus' && selected === 'a')) ? ' toggle__option--focus' : '';
+  const bFocus   = (state === 'option-focus' && selected === 'b') ? ' toggle__option--focus' : '';
   const aPressed = state === 'pressed' && selected === 'a' ? ' toggle__option--pressed' : '';
   const bPressed = state === 'pressed' && selected === 'b' ? ' toggle__option--pressed' : '';
 

@@ -59,15 +59,16 @@
 
 .toggle:focus-within,
 .toggle--focus {
-  outline: none;
-  border-color: var(--border-focus);
-  box-shadow: inset 0 0 0 1px var(--border-focus-inner);
+  border-color: var(--border-focus-inner);
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
 }
 
 .toggle__option:focus,
-.toggle__option:focus-visible {
+.toggle__option:focus-visible,
+.toggle__option--focus {
   outline: none;
-  box-shadow: none;
+  box-shadow: inset 0 0 0 1px var(--border-focus-inner);
 }
 
 .toggle[data-no-transition] .toggle__option {
