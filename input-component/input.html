@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../src/styles/layout.css">
   <link rel="stylesheet" href="../src/styles/sheet.css">
   <link rel="stylesheet" href="../toggle-component/toggle.css">
+  <link rel="stylesheet" href="../radio-component/radio.css">
   <link rel="stylesheet" href="input.css">
 <style>
 
@@ -61,37 +62,6 @@
   .demo-type-picker__options {
     display: flex;
     gap: var(--spacing-sm);
-  }
-  .radio-option {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2xs);
-    cursor: pointer;
-    font-size: var(--type-label-size);
-    font-weight: var(--type-label-weight);
-    line-height: var(--type-label-line-height);
-    letter-spacing: var(--type-label-letter-spacing);
-    color: var(--text-primary);
-    user-select: none;
-  }
-  .radio-option input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .radio-icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    color: var(--text-secondary);
-    fill: currentColor;
-  }
-  .radio-icon--checked { display: none; }
-  .radio-option input[type="radio"]:checked ~ .radio-icon--unchecked { display: none; }
-  .radio-option input[type="radio"]:checked ~ .radio-icon--checked {
-    display: inline-block;
-    color: var(--text-primary);
   }
   .variant-card__grid {
     border-bottom: 1px solid var(--border-default);
@@ -588,29 +558,27 @@
       <p class="input__helper" title="Helper text">Helper text</p>
     </div>
     <div class="demo-type-picker-wrapper">
-    <fieldset class="demo-type-picker">
-      <legend class="demo-type-picker__legend">Type</legend>
-      <div class="demo-type-picker__options">
-        <label class="radio-option">
-          <input type="radio" name="demo-variant" value="text" checked>
-          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
-          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
-          Text
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="demo-variant" value="password">
-          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
-          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
-          Password
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="demo-variant" value="search">
-          <svg class="radio-icon radio-icon--unchecked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z"/></svg>
-          <svg class="radio-icon radio-icon--checked" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M 8,0 A 8,8 0 1,0 8,16 A 8,8 0 1,0 8,0 Z M 8,1.5 A 6.5,6.5 0 1,0 8,14.5 A 6.5,6.5 0 1,0 8,1.5 Z M 8,5 A 3,3 0 1,0 8,11 A 3,3 0 1,0 8,5 Z"/></svg>
-          Search
-        </label>
+      <p class="demo-type-picker__legend">Type</p>
+      <div class="demo-type-picker__options" role="radiogroup" aria-label="Type">
+        <button type="button" class="radio radio--checked" data-type="text" aria-checked="true" role="radio">
+          <span class="radio__icon-wrap" aria-hidden="true">
+            <svg class="radio__icon" viewBox="0 0 16 16"><use href="../src/icons/sprite.svg#icon-radio-button-checked"/></svg>
+          </span>
+          <span class="radio__label">Text</span>
+        </button>
+        <button type="button" class="radio" data-type="password" aria-checked="false" role="radio">
+          <span class="radio__icon-wrap" aria-hidden="true">
+            <svg class="radio__icon" viewBox="0 0 16 16"><use href="../src/icons/sprite.svg#icon-radio-button-unchecked"/></svg>
+          </span>
+          <span class="radio__label">Password</span>
+        </button>
+        <button type="button" class="radio" data-type="search" aria-checked="false" role="radio">
+          <span class="radio__icon-wrap" aria-hidden="true">
+            <svg class="radio__icon" viewBox="0 0 16 16"><use href="../src/icons/sprite.svg#icon-radio-button-unchecked"/></svg>
+          </span>
+          <span class="radio__label">Search</span>
+        </button>
       </div>
-    </fieldset>
     </div>
   </div>
 
@@ -642,8 +610,18 @@
     demoValue.value = '';
   }
 
-  document.querySelectorAll('input[name="demo-variant"]').forEach(radio => {
-    radio.addEventListener('change', () => applyVariant(radio.value));
+  document.querySelectorAll('[data-type]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-type]').forEach(b => {
+        const isSelected = b === btn;
+        b.classList.toggle('radio--checked', isSelected);
+        b.setAttribute('aria-checked', String(isSelected));
+        b.querySelector('use').setAttribute('href', isSelected
+          ? '../src/icons/sprite.svg#icon-radio-button-checked'
+          : '../src/icons/sprite.svg#icon-radio-button-unchecked');
+      });
+      applyVariant(btn.dataset.type);
+    });
   });
 
   if (demoInput && demoValue) {

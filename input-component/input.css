@@ -91,7 +91,7 @@
   line-height: var(--type-body-md-line-height);
   color: var(--text-tertiary);
   cursor: inherit;
-  padding-top: 1px;
+  padding-top: 2px;
 }
 
 .input__value::placeholder {
