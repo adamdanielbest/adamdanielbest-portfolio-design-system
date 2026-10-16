@@ -74,17 +74,32 @@
     padding: 2px 6px;
     border-radius: var(--radius-sm);
   }
+  .demo-density-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+  }
+  .demo-density-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  .demo-caption {
+    font-size: var(--type-caption-size);
+    line-height: var(--type-caption-line-height);
+    color: var(--text-tertiary);
+    margin: 0;
+  }
   .toggle__option--demo-hover { background: var(--background-control-hover) !important; }
   .toggle--demo-focus { outline: 3px solid var(--border-focus) !important; border-color: transparent !important; }
   .toggle__option--demo-option-hover { background: var(--background-control-hover) !important; color: var(--text-inverse) !important; }
   .toggle__option--demo-pressed { background: var(--background-control-pressed) !important; }
   .overline {
-    font-size: var(--type-overline-size);
-    font-weight: var(--type-overline-weight);
-    line-height: var(--type-overline-line-height);
-    letter-spacing: var(--type-overline-letter-spacing);
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
     color: var(--text-link);
-    text-transform: uppercase;
     margin: 0;
   }
 </style>
@@ -235,9 +250,21 @@
 
   <div class="variant-card__demo">
     <p class="overline">Demo</p>
-    <div class="toggle" role="group" aria-label="Theme" id="live-demo">
-      <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
-      <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+    <div class="demo-density-row">
+      <div class="demo-density-item">
+        <div class="toggle" role="group" aria-label="Theme" id="live-demo">
+          <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+          <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        </div>
+        <p class="demo-caption">Desktop</p>
+      </div>
+      <div class="demo-density-item">
+        <div class="toggle toggle--density-mobile" role="group" aria-label="Theme" id="live-demo-mobile">
+          <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+          <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        </div>
+        <p class="demo-caption">Mobile</p>
+      </div>
     </div>
   </div>
 </div>
@@ -283,6 +310,46 @@
   });
 </script>
 
+<script>
+  const liveDemoMobile = document.getElementById('live-demo-mobile');
+
+  function selectOptionMobile(target) {
+    const buttons = [...liveDemoMobile.querySelectorAll('button')];
+    buttons.forEach(b => {
+      const selected = b === target;
+      b.classList.toggle('toggle__option--selected', selected);
+      b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      b.tabIndex = selected ? 0 : -1;
+    });
+  }
+
+  liveDemoMobile.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) selectOptionMobile(btn);
+  });
+
+  liveDemoMobile.addEventListener('keydown', e => {
+    const buttons = [...liveDemoMobile.querySelectorAll('button')];
+    const currentIndex = buttons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = buttons[(currentIndex + 1) % buttons.length];
+      liveDemoMobile.dataset.noTransition = '';
+      selectOptionMobile(next);
+      next.focus();
+      requestAnimationFrame(() => delete liveDemoMobile.dataset.noTransition);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = buttons[(currentIndex - 1 + buttons.length) % buttons.length];
+      liveDemoMobile.dataset.noTransition = '';
+      selectOptionMobile(prev);
+      prev.focus();
+      requestAnimationFrame(() => delete liveDemoMobile.dataset.noTransition);
+    }
+  });
+</script>
+
 <!-- Token table -->
 <div class="variant-card variant-card--table">
   <div class="variant-card__grid">
@@ -316,7 +383,7 @@
           <td title="All">All</td>
         </tr>
         <tr>
-          <td><code class="token-label" title="border/subtle">border/subtle</code></td>
+          <td><code class="token-label" title="border/default">border/default</code></td>
           <td title="Track border">Track border</td>
           <td title="Default, hover, pressed, option-hover">Default, hover, pressed, option-hover</td>
         </tr>
