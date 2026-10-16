@@ -127,7 +127,7 @@ export function attachSelectInteraction(canvasElement, { multi = false } = {}) {
       opt.classList.toggle('select__option--selected', nowSelected);
       opt.setAttribute('aria-selected', String(nowSelected));
       const useEl = opt.querySelector('use');
-      if (useEl) useEl.setAttribute('href', nowSelected ? '#icon-checkbox-checked' : '#icon-checkbox');
+      if (useEl) swapIcon(useEl.closest('svg'), nowSelected ? '#icon-checkbox-checked' : '#icon-checkbox');
       updateFieldValue();
     } else {
       optionList.forEach(o => { o.classList.remove('select__option--selected'); o.setAttribute('aria-selected', 'false'); });

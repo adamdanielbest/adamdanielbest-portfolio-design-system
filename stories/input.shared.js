@@ -23,7 +23,7 @@ export const renderInput = ({ type = 'text', state = 'default', label = 'Label',
     : `<input class="input__value" type="text" placeholder="${inputPlaceholder}" value="${inputValue}"${ariaInvalid}${disabledAttr}>`;
 
   const helperText = type !== 'search'
-    ? `<p class="input__helper">Helper text</p>`
+    ? `<p class="input__helper">${state === 'error' ? 'Error message' : 'Helper text'}</p>`
     : '';
 
   return `

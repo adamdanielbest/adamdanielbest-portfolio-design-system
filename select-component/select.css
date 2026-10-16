@@ -129,7 +129,23 @@
    Simulated with .select--open class for the reference sheet
    -------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------
+   State: focus
+   Keyboard focus without opening — distinct from open state
+   -------------------------------------------------------------------------- */
+
+.select--focus .select__field {
+  border-color: var(--border-focus-inner);
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.select--focus .select__icon {
+  color: var(--text-secondary);
+}
+
 .select--open .select__field {
+  border-color: var(--border-focus-inner);
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
 }
@@ -142,6 +158,7 @@
 
 .select--focus-hover .select__field {
   background-color: var(--background-hover);
+  border-color: var(--border-focus-inner);
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
 }
@@ -151,6 +168,7 @@
 }
 
 .select--open .select__icon,
+.select--focus .select__icon,
 .select--focus-hover .select__icon {
   color: var(--text-secondary);
 }
