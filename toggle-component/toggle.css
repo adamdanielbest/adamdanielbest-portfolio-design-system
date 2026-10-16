@@ -48,7 +48,8 @@
 }
 
 
-.toggle__option:not(.toggle__option--selected):hover {
+.toggle__option:not(.toggle__option--selected):hover,
+.toggle__option--hover:not(.toggle__option--selected) {
   background: var(--background-control-hover);
   color: var(--text-inverse);
 }
@@ -58,8 +59,14 @@
   color: var(--text-inverse);
 }
 
-.toggle__option--selected:hover {
+.toggle__option--selected:hover,
+.toggle__option--selected.toggle__option--hover {
   background: var(--background-control-hover);
+}
+
+.toggle__option--selected:active,
+.toggle__option--selected.toggle__option--pressed {
+  background: var(--background-control-pressed);
 }
 
 .toggle:focus-within,
@@ -79,9 +86,6 @@
   transition: none;
 }
 
-.toggle__option--selected:active {
-  background: var(--background-control-pressed);
-}
 
 /* Mobile density — 48px touch targets */
 .toggle--density-mobile .toggle__option {
