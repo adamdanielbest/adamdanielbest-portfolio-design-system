@@ -31,6 +31,7 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.15s, color 0.15s;
+  padding-top: 2px;
   user-select: none;
   white-space: nowrap;
 }
@@ -61,7 +62,7 @@
 .toggle--focus {
   border-color: var(--border-focus-inner);
   outline: 3px solid var(--border-focus);
-  outline-offset: 2px;
+  outline-offset: 0;
 }
 
 .toggle__option:focus,
