@@ -31,7 +31,6 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.15s, color 0.15s;
-  padding-top: 2px;
   user-select: none;
   white-space: nowrap;
 }
