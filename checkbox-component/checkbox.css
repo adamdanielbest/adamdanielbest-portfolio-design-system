@@ -10,6 +10,8 @@
   user-select: none;
   border-radius: var(--radius-sm);
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
   background: transparent;
   min-height: 48px;
   padding-inline-start: 0;
