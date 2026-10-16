@@ -7,7 +7,7 @@
   align-items: center;
   gap: 0;
   border-radius: var(--radius-sm);
-  border: 3px solid var(--border-default);
+  border: var(--border-width-default) solid var(--border-default);
   background: var(--background-input);
   overflow: hidden;
 }
