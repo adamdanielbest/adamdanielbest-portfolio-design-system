@@ -6,6 +6,8 @@ import '../src/styles/generated/tokens-light.css';
 import '../src/styles/generated/tokens-dark.css';
 import '../src/styles/generated/tokens-desktop.css';
 import '../src/styles/generated/tokens-mobile.css';
+// Global reset — matches what every component HTML page gets via layout.css
+import '../src/styles/layout.css';
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
@@ -32,7 +34,7 @@ const preview = {
       const wrapper = document.createElement('div');
       wrapper.setAttribute('data-theme', theme);
       wrapper.style.background = 'var(--background-page)';
-      wrapper.style.fontFamily = "var(--type-family-regular, 'Eina04'), Arial, sans-serif";
+      wrapper.style.fontFamily = "var(--type-family-primary, 'Eina04'), Arial, sans-serif";
       wrapper.style.padding = '24px';
       wrapper.style.minHeight = '100px';
       wrapper.innerHTML = story();
