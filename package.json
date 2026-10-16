@@ -27,6 +27,7 @@
     "@storybook/addon-a11y": "^10.6.1",
     "@storybook/addon-docs": "^10.6.1",
     "@storybook/html-vite": "^10.6.1",
+    "html-validate": "^11.16.2",
     "storybook": "^10.6.1"
   }
 }

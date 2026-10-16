@@ -205,7 +205,9 @@
    -------------------------------------------------------------------------- */
 
 .select--error .select__field {
-  border-color: var(--border-error);
+  border-color: var(--border-focus-inner);
+  outline: 3px solid var(--border-error);
+  outline-offset: 2px;
 }
 
 .select--error .select__helper {

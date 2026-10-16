@@ -217,11 +217,25 @@
    -------------------------------------------------------------------------- */
 
 .input--error .input__field {
-  border-color: var(--border-error);
+  border-color: var(--border-focus-inner);
+  outline: 3px solid var(--border-error);
+  outline-offset: 2px;
 }
 
 .input--error .input__helper {
   color: var(--text-error);
+}
+
+/* --------------------------------------------------------------------------
+   State: error + focus
+   Native :focus-within fires on the inner <input> when error state is active.
+   Keep red border and switch the outline to the error colour.
+   -------------------------------------------------------------------------- */
+
+.input--error .input__field:focus-within {
+  border-color: var(--border-error);
+  outline: 3px solid var(--border-error);
+  outline-offset: 2px;
 }
 
 /* Demo helpers */

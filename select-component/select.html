@@ -53,9 +53,10 @@
   }
   .variant-card__grid {
     border-bottom: 1px solid var(--border-default);
-    border-top-left-radius: var(--radius-lg);
-    border-top-right-radius: var(--radius-lg);
-    overflow: hidden;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   table {
     border-collapse: collapse;
@@ -210,6 +211,7 @@
           <th title="Filled">Filled</th>
           <th title="Disabled">Disabled</th>
           <th title="Error">Error</th>
+          <th title="Focus">Focus</th>
           <th title="Focus hover">Focus hover</th>
         </tr>
       </thead>
@@ -307,6 +309,21 @@
             </div>
           </td>
 
+          <!-- Focus -->
+          <td class="demo-cell">
+            <div class="select select--focus">
+              <div class="select__label-row">
+                <span class="select__label" title="Label">Label</span>
+                <span class="select__required" aria-hidden="true" title="Required">*</span>
+              </div>
+              <div class="select__field" role="combobox" aria-expanded="false" tabindex="0">
+                <span class="select__value" title="Select option...">Select option...</span>
+                <svg class="select__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="../src/icons/sprite.svg#icon-arrow-drop-down"/></svg>
+              </div>
+              <p class="select__helper" title="Helper text">Helper text</p>
+            </div>
+          </td>
+
           <!-- Focus hover -->
           <td class="demo-cell">
             <div class="select select--focus-hover">
@@ -334,10 +351,12 @@
         <span class="select__label" title="Label">Label</span>
         <span class="select__required" aria-hidden="true" title="Required"> *</span>
       </div>
-      <div class="select__field" role="combobox" aria-expanded="false" aria-haspopup="listbox" tabindex="0" id="demo-select-field">
-        <span class="select__value" title="Select option..." id="demo-select-value">Select option...</span>
-        <svg class="select__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="../src/icons/sprite.svg#icon-arrow-drop-down"/></svg>
-        <ul class="select__dropdown" role="listbox" aria-label="Options" id="demo-select-dropdown">
+      <div class="select__field-wrap">
+        <div class="select__field" role="combobox" aria-expanded="false" aria-haspopup="listbox" tabindex="0" id="demo-select-field">
+          <span class="select__value" title="Select option..." id="demo-select-value">Select option...</span>
+          <svg class="select__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="../src/icons/sprite.svg#icon-arrow-drop-down"/></svg>
+        </div>
+        <ul class="select__dropdown" role="listbox" aria-label="Options" id="demo-select-dropdown" style="display:none">
           <li class="select__option" role="option" aria-selected="false" title="Option one"><span>Option one</span><svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox"/></svg></li>
           <li class="select__option" role="option" aria-selected="false" title="Option two"><span>Option two</span><svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox"/></svg></li>
           <li class="select__option" role="option" aria-selected="false" title="Option three"><span>Option three</span><svg class="select__option-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-checkbox"/></svg></li>
