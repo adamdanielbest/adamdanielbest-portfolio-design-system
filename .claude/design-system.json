@@ -93,7 +93,9 @@
       "name": "content-section",
       "figmaNodeId": "2934:4669",
       "cssFile": "content-section-component/content-section.css",
-      "htmlFile": "content-section-component/content-section.html"
+      "htmlFile": "content-section-component/content-section.html",
+      "sharedFile": "stories/content-section.shared.js",
+      "storiesDir": "stories/ContentSection.stories.js"
     },
     {
       "name": "header",
