@@ -37,29 +37,30 @@
   max-width: 375px;
 }
 
-/* --------------------------------------------------------------------------
-   Logo
-   Mirrors logo/wordmark component: wordmark text + 2px accent underscore
-   -------------------------------------------------------------------------- */
-.header__logo {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0;
+.header-demo--desktop-closed {
+  width: 48px;
+  min-width: 48px;
+  padding-left: 0;
+  border-right: 1px solid var(--border-subtle);
 }
 
-.header__logo-wordmark {
+/* --------------------------------------------------------------------------
+   Logo — rendered as <a> (logo/wordmark-link component)
+   Underline is a text decoration on the wordmark: 2px, offset 0, brand/cobalt.
+   -------------------------------------------------------------------------- */
+.header__logo {
+  display: inline-block;
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-heading-md-size);
   font-weight: 400;
   line-height: 1;
   color: var(--text-primary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-}
-
-.header__logo-underscore {
-  height: 2px;
-  background: var(--text-link);
+  text-box: trim-both cap alphabetic;
+  text-decoration: underline;
+  text-decoration-color: var(--text-link);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0;
+  text-decoration-skip-ink: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -77,12 +78,14 @@
   margin-left: auto;
   background: none;
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
   padding: 0;
   cursor: default;
 }
 
 .header__icon {
-  width: 32px;
-  height: 32px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   fill: var(--icon-accent);
 }

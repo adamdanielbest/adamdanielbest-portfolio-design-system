@@ -93,7 +93,9 @@
       "name": "header",
       "figmaNodeId": "2933:30176",
       "cssFile": "header-component/header.css",
-      "htmlFile": "header-component/header.html"
+      "htmlFile": "header-component/header.html",
+      "sharedFile": "stories/header.shared.js",
+      "storiesDir": "stories/Header.stories.js"
     },
     {
       "name": "icon",

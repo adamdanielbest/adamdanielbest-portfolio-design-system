@@ -48,35 +48,41 @@
       <span class="demo-controls__divider" aria-hidden="true"></span>
       <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
 
-        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="light">Light</button>
 
-        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="dark">Dark</button>
 
       </div>
     </div>
 
     <script>
       document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const btns = themeToggle.querySelectorAll('.toggle__option');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => { b.classList.remove('toggle__option--selected'); b.setAttribute('aria-pressed', 'false'); b.tabIndex = -1; });
+            btn.classList.add('toggle__option--selected');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.tabIndex = 0;
+            const val = btn.dataset.value;
+            document.documentElement.dataset.theme = val;
+            const bt = document.querySelector('.breadcrumb-theme');
+            if (bt) bt.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+          });
         });
-      });
+      }
     </script>
 
     <!-- Mobile — 375px -->
     <div class="header-variant-card">
       <p class="overline">Mobile · 375px</p>
       <header class="header-demo header-demo--mobile" aria-label="Site header, mobile">
-        <div class="header__logo">
-          <span class="header__logo-wordmark">adamdanielbest</span>
-          <span class="header__logo-underscore" aria-hidden="true"></span>
-        </div>
+        <a href="/" class="header__logo" tabindex="-1">adamdanielbest</a>
         <button class="header__icon-btn" type="button" aria-label="Open menu" tabindex="-1">
           <svg class="header__icon" aria-hidden="true" focusable="false">
-            <use href="#icon-top-panel-open"></use>
+            <use href="#icon-top-panel-open-sm"></use>
           </svg>
         </button>
       </header>
@@ -85,14 +91,36 @@
     <!-- Tablet — 768px -->
     <div class="header-variant-card">
       <p class="overline">Tablet · 768px</p>
-      <header class="header-demo header-demo--tablet" aria-label="Site header, tablet">
-        <div class="header__logo">
-          <span class="header__logo-wordmark">adamdanielbest</span>
-          <span class="header__logo-underscore" aria-hidden="true"></span>
-        </div>
+      <header class="header-demo" aria-label="Site header, tablet">
+        <a href="/" class="header__logo" tabindex="-1">adamdanielbest</a>
         <button class="header__icon-btn" type="button" aria-label="Open menu" tabindex="-1">
           <svg class="header__icon" aria-hidden="true" focusable="false">
-            <use href="#icon-top-panel-open"></use>
+            <use href="#icon-top-panel-open-sm"></use>
+          </svg>
+        </button>
+      </header>
+    </div>
+
+    <!-- Desktop Open — left panel visible, icon closes it -->
+    <div class="header-variant-card">
+      <p class="overline">Desktop Open</p>
+      <header class="header-demo" aria-label="Site header, desktop open">
+        <a href="/" class="header__logo" tabindex="-1">adamdanielbest</a>
+        <button class="header__icon-btn" type="button" aria-label="Close sidebar" tabindex="-1">
+          <svg class="header__icon" aria-hidden="true" focusable="false">
+            <use href="#icon-left-panel-close-sm"></use>
+          </svg>
+        </button>
+      </header>
+    </div>
+
+    <!-- Desktop Closed — sidebar hidden, 48×48 strip with right border -->
+    <div class="header-variant-card">
+      <p class="overline">Desktop Closed</p>
+      <header class="header-demo header-demo--desktop-closed" aria-label="Site header, desktop closed">
+        <button class="header__icon-btn" type="button" aria-label="Open sidebar" tabindex="-1">
+          <svg class="header__icon" aria-hidden="true" focusable="false">
+            <use href="#icon-left-panel-open-sm"></use>
           </svg>
         </button>
       </header>
