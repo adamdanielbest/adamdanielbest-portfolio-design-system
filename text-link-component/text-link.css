@@ -26,9 +26,9 @@
   white-space: nowrap;
   box-sizing: border-box;
   border: none;
-  pointer-events: none;
 }
 
+.link-demo:hover,
 .link-demo--hover {
   color: var(--text-link-hover);
 }
@@ -37,6 +37,7 @@
   color: var(--text-link-visited);
 }
 
+.link-demo:focus-visible,
 .link-demo--focus,
 .link-demo--focus-hover {
   padding-top: 0;
@@ -47,10 +48,12 @@
   border-radius: var(--radius-xs);
 }
 
+.link-demo:focus-visible,
 .link-demo--focus {
   color: var(--text-link);
 }
 
+.link-demo:focus-visible:hover,
 .link-demo--focus-hover {
   color: var(--text-link-hover);
 }
@@ -58,4 +61,5 @@
 .link-demo--disabled {
   color: var(--text-disabled);
   cursor: not-allowed;
+  pointer-events: none;
 }
