@@ -63,6 +63,11 @@
   text-decoration-skip-ink: none;
 }
 
+.header__logo:hover,
+.header__logo--hover {
+  color: var(--text-link-hover);
+}
+
 /* --------------------------------------------------------------------------
    Menu icon button
    Touch target: 48×48. Icon glyph: 32×32. Pushed to far right by auto margin.

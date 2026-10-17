@@ -19,8 +19,9 @@ function ensureSprite() {
     });
 }
 
-function logoHTML() {
-  return `<a href="/" class="header__logo">adamdanielbest</a>`;
+function logoHTML(hover = false) {
+  const cls = hover ? 'header__logo header__logo--hover' : 'header__logo';
+  return `<a href="/" class="${cls}">adamdanielbest</a>`;
 }
 
 const ICON_MAP = {
@@ -40,7 +41,7 @@ function iconBtnHTML(breakpoint) {
     </button>`;
 }
 
-export function renderHeader({ breakpoint = 'mobile' } = {}) {
+export function renderHeader({ breakpoint = 'mobile' } = {}, { logoHover = false } = {}) {
   ensureSprite();
 
   const isMobile        = breakpoint === 'mobile';
@@ -51,7 +52,7 @@ export function renderHeader({ breakpoint = 'mobile' } = {}) {
   if (isDesktopClosed) modifiers.push('header-demo--desktop-closed');
 
   const label = `Site header, ${breakpoint.replace('-', ' ')}`;
-  const logo  = isDesktopClosed ? '' : logoHTML();
+  const logo  = isDesktopClosed ? '' : logoHTML(logoHover);
   const icon  = iconBtnHTML(breakpoint);
 
   return `<header class="${modifiers.join(' ')}" aria-label="${label}">${logo}${icon}</header>`;
