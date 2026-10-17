@@ -51,22 +51,31 @@
       <span class="demo-controls__divider" aria-hidden="true"></span>
       <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
 
-        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="light">Light</button>
 
-        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="dark">Dark</button>
 
       </div>
     </div>
 
     <script>
       document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const btns = themeToggle.querySelectorAll('.toggle__option');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => { b.classList.remove('toggle__option--selected'); b.setAttribute('aria-pressed', 'false'); b.tabIndex = -1; });
+            btn.classList.add('toggle__option--selected');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.tabIndex = 0;
+            const val = btn.dataset.value;
+            document.documentElement.dataset.theme = val;
+            const bt = document.querySelector('.breadcrumb-theme');
+            if (bt) bt.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+          });
         });
-      });
+      }
     </script>
 
     <!-- Variant matrix -->

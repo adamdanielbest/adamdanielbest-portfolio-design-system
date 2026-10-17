@@ -69,7 +69,9 @@
       "name": "card",
       "figmaNodeId": "2925:8244",
       "cssFile": "card-component/card.css",
-      "htmlFile": "card-component/card.html"
+      "htmlFile": "card-component/card.html",
+      "sharedFile": "stories/card.shared.js",
+      "storiesDir": "stories/Card.stories.js"
     },
     {
       "name": "card-item",
