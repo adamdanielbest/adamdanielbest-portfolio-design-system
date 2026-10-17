@@ -55,34 +55,23 @@
 }
 
 /* --------------------------------------------------------------------------
-   Demo sheet aliases — sheet use only, not for composition
+   Simulated state modifiers — sheet use only
    -------------------------------------------------------------------------- */
-.nav-link-demo { /* alias for demo sheet */ }
-
-.nav-link-demo--hover {
+.nav-link--hover {
   color: var(--text-link-hover);
 }
 
-.nav-link-demo--hover .nav-link__label {
+.nav-link--hover .nav-link__label {
   color: var(--text-link-hover);
 }
 
-.nav-link-demo--focus,
-.nav-link-demo--focus-hover {
+.nav-link--focus,
+.nav-link--focus-hover {
   outline: var(--border-width-focus) solid var(--border-focus);
   outline-offset: 2px;
   border-radius: var(--radius-xs);
 }
 
-.nav-link-demo--focus-hover .nav-link__label {
+.nav-link--focus-hover .nav-link__label {
   color: var(--text-link-hover);
-}
-
-.nav-link-demo__icon {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  width: var(--icon-size-xs);
-  height: var(--icon-size-xs);
-  fill: currentColor;
 }

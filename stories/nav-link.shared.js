@@ -3,13 +3,13 @@ import '../nav-link-component/nav-link.css';
 import './sprite.js';
 
 export const renderNavLink = ({ state = 'default', label = 'Link text', iconLeft = false, iconRight = false } = {}) => {
-  const stateMap = { hover: 'nav-link-demo--hover', focus: 'nav-link-demo--focus', 'focus-hover': 'nav-link-demo--focus-hover' };
+  const stateMap = { hover: 'nav-link--hover', focus: 'nav-link--focus', 'focus-hover': 'nav-link--focus-hover' };
   const stateClass = stateMap[state] ? ` ${stateMap[state]}` : '';
 
   const iconLeftSvg  = `<svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>`;
   const iconRightSvg = `<svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>`;
 
-  return `<a class="nav-link nav-link-demo${stateClass}" href="#">
+  return `<a class="nav-link${stateClass}" href="#">
   ${iconLeft ? iconLeftSvg + '\n  ' : ''}<span class="nav-link__label">${label}</span>${iconRight ? '\n  ' + iconRightSvg : ''}
 </a>`.trim();
 };

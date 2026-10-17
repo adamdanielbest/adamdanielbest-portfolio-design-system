@@ -24,7 +24,7 @@
 .sidebar-demo {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   background: var(--background-card);
   pointer-events: none;
 }
@@ -53,34 +53,8 @@
 .sidebar__inner {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   padding: var(--spacing-lg);
-}
-
-/* --------------------------------------------------------------------------
-   Logo (desktop only)
-   Mirrors logo/wordmark component: wordmark text + 2px accent underscore bar
-   -------------------------------------------------------------------------- */
-.sidebar__logo {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0;
-  align-self: flex-start;
-}
-
-.sidebar__logo-wordmark {
-  font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-lg-size);
-  font-weight: 400;
-  line-height: 1;
-  color: var(--text-primary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-}
-
-.sidebar__logo-underscore {
-  height: 2px;
-  background: var(--text-link);
 }
 
 /* --------------------------------------------------------------------------
@@ -100,118 +74,11 @@
 }
 
 /* --------------------------------------------------------------------------
-   Sections
+   Context overrides — strip reading-column max-width inside sidebar
    -------------------------------------------------------------------------- */
-.sidebar__section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-/* --------------------------------------------------------------------------
-   Section headings — type/heading-3 (20px) in text/primary
-   -------------------------------------------------------------------------- */
-.sidebar__heading {
-  margin: 0;
-  font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-sm-size);
-  font-weight: 400;
-  line-height: 1;
-  color: var(--text-primary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-}
-
-/* --------------------------------------------------------------------------
-   Bio
-   -------------------------------------------------------------------------- */
-.sidebar__bio {
-  margin: 0;
-  font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-md-size);
-  line-height: var(--type-body-md-line-height);
-  color: var(--text-primary);
-}
-
-/* --------------------------------------------------------------------------
-   Timeline
-   -------------------------------------------------------------------------- */
-.sidebar__timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.sidebar__timeline-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding-top: var(--spacing-xs);
-  padding-bottom: var(--spacing-xs);
-  position: relative;
-}
-
-.sidebar__timeline-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 24px;
-  bottom: -24px;
-  width: 1px;
-  background: var(--text-tertiary);
-  z-index: 0;
-}
-
-.sidebar__timeline-icon {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
-.sidebar__timeline-icon::before {
-  content: '';
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--icon-primary);
-}
-
-.sidebar__timeline-item--current .sidebar__timeline-icon::before {
-  background: var(--background-card);
-  border: 2px solid var(--icon-primary);
-  box-sizing: border-box;
-}
-
-.sidebar__timeline-body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-}
-
-.sidebar__timeline-company {
-  display: block;
-  font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-md-size);
-  line-height: 1;
-  color: var(--text-primary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
-}
-
-.sidebar__timeline-meta {
-  display: block;
-  font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-caption-size);
-  line-height: 1;
-  color: var(--text-secondary);
-  text-box-trim: trim-both;
-  text-box-edge: cap alphabetic;
+.sidebar-demo .content-section__heading,
+.sidebar-demo .content-section__body {
+  max-width: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -222,22 +89,6 @@
   flex-direction: column;
   gap: 0;
   align-items: flex-start;
-}
-
-/* --------------------------------------------------------------------------
-   Text-link — matches text-link component (4px top/bottom, 2px left/right)
-   -------------------------------------------------------------------------- */
-.sidebar__text-link {
-  display: inline-flex;
-  align-items: center;
-  height: 48px;
-  font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-md-size);
-  line-height: var(--type-body-md-line-height);
-  color: var(--text-link);
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  cursor: default;
 }
 
 /* --------------------------------------------------------------------------

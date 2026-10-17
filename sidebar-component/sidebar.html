@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="../src/styles/layout.css">
   <link rel="stylesheet" href="../src/styles/sheet.css">
   <link rel="stylesheet" href="../toggle-component/toggle.css">
+  <link rel="stylesheet" href="../content-section-component/content-section.css">
+  <link rel="stylesheet" href="../timeline-component/timeline.css">
+  <link rel="stylesheet" href="../text-link-component/text-link.css">
   <link rel="stylesheet" href="../button-component/button.css">
 
   <link rel="stylesheet" href="sidebar.css">
@@ -49,97 +52,106 @@
       <span class="demo-controls__divider" aria-hidden="true"></span>
       <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
 
-        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="light">Light</button>
 
-        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="dark">Dark</button>
 
       </div>
     </div>
 
     <script>
       document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const btns = themeToggle.querySelectorAll('.toggle__option');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => { b.classList.remove('toggle__option--selected'); b.setAttribute('aria-pressed', 'false'); b.tabIndex = -1; });
+            btn.classList.add('toggle__option--selected');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.tabIndex = 0;
+            const val = btn.dataset.value;
+            document.documentElement.dataset.theme = val;
+            const bt = document.querySelector('.breadcrumb-theme');
+            if (bt) bt.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+          });
         });
-      });
+      }
     </script>
 
     <!-- Mobile — no border on sidebar, full card wrapper -->
     <div class="sidebar-variant-card">
       <p class="overline">Mobile · 375px</p>
       <aside class="sidebar-demo sidebar-demo--mobile" aria-label="Sidebar, mobile">
-        <section class="sidebar__section">
-          <h2 class="sidebar__heading">About me</h2>
-          <p class="sidebar__bio">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+        <section class="content-section">
+          <h2 class="content-section__heading">About me</h2>
+          <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
         </section>
 
-        <section class="sidebar__section">
-          <h2 class="sidebar__heading">Career timeline</h2>
-          <ol class="sidebar__timeline" aria-label="Career timeline">
-            <li class="sidebar__timeline-item sidebar__timeline-item--current">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">giffgaff</span>
-                <span class="sidebar__timeline-meta">Product Designer · 2023</span>
+        <section class="content-section">
+          <h2 class="content-section__heading">Career timeline</h2>
+          <ol class="timeline" aria-label="Career timeline">
+            <li class="timeline-item timeline-item--current">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">giffgaff</span>
+                <span class="timeline-item__meta">Product Designer · 2023</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">Lickd</span>
-                <span class="sidebar__timeline-meta">Product Designer · 2020</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Lickd</span>
+                <span class="timeline-item__meta">Product Designer · 2020</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">HubbleHQ</span>
-                <span class="sidebar__timeline-meta">Product Designer · 2019</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">HubbleHQ</span>
+                <span class="timeline-item__meta">Product Designer · 2019</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">ORDRE</span>
-                <span class="sidebar__timeline-meta">UI Designer · 2019</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">ORDRE</span>
+                <span class="timeline-item__meta">UI Designer · 2019</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">Harrods</span>
-                <span class="sidebar__timeline-meta">Lead Digital Designer · 2018</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Harrods</span>
+                <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">Boutique 1</span>
-                <span class="sidebar__timeline-meta">Digital Designer · 2017</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Boutique 1</span>
+                <span class="timeline-item__meta">Digital Designer · 2017</span>
               </div>
             </li>
-            <li class="sidebar__timeline-item">
-              <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-              <div class="sidebar__timeline-body">
-                <span class="sidebar__timeline-company">Burberry</span>
-                <span class="sidebar__timeline-meta">Digital Designer · 2009</span>
+            <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Burberry</span>
+                <span class="timeline-item__meta">Digital Designer · 2009</span>
               </div>
             </li>
           </ol>
           <div class="sidebar__cv">
-            <a class="sidebar__text-link" href="#">More about my experience</a>
+            <a class="text-link" href="#">More about my experience</a>
             <button class="btn btn--primary btn--large" type="button">Download CV</button>
           </div>
         </section>
 
-        <footer class="sidebar__section">
-          <h2 class="sidebar__heading">Get in touch</h2>
+        <footer class="content-section">
+          <h2 class="content-section__heading">Get in touch</h2>
           <div class="sidebar__links">
-            <a class="sidebar__text-link" href="#">Email</a>
-            <a class="sidebar__text-link" href="#">LinkedIn</a>
+            <a class="text-link" href="#">Email</a>
+            <a class="text-link" href="#">LinkedIn</a>
           </div>
         </footer>
       </aside>
@@ -151,74 +163,74 @@
       <aside class="sidebar-demo sidebar-demo--tablet" aria-label="Sidebar, tablet">
         <div class="sidebar__tablet-container">
           <div class="sidebar__tablet-col">
-            <section class="sidebar__section">
-              <h2 class="sidebar__heading">About me</h2>
-              <p class="sidebar__bio">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+            <section class="content-section">
+              <h2 class="content-section__heading">About me</h2>
+              <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
             </section>
-            <footer class="sidebar__section">
-              <h2 class="sidebar__heading">Get in touch</h2>
+            <footer class="content-section">
+              <h2 class="content-section__heading">Get in touch</h2>
               <div class="sidebar__links">
-                <a class="sidebar__text-link" href="#">Email</a>
-                <a class="sidebar__text-link" href="#">LinkedIn</a>
+                <a class="text-link" href="#">Email</a>
+                <a class="text-link" href="#">LinkedIn</a>
               </div>
             </footer>
           </div>
           <div class="sidebar__tablet-col">
-            <section class="sidebar__section">
-              <h2 class="sidebar__heading">Career timeline</h2>
-              <ol class="sidebar__timeline" aria-label="Career timeline">
-                <li class="sidebar__timeline-item sidebar__timeline-item--current">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">giffgaff</span>
-                    <span class="sidebar__timeline-meta">Product Designer · 2023</span>
+            <section class="content-section">
+              <h2 class="content-section__heading">Career timeline</h2>
+              <ol class="timeline" aria-label="Career timeline">
+                <li class="timeline-item timeline-item--current">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">giffgaff</span>
+                    <span class="timeline-item__meta">Product Designer · 2023</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">Lickd</span>
-                    <span class="sidebar__timeline-meta">Product Designer · 2020</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">Lickd</span>
+                    <span class="timeline-item__meta">Product Designer · 2020</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">HubbleHQ</span>
-                    <span class="sidebar__timeline-meta">Product Designer · 2019</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">HubbleHQ</span>
+                    <span class="timeline-item__meta">Product Designer · 2019</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">ORDRE</span>
-                    <span class="sidebar__timeline-meta">UI Designer · 2019</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">ORDRE</span>
+                    <span class="timeline-item__meta">UI Designer · 2019</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">Harrods</span>
-                    <span class="sidebar__timeline-meta">Lead Digital Designer · 2018</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">Harrods</span>
+                    <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">Boutique 1</span>
-                    <span class="sidebar__timeline-meta">Digital Designer · 2017</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">Boutique 1</span>
+                    <span class="timeline-item__meta">Digital Designer · 2017</span>
                   </div>
                 </li>
-                <li class="sidebar__timeline-item">
-                  <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                  <div class="sidebar__timeline-body">
-                    <span class="sidebar__timeline-company">Burberry</span>
-                    <span class="sidebar__timeline-meta">Digital Designer · 2009</span>
+                <li class="timeline-item">
+                  <span class="timeline-item__icon" aria-hidden="true"></span>
+                  <div class="timeline-item__body">
+                    <span class="timeline-item__company">Burberry</span>
+                    <span class="timeline-item__meta">Digital Designer · 2009</span>
                   </div>
                 </li>
               </ol>
               <div class="sidebar__cv">
-                <a class="sidebar__text-link" href="#">More about my experience</a>
+                <a class="text-link" href="#">More about my experience</a>
                 <button class="btn btn--primary btn--large" type="button">Download CV</button>
               </div>
             </section>
@@ -227,85 +239,80 @@
       </aside>
     </div>
 
-    <!-- Desktop — right border only, logo at top, 32px inner padding -->
+    <!-- Desktop — right border only, 32px inner padding -->
     <div class="sidebar-variant-card">
       <p class="overline">Desktop · 360px</p>
       <aside class="sidebar-demo sidebar-demo--desktop" aria-label="Sidebar, desktop">
         <div class="sidebar__inner">
-          <div class="sidebar__logo">
-            <span class="sidebar__logo-wordmark">adamdanielbest</span>
-            <span class="sidebar__logo-underscore" aria-hidden="true"></span>
-          </div>
-
-          <section class="sidebar__section">
-            <h2 class="sidebar__heading">About me</h2>
-            <p class="sidebar__bio">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+          <section class="content-section">
+            <h2 class="content-section__heading">About me</h2>
+            <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
           </section>
 
-          <section class="sidebar__section">
-            <h2 class="sidebar__heading">Career timeline</h2>
-            <ol class="sidebar__timeline" aria-label="Career timeline">
-              <li class="sidebar__timeline-item sidebar__timeline-item--current">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">giffgaff</span>
-                  <span class="sidebar__timeline-meta">Product Designer · 2023</span>
+          <section class="content-section">
+            <h2 class="content-section__heading">Career timeline</h2>
+            <ol class="timeline" aria-label="Career timeline">
+              <li class="timeline-item timeline-item--current">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">giffgaff</span>
+                  <span class="timeline-item__meta">Product Designer · 2023</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">Lickd</span>
-                  <span class="sidebar__timeline-meta">Product Designer · 2020</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">Lickd</span>
+                  <span class="timeline-item__meta">Product Designer · 2020</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">HubbleHQ</span>
-                  <span class="sidebar__timeline-meta">Product Designer · 2019</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">HubbleHQ</span>
+                  <span class="timeline-item__meta">Product Designer · 2019</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">ORDRE</span>
-                  <span class="sidebar__timeline-meta">UI Designer · 2019</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">ORDRE</span>
+                  <span class="timeline-item__meta">UI Designer · 2019</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">Harrods</span>
-                  <span class="sidebar__timeline-meta">Lead Digital Designer · 2018</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">Harrods</span>
+                  <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">Boutique 1</span>
-                  <span class="sidebar__timeline-meta">Digital Designer · 2017</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">Boutique 1</span>
+                  <span class="timeline-item__meta">Digital Designer · 2017</span>
                 </div>
               </li>
-              <li class="sidebar__timeline-item">
-                <span class="sidebar__timeline-icon" aria-hidden="true"></span>
-                <div class="sidebar__timeline-body">
-                  <span class="sidebar__timeline-company">Burberry</span>
-                  <span class="sidebar__timeline-meta">Digital Designer · 2009</span>
+              <li class="timeline-item">
+                <span class="timeline-item__icon" aria-hidden="true"></span>
+                <div class="timeline-item__body">
+                  <span class="timeline-item__company">Burberry</span>
+                  <span class="timeline-item__meta">Digital Designer · 2009</span>
                 </div>
               </li>
             </ol>
             <div class="sidebar__cv">
-              <a class="sidebar__text-link" href="#">More about my experience</a>
+              <a class="text-link" href="#">More about my experience</a>
               <button class="btn btn--primary btn--large" type="button">Download CV</button>
             </div>
           </section>
 
-          <footer class="sidebar__section">
-            <h2 class="sidebar__heading">Get in touch</h2>
+          <footer class="content-section">
+            <h2 class="content-section__heading">Get in touch</h2>
             <div class="sidebar__links">
-              <a class="sidebar__text-link" href="#">Email</a>
-              <a class="sidebar__text-link" href="#">LinkedIn</a>
+              <a class="text-link" href="#">Email</a>
+              <a class="text-link" href="#">LinkedIn</a>
             </div>
           </footer>
         </div>

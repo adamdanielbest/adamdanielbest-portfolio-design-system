@@ -10,7 +10,7 @@
    Focus uses a solid border/focus stroke — no padding so the ring sits
    flush with the bounding box edge, matching the Figma component.
    -------------------------------------------------------------------------- */
-.link-demo {
+.text-link {
   display: inline-flex;
   align-items: center;
   min-height: 48px;
@@ -28,18 +28,18 @@
   border: none;
 }
 
-.link-demo:hover,
-.link-demo--hover {
+.text-link:hover,
+.text-link--hover {
   color: var(--text-link-hover);
 }
 
-.link-demo--visited {
+.text-link--visited {
   color: var(--text-link-visited);
 }
 
-.link-demo:focus-visible,
-.link-demo--focus,
-.link-demo--focus-hover {
+.text-link:focus-visible,
+.text-link--focus,
+.text-link--focus-hover {
   padding-top: 0;
   padding-bottom: 0;
   border: none;
@@ -48,17 +48,17 @@
   border-radius: var(--radius-xs);
 }
 
-.link-demo:focus-visible,
-.link-demo--focus {
+.text-link:focus-visible,
+.text-link--focus {
   color: var(--text-link);
 }
 
-.link-demo:focus-visible:hover,
-.link-demo--focus-hover {
+.text-link:focus-visible:hover,
+.text-link--focus-hover {
   color: var(--text-link-hover);
 }
 
-.link-demo--disabled {
+.text-link--disabled {
   color: var(--text-disabled);
   cursor: not-allowed;
   pointer-events: none;

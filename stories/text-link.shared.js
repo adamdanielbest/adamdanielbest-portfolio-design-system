@@ -3,11 +3,11 @@ import '../text-link-component/text-link.css';
 export const renderTextLink = ({ state = 'default', label = 'Link text' } = {}) => {
   const stateClass = (() => {
     switch (state) {
-      case 'hover':       return ' link-demo--hover';
-      case 'visited':     return ' link-demo--visited';
-      case 'focus':       return ' link-demo--focus';
-      case 'focus-hover': return ' link-demo--focus-hover';
-      case 'disabled':    return ' link-demo--disabled';
+      case 'hover':       return ' text-link--hover';
+      case 'visited':     return ' text-link--visited';
+      case 'focus':       return ' text-link--focus';
+      case 'focus-hover': return ' text-link--focus-hover';
+      case 'disabled':    return ' text-link--disabled';
       default:            return '';
     }
   })();
@@ -15,7 +15,7 @@ export const renderTextLink = ({ state = 'default', label = 'Link text' } = {}) 
   const isDisabled = state === 'disabled';
 
   return `<a
-  class="link-demo${stateClass}"
+  class="text-link${stateClass}"
   href="${isDisabled ? undefined : '#'}"
   ${isDisabled ? 'aria-disabled="true" tabindex="-1"' : ''}
 >${label}</a>`.trim();

@@ -136,7 +136,9 @@
       "name": "sidebar",
       "figmaNodeId": "2933:22572",
       "cssFile": "sidebar-component/sidebar.css",
-      "htmlFile": "sidebar-component/sidebar.html"
+      "htmlFile": "sidebar-component/sidebar.html",
+      "sharedFile": "stories/sidebar.shared.js",
+      "storiesDir": "stories/Sidebar.stories.js"
     },
     {
       "name": "table",
