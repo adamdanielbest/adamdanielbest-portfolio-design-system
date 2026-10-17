@@ -114,9 +114,11 @@
     },
     {
       "name": "page-nav",
-      "figmaNodeId": "2933:31146",
+      "figmaNodeId": "3105:12014",
       "cssFile": "page-nav-component/page-nav.css",
-      "htmlFile": "page-nav-component/page-nav.html"
+      "htmlFile": "page-nav-component/page-nav.html",
+      "sharedFile": "stories/page-nav.shared.js",
+      "storiesDir": "stories/PageNav.stories.js"
     },
     {
       "name": "sidebar",

@@ -4,13 +4,10 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Nav link demo atoms
-   Label uses .link-demo (text-link atom) for underline, padding, and type.
-   The outer <a> drives icon colour via currentColor; .link-demo drives label
-   colour via its own rules. Both resolve to the same tokens so they stay in
-   sync. Icons are siblings of .link-demo — label padding doesn't affect them.
+   Nav link — reusable atom
+   Self-contained: no dependency on .link-demo from text-link.css.
    -------------------------------------------------------------------------- */
-.nav-link-demo {
+.nav-link {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2xs);
@@ -22,18 +19,54 @@
   -webkit-appearance: none;
 }
 
-.nav-link-demo:hover,
+.nav-link:hover {
+  color: var(--text-link-hover);
+}
+
+.nav-link:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.nav-link__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: currentColor;
+}
+
+.nav-link__label {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width-strong);
+  text-underline-offset: var(--border-width-strong);
+  text-decoration-skip-ink: none;
+  white-space: nowrap;
+}
+
+.nav-link:hover .nav-link__label,
+.nav-link:focus-visible .nav-link__label {
+  color: var(--text-link-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Demo sheet aliases — sheet use only, not for composition
+   -------------------------------------------------------------------------- */
+.nav-link-demo { /* alias for demo sheet */ }
+
 .nav-link-demo--hover {
   color: var(--text-link-hover);
 }
 
-/* Force label to hover colour on the static BEM demo (.link-demo:hover fires
-   naturally in Storybook when the user hovers the real <a>) */
-.nav-link-demo--hover .link-demo {
+.nav-link-demo--hover .nav-link__label {
   color: var(--text-link-hover);
 }
 
-.nav-link-demo:focus-visible,
 .nav-link-demo--focus,
 .nav-link-demo--focus-hover {
   outline: var(--border-width-focus) solid var(--border-focus);
@@ -41,8 +74,7 @@
   border-radius: var(--radius-xs);
 }
 
-.nav-link-demo--focus-hover,
-.nav-link-demo--focus-hover .link-demo {
+.nav-link-demo--focus-hover .nav-link__label {
   color: var(--text-link-hover);
 }
 

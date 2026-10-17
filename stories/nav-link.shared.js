@@ -6,11 +6,11 @@ export const renderNavLink = ({ state = 'default', label = 'Link text', iconLeft
   const stateMap = { hover: 'nav-link-demo--hover', focus: 'nav-link-demo--focus', 'focus-hover': 'nav-link-demo--focus-hover' };
   const stateClass = stateMap[state] ? ` ${stateMap[state]}` : '';
 
-  const iconLeftSvg  = `<svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>`;
-  const iconRightSvg = `<svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>`;
+  const iconLeftSvg  = `<svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>`;
+  const iconRightSvg = `<svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>`;
 
-  return `<a class="nav-link-demo${stateClass}" href="#">
-  ${iconLeft ? iconLeftSvg + '\n  ' : ''}<span class="link-demo">${label}</span>${iconRight ? '\n  ' + iconRightSvg : ''}
+  return `<a class="nav-link nav-link-demo${stateClass}" href="#">
+  ${iconLeft ? iconLeftSvg + '\n  ' : ''}<span class="nav-link__label">${label}</span>${iconRight ? '\n  ' + iconRightSvg : ''}
 </a>`.trim();
 };
 

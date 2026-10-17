@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../src/styles/sheet.css">
   <link rel="stylesheet" href="../toggle-component/toggle.css">
 
+  <link rel="stylesheet" href="../nav-link-component/nav-link.css">
   <link rel="stylesheet" href="page-nav.css">
 </head>
 <body>
@@ -47,52 +48,70 @@
       <span class="demo-controls__label">Demo controls</span>
       <span class="demo-controls__divider" aria-hidden="true"></span>
       <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
-
-        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
-
-        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
-
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="light">Light</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="dark">Dark</button>
+      </div>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <div class="toggle" role="group" aria-label="Labels" id="labels-toggle">
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="true">Labels</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="false">Icons only</button>
       </div>
     </div>
 
-    <script>
-      document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
-        });
-      });
-    </script>
+    <!-- Demo variant card — JS swaps content on toggle -->
+    <div class="page-nav-variant-card" id="demo-card">
 
-    <!-- Default -->
-    <div class="page-nav-variant-card">
-      <nav class="page-nav" aria-label="Page navigation">
+      <!-- labels=true -->
+      <nav class="page-nav" aria-label="Page navigation" id="nav-labels">
         <div class="page-nav__back">
-          <a class="page-nav__link" href="#" tabindex="-1">
-            <span class="page-nav__link-icon" aria-hidden="true">
+          <a class="nav-link page-nav__link" href="#" tabindex="-1">
+            <span class="nav-link__icon" aria-hidden="true">
               <svg focusable="false"><use href="#icon-arrow-backwards"></use></svg>
             </span>
-            <span class="page-nav__link-label">Back</span>
+            <span class="nav-link__label">Back</span>
           </a>
         </div>
-        <p class="page-nav__title">Case study title</p>
+        <p class="page-nav__title">Title</p>
         <div class="page-nav__prev-next">
-          <a class="page-nav__link" href="#" tabindex="-1">
-            <span class="page-nav__link-icon" aria-hidden="true">
+          <a class="nav-link page-nav__link" href="#" tabindex="-1">
+            <span class="nav-link__icon" aria-hidden="true">
               <svg focusable="false"><use href="#icon-chevron-backward"></use></svg>
             </span>
-            <span class="page-nav__link-label">Previous</span>
+            <span class="nav-link__label">Previous</span>
           </a>
-          <a class="page-nav__link" href="#" tabindex="-1">
-            <span class="page-nav__link-label">Next</span>
-            <span class="page-nav__link-icon" aria-hidden="true">
+          <a class="nav-link page-nav__link" href="#" tabindex="-1">
+            <span class="nav-link__label">Next</span>
+            <span class="nav-link__icon" aria-hidden="true">
               <svg focusable="false"><use href="#icon-chevron-forward"></use></svg>
             </span>
           </a>
         </div>
       </nav>
+
+      <!-- labels=false (hidden by default) -->
+      <nav class="page-nav page-nav--icons-only" aria-label="Page navigation" id="nav-icons" style="display:none">
+        <div class="page-nav__back">
+          <a class="nav-link page-nav__link page-nav__link--icon-only" href="#" aria-label="Back" tabindex="-1">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg focusable="false"><use href="#icon-arrow-backwards"></use></svg>
+            </span>
+          </a>
+        </div>
+        <p class="page-nav__title">Title</p>
+        <div class="page-nav__prev-next">
+          <a class="nav-link page-nav__link page-nav__link--icon-only" href="#" aria-label="Previous" tabindex="-1">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg focusable="false"><use href="#icon-chevron-backward"></use></svg>
+            </span>
+          </a>
+          <a class="nav-link page-nav__link page-nav__link--icon-only" href="#" aria-label="Next" tabindex="-1">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg focusable="false"><use href="#icon-chevron-forward"></use></svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+
     </div>
 
     <!-- Token table -->
@@ -132,6 +151,11 @@
               <td title="Focus ring">Focus ring</td>
               <td title="Focus">Focus</td>
             </tr>
+            <tr>
+              <td><code class="token-label" title="icon/size/xs">icon/size/xs</code></td>
+              <td title="Nav link icon">Nav link icon</td>
+              <td title="All">All</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -140,6 +164,33 @@
   </div>
 
   <script>
+    document.documentElement.dataset.theme = 'light';
+
+    // Generic roving toggle handler
+    function initToggle(groupEl, onChange) {
+      const btns = groupEl.querySelectorAll('.toggle__option');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => { b.classList.remove('toggle__option--selected'); b.setAttribute('aria-pressed', 'false'); b.tabIndex = -1; });
+          btn.classList.add('toggle__option--selected');
+          btn.setAttribute('aria-pressed', 'true');
+          btn.tabIndex = 0;
+          onChange(btn.dataset.value);
+        });
+      });
+    }
+
+    initToggle(document.getElementById('theme-toggle'), val => {
+      document.documentElement.dataset.theme = val;
+      const bt = document.querySelector('.breadcrumb-theme');
+      if (bt) bt.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+    });
+
+    initToggle(document.getElementById('labels-toggle'), val => {
+      document.getElementById('nav-labels').style.display = (val === 'false') ? 'none' : '';
+      document.getElementById('nav-icons').style.display  = (val === 'true')  ? 'none' : '';
+    });
+
     document.querySelectorAll('.meta-date').forEach(el => {
       el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
     });
