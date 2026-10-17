@@ -68,6 +68,17 @@
   color: var(--text-link-hover);
 }
 
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo:focus-visible,
+.header__logo--focus {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 0;
+  border-radius: var(--radius-sm);
+}
+
 /* --------------------------------------------------------------------------
    Menu icon button
    Touch target: 48×48. Icon glyph: 32×32. Pushed to far right by auto margin.

@@ -18,3 +18,9 @@ export const LogoHover = {
   args: { breakpoint: 'mobile' },
   render: (args) => renderHeader(args, { logoHover: true }),
 };
+
+export const LogoFocus = {
+  name: 'Logo — Focus',
+  args: { breakpoint: 'mobile' },
+  render: (args) => renderHeader(args, { logoFocus: true }),
+};
