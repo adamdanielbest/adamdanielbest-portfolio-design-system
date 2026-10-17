@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core – Nav Link – adamdanielbest Design System</title>
+
+  <!-- Tokens — order matters: primitives → semantic colour → dimensions -->
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../src/styles/sheet.css">
+  <link rel="stylesheet" href="../toggle-component/toggle.css">
+
+  <!-- Component styles -->
+  <link rel="stylesheet" href="../text-link-component/text-link.css">
+  <link rel="stylesheet" href="nav-link.css">
+</head>
+<body>
+
+  <script>
+    fetch('../src/icons/sprite.svg?v=4')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <div class="container">
+
+    <header class="page-header">
+      <h1 title="Nav Link">Nav Link</h1>
+      <hr class="page-header__divider">
+      <div class="page-header__metadata">
+        <p class="breadcrumb" title="adamdanielbest.com · Nav Link · Light">adamdanielbest.com · Nav Link · <span class="breadcrumb-theme">Light</span></p>
+        <p class="meta" title="Eina04 · 4px base unit · v1.0 Stable · Updated 17 Oct 2026 · WCAG 1.4.3 AA">Eina04 · 4px base unit · v1.0 Stable · Updated <span class="meta-date"></span> · WCAG 1.4.3 AA</p>
+        <p class="usage" title="Navigation link atom. Used in sidebars, breadcrumbs, and in-page navigation. No underline — link role conveyed by context.">Navigation link atom. Used in sidebars, breadcrumbs, and in-page navigation. No underline — link role conveyed by context.</p>
+      </div>
+    </header>
+
+    <div class="demo-controls">
+      <span class="demo-controls__label">Demo controls</span>
+      <span class="demo-controls__divider" aria-hidden="true"></span>
+      <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+      </div>
+    </div>
+
+    <script>
+      document.documentElement.dataset.theme = 'light';
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeButtons = [...themeToggle.querySelectorAll('button')];
+      function selectTheme(btn) {
+        themeButtons.forEach(b => {
+          const selected = b === btn;
+          b.classList.toggle('toggle__option--selected', selected);
+          b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+          b.tabIndex = selected ? 0 : -1;
+        });
+        document.documentElement.dataset.theme = btn.textContent.toLowerCase();
+      }
+      themeToggle.addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (btn) selectTheme(btn);
+      });
+      themeToggle.addEventListener('keydown', e => {
+        const currentIndex = themeButtons.indexOf(document.activeElement);
+        if (currentIndex === -1) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = themeButtons[(currentIndex + 1) % themeButtons.length];
+          selectTheme(next); next.focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = themeButtons[(currentIndex - 1 + themeButtons.length) % themeButtons.length];
+          selectTheme(prev); prev.focus();
+        }
+      });
+    </script>
+
+    <!-- Variant matrix -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" title="Default">Default</th>
+              <th scope="col" title="Hover">Hover</th>
+              <th scope="col" title="Focus">Focus</th>
+              <th scope="col" title="Focus hover">Focus hover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" title="No icons">No icons</th>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo" href="#" tabindex="-1" aria-label="Default nav link"><span class="link-demo">Link text</span></a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--hover" href="#" tabindex="-1" aria-label="Hover nav link"><span class="link-demo">Link text</span></a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus" href="#" tabindex="-1" aria-label="Focus nav link"><span class="link-demo">Link text</span></a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus-hover" href="#" tabindex="-1" aria-label="Focus hover nav link"><span class="link-demo">Link text</span></a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" title="Icon left">Icon left</th>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo" href="#" tabindex="-1" aria-label="Default nav link with left icon">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--hover" href="#" tabindex="-1" aria-label="Hover nav link with left icon">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus" href="#" tabindex="-1" aria-label="Focus nav link with left icon">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus-hover" href="#" tabindex="-1" aria-label="Focus hover nav link with left icon">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" title="Icon right">Icon right</th>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo" href="#" tabindex="-1" aria-label="Default nav link with right icon">
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--hover" href="#" tabindex="-1" aria-label="Hover nav link with right icon">
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus" href="#" tabindex="-1" aria-label="Focus nav link with right icon">
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus-hover" href="#" tabindex="-1" aria-label="Focus hover nav link with right icon">
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" title="Both icons">Both icons</th>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo" href="#" tabindex="-1" aria-label="Default nav link with both icons">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--hover" href="#" tabindex="-1" aria-label="Hover nav link with both icons">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus" href="#" tabindex="-1" aria-label="Focus nav link with both icons">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+              <td class="demo-cell" style="pointer-events:none">
+                <a class="nav-link-demo nav-link-demo--focus-hover" href="#" tabindex="-1" aria-label="Focus hover nav link with both icons">
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
+                  <span class="link-demo">Link text</span>
+                  <svg class="nav-link-demo__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Token table -->
+    <div class="content-card">
+      <div class="variant-card__grid">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th scope="col" title="Token">Token</th>
+              <th scope="col" title="Property">Property</th>
+              <th scope="col" title="State">State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="token-label" title="text/link">text/link</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Default">Default</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="text/link-hover">text/link-hover</code></td>
+              <td title="Link colour">Link colour</td>
+              <td title="Hover">Hover</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="border/focus">border/focus</code></td>
+              <td title="Focus ring">Focus ring</td>
+              <td title="Focus">Focus</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="spacing/2xs">spacing/2xs</code></td>
+              <td title="Icon gap">Icon gap</td>
+              <td title="All">All</td>
+            </tr>
+            <tr>
+              <td><code class="token-label" title="icon/size/xs">icon/size/xs</code></td>
+              <td title="Icon size">Icon size</td>
+              <td title="All">All</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <script>
+    document.querySelectorAll('.meta-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    });
+  </script>
+
+</body>
+</html>

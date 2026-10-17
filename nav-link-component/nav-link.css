@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Nav Link component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Nav link demo atoms
+   Label uses .link-demo (text-link atom) for underline, padding, and type.
+   The outer <a> drives icon colour via currentColor; .link-demo drives label
+   colour via its own rules. Both resolve to the same tokens so they stay in
+   sync. Icons are siblings of .link-demo — label padding doesn't affect them.
+   -------------------------------------------------------------------------- */
+.nav-link-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  color: var(--text-link);
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.nav-link-demo:hover,
+.nav-link-demo--hover {
+  color: var(--text-link-hover);
+}
+
+/* Force label to hover colour on the static BEM demo (.link-demo:hover fires
+   naturally in Storybook when the user hovers the real <a>) */
+.nav-link-demo--hover .link-demo {
+  color: var(--text-link-hover);
+}
+
+.nav-link-demo:focus-visible,
+.nav-link-demo--focus,
+.nav-link-demo--focus-hover {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.nav-link-demo--focus-hover,
+.nav-link-demo--focus-hover .link-demo {
+  color: var(--text-link-hover);
+}
+
+.nav-link-demo__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: currentColor;
+}

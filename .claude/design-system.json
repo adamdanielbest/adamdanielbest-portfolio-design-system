@@ -131,7 +131,10 @@
     },
     {
       "name": "nav-link",
-      "figmaNodeId": "2925:10113"
+      "figmaNodeId": "2925:10113",
+      "cssFile": "nav-link-component/nav-link.css",
+      "htmlFile": "nav-link-component/nav-link.html",
+      "sharedFile": "stories/nav-link.shared.js"
     },
     {
       "name": "card-grid",
