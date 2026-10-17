@@ -116,7 +116,9 @@
       "name": "media-block",
       "figmaNodeId": "2936:4906",
       "cssFile": "media-block-component/media-block.css",
-      "htmlFile": "media-block-component/media-block.html"
+      "htmlFile": "media-block-component/media-block.html",
+      "sharedFile": "stories/media-block.shared.js",
+      "storiesDir": "stories/MediaBlock.stories.js"
     },
     {
       "name": "page-nav",

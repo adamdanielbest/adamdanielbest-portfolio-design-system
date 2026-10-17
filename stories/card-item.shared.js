@@ -1,4 +1,5 @@
 import '../card-item-component/card-item.css';
+import { renderMediaBlock } from './media-block.shared.js';
 
 export function renderCardItem({ state = 'default' } = {}) {
   const rootCls = state === 'hover' || state === 'focus-hover'
@@ -14,7 +15,7 @@ export function renderCardItem({ state = 'default' } = {}) {
     : '';
 
   return `<article class="${rootCls}" aria-label="Card item ${state} state"${focusAttr}>
-  <div class="card-grid-demo__media" aria-hidden="true"></div>
+  ${renderMediaBlock({ ratio: '16:9' })}
   <div class="${copyCls}">
     <div class="card-grid-demo__top">
       <h2 class="card-grid-demo__title">Project title</h2>
