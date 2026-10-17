@@ -5,7 +5,7 @@
 .checkbox {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: var(--spacing-2xs);
   cursor: pointer;
   user-select: none;
   border-radius: var(--radius-sm);
@@ -14,24 +14,23 @@
   -webkit-appearance: none;
   background: transparent;
   min-height: 48px;
-  padding-inline-start: 0;
-  padding-inline-end: var(--spacing-xs);
+  padding-inline: var(--spacing-xs);
   box-sizing: border-box;
   transition: background 0.15s;
 }
 
 .checkbox__icon-wrap {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .checkbox__icon {
-  width: 48px;
-  height: 48px;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
   color: var(--icon-primary);
   fill: currentColor;
   transition: color 0.15s;
