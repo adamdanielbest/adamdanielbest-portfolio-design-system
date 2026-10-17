@@ -22,11 +22,12 @@ function itemHTML({ company, role, year, current = false }) {
     </li>`;
 }
 
-export function renderTimeline({ items = DEFAULT_ITEMS } = {}) {
+export function renderTimeline({ items = DEFAULT_ITEMS, current = true } = {}) {
+  const resolvedItems = items.map((item, i) => i === 0 ? { ...item, current } : item);
   return `
     <ol class="timeline" aria-label="Work history">
-      ${items.map(itemHTML).join('')}
+      ${resolvedItems.map(itemHTML).join('')}
     </ol>`;
 }
 
-export const defaultArgs = { items: DEFAULT_ITEMS };
+export const defaultArgs = { items: DEFAULT_ITEMS, current: true };
