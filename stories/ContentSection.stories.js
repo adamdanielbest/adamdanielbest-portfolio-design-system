@@ -8,7 +8,6 @@ export default {
 
 const render = (args) => renderContentSection(args);
 
-export const Default       = { render };
-export const WithMedia     = { args: { showMedia: true }, render };
-export const WithCaption   = { args: { showMedia: true, showCaption: true }, render };
-export const FourThree     = { args: { showMedia: true, ratio: '4:3' }, render };
+export const Default     = { render };
+export const WithMedia   = { args: { showMedia: true }, render };
+export const WithCaption = { args: { showMedia: true, showCaption: true }, render };
