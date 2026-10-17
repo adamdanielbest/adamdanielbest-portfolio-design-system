@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../src/styles/sheet.css">
   <link rel="stylesheet" href="../toggle-component/toggle.css">
 
+  <link rel="stylesheet" href="../media-block-component/media-block.css">
   <link rel="stylesheet" href="case-study-hero.css">
 </head>
 <body>
@@ -48,30 +49,41 @@
       <span class="demo-controls__divider" aria-hidden="true"></span>
       <div class="toggle" role="group" aria-label="Theme" id="theme-toggle">
 
-        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0">Light</button>
+        <button class="toggle__option toggle__option--selected" type="button" aria-pressed="true" tabindex="0" data-value="light">Light</button>
 
-        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1">Dark</button>
+        <button class="toggle__option" type="button" aria-pressed="false" tabindex="-1" data-value="dark">Dark</button>
 
       </div>
     </div>
 
     <script>
       document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const btns = themeToggle.querySelectorAll('.toggle__option');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => { b.classList.remove('toggle__option--selected'); b.setAttribute('aria-pressed', 'false'); b.tabIndex = -1; });
+            btn.classList.add('toggle__option--selected');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.tabIndex = 0;
+            const val = btn.dataset.value;
+            document.documentElement.dataset.theme = val;
+            const bt = document.querySelector('.breadcrumb-theme');
+            if (bt) bt.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+          });
         });
-      });
+      }
     </script>
 
     <!-- Desktop -->
     <div class="hero-variant-card">
       <p class="overline">Desktop · 1016px</p>
       <article class="case-study-hero case-study-hero--desktop" aria-label="Case study hero, desktop">
-        <div class="case-study-hero__media" aria-hidden="true">
-          <span class="case-study-hero__media-label">Media</span>
+        <div class="case-study-hero__media">
+          <figure class="media-block">
+            <div class="media-block__image" role="img" aria-label="Media placeholder"></div>
+          </figure>
         </div>
         <div class="case-study-hero__copy">
           <div class="case-study-hero__top">
@@ -95,8 +107,10 @@
     <div class="hero-variant-card">
       <p class="overline">Tablet · 736px</p>
       <article class="case-study-hero case-study-hero--tablet" aria-label="Case study hero, tablet">
-        <div class="case-study-hero__media" aria-hidden="true">
-          <span class="case-study-hero__media-label">Media</span>
+        <div class="case-study-hero__media">
+          <figure class="media-block">
+            <div class="media-block__image" role="img" aria-label="Media placeholder"></div>
+          </figure>
         </div>
         <div class="case-study-hero__copy">
           <div class="case-study-hero__top">
@@ -120,8 +134,10 @@
     <div class="hero-variant-card">
       <p class="overline">Mobile · 343px</p>
       <article class="case-study-hero case-study-hero--mobile" aria-label="Case study hero, mobile">
-        <div class="case-study-hero__media" aria-hidden="true">
-          <span class="case-study-hero__media-label">Media</span>
+        <div class="case-study-hero__media">
+          <figure class="media-block">
+            <div class="media-block__image" role="img" aria-label="Media placeholder"></div>
+          </figure>
         </div>
         <div class="case-study-hero__copy">
           <div class="case-study-hero__top">
@@ -158,7 +174,7 @@
             </tr>
             <tr>
               <td><code class="token-label" title="background/hover">background/hover</code></td>
-              <td title="Media placeholder">Media placeholder</td>
+              <td title="Media checkerboard base">Media checkerboard base</td>
               <td title="All">All</td>
             </tr>
             <tr>
@@ -178,12 +194,12 @@
             </tr>
             <tr>
               <td><code class="token-label" title="text/secondary">text/secondary</code></td>
-              <td title="Hook body, role">Hook body, role</td>
+              <td title="Hook body">Hook body</td>
               <td title="All">All</td>
             </tr>
             <tr>
-              <td><code class="token-label" title="text/tertiary">text/tertiary</code></td>
-              <td title="Media placeholder label">Media placeholder label</td>
+              <td><code class="token-label" title="text/info">text/info</code></td>
+              <td title="Role">Role</td>
               <td title="All">All</td>
             </tr>
           </tbody>

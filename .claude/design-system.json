@@ -85,7 +85,9 @@
       "name": "case-study-hero",
       "figmaNodeId": "2933:30526",
       "cssFile": "case-study-hero-component/case-study-hero.css",
-      "htmlFile": "case-study-hero-component/case-study-hero.html"
+      "htmlFile": "case-study-hero-component/case-study-hero.html",
+      "sharedFile": "stories/case-study-hero.shared.js",
+      "storiesDir": "stories/CaseStudyHero.stories.js"
     },
     {
       "name": "content-section",
