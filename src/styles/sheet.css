@@ -289,6 +289,7 @@ code.token-label {
 .variant-card__grid .demo-cell {
   padding-top: var(--spacing-md);
   padding-bottom: var(--spacing-md);
+  pointer-events: none;
 }
 
 /* --------------------------------------------------------------------------
