@@ -37,6 +37,20 @@
   position: relative;
 }
 
+.timeline-item:first-child {
+  padding-top: 0;
+  min-height: auto;
+}
+
+.timeline-item:first-child::after {
+  top: 16px; /* no top padding: half of 32px icon only */
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+  min-height: auto;
+}
+
 /* --------------------------------------------------------------------------
    Icon dot — 32×32 outer container, 16×16 visual dot centred inside
    The 32×32 outer size matches the Figma icon frame; the visible circle
@@ -101,6 +115,7 @@
   line-height: 1;
   font-weight: var(--type-body-md-weight);
   color: var(--text-primary);
+  text-box: trim-both cap alphabetic;
 }
 
 .timeline-item__meta {
@@ -110,4 +125,5 @@
   line-height: var(--type-caption-line-height);
   font-weight: var(--type-caption-weight);
   color: var(--text-secondary);
+  text-box: trim-both cap alphabetic;
 }

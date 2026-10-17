@@ -155,7 +155,9 @@
       "name": "timeline",
       "figmaNodeId": "2933:21667",
       "cssFile": "timeline-component/timeline.css",
-      "htmlFile": "timeline-component/timeline.html"
+      "htmlFile": "timeline-component/timeline.html",
+      "sharedFile": "stories/timeline.shared.js",
+      "storiesDir": "stories/Timeline.stories.js"
     },
     {
       "name": "timeline-item",
