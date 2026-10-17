@@ -40,9 +40,15 @@
   --spacing-4xl: 80px;
   --spacing-5xl: 96px;
   --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
+  --spacing-badge-padding: 4px;
   --spacing-lg: 32px;
   /* Between content blocks. 16px mobile. */
   --spacing-md: 24px;
+  /* Min horizontal page padding. 16px mobile. */
+  --spacing-page-margin-x: 16px;
+  /* Page vertical padding. 40px mobile. */
+  --spacing-page-margin-y: 40px;
   /* Stacked elements. 16px mobile. */
   --spacing-sm: 16px;
   --spacing-xl: 40px;

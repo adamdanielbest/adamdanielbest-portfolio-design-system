@@ -42,10 +42,16 @@
   --spacing-4xl: 80px;
   --spacing-5xl: 96px;
   --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
+  --spacing-badge-padding: 4px;
   /* Between content blocks within a section. 32px desktop. */
   --spacing-lg: 32px;
   /* Internal padding for project cards. 24px desktop. */
   --spacing-md: 24px;
+  /* Min horizontal page padding. 32px desktop. */
+  --spacing-page-margin-x: 32px;
+  /* Page vertical padding. 80px desktop. */
+  --spacing-page-margin-y: 80px;
   /* Between stacked elements in a column. 16px desktop. */
   --spacing-sm: 16px;
   --spacing-xl: 40px;
