@@ -141,7 +141,8 @@
       "name": "text-link",
       "figmaNodeId": "2925:8973",
       "cssFile": "text-link-component/text-link.css",
-      "htmlFile": "text-link-component/text-link.html"
+      "htmlFile": "text-link-component/text-link.html",
+      "sharedFile": "stories/text-link.shared.js"
     },
     {
       "name": "timeline",

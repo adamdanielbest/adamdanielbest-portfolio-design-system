@@ -20,6 +20,8 @@
   line-height: var(--type-body-md-line-height);
   color: var(--text-link);
   text-decoration: underline;
+  text-decoration-thickness: var(--border-width-strong);
+  text-underline-offset: var(--border-width-strong);
   text-decoration-skip-ink: none;
   white-space: nowrap;
   box-sizing: border-box;
@@ -29,7 +31,6 @@
 
 .link-demo--hover {
   color: var(--text-link-hover);
-  text-decoration: none;
 }
 
 .link-demo--visited {
@@ -43,7 +44,7 @@
   border: none;
   outline: 3px solid var(--border-focus);
   outline-offset: 0;
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
 }
 
 .link-demo--focus {

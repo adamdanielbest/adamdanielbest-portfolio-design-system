@@ -60,12 +60,33 @@
 
     <script>
       document.documentElement.dataset.theme = 'light';
-      document.querySelectorAll('input[name="theme"]').forEach(r => {
-        r.addEventListener('change', () => {
-          document.documentElement.dataset.theme = r.value;
-          const bt = document.querySelector('.breadcrumb-theme');
-          if (bt) bt.textContent = r.value.charAt(0).toUpperCase() + r.value.slice(1);
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeButtons = [...themeToggle.querySelectorAll('button')];
+      function selectTheme(btn) {
+        themeButtons.forEach(b => {
+          const selected = b === btn;
+          b.classList.toggle('toggle__option--selected', selected);
+          b.setAttribute('aria-pressed', selected ? 'true' : 'false');
+          b.tabIndex = selected ? 0 : -1;
         });
+        document.documentElement.dataset.theme = btn.textContent.toLowerCase();
+      }
+      themeToggle.addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (btn) selectTheme(btn);
+      });
+      themeToggle.addEventListener('keydown', e => {
+        const currentIndex = themeButtons.indexOf(document.activeElement);
+        if (currentIndex === -1) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = themeButtons[(currentIndex + 1) % themeButtons.length];
+          selectTheme(next); next.focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = themeButtons[(currentIndex - 1 + themeButtons.length) % themeButtons.length];
+          selectTheme(prev); prev.focus();
+        }
       });
     </script>
 
@@ -88,7 +109,7 @@
             <tr>
               <th scope="row" title="Link">Link</th>
               <td class="demo-cell">
-                <a class="link-demo link-demo--default" href="#" tabindex="-1" aria-label="Default link">Link text</a>
+                <a class="link-demo" href="#" tabindex="-1" aria-label="Default link">Link text</a>
               </td>
               <td class="demo-cell">
                 <a class="link-demo link-demo--hover" href="#" tabindex="-1" aria-label="Hover link">Link text</a>
