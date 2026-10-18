@@ -144,8 +144,8 @@
 
 .case-study-hero--tablet .case-study-hero__title,
 .case-study-hero--mobile .case-study-hero__title {
-  font-size: var(--type-heading-md-size);
-  line-height: var(--type-heading-md-line-height);
+  font-size: var(--type-heading-lg-size);
+  line-height: var(--type-heading-lg-line-height);
 }
 
 .case-study-hero__outcome {
@@ -194,8 +194,8 @@
   }
 
   .case-study-hero--desktop .case-study-hero__title {
-    font-size: var(--type-heading-md-size);
-    line-height: var(--type-heading-md-line-height);
+    font-size: var(--type-heading-lg-size);
+    line-height: var(--type-heading-lg-line-height);
   }
 }
 
@@ -220,6 +220,6 @@
   }
 
   .case-study-hero--desktop .case-study-hero__title {
-    font-size: var(--type-heading-md-size);
+    font-size: var(--type-heading-lg-size);
   }
 }
