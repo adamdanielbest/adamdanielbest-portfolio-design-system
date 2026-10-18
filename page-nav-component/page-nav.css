@@ -41,12 +41,11 @@
 }
 
 /* --------------------------------------------------------------------------
-   Title — absolutely centred edge-to-edge, independent of back/prev-next widths
+   Title — flex child, centred between back and prev-next groups
    -------------------------------------------------------------------------- */
 .page-nav__title {
-  position: absolute;
-  left: 0;
-  right: 0;
+  flex: 1;
+  min-width: 0;
   margin: 0;
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-body-md-size);
