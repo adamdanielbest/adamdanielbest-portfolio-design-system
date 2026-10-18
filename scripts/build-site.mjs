@@ -64,7 +64,7 @@ function renderCardItemHTML({ title, outcome, role, href } = {}) {
 
 const caseStudies = [
   {
-    slug:    'giffgaff-full-fibre',
+    slug:    'giffgaff-broadband-launch',
     title:   'Designing state-aware UX for a 0→1 broadband launch',
     outcome: '6% conversion vs 4.5% target · 95 NPS · 0.2% churn · 9.7/10 DXS',
     role:    'Product Designer · giffgaff · 2023–2024',
