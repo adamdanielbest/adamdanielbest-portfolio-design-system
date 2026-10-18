@@ -4,7 +4,7 @@
  * Run: node scripts/build-site.mjs
  */
 
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 import { renderHeaderContent } from '../stories/header.render.js';
@@ -64,36 +64,99 @@ function renderCardItemHTML({ title, outcome, role, href } = {}) {
 
 const caseStudies = [
   {
-    title:       'giffgaff',
-    outcome:     'Design system and component library from scratch',
-    hookHeading: 'Hook',
-    hookBody:    'Placeholder hook — one strong statement that sets the stakes.',
-    role:        'Product Designer · giffgaff · 2023',
-    slug:        'giffgaff',
+    slug:    'giffgaff',
+    title:   'Designing state-aware UX for a 0→1 broadband launch',
+    outcome: '6% conversion vs 4.5% target · 95 NPS · 0.2% churn · 9.7/10 DXS',
+    role:    'Product Designer · giffgaff · 2023–2024',
+    tldr: [
+      '6% conversion against a 4.5% target',
+      '95 NPS at launch, 9.7/10 DXS, 91.7% CSAT',
+      '0.2% churn after 6 months live',
+    ],
+    sections: [
+      { type: 'context', content: 'content/giffgaff/context.md' },
+      { type: 'work',    heading: 'Orchestrating the insight machine',   content: 'content/giffgaff/work-1.md' },
+      { type: 'work',    heading: 'De-risking via incremental rollout',  content: 'content/giffgaff/work-2.md' },
+      { type: 'work',    heading: 'Architecting service logic',          content: 'content/giffgaff/work-3.md' },
+      { type: 'work',    heading: 'Pre-activation handoff',              content: 'content/giffgaff/work-4.md' },
+      { type: 'impact',  content: 'content/giffgaff/impact.md' },
+    ],
+    jsonld: {
+      name:        'Designing state-aware UX for a 0→1 broadband launch',
+      description: '6% conversion vs 4.5% target, 95 NPS at launch, 0.2% churn after 6 months.',
+      keywords:    ['product design', '0→1', 'broadband', 'giffgaff', 'UX', 'conversion rate optimisation'],
+    },
   },
   {
-    title:       'Lickd',
-    outcome:     'Creator monetisation platform',
-    hookHeading: 'Hook',
-    hookBody:    'Placeholder hook — one strong statement that sets the stakes.',
-    role:        'Product Designer · Lickd · 2020',
-    slug:        'lickd',
+    slug:    'lickd',
+    title:   'Demystifying music copyright to lift checkout conversion by 10%',
+    outcome: '+10% Premium conversion · +10% Included conversion · -10% claims tickets',
+    role:    'Product Designer · Lickd · 2021–2022',
+    tldr: [
+      '+10% Premium conversion (to 43.5%)',
+      '+10% Included conversion (to 66%)',
+      '+5% overall checkout conversion (to 42.58%)',
+      '-10% claims tickets, -1.45% support tickets',
+    ],
+    sections: [
+      { type: 'context', content: 'content/lickd/context.md' },
+      { type: 'work',    heading: 'Discovery: mapping the complexity',                  content: 'content/lickd/work-1.md' },
+      { type: 'work',    heading: 'Reducing friction at checkout',                      content: 'content/lickd/work-2.md' },
+      { type: 'work',    heading: 'The Innovation Hub — continuous user access',        content: 'content/lickd/work-3.md' },
+      { type: 'impact',  content: 'content/lickd/impact.md' },
+    ],
+    jsonld: {
+      name:        'Demystifying music copyright to lift checkout conversion by 10%',
+      description: 'Checkout redesign that lifted Premium conversion to 43.5%, Included to 66%, and reduced claims tickets by 10%.',
+      keywords:    ['product design', 'checkout', 'conversion', 'music licensing', 'Lickd', 'UX research'],
+    },
   },
   {
-    title:       'HubbleHQ',
-    outcome:     'Workplace search and discovery',
-    hookHeading: 'Hook',
-    hookBody:    'Placeholder hook — one strong statement that sets the stakes.',
-    role:        'Product Designer · HubbleHQ · 2019',
-    slug:        'hubblehq',
+    slug:    'hubblehq',
+    title:   'Fixing a 30% host decline rate — viewings redesign under a business pivot',
+    outcome: 'Viewings flow redesign · two-sided marketplace · constraints-led delivery',
+    role:    'Product Designer · HubbleHQ · 2019–2020',
+    tldr: [
+      'Problem: 30% of viewings requests declined by hosts',
+      'Redesigned the end-to-end viewings request and confirmation flow',
+      'Project deprioritised following a business pivot before full outcome capture',
+    ],
+    sections: [
+      { type: 'context', content: 'content/hubblehq/context.md' },
+      { type: 'work',    heading: 'Discovery: understanding why hosts were declining',  content: 'content/hubblehq/work-1.md' },
+      { type: 'work',    heading: 'Designing the viewings flow',                        content: 'content/hubblehq/work-2.md' },
+      { type: 'impact',  content: 'content/hubblehq/impact.md' },
+    ],
+    jsonld: {
+      name:        'Fixing a 30% host decline rate — viewings redesign under a business pivot',
+      description: 'End-to-end viewings flow redesign for a two-sided office marketplace, delivered under a business pivot and COVID.',
+      keywords:    ['product design', 'marketplace', 'two-sided platform', 'HubbleHQ', 'UX', 'constraints-led'],
+    },
   },
   {
-    title:       'Harrods',
-    outcome:     'Digital transformation and brand design',
-    hookHeading: 'Hook',
-    hookBody:    'Placeholder hook — one strong statement that sets the stakes.',
-    role:        'Lead Digital Designer · Harrods · 2018',
-    slug:        'harrods',
+    slug:    'figma-to-code',
+    title:   'Figma to code, end to end — tokens, components, and a CI pipeline built with AI',
+    outcome: 'Full design system · Figma variables → production CSS · Storybook component library',
+    role:    'Product Designer · Personal · 2025–2026',
+    tldr: [
+      'Full design token pipeline: Figma variables → CSS custom properties',
+      'Component library documented in Storybook',
+      'Automated sync, drift detection, and commit pipeline',
+      'Built end to end with Claude as a collaborative tool',
+    ],
+    sections: [
+      { type: 'context', content: 'content/figma-to-code/context.md' },
+      { type: 'work',    heading: 'Designing the token architecture',                  content: 'content/figma-to-code/work-1.md' },
+      { type: 'work',    heading: 'Building the component library',                    content: 'content/figma-to-code/work-2.md' },
+      { type: 'work',    heading: 'The CI pipeline — sync, drift, commit',             content: 'content/figma-to-code/work-3.md' },
+      { type: 'work',    heading: 'Claude as a collaborator',                          content: 'content/figma-to-code/work-4.md' },
+      { type: 'impact',  content: 'content/figma-to-code/impact.md' },
+    ],
+    jsonld: {
+      name:        'Figma to code, end to end — tokens, components, and a CI pipeline built with AI',
+      description: 'A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline, built with Claude.',
+      keywords:    ['design system', 'design tokens', 'Figma variables', 'Storybook', 'CI pipeline', 'AI', 'Claude', 'product design'],
+    },
   },
 ];
 
@@ -297,13 +360,67 @@ function renderCaseStudyPage(study, { prev, next } = {}) {
     role:       study.role,
   });
 
+  const tldrHtml = study.tldr?.length
+    ? `<ul class="case-study-tldr" aria-label="Key outcomes">
+        ${study.tldr.map(t => `<li class="case-study-tldr__item">${t}</li>`).join('\n        ')}
+      </ul>`
+    : '';
+
+  function readMd(relPath) {
+    try {
+      return readFileSync(resolve(root, relPath), 'utf8').trim();
+    } catch {
+      return `<p><em>Content coming soon.</em></p>`;
+    }
+  }
+
+  const sectionsHtml = (study.sections || []).map(s => {
+    const body = readMd(s.content);
+    if (s.type === 'context') {
+      return `<section class="content-section content-section--context" aria-label="Context">
+          <h2 class="content-section__heading">Context</h2>
+          <div class="content-section__body">${body}</div>
+        </section>`;
+    }
+    if (s.type === 'work') {
+      return `<section class="content-section content-section--work" aria-label="${s.heading}">
+          <h2 class="content-section__heading">${s.heading}</h2>
+          <div class="content-section__body">${body}</div>
+        </section>`;
+    }
+    if (s.type === 'impact') {
+      return `<section class="content-section content-section--impact" aria-label="Impact">
+          <h2 class="content-section__heading">Impact</h2>
+          <div class="content-section__body">${body}</div>
+        </section>`;
+    }
+    return '';
+  }).join('\n\n        ');
+
+  const jsonldScript = study.jsonld ? `
+  <script type="application/ld+json">
+  ${JSON.stringify({
+    '@context':   'https://schema.org',
+    '@type':      'CreativeWork',
+    'name':       study.jsonld.name,
+    'description': study.jsonld.description,
+    'keywords':   study.jsonld.keywords.join(', '),
+    'author': {
+      '@type': 'Person',
+      'name':  'Adam Daniel Best',
+      'url':   'https://adamdanielbest.com',
+    },
+    'url': `https://adamdanielbest.com/case-studies/${study.slug}.html`,
+  }, null, 2)}
+  </script>` : '';
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${study.title} — Adam Daniel Best</title>
-  <meta name="description" content="${study.outcome}">
+  <meta name="description" content="${study.jsonld?.description ?? study.outcome}">${jsonldScript}
 
 ${renderCssLinks('../')}
 </head>
@@ -402,24 +519,8 @@ ${renderCssLinks('../')}
     <div class="site-main__content">
       <div class="case-study-content">
         ${hero}
-
-        <section class="content-section" aria-label="Problem">
-          <h2 class="content-section__heading">Problem</h2>
-          <p class="content-section__body">Placeholder — describe the problem or opportunity this project addressed.</p>
-        </section>
-
-        <section class="content-section" aria-label="Process">
-          <h2 class="content-section__heading">Process</h2>
-          <figure class="media-block">
-            <div class="media-block__image media-block__image--16-9" role="img" aria-label="Process image placeholder"></div>
-          </figure>
-          <p class="content-section__body">Placeholder — describe your design process, research, and decisions.</p>
-        </section>
-
-        <section class="content-section" aria-label="Outcomes">
-          <h2 class="content-section__heading">Outcomes</h2>
-          <p class="content-section__body">Placeholder — describe the measurable outcomes and impact.</p>
-        </section>
+        ${tldrHtml}
+        ${sectionsHtml}
       </div>
     </div>
 
