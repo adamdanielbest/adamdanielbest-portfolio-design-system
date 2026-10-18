@@ -1,4 +1,5 @@
 import '../header-component/header.css';
+import { ICON_MAP } from './header.render.js';
 
 const SPRITE_URL = new URL('../src/icons/sprite.svg', import.meta.url).href;
 
@@ -25,13 +26,6 @@ function logoHTML({ hover = false, focus = false } = {}) {
   if (focus) modifiers.push('header__logo--focus');
   return `<a href="/" class="${modifiers.join(' ')}">adamdanielbest</a>`;
 }
-
-const ICON_MAP = {
-  'mobile':          { id: 'icon-top-panel-open-sm',   label: 'Open menu'    },
-  'tablet':          { id: 'icon-top-panel-open-sm',   label: 'Open menu'    },
-  'desktop-open':    { id: 'icon-left-panel-close-sm', label: 'Close sidebar' },
-  'desktop-closed':  { id: 'icon-left-panel-open-sm',  label: 'Open sidebar'  },
-};
 
 function iconBtnHTML(breakpoint) {
   const { id, label } = ICON_MAP[breakpoint] ?? ICON_MAP['mobile'];

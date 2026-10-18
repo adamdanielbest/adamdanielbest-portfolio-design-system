@@ -203,3 +203,31 @@
   line-height: var(--type-caption-line-height);
   color: var(--text-info);
 }
+
+/* --------------------------------------------------------------------------
+   Responsive — stack to mobile layout at ≤768px regardless of modifier class
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .case-study-hero--desktop,
+  .case-study-hero--tablet {
+    flex-direction: column;
+    width: auto;
+    min-height: unset;
+  }
+
+  .case-study-hero--desktop .case-study-hero__media,
+  .case-study-hero--tablet .case-study-hero__media {
+    width: 100%;
+    height: 240px;
+  }
+
+  .case-study-hero--desktop .case-study-hero__copy,
+  .case-study-hero--tablet .case-study-hero__copy {
+    padding: var(--spacing-md) var(--spacing-sm);
+    gap: var(--spacing-md);
+  }
+
+  .case-study-hero--desktop .case-study-hero__title {
+    font-size: var(--type-heading-md-size);
+  }
+}

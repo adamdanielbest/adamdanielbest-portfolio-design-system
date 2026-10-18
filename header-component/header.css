@@ -98,12 +98,45 @@
   border: none;
   appearance: none;
   -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   padding: 0;
   cursor: default;
 }
 
+.header__icon-btn:hover {
+  background: var(--background-hover);
+  cursor: pointer;
+}
+
+.header__icon-btn:focus {
+  outline: none;
+}
+
+.header__icon-btn:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: -2px;
+  border-radius: var(--radius-xs);
+}
+
+@media (hover: none) {
+  .header__icon-btn:hover {
+    background: none;
+  }
+  .header__icon-btn:focus-visible {
+    outline: none;
+  }
+}
+
 .header__icon {
-  width: var(--icon-size-sm);
-  height: var(--icon-size-sm);
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
   fill: var(--icon-accent);
+}
+
+@media (max-width: 768px) {
+  .header__icon {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+  }
 }

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Daniel Best — Senior Product Designer, London</title>
+  <meta name="description" content="Senior Product Designer with 15 years across luxury heritage and high-growth product. Based in London.">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="src/styles/fonts.css">
+
+  <!-- Design tokens -->
+  <link rel="stylesheet" href="src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="src/styles/generated/tokens-mobile.css">
+
+  <!-- Layout utilities -->
+  <link rel="stylesheet" href="src/styles/layout.css">
+
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="content-section-component/content-section.css">
+  <link rel="stylesheet" href="timeline-component/timeline.css">
+  <link rel="stylesheet" href="text-link-component/text-link.css">
+  <link rel="stylesheet" href="button-component/button.css">
+  <link rel="stylesheet" href="sidebar-component/sidebar.css">
+  <link rel="stylesheet" href="header-component/header.css">
+  <link rel="stylesheet" href="page-nav-component/page-nav.css">
+  <link rel="stylesheet" href="nav-link-component/nav-link.css">
+  <link rel="stylesheet" href="media-block-component/media-block.css">
+  <link rel="stylesheet" href="card-item-component/card-item.css">
+
+  <!-- Site layout -->
+  <link rel="stylesheet" href="src/styles/site.css">
+</head>
+<body data-theme="light">
+
+  <script>
+    document.documentElement.dataset.theme = 'light';
+    fetch('src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <!-- =====================================================================
+       Desktop aside — visible ≥769px
+       ===================================================================== -->
+  <aside class="site-aside" aria-label="About Adam Daniel Best">
+    <div class="site-aside__header">
+      <a class="header__logo" href="/" aria-label="Adam Daniel Best — home">adamdanielbest</a>
+    <button class="header__icon-btn js-sidebar-toggle" type="button" aria-label="Close sidebar" aria-expanded="true">
+      <svg class="header__icon" aria-hidden="true" focusable="false">
+        <use href="#icon-left-panel-close-sm"></use>
+      </svg>
+    </button>
+    </div>
+    <div class="site-aside__body">
+      <div class="sidebar-demo sidebar-demo--desktop">
+        <div class="sidebar__inner">
+          
+        <section class="content-section" aria-label="About">
+          <h2 class="content-section__heading">About me</h2>
+          <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+        </section>
+
+        <section class="content-section" aria-label="Career timeline">
+          <h2 class="content-section__heading">Career timeline</h2>
+          <ol class="timeline" aria-label="Career timeline">
+          <li class="timeline-item timeline-item--current">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">giffgaff</span>
+                <span class="timeline-item__meta">Product Designer · 2023</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Lickd</span>
+                <span class="timeline-item__meta">Product Designer · 2020</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">HubbleHQ</span>
+                <span class="timeline-item__meta">Product Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">ORDRE</span>
+                <span class="timeline-item__meta">UI Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Harrods</span>
+                <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Boutique 1</span>
+                <span class="timeline-item__meta">Digital Designer · 2017</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Burberry</span>
+                <span class="timeline-item__meta">Digital Designer · 2009</span>
+              </div>
+            </li>
+          </ol>
+          <div class="sidebar__cv">
+            <a class="text-link" href="#">More about my experience</a>
+            <button class="btn btn--primary btn--large" type="button">Download CV</button>
+          </div>
+        </section>
+
+        <footer class="content-section" aria-label="Contact">
+          <h2 class="content-section__heading">Get in touch</h2>
+          <div class="sidebar__links">
+            <a class="text-link" href="mailto:eyeofsourceproductions@gmail.com">Email</a>
+            <a class="text-link" href="https://www.linkedin.com/in/adamdanielbest" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </footer>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       Mobile / tablet header — visible ≤768px
+       ===================================================================== -->
+  <header class="site-header" aria-label="Site navigation">
+    <a class="header__logo" href="/" aria-label="Adam Daniel Best — home">adamdanielbest</a>
+    <button class="header__icon-btn js-drawer-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+      <svg class="header__icon" aria-hidden="true" focusable="false">
+        <use href="#icon-top-panel-open-sm"></use>
+      </svg>
+    </button>
+  </header>
+
+  <!-- =====================================================================
+       Mobile / tablet page-nav bar — visible ≤768px
+       ===================================================================== -->
+  <nav class="site-page-nav" aria-label="Page navigation">
+    <nav class="page-nav" aria-label="Page navigation"><p class="page-nav__title">Case Studies</p></nav>
+  </nav>
+
+  <!-- =====================================================================
+       Mobile drawer — sidebar overlay below header
+       ===================================================================== -->
+  <div class="site-drawer" id="site-drawer" role="dialog" aria-modal="true" aria-label="About Adam Daniel Best" hidden>
+    <div class="sidebar-demo sidebar-demo--mobile">
+      <div class="sidebar__inner">
+        
+        <section class="content-section" aria-label="About">
+          <h2 class="content-section__heading">About me</h2>
+          <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+        </section>
+
+        <section class="content-section" aria-label="Career timeline">
+          <h2 class="content-section__heading">Career timeline</h2>
+          <ol class="timeline" aria-label="Career timeline">
+          <li class="timeline-item timeline-item--current">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">giffgaff</span>
+                <span class="timeline-item__meta">Product Designer · 2023</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Lickd</span>
+                <span class="timeline-item__meta">Product Designer · 2020</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">HubbleHQ</span>
+                <span class="timeline-item__meta">Product Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">ORDRE</span>
+                <span class="timeline-item__meta">UI Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Harrods</span>
+                <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Boutique 1</span>
+                <span class="timeline-item__meta">Digital Designer · 2017</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Burberry</span>
+                <span class="timeline-item__meta">Digital Designer · 2009</span>
+              </div>
+            </li>
+          </ol>
+          <div class="sidebar__cv">
+            <a class="text-link" href="#">More about my experience</a>
+            <button class="btn btn--primary btn--large" type="button">Download CV</button>
+          </div>
+        </section>
+
+        <footer class="content-section" aria-label="Contact">
+          <h2 class="content-section__heading">Get in touch</h2>
+          <div class="sidebar__links">
+            <a class="text-link" href="mailto:eyeofsourceproductions@gmail.com">Email</a>
+            <a class="text-link" href="https://www.linkedin.com/in/adamdanielbest" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       Main content
+       ===================================================================== -->
+  <main class="site-main" id="main-content">
+
+    <nav class="site-main__nav" aria-label="Page navigation">
+      <nav class="page-nav" aria-label="Page navigation"><p class="page-nav__title">Case Studies</p></nav>
+    </nav>
+
+    <div class="site-main__content">
+      <section class="section--work" aria-label="Work">
+        <div class="card-grid">
+        <a class="card-grid-demo" href="case-studies/giffgaff.html">
+          <figure class="media-block" aria-hidden="true">
+  <div class="media-block__image media-block__image--16-9"></div>
+</figure>
+          <div class="card-grid-demo__copy">
+    <div class="card-grid-demo__top">
+      <h2 class="card-grid-demo__title">giffgaff</h2>
+      <p class="card-grid-demo__outcome">Design system and component library from scratch</p>
+    </div>
+    <div class="card-grid-demo__bottom">
+      <span class="card-grid-demo__role">Product Designer · giffgaff · 2023</span>
+    </div>
+  </div>
+        </a>
+
+        <a class="card-grid-demo" href="case-studies/lickd.html">
+          <figure class="media-block" aria-hidden="true">
+  <div class="media-block__image media-block__image--16-9"></div>
+</figure>
+          <div class="card-grid-demo__copy">
+    <div class="card-grid-demo__top">
+      <h2 class="card-grid-demo__title">Lickd</h2>
+      <p class="card-grid-demo__outcome">Creator monetisation platform</p>
+    </div>
+    <div class="card-grid-demo__bottom">
+      <span class="card-grid-demo__role">Product Designer · Lickd · 2020</span>
+    </div>
+  </div>
+        </a>
+
+        <a class="card-grid-demo" href="case-studies/hubblehq.html">
+          <figure class="media-block" aria-hidden="true">
+  <div class="media-block__image media-block__image--16-9"></div>
+</figure>
+          <div class="card-grid-demo__copy">
+    <div class="card-grid-demo__top">
+      <h2 class="card-grid-demo__title">HubbleHQ</h2>
+      <p class="card-grid-demo__outcome">Workplace search and discovery</p>
+    </div>
+    <div class="card-grid-demo__bottom">
+      <span class="card-grid-demo__role">Product Designer · HubbleHQ · 2019</span>
+    </div>
+  </div>
+        </a>
+
+        <a class="card-grid-demo" href="case-studies/harrods.html">
+          <figure class="media-block" aria-hidden="true">
+  <div class="media-block__image media-block__image--16-9"></div>
+</figure>
+          <div class="card-grid-demo__copy">
+    <div class="card-grid-demo__top">
+      <h2 class="card-grid-demo__title">Harrods</h2>
+      <p class="card-grid-demo__outcome">Digital transformation and brand design</p>
+    </div>
+    <div class="card-grid-demo__bottom">
+      <span class="card-grid-demo__role">Lead Digital Designer · Harrods · 2018</span>
+    </div>
+  </div>
+        </a>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script>
+    // Desktop sidebar collapse
+    const sidebarToggle = document.querySelector('.js-sidebar-toggle');
+    const aside         = document.querySelector('.site-aside');
+    const siteMain      = document.querySelector('.site-main');
+    const sidebarIcon   = sidebarToggle?.querySelector('use');
+
+    sidebarToggle?.addEventListener('click', () => {
+      const collapsed = aside.classList.toggle('site-aside--collapsed');
+      siteMain.classList.toggle('site-main--aside-collapsed', collapsed);
+      if (collapsed) {
+        sidebarToggle.setAttribute('aria-label', 'Open sidebar');
+        sidebarToggle.setAttribute('aria-expanded', 'false');
+        if (sidebarIcon) sidebarIcon.setAttribute('href', '#icon-left-panel-open-sm');
+      } else {
+        sidebarToggle.setAttribute('aria-label', 'Close sidebar');
+        sidebarToggle.setAttribute('aria-expanded', 'true');
+        if (sidebarIcon) sidebarIcon.setAttribute('href', '#icon-left-panel-close-sm');
+      }
+    });
+  </script>
+
+  <script>
+    const drawerToggle = document.querySelector('.js-drawer-toggle');
+    const drawer       = document.getElementById('site-drawer');
+    const toggleIcon   = drawerToggle?.querySelector('use');
+
+    function openDrawer() {
+      drawer.removeAttribute('hidden');
+      drawer.classList.add('site-drawer--open');
+      document.body.classList.add('drawer-open');
+      drawerToggle.setAttribute('aria-expanded', 'true');
+      drawerToggle.setAttribute('aria-label', 'Close menu');
+      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-close-sm');
+      drawerToggle.focus();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('site-drawer--open');
+      document.body.classList.remove('drawer-open');
+      drawerToggle.setAttribute('aria-expanded', 'false');
+      drawerToggle.setAttribute('aria-label', 'Open menu');
+      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-open-sm');
+      drawerToggle.focus();
+      drawer.addEventListener('transitionend', () => drawer.setAttribute('hidden', ''), { once: true });
+    }
+
+    drawerToggle?.addEventListener('click', () => {
+      drawer.hasAttribute('hidden') || !drawer.classList.contains('site-drawer--open')
+        ? openDrawer()
+        : closeDrawer();
+    });
+
+    drawer?.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+  </script>
+
+</body>
+</html>
