@@ -27,6 +27,10 @@ PATCHES = [
     ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{01-primitives.size.1600}", "dimension", "Page vertical padding. 80px desktop.", True),
     ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{01-primitives.size.1300}", "dimension", "Page vertical padding. 40px mobile.",  True),
 
+    # border/inverse — export tool drops this; cobalt/950 in light, cobalt/50 in dark
+    ("02-color-light", ("border", "inverse"), "{01-primitives.cobalt.950}", "color", "Inverted border — card edges on dark/inverse surfaces.", False),
+    ("02-color-dark",  ("border", "inverse"), "{01-primitives.cobalt.50}",  "color", "Inverted border — card edges on dark/inverse surfaces.", False),
+
     # type/body-md/line-height — export tool returns stale 26px; correct value is 22px
     ("02-dimensions-desktop", ("type", "body-md", "line-height"), 22, "dimension", "Body md line height. 22px.", True),
     ("02-dimensions-mobile",  ("type", "body-md", "line-height"), 22, "dimension", "Body md line height. 22px.", True),
