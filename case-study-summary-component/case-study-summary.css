@@ -20,12 +20,12 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--text-inverse);
+  color: var(--icon-inverse);
 }
 
 .case-study-summary__icon svg {
-  width: var(--icon-size-lg) !important;
-  height: var(--icon-size-lg) !important;
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
   fill: currentColor;
   flex-shrink: 0;
 }
@@ -40,10 +40,9 @@
 .case-study-summary__title {
   color: var(--text-inverse);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-md-size);
+  font-size: var(--type-heading-sm-size);
   font-weight: 400;
-  line-height: var(--type-heading-md-line-height);
-  letter-spacing: var(--type-heading-md-letter-spacing);
+  line-height: var(--type-heading-sm-line-height);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
@@ -68,15 +67,15 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  color: var(--text-inverse);
+  color: var(--icon-inverse);
 }
 
 .case-study-summary__description {
   color: var(--text-inverse);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
-  font-size: var(--type-heading-sm-size);
+  font-size: var(--type-body-md-size);
   font-weight: 400;
-  line-height: var(--type-heading-sm-line-height);
+  line-height: var(--type-body-md-line-height);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }

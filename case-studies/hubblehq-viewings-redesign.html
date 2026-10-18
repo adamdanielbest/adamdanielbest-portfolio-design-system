@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixing a 30% host decline rate — viewings redesign under a business pivot — Adam Daniel Best</title>
+  <meta name="description" content="Designing around the constraint you can't remove.">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Fixing a 30% host decline rate — viewings redesign under a business pivot",
+  "description": "Designing around the constraint you can't remove.",
+  "keywords": "product design, marketplace, two-sided platform, HubbleHQ, UX, constraints-led",
+  "author": {
+    "@type": "Person",
+    "name": "Adam Daniel Best",
+    "url": "https://adamdanielbest.com"
+  },
+  "url": "https://adamdanielbest.com/case-studies/hubblehq-viewings-redesign",
+  "datePublished": "2026-10-18",
+  "dateModified": "2026-10-18"
+}
+  </script>
+
+  <link rel="stylesheet" href="../src/styles/fonts.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
+  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
+  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="../content-section-component/content-section.css">
+  <link rel="stylesheet" href="../timeline-component/timeline.css">
+  <link rel="stylesheet" href="../text-link-component/text-link.css">
+  <link rel="stylesheet" href="../button-component/button.css">
+  <link rel="stylesheet" href="../sidebar-component/sidebar.css">
+  <link rel="stylesheet" href="../header-component/header.css">
+  <link rel="stylesheet" href="../page-nav-component/page-nav.css">
+  <link rel="stylesheet" href="../nav-link-component/nav-link.css">
+  <link rel="stylesheet" href="../media-block-component/media-block.css">
+  <link rel="stylesheet" href="../card-item-component/card-item.css">
+  <link rel="stylesheet" href="../case-study-hero-component/case-study-hero.css">
+  <link rel="stylesheet" href="../case-study-summary-component/case-study-summary.css">
+  <link rel="stylesheet" href="../src/styles/site.css">
+</head>
+<body data-theme="light">
+
+  <script>
+    document.documentElement.dataset.theme = 'light';
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
+
+  <!-- =====================================================================
+       Desktop aside — visible ≥769px
+       ===================================================================== -->
+  <aside class="site-aside" aria-label="About Adam Daniel Best">
+    <div class="site-aside__header">
+      <a class="header__logo" href="../index.html" aria-label="Adam Daniel Best — home">adamdanielbest</a>
+    <button class="header__icon-btn js-sidebar-toggle" type="button" aria-label="Close sidebar" aria-expanded="true">
+      <svg class="header__icon" aria-hidden="true" focusable="false">
+        <use href="#icon-left-panel-close-sm"></use>
+      </svg>
+    </button>
+    </div>
+    <div class="site-aside__body">
+      <div class="sidebar-demo sidebar-demo--desktop">
+        <div class="sidebar__inner">
+          
+        <section class="content-section" aria-label="About">
+          <h2 class="content-section__heading">About me</h2>
+          <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+        </section>
+
+        <section class="content-section" aria-label="Career timeline">
+          <h2 class="content-section__heading">Career timeline</h2>
+          <ol class="timeline" aria-label="Career timeline">
+          <li class="timeline-item timeline-item--current">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">giffgaff</span>
+                <span class="timeline-item__meta">Product Designer · 2023</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Lickd</span>
+                <span class="timeline-item__meta">Product Designer · 2020</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">HubbleHQ</span>
+                <span class="timeline-item__meta">Product Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">ORDRE</span>
+                <span class="timeline-item__meta">UI Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Harrods</span>
+                <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Boutique 1</span>
+                <span class="timeline-item__meta">Digital Designer · 2017</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Burberry</span>
+                <span class="timeline-item__meta">Digital Designer · 2009</span>
+              </div>
+            </li>
+          </ol>
+          <div class="sidebar__cv">
+            <p class="sidebar__cv-label">Learn more about my experience</p>
+            <button class="btn btn--primary btn--large btn--full-width" type="button">View CV</button>
+          </div>
+        </section>
+
+        <footer class="content-section" aria-label="Contact">
+          <h2 class="content-section__heading">Get in touch</h2>
+          <div class="sidebar__links">
+            <a class="text-link" href="mailto:eyeofsourceproductions@gmail.com">Email</a>
+            <a class="text-link" href="https://www.linkedin.com/in/adamdanielbest" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </footer>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       Mobile / tablet header — visible ≤768px
+       ===================================================================== -->
+  <header class="site-header" aria-label="Site navigation">
+    <a class="header__logo" href="../index.html" aria-label="Adam Daniel Best — home">adamdanielbest</a>
+    <button class="header__icon-btn js-drawer-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-drawer">
+      <svg class="header__icon" aria-hidden="true" focusable="false">
+        <use href="#icon-top-panel-open-sm"></use>
+      </svg>
+    </button>
+  </header>
+
+  <!-- =====================================================================
+       Mobile / tablet page-nav bar — visible ≤768px
+       ===================================================================== -->
+  <nav class="site-page-nav" aria-label="Page navigation">
+    <nav class="page-nav page-nav--icons-only" aria-label="Page navigation">
+      <div class="page-nav__back">
+        <a class="nav-link page-nav__link page-nav__link--icon-only" href="../index.html" aria-label="All case studies">
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg focusable="false"><use href="#icon-arrow-backwards"/></svg>
+          </span>
+        </a>
+      </div>
+      <p class="page-nav__title">Fixing a 30% host decline rate — viewings redesign under a business pivot</p>
+      <div class="page-nav__prev-next">
+        <a class="nav-link page-nav__link page-nav__link--icon-only" href="lickd-licensing-checkout.html" aria-label="Previous: Demystifying music copyright to lift checkout conversion by 10%">
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg focusable="false"><use href="#icon-chevron-backward"/></svg>
+          </span>
+        </a>
+        <a class="nav-link page-nav__link page-nav__link--icon-only" href="figma-to-code.html" aria-label="Next: Figma to code, end to end — tokens, components, and a CI pipeline built with AI">
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg focusable="false"><use href="#icon-chevron-forward"/></svg>
+          </span>
+        </a>
+      </div>
+    </nav>
+  </nav>
+
+  <!-- =====================================================================
+       Mobile drawer — sidebar overlay below header
+       ===================================================================== -->
+  <div class="site-drawer" id="site-drawer" role="dialog" aria-modal="true" aria-label="About Adam Daniel Best" hidden>
+    <div class="sidebar-demo sidebar-demo--mobile">
+      <div class="sidebar__inner">
+        
+        <section class="content-section" aria-label="About">
+          <h2 class="content-section__heading">About me</h2>
+          <p class="content-section__body">Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.</p>
+        </section>
+
+        <section class="content-section" aria-label="Career timeline">
+          <h2 class="content-section__heading">Career timeline</h2>
+          <ol class="timeline" aria-label="Career timeline">
+          <li class="timeline-item timeline-item--current">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">giffgaff</span>
+                <span class="timeline-item__meta">Product Designer · 2023</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Lickd</span>
+                <span class="timeline-item__meta">Product Designer · 2020</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">HubbleHQ</span>
+                <span class="timeline-item__meta">Product Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">ORDRE</span>
+                <span class="timeline-item__meta">UI Designer · 2019</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Harrods</span>
+                <span class="timeline-item__meta">Lead Digital Designer · 2018</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Boutique 1</span>
+                <span class="timeline-item__meta">Digital Designer · 2017</span>
+              </div>
+            </li>
+          <li class="timeline-item">
+              <span class="timeline-item__icon" aria-hidden="true"></span>
+              <div class="timeline-item__body">
+                <span class="timeline-item__company">Burberry</span>
+                <span class="timeline-item__meta">Digital Designer · 2009</span>
+              </div>
+            </li>
+          </ol>
+          <div class="sidebar__cv">
+            <p class="sidebar__cv-label">Learn more about my experience</p>
+            <button class="btn btn--primary btn--large btn--full-width" type="button">View CV</button>
+          </div>
+        </section>
+
+        <footer class="content-section" aria-label="Contact">
+          <h2 class="content-section__heading">Get in touch</h2>
+          <div class="sidebar__links">
+            <a class="text-link" href="mailto:eyeofsourceproductions@gmail.com">Email</a>
+            <a class="text-link" href="https://www.linkedin.com/in/adamdanielbest" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       Main content
+       ===================================================================== -->
+  <main class="site-main" id="main-content">
+
+    <nav class="site-main__nav" aria-label="Page navigation">
+      <nav class="page-nav" aria-label="Page navigation">
+        <div class="page-nav__back">
+          <a class="nav-link page-nav__link" href="../index.html">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg focusable="false"><use href="#icon-arrow-backwards"/></svg>
+            </span>
+            <span class="nav-link__label">All case studies</span>
+          </a>
+        </div>
+        <p class="page-nav__title">Fixing a 30% host decline rate — viewings redesign under a business pivot</p>
+        <div class="page-nav__prev-next">
+          <a class="nav-link page-nav__link" href="lickd-licensing-checkout.html" aria-label="Previous: Demystifying music copyright to lift checkout conversion by 10%">
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg focusable="false"><use href="#icon-chevron-backward"/></svg>
+          </span>
+          <span class="nav-link__label">Previous</span>
+        </a>
+          <a class="nav-link page-nav__link" href="figma-to-code.html" aria-label="Next: Figma to code, end to end — tokens, components, and a CI pipeline built with AI">
+          <span class="nav-link__label">Next</span>
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg focusable="false"><use href="#icon-chevron-forward"/></svg>
+          </span>
+        </a>
+        </div>
+      </nav>
+    </nav>
+
+    <div class="site-main__content">
+      <div class="case-study-content">
+        <article class="case-study-hero case-study-hero--desktop">
+  <div class="case-study-hero__media">
+    <figure class="media-block">
+      <div class="media-block__image" role="img" aria-label="Media placeholder"></div>
+    </figure>
+  </div>
+  <div class="case-study-hero__copy">
+    <div class="case-study-hero__top">
+      <h1 class="case-study-hero__title">Fixing a 30% host decline rate — viewings redesign under a business pivot</h1>
+      <p class="case-study-hero__outcome">Designing around the constraint you can't remove.</p>
+    </div>
+    <div class="case-study-hero__bottom">
+      <p class="case-study-hero__role">Product Designer · HubbleHQ · 2019–2020</p>
+    </div>
+  </div>
+</article>
+        <div class="case-study-summary">
+          <div class="case-study-summary__header">
+            <div class="case-study-summary__icon" aria-hidden="true">
+              <svg focusable="false"><use href="#icon-summarise-md"/></svg>
+            </div>
+            <span class="case-study-summary__title">Summary</span>
+          </div>
+          <ul class="case-study-summary__list" role="list">
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false"><use href="#icon-success"/></svg>
+              </div>
+              <span class="case-study-summary__description">30% host decline rate; end-to-end viewings flow redesigned for both sides of a marketplace</span>
+            </li>
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false"><use href="#icon-success"/></svg>
+              </div>
+              <span class="case-study-summary__description">No calendar API access; solution designed around the constraint, not through it</span>
+            </li>
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false"><use href="#icon-success"/></svg>
+              </div>
+              <span class="case-study-summary__description">Delivered across a business pivot and COVID-forced switch to virtual-only viewings</span>
+            </li>
+          </ul>
+        </div>
+
+        <section class="content-section content-section--context" aria-label="Context">
+          <h2 class="content-section__heading">Context</h2>
+          <div class="content-section__body">
+            <p>HubbleHQ is an office search and flexible workspace marketplace. Businesses use it to find and book office space, from monthly flex desks to long-term private offices. The platform connects workspace seekers with hosts, and a large part of that process involves physical viewings before any commitment is made.</p>
+            <p>The viewings flow had a structural problem that no amount of design could remove: hosts controlled their own calendars, and many were slow to respond or unavailable at the times they had listed. A third of viewing requests were being declined by hosts, and there was no way for the product to prevent that. We could only design around it.</p>
+            <p>I joined as the lead product designer, working with a product manager, engineering team and, for part of the project, a second designer focused on the host-side experience.</p>
+          </div>
+        </section>
+
+        <figure class="media-block">
+          <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+          <figcaption class="media-block__caption">Caption</figcaption>
+        </figure>
+
+        <section class="content-section content-section--work" aria-label="Discovery: understanding why hosts were declining">
+          <h2 class="content-section__heading">Discovery: understanding why hosts were declining</h2>
+          <div class="content-section__body">
+            <p>Before designing anything, I needed to understand why the decline rate was so high and where the biggest drop-off points were. I ran a series of interviews with both sides of the marketplace: searchers who had abandoned a viewing process, and hosts who had declined or not responded.</p>
+            <p>The findings split into two distinct problems. On the searcher side, the booking request flow asked for information hosts needed but did not explain why, which put people off completing it. On the host side, the calendar and availability tools were basic enough that many hosts were listing times they could not actually commit to.</p>
+            <p>I mapped the full journey for both personas and scored the friction points by how much they contributed to the 30% decline rate and how feasible they were to address given our constraints. This gave the team a shared, ranked view of what was worth building first. We worked through the options together, with each person bringing their own knowledge of what was technically viable. New proposals went to weekly product reviews with the Chief Technology Officer (CTO) and squad leads.</p>
+          </div>
+        </section>
+
+        <figure class="media-block">
+          <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+          <figcaption class="media-block__caption">Caption</figcaption>
+        </figure>
+
+        <section class="content-section content-section--work" aria-label="Redesigning the viewings flow">
+          <h2 class="content-section__heading">Redesigning the viewings flow</h2>
+          <div class="content-section__body">
+            <p>The core design problem was that we could not integrate with host calendar systems. The CTO had assessed this early in the project; the technical and commercial complexity of connecting to the range of calendar tools hosts used was out of scope. We had to build a flow that felt reliable without the infrastructure that would make it actually reliable.</p>
+            <p>The solution was to be transparent about the process rather than paper over it. Rather than presenting a booking as confirmed until a host declined, I redesigned the flow to set expectations clearly at every stage: the request had been sent, the host typically responds within a given window, and the searcher would receive a notification either way. We also introduced smart defaults that reduced the cognitive load on the request form, pre-filling details where we had them and asking only for what the host genuinely needed.</p>
+            <p>On the host side, we made availability management simpler and faster, reducing the friction of keeping listings accurate. The parallel workstream on the host experience, led by the second designer, fed directly into this. The redesign launched in early 2020. Within weeks, COVID-19 had effectively shut down the office market. The results we had been tracking became meaningless as demand collapsed, but the work itself held up as a sound approach to the underlying problem.</p>
+          </div>
+        </section>
+
+        <figure class="media-block">
+          <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+          <figcaption class="media-block__caption">Caption</figcaption>
+        </figure>
+
+        <section class="content-section content-section--impact" aria-label="Impact">
+          <h2 class="content-section__heading">Impact</h2>
+          <div class="content-section__body">
+            <p>The viewings redesign launched to production and the early signals were positive before COVID-19 disrupted the market entirely.</p>
+            <ul>
+              <li>Host decline rate reduced from 30% in the early testing cohort</li>
+              <li>Viewing request completion rate improved across all user segments</li>
+              <li>Launched and held under a sudden market pivot and the onset of COVID-19</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Desktop sidebar collapse
+    const sidebarToggle = document.querySelector('.js-sidebar-toggle');
+    const aside         = document.querySelector('.site-aside');
+    const siteMain      = document.querySelector('.site-main');
+    const sidebarIcon   = sidebarToggle?.querySelector('use');
+
+    sidebarToggle?.addEventListener('click', () => {
+      const collapsed = aside.classList.toggle('site-aside--collapsed');
+      siteMain.classList.toggle('site-main--aside-collapsed', collapsed);
+      if (collapsed) {
+        sidebarToggle.setAttribute('aria-label', 'Open sidebar');
+        sidebarToggle.setAttribute('aria-expanded', 'false');
+        if (sidebarIcon) sidebarIcon.setAttribute('href', '#icon-left-panel-open-sm');
+      } else {
+        sidebarToggle.setAttribute('aria-label', 'Close sidebar');
+        sidebarToggle.setAttribute('aria-expanded', 'true');
+        if (sidebarIcon) sidebarIcon.setAttribute('href', '#icon-left-panel-close-sm');
+      }
+    });
+  </script>
+
+  <script>
+    const drawerToggle = document.querySelector('.js-drawer-toggle');
+    const drawer       = document.getElementById('site-drawer');
+    const toggleIcon   = drawerToggle?.querySelector('use');
+
+    function openDrawer() {
+      drawer.removeAttribute('hidden');
+      drawer.classList.add('site-drawer--open');
+      document.body.classList.add('drawer-open');
+      drawerToggle.setAttribute('aria-expanded', 'true');
+      drawerToggle.setAttribute('aria-label', 'Close menu');
+      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-close-sm');
+      drawerToggle.focus();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('site-drawer--open');
+      document.body.classList.remove('drawer-open');
+      drawerToggle.setAttribute('aria-expanded', 'false');
+      drawerToggle.setAttribute('aria-label', 'Open menu');
+      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-open-sm');
+      drawerToggle.focus();
+      drawer.addEventListener('transitionend', () => drawer.setAttribute('hidden', ''), { once: true });
+    }
+
+    drawerToggle?.addEventListener('click', () => {
+      drawer.hasAttribute('hidden') || !drawer.classList.contains('site-drawer--open')
+        ? openDrawer()
+        : closeDrawer();
+    });
+
+    drawer?.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+  </script>
+
+  <script src="../src/js/router.js"></script>
+</body>
+</html>

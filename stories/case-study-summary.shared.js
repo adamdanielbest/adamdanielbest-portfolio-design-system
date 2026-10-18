@@ -8,7 +8,7 @@ export const renderCaseStudySummary = (args) => {
   const listItems = items.map(text => `
     <li class="case-study-summary__list-item">
       <div class="case-study-summary__list-icon" aria-hidden="true">
-        <svg focusable="false">
+        <svg width="16" height="16" focusable="false">
           <use href="#icon-success"/>
         </svg>
       </div>
@@ -17,12 +17,12 @@ export const renderCaseStudySummary = (args) => {
   `).join('');
 
   return `
-    <div data-theme="${theme}" style="background-color: var(--background-page); padding: var(--spacing-lg);">
+    <div data-theme="${theme}" style="background-color: var(--background-page); padding: var(--spacing-lg); min-height: 100vh; box-sizing: border-box;">
       <div class="case-study-summary">
         <div class="case-study-summary__header">
           <div class="case-study-summary__icon" aria-hidden="true">
             <svg focusable="false">
-              <use href="#icon-summarise-lg"/>
+              <use href="#icon-summarise-md"/>
             </svg>
           </div>
           <span class="case-study-summary__title">${title}</span>

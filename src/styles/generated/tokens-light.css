@@ -46,7 +46,7 @@
   /* Form inputs, selects, textareas. */
   --background-input: #FFFFFF;
   /* Inverted surface — dark chip/badge on light mode. */
-  --background-inverse: #121212;
+  --background-inverse: #10243A;
   /* Modal scrim — darkens page to focus attention on elevated content. */
   --background-overlay: #000000;
   /* Page background — Off White outermost surface. */
@@ -87,6 +87,7 @@
   --icon-accent: #3A73A0;
   --icon-disabled: #ABABAB;
   --icon-error: #BE123C;
+  --icon-inverse: #FAF9F6;
   --icon-primary: #121212;
   --icon-secondary: #666666;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels. */

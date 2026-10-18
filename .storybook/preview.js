@@ -35,8 +35,8 @@ const preview = {
       wrapper.setAttribute('data-theme', theme);
       wrapper.style.background = 'var(--background-page)';
       wrapper.style.fontFamily = "var(--type-family-primary, 'Eina04'), Arial, sans-serif";
-      wrapper.style.padding = '24px';
-      wrapper.style.minHeight = '100px';
+      wrapper.style.minHeight = '100vh';
+      wrapper.style.boxSizing = 'border-box';
       wrapper.innerHTML = story();
       return wrapper;
     },
