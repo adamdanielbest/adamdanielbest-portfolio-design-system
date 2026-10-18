@@ -41,11 +41,14 @@
 }
 
 /* --------------------------------------------------------------------------
-   Title — flex child, centred between back and prev-next groups
+   Title — truly centred over the bar; max-width guards against button overlap
+   (prev+next group ≈ 112px, 8px padding each side → 240px total clearance)
    -------------------------------------------------------------------------- */
 .page-nav__title {
-  flex: 1;
-  min-width: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 240px);
   margin: 0;
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-body-md-size);
