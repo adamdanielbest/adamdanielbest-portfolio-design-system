@@ -93,8 +93,8 @@
 .sidebar__cv-label {
   margin: 0;
   font-family: var(--type-family-primary), system-ui, sans-serif;
-  font-size: var(--type-body-sm-size);
-  line-height: var(--type-body-sm-line-height);
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
   color: var(--text-secondary);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
