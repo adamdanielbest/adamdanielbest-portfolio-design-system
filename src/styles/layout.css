@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+code {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-emphasis-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  white-space: nowrap;
+}
+
 /* --------------------------------------------------------------------------
    Container
    Max-width wrapper, centred, with page-margin padding on both sides.
