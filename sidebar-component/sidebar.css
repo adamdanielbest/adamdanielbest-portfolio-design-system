@@ -53,7 +53,7 @@
 .sidebar__inner {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
   padding: var(--spacing-lg);
 }
 
@@ -87,8 +87,17 @@
 .sidebar__cv {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.sidebar__cv-label {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-sm-size);
+  line-height: var(--type-body-sm-line-height);
+  color: var(--text-secondary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 /* --------------------------------------------------------------------------
@@ -97,4 +106,5 @@
 .sidebar__links {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-xs);
 }

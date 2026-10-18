@@ -9,8 +9,8 @@ export function renderSidebar({
   breakpoint  = 'desktop',
   bio         = 'Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.',
   timeline    = DEFAULT_TIMELINE,
-  cvLinkLabel = 'More about my experience',
-  buttonLabel = 'Download CV',
+  cvLinkLabel = 'Learn more about my experience',
+  buttonLabel = 'View CV',
   emailLabel  = 'Email',
   linkedinLabel = 'LinkedIn',
 } = {}) {
@@ -45,8 +45,8 @@ export const defaultArgs = {
   breakpoint: 'desktop',
   bio: 'Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.',
   timeline: DEFAULT_TIMELINE,
-  cvLinkLabel: 'More about my experience',
-  buttonLabel: 'Download CV',
+  cvLinkLabel: 'Learn more about my experience',
+  buttonLabel: 'View CV',
   emailLabel: 'Email',
   linkedinLabel: 'LinkedIn',
 };

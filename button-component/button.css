@@ -41,6 +41,12 @@
   cursor: not-allowed;
 }
 
+/* ---- Layout modifiers ---- */
+
+.btn--full-width {
+  width: 100%;
+}
+
 /* ---- Sizes ---- (measured from the Figma component: 32 / 40 / 48px tall) */
 
 .btn--small {

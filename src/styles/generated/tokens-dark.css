@@ -64,6 +64,7 @@
   --border-brand: #5C91B5;
   /* Standard card edges and dividers — blue-grey tinted. */
   --border-default: #193651;
+  --border-disabled: #4A4A4A;
   --border-divider: #2E2E2E;
   /* Error border in dark. */
   --border-error: #E11D48;
@@ -82,6 +83,7 @@
   /* Warning border in dark. */
   --border-warning: #D97706;
   --icon-accent: #88B0CD;
+  --icon-disabled: #666666;
   --icon-error: #FB7185;
   --icon-primary: #FAF9F6;
   --icon-secondary: #ABABAB;

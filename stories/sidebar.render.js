@@ -23,9 +23,9 @@ function renderTimeline(items) {
 export function renderSidebarSections({
   bio           = 'Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.',
   timeline      = DEFAULT_TIMELINE,
-  cvLinkLabel   = 'More about my experience',
+  cvLinkLabel   = 'Learn more about my experience',
   cvLinkHref    = '#',
-  buttonLabel   = 'Download CV',
+  buttonLabel   = 'View CV',
   emailLabel    = 'Email',
   emailHref     = 'mailto:eyeofsourceproductions@gmail.com',
   linkedinLabel = 'LinkedIn',
@@ -41,8 +41,8 @@ export function renderSidebarSections({
           <h2 class="content-section__heading">Career timeline</h2>
           ${renderTimeline(timeline)}
           <div class="sidebar__cv">
-            <a class="text-link" href="${cvLinkHref}">${cvLinkLabel}</a>
-            <button class="btn btn--primary btn--large" type="button">${buttonLabel}</button>
+            <p class="sidebar__cv-label">${cvLinkLabel}</p>
+            <button class="btn btn--primary btn--large btn--full-width" type="button">${buttonLabel}</button>
           </div>
         </section>
 

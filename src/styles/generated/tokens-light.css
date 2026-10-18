@@ -64,6 +64,7 @@
   --border-brand: #88B0CD;
   /* Standard card edges, input borders, content dividers. */
   --border-default: #E8E8E8;
+  --border-disabled: #D4D4D4;
   --border-divider: #E8E8E8;
   /* Error state border — error banners, invalid inputs. */
   --border-error: #BE123C;
@@ -82,6 +83,7 @@
   /* Warning state border — caution banners. */
   --border-warning: #F59E0B;
   --icon-accent: #3A73A0;
+  --icon-disabled: #ABABAB;
   --icon-error: #BE123C;
   --icon-primary: #121212;
   --icon-secondary: #666666;
