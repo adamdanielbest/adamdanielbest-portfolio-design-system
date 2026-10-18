@@ -273,6 +273,10 @@ body {
   padding: var(--spacing-xl) var(--spacing-lg);
 }
 
+.case-study-content .case-study-summary {
+  margin-top: var(--spacing-xl);
+}
+
 .case-study-content .content-section {
   margin-top: var(--spacing-xl);
 }

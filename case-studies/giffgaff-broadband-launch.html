@@ -17,7 +17,9 @@
     "name": "Adam Daniel Best",
     "url": "https://adamdanielbest.com"
   },
-  "url": "https://adamdanielbest.com/case-studies/giffgaff-broadband-launch.html"
+  "url": "https://adamdanielbest.com/case-studies/giffgaff-broadband-launch",
+  "datePublished": "2026-10-19",
+  "dateModified": "2026-10-18"
 }
   </script>
 
@@ -39,6 +41,7 @@
   <link rel="stylesheet" href="../media-block-component/media-block.css">
   <link rel="stylesheet" href="../card-item-component/card-item.css">
   <link rel="stylesheet" href="../case-study-hero-component/case-study-hero.css">
+  <link rel="stylesheet" href="../case-study-summary-component/case-study-summary.css">
   <link rel="stylesheet" href="../src/styles/site.css">
 </head>
 <body data-theme="light">
@@ -321,11 +324,42 @@
     </div>
   </div>
 </article>
-        <ul class="case-study-tldr" aria-label="Key outcomes">
-        <li class="case-study-tldr__item">6% conversion against a 4.5% target</li>
-        <li class="case-study-tldr__item">95 NPS at launch, 9.7/10 DXS, 91.7% CSAT</li>
-        <li class="case-study-tldr__item">0.2% churn after 6 months live</li>
-      </ul>
+        <div class="case-study-summary">
+          <div class="case-study-summary__header">
+            <div class="case-study-summary__icon" aria-hidden="true">
+              <svg focusable="false">
+                <use href="#icon-summarise-lg"/>
+              </svg>
+            </div>
+            <span class="case-study-summary__title">Summary</span>
+          </div>
+          <ul class="case-study-summary__list" role="list">
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false">
+                  <use href="#icon-success"/>
+                </svg>
+              </div>
+              <span class="case-study-summary__description">6% conversion against a 4.5% target</span>
+            </li>
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false">
+                  <use href="#icon-success"/>
+                </svg>
+              </div>
+              <span class="case-study-summary__description">95 NPS at launch, 9.7/10 DXS, 91.7% CSAT</span>
+            </li>
+            <li class="case-study-summary__list-item">
+              <div class="case-study-summary__list-icon" aria-hidden="true">
+                <svg width="16" height="16" focusable="false">
+                  <use href="#icon-success"/>
+                </svg>
+              </div>
+              <span class="case-study-summary__description">0.2% churn after 6 months live</span>
+            </li>
+          </ul>
+        </div>
         <section class="content-section content-section--context" aria-label="Context">
           <h2 class="content-section__heading">Context</h2>
           <div class="content-section__body"><p>giffgaff is a mobile virtual network operator known for its community-led model and challenger brand positioning. In 2023 the business decided to enter the Full Fibre broadband market — a move that had no existing playbook internally and sat outside its core product infrastructure.</p>
@@ -337,27 +371,66 @@
 
         <section class="content-section content-section--work" aria-label="Orchestrating the insight machine">
           <h2 class="content-section__heading">Orchestrating the insight machine</h2>
-          <div class="content-section__body"><p><em>Content to be written.</em></p></div>
+          <div class="content-section__body">
+            <p>To attack a volatile 0→1 market, we needed a scalable discovery infrastructure. Rapid experimentation was creating insight silos, causing a delay between user feedback and roadmap decisions.</p>
+            <p>I led stakeholder interviews across CX, commercial, and our network partner VMO2 to map what was already known. Alongside this, I standardised our AI-augmented insight library, introducing a consistent taxonomy and automated tagging of Maze trialist data. This reduced discovery-to-insight cycles and meant the repository remained accessible for future desk research, giving product leads a single source of truth to make data-driven trade-offs in real time rather than re-running the same discovery work.</p>
+          </div>
+          <figure class="media-block">
+            <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+            <figcaption class="media-block__caption">Caption</figcaption>
+          </figure>
         </section>
 
         <section class="content-section content-section--work" aria-label="De-risking via incremental rollout">
           <h2 class="content-section__heading">De-risking via incremental rollout</h2>
-          <div class="content-section__body"><p><em>Content to be written.</em></p></div>
+          <div class="content-section__body">
+            <p>Launching a 0→1 vertical in a regulated utility space required a tiered approach to risk. Rather than designing in isolation and launching at scale, we built through progressive exposure: discovery, internal staff trials, a small member cohort, a controlled regional launch, and finally a national commercial launch.</p>
+            <p>The small cohort phase was the most valuable. We ran field visits alongside the installs, observing and interviewing members during the actual engineer visit, capturing the emotional reality of the experience in a way no remote research could replicate. Each phase gave us real contact rate and satisfaction data before the next cohort went live, so service logic failures and UI gaps were caught and resolved before scaling. The product that launched nationally was substantially different from the one we started with.</p>
+          </div>
+          <figure class="media-block">
+            <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+            <figcaption class="media-block__caption">Caption</figcaption>
+          </figure>
         </section>
 
         <section class="content-section content-section--work" aria-label="Architecting service logic">
           <h2 class="content-section__heading">Architecting service logic</h2>
-          <div class="content-section__body"><p><em>Content to be written.</em></p></div>
+          <div class="content-section__body">
+            <p>My primary contribution was architecting the underlying service ruleset. The acquisition and onboarding journey was constrained by three concurrent, non-deterministic third-party dependencies, each of which could alter the journey in ways we could not predict or control.</p>
+            <p>The address check (UPRN/Loqate) was the entry trigger, determining property type (MDU vs. SDU) and cascading into field force scheduling constraints and install type (1-stage vs. 2-stage). The installation slot (VMO2 Booking API) could not be confirmed until a regulatory switch intent was registered via SureSwitch, which itself was governed by Ofcom's One Touch Switch regulation. The UI had to reflect these states honestly, managing member anxiety through a high-ambiguity window where the experience was partly outside our control.</p>
+            <p>I designed the installation booking experience to surface the right information at each state, rather than forcing a linear flow that the underlying APIs could not guarantee. By partnering with engineering to enable State-Aware UI for these non-deterministic windows, we sustained brand trust through technical constraints that were not ours to resolve.</p>
+          </div>
+          <figure class="media-block">
+            <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+            <figcaption class="media-block__caption">Caption</figcaption>
+          </figure>
         </section>
 
         <section class="content-section content-section--work" aria-label="Pre-activation handoff">
           <h2 class="content-section__heading">Pre-activation handoff</h2>
-          <div class="content-section__body"><p><em>Content to be written.</em></p></div>
+          <div class="content-section__body">
+            <p>Research identified the engineer visit as the peak friction point, with a 40% pre-install cancellation rate driven by anxiety in the window between order confirmation and installation day.</p>
+            <p>I designed the pre-install preparation experience: a self-serve flow that collected critical field force data (health, safety, and vulnerability information) ahead of the engineer visit, and provided proactive status updates at each operational milestone. Working with the content designer, we wrote messaging to manage expectations around VMO2 logistics delays rather than obscure them.</p>
+            <p>Despite unavoidable delays in VMO2's field force operations, we maintained a 95 NPS from the trialist cohort by treating transparency as the design principle, not a fallback.</p>
+          </div>
+          <figure class="media-block">
+            <div class="media-block__image media-block__image--16-9" role="img" aria-label="Image placeholder"></div>
+            <figcaption class="media-block__caption">Caption</figcaption>
+          </figure>
         </section>
 
         <section class="content-section content-section--impact" aria-label="Impact">
           <h2 class="content-section__heading">Impact</h2>
-          <div class="content-section__body"><p><em>Content to be written.</em></p></div>
+          <div class="content-section__body">
+            <p>giffgaff Full Fibre launched to the first postcode cohort and scaled to a national commercial launch.</p>
+            <ul>
+              <li>6% conversion rate against a 4.5% target</li>
+              <li>95 NPS sustained from trialists through to commercial launch</li>
+              <li>9.7/10 Digital Experience Score (Medallia)</li>
+              <li>91.7% CSAT</li>
+              <li>0.2% churn after 6 months live</li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
