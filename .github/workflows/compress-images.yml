@@ -1,0 +1,33 @@
+name: Compress Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/images/**'
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    name: Compress JPGs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install sharp
+        run: npm install --no-save sharp glob
+
+      - name: Compress images
+        run: node .github/scripts/compress-images.js
+
+      - name: Commit compressed images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: compress images"
+          file_pattern: "assets/images/**"
