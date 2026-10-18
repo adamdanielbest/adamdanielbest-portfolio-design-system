@@ -291,12 +291,10 @@ function renderCaseStudyPage(study, { prev, next } = {}) {
         </a>`;
 
   const hero = renderCaseStudyHero({
-    breakpoint:  'desktop',
-    title:       study.title,
-    outcome:     study.outcome,
-    hookHeading: study.hookHeading,
-    hookBody:    study.hookBody,
-    role:        study.role,
+    breakpoint: 'desktop',
+    title:      study.title,
+    outcome:    study.outcome,
+    role:       study.role,
   });
 
   return `<!DOCTYPE html>

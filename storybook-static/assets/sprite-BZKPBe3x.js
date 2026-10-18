@@ -1,5 +1,5 @@
 import{n as e}from"./rolldown-runtime-DkW27tQK.js";var t;function n(){return(n=e((()=>{t=`<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <!-- 204 icons exported from Figma (xs=no suffix, sm/md/lg=size suffix) -->
+  <!-- 204 icons exported from Figma node 2601:3955 (xs=no suffix, sm/md/lg=size suffix) -->
   <symbol id="icon-add" viewBox="0 0 16 16">
     <g clip-path="url(#clip0_3051_11240)">
 <path d="M7.2 12H8.8V8.8H12V7.2H8.8V4H7.2V7.2H4V8.8H7.2V12ZM8 16C6.89333 16 5.85333 15.79 4.88 15.37C3.90667 14.95 3.06 14.38 2.34 13.66C1.62 12.94 1.05 12.0933 0.63 11.12C0.21 10.1467 0 9.10667 0 8C0 6.89333 0.21 5.85333 0.63 4.88C1.05 3.90667 1.62 3.06 2.34 2.34C3.06 1.62 3.90667 1.05 4.88 0.63C5.85333 0.21 6.89333 0 8 0C9.10667 0 10.1467 0.21 11.12 0.63C12.0933 1.05 12.94 1.62 13.66 2.34C14.38 3.06 14.95 3.90667 15.37 4.88C15.79 5.85333 16 6.89333 16 8C16 9.10667 15.79 10.1467 15.37 11.12C14.95 12.0933 14.38 12.94 13.66 13.66C12.94 14.38 12.0933 14.95 11.12 15.37C10.1467 15.79 9.10667 16 8 16Z"/>
@@ -1509,5 +1509,4 @@ import{n as e}from"./rolldown-runtime-DkW27tQK.js";var t;function n(){return(n=e
   <symbol id="icon-warning-lg" viewBox="0 0 48 48">
     <path d="M0 46L24 2L48 46H0ZM25.5545 38.3868C25.9727 37.943 26.1818 37.393 26.1818 36.7368C26.1818 36.0807 25.9727 35.5307 25.5545 35.0868C25.1364 34.643 24.6182 34.4211 24 34.4211C23.3818 34.4211 22.8636 34.643 22.4455 35.0868C22.0273 35.5307 21.8182 36.0807 21.8182 36.7368C21.8182 37.393 22.0273 37.943 22.4455 38.3868C22.8636 38.8307 23.3818 39.0526 24 39.0526C24.6182 39.0526 25.1364 38.8307 25.5545 38.3868ZM21.8182 32.1053H26.1818V20.5263H21.8182V32.1053Z"/>
   </symbol>
-</svg>
-`})))()}function r(e,t){if(!e)return;let n=e.ownerDocument,r=t.startsWith(`#`)?t.slice(1):t,i=n.getElementById(r);if(i){e.innerHTML=``;for(let t of i.children)e.appendChild(t.cloneNode(!0))}}function i(){return(i=e((()=>{if(n(),!document.getElementById(`sb-sprite`)){let e=document.createElement(`div`);e.id=`sb-sprite`,e.setAttribute(`aria-hidden`,`true`),e.innerHTML=t,document.body.insertBefore(e,document.body.firstChild)}})))()}export{r as n,i as t};
+</svg>`})))()}function r(e,t){if(!e)return;let n=e.ownerDocument,r=t.startsWith(`#`)?t.slice(1):t,i=n.getElementById(r);if(i){e.innerHTML=``;for(let t of i.children)e.appendChild(t.cloneNode(!0))}}function i(){return(i=e((()=>{if(n(),!document.getElementById(`sb-sprite`)){let e=document.createElement(`div`);e.id=`sb-sprite`,e.setAttribute(`aria-hidden`,`true`),e.innerHTML=t,document.body.insertBefore(e,document.body.firstChild)}})))()}export{r as n,i as t};
