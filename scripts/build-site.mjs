@@ -245,6 +245,7 @@ const html = `<!DOCTYPE html>
     });
   </script>
 
+  <script src="src/js/router.js"></script>
 </body>
 </html>
 `;
@@ -505,6 +506,7 @@ function renderCaseStudyPage(study, { prev, next } = {}) {
     });
   </script>
 
+  <script src="../src/js/router.js"></script>
 </body>
 </html>
 `;
