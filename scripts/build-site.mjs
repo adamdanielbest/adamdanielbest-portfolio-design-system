@@ -17,6 +17,37 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
 // ---------------------------------------------------------------------------
+// Global CSS — loaded on every page regardless of content type.
+// With client-side routing the homepage shell hosts all content,
+// so all component CSS must be present from the first load.
+// ---------------------------------------------------------------------------
+const CSS_FILES = [
+  'src/styles/fonts.css',
+  'src/styles/generated/tokens-primitives.css',
+  'src/styles/generated/tokens-light.css',
+  'src/styles/generated/tokens-dark.css',
+  'src/styles/generated/tokens-desktop.css',
+  'src/styles/generated/tokens-mobile.css',
+  'src/styles/layout.css',
+  'content-section-component/content-section.css',
+  'timeline-component/timeline.css',
+  'text-link-component/text-link.css',
+  'button-component/button.css',
+  'sidebar-component/sidebar.css',
+  'header-component/header.css',
+  'page-nav-component/page-nav.css',
+  'nav-link-component/nav-link.css',
+  'media-block-component/media-block.css',
+  'card-item-component/card-item.css',
+  'case-study-hero-component/case-study-hero.css',
+  'src/styles/site.css',
+];
+
+function renderCssLinks(prefix = '') {
+  return CSS_FILES.map(f => `  <link rel="stylesheet" href="${prefix}${f}">`).join('\n');
+}
+
+// ---------------------------------------------------------------------------
 // Site-specific render wrappers
 // ---------------------------------------------------------------------------
 
@@ -84,33 +115,7 @@ const html = `<!DOCTYPE html>
   <title>Adam Daniel Best — Senior Product Designer, London</title>
   <meta name="description" content="Senior Product Designer with 15 years across luxury heritage and high-growth product. Based in London.">
 
-  <!-- Fonts -->
-  <link rel="stylesheet" href="src/styles/fonts.css">
-
-  <!-- Design tokens -->
-  <link rel="stylesheet" href="src/styles/generated/tokens-primitives.css">
-  <link rel="stylesheet" href="src/styles/generated/tokens-light.css">
-  <link rel="stylesheet" href="src/styles/generated/tokens-dark.css">
-  <link rel="stylesheet" href="src/styles/generated/tokens-desktop.css">
-  <link rel="stylesheet" href="src/styles/generated/tokens-mobile.css">
-
-  <!-- Layout utilities -->
-  <link rel="stylesheet" href="src/styles/layout.css">
-
-  <!-- Component CSS -->
-  <link rel="stylesheet" href="content-section-component/content-section.css">
-  <link rel="stylesheet" href="timeline-component/timeline.css">
-  <link rel="stylesheet" href="text-link-component/text-link.css">
-  <link rel="stylesheet" href="button-component/button.css">
-  <link rel="stylesheet" href="sidebar-component/sidebar.css">
-  <link rel="stylesheet" href="header-component/header.css">
-  <link rel="stylesheet" href="page-nav-component/page-nav.css">
-  <link rel="stylesheet" href="nav-link-component/nav-link.css">
-  <link rel="stylesheet" href="media-block-component/media-block.css">
-  <link rel="stylesheet" href="card-item-component/card-item.css">
-
-  <!-- Site layout -->
-  <link rel="stylesheet" href="src/styles/site.css">
+${renderCssLinks()}
 </head>
 <body data-theme="light">
 
@@ -302,33 +307,7 @@ function renderCaseStudyPage(study, { prev, next } = {}) {
   <title>${study.title} — Adam Daniel Best</title>
   <meta name="description" content="${study.outcome}">
 
-  <!-- Fonts -->
-  <link rel="stylesheet" href="../src/styles/fonts.css">
-
-  <!-- Design tokens -->
-  <link rel="stylesheet" href="../src/styles/generated/tokens-primitives.css">
-  <link rel="stylesheet" href="../src/styles/generated/tokens-light.css">
-  <link rel="stylesheet" href="../src/styles/generated/tokens-dark.css">
-  <link rel="stylesheet" href="../src/styles/generated/tokens-desktop.css">
-  <link rel="stylesheet" href="../src/styles/generated/tokens-mobile.css">
-
-  <!-- Layout utilities -->
-  <link rel="stylesheet" href="../src/styles/layout.css">
-
-  <!-- Component CSS -->
-  <link rel="stylesheet" href="../content-section-component/content-section.css">
-  <link rel="stylesheet" href="../timeline-component/timeline.css">
-  <link rel="stylesheet" href="../text-link-component/text-link.css">
-  <link rel="stylesheet" href="../button-component/button.css">
-  <link rel="stylesheet" href="../sidebar-component/sidebar.css">
-  <link rel="stylesheet" href="../header-component/header.css">
-  <link rel="stylesheet" href="../page-nav-component/page-nav.css">
-  <link rel="stylesheet" href="../nav-link-component/nav-link.css">
-  <link rel="stylesheet" href="../media-block-component/media-block.css">
-  <link rel="stylesheet" href="../case-study-hero-component/case-study-hero.css">
-
-  <!-- Site layout -->
-  <link rel="stylesheet" href="../src/styles/site.css">
+${renderCssLinks('../')}
 </head>
 <body data-theme="light">
 
