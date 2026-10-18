@@ -74,6 +74,7 @@
   --border-ghost: #88B0CD;
   /* Info border in dark. */
   --border-info: #5C91B5;
+  --border-inverse: #E8E8E8;
   /* Prominent edge — selected states, strong dividers in dark. */
   --border-strong: #888888;
   /* Barely-there dividers — section separators in dark. */

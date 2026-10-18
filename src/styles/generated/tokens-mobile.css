@@ -55,7 +55,7 @@
   /* Icon + label. 8px both viewports. */
   --spacing-xs: 8px;
   /* Body line height mobile — more generous for narrow screens. 28px. */
-  --type-body-md-line-height: 28px;
+  --type-body-md-line-height: 22px;
   /* Body text. 16px — consistent with desktop for scale cohesion. */
   --type-body-md-size: 16px;
   /* Body weight — regular. */

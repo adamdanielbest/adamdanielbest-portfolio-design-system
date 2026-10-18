@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./sprite-BZKPBe3x.js";import"./text-link-DbhvFB9v.js";import"./nav-link-CrFopdLz.js";var n,r,i;function a(){return(a=e((()=>{t(),n=({state:e=`default`,label:t=`Link text`,iconLeft:n=!1,iconRight:r=!1}={})=>{let i={hover:`nav-link--hover`,focus:`nav-link--focus`,"focus-hover":`nav-link--focus-hover`};return`<a class="nav-link${i[e]?` ${i[e]}`:``}" href="#">
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./sprite-DrJHSH6n.js";import"./text-link-DbhvFB9v.js";import"./nav-link-CrFopdLz.js";var n,r,i;function a(){return(a=e((()=>{t(),n=({state:e=`default`,label:t=`Link text`,iconLeft:n=!1,iconRight:r=!1}={})=>{let i={hover:`nav-link--hover`,focus:`nav-link--focus`,"focus-hover":`nav-link--focus-hover`};return`<a class="nav-link${i[e]?` ${i[e]}`:``}" href="#">
   ${n?`<svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-backward"/></svg>
   `:``}<span class="nav-link__label">${t}</span>${r?`
   <svg class="nav-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron-forward"/></svg>`:``}

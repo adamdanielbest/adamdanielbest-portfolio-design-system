@@ -1,1 +1,3 @@
-<p><em>Content to be written.</em></p>
+<p>To attack a volatile 0→1 market, we needed a scalable discovery infrastructure. Rapid experimentation was creating insight silos, causing a delay between user feedback and roadmap decisions.</p>
+
+<p>I led stakeholder interviews across CX, commercial, and our network partner VMO2 to map what was already known. Alongside this, I standardised our AI-augmented insight library, introducing a consistent taxonomy and automated tagging of Maze trialist data. This reduced discovery-to-insight cycles and meant the repository remained accessible for future desk research, giving product leads a single source of truth to make data-driven trade-offs in real time rather than re-running the same discovery work.</p>

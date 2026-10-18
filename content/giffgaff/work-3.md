@@ -1,1 +1,5 @@
-<p><em>Content to be written.</em></p>
+<p>My primary contribution was architecting the underlying service ruleset. The acquisition and onboarding journey was constrained by three concurrent, non-deterministic third-party dependencies, each of which could alter the journey in ways we could not predict or control.</p>
+
+<p>The address check (UPRN/Loqate) was the entry trigger, determining property type (MDU vs. SDU) and cascading into field force scheduling constraints and install type (1-stage vs. 2-stage). The installation slot (VMO2 Booking API) could not be confirmed until a regulatory switch intent was registered via SureSwitch, which itself was governed by Ofcom's One Touch Switch regulation. The UI had to reflect these states honestly, managing member anxiety through a high-ambiguity window where the experience was partly outside our control.</p>
+
+<p>I designed the installation booking experience to surface the right information at each state, rather than forcing a linear flow that the underlying APIs could not guarantee. By partnering with engineering to enable State-Aware UI for these non-deterministic windows, we sustained brand trust through technical constraints that were not ours to resolve.</p>

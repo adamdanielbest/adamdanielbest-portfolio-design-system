@@ -58,7 +58,7 @@
   /* Between inline elements — icon + label. 8px both. */
   --spacing-xs: 8px;
   /* Body line height — generous for readability. 26px desktop. */
-  --type-body-md-line-height: 26px;
+  --type-body-md-line-height: 22px;
   /* Default long-form reading text. Case study content. 16px both viewports. */
   --type-body-md-size: 16px;
   /* Body weight — regular. */

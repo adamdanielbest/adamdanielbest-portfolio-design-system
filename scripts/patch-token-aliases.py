@@ -27,6 +27,10 @@ PATCHES = [
     ("02-dimensions-desktop", ("spacing", "page-margin-y"), "{01-primitives.size.1600}", "dimension", "Page vertical padding. 80px desktop.", True),
     ("02-dimensions-mobile",  ("spacing", "page-margin-y"), "{01-primitives.size.1300}", "dimension", "Page vertical padding. 40px mobile.",  True),
 
+    # type/body-md/line-height — export tool returns stale 26px; correct value is 22px
+    ("02-dimensions-desktop", ("type", "body-md", "line-height"), 22, "dimension", "Body md line height. 22px.", True),
+    ("02-dimensions-mobile",  ("type", "body-md", "line-height"), 22, "dimension", "Body md line height. 22px.", True),
+
     # icon/size/xs and icon/size/lg — export tool drops these entirely
     ("02-dimensions-desktop", ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px.", False),
     ("02-dimensions-mobile",  ("icon", "size", "xs"), 16, "dimension", "Icon size xs. 16px.", False),
