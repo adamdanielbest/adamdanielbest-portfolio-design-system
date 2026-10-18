@@ -232,34 +232,34 @@ body {
 }
 
 /* Enable interactivity on card links */
-.card-grid-demo {
+.card-item {
   pointer-events: auto;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
-.card-grid-demo:hover {
+.card-item:hover {
   box-shadow:
     0px 4px 6px var(--shadow-light-08),
     0px 1px 1.5px var(--shadow-light-06);
 }
 
-.card-grid-demo:hover .card-grid-demo__copy {
+.card-item:hover .card-item__copy {
   background: var(--background-hover);
 }
 
-.card-grid-demo:hover .card-grid-demo__role {
+.card-item:hover .card-item__role {
   color: var(--text-secondary);
 }
 
-[data-theme="dark"] .card-grid-demo:hover {
+[data-theme="dark"] .card-item:hover {
   box-shadow:
     0px 4px 6px var(--shadow-dark-28),
     0px 1px 1.5px var(--shadow-dark-24);
 }
 
-.card-grid-demo:focus-visible {
+.card-item:focus-visible {
   outline: var(--border-width-focus) solid var(--border-focus);
   outline-offset: 0;
 }

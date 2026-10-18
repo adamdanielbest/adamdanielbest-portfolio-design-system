@@ -6,13 +6,13 @@ export function renderMediaBlockHtml({ ratio = '16:9' } = {}) {
 }
 
 export function renderCardItemCopy({ title = 'Project title', outcome = 'Brief outcome or project description', role = 'Product Designer · Company · Year' } = {}) {
-  return `<div class="card-grid-demo__copy">
-    <div class="card-grid-demo__top">
-      <h2 class="card-grid-demo__title">${title}</h2>
-      <p class="card-grid-demo__outcome">${outcome}</p>
+  return `<div class="card-item__copy">
+    <div class="card-item__top">
+      <h2 class="card-item__title">${title}</h2>
+      <p class="card-item__outcome">${outcome}</p>
     </div>
-    <div class="card-grid-demo__bottom">
-      <span class="card-grid-demo__role">${role}</span>
+    <div class="card-item__bottom">
+      <span class="card-item__role">${role}</span>
     </div>
   </div>`;
 }

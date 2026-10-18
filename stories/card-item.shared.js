@@ -4,8 +4,8 @@ import { renderCardItemCopy } from './card-item.render.js';
 
 export function renderCardItem({ state = 'default' } = {}) {
   const rootCls = state === 'hover' || state === 'focus-hover'
-    ? 'card-grid-demo card-grid-demo--hover'
-    : 'card-grid-demo';
+    ? 'card-item card-item--hover'
+    : 'card-item';
 
   const focusAttr = state === 'focus' || state === 'focus-hover'
     ? ' data-state="focus"'
