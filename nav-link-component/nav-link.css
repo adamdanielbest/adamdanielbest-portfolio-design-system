@@ -42,10 +42,7 @@
   font-family: var(--type-family-primary), system-ui, sans-serif;
   font-size: var(--type-body-md-size);
   line-height: var(--type-body-md-line-height);
-  text-decoration: underline;
-  text-decoration-thickness: var(--border-width-strong);
-  text-underline-offset: var(--border-width-strong);
-  text-decoration-skip-ink: none;
+  text-decoration: none;
   white-space: nowrap;
 }
 
