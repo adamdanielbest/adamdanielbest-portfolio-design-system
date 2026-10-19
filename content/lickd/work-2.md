@@ -1,1 +1,5 @@
-<p><em>Content to be written.</em></p>
+<p>The hardest design call was the tension between education and friction. We could not make every piece of licence information a mandatory gate; that would have killed conversion. But leaving it entirely optional meant creators were still signing up without reading the terms, then raising support tickets when claims arrived.</p>
+
+<p>I introduced a contextual information layer on key moments in the journey, including the first commercial track download and channel verification. The information appeared because the action warranted it, not as an interruption to every user. We ran A/B tests to validate that surfacing licence terms at those moments did not meaningfully harm conversion, while noticeably reducing post-download confusion.</p>
+
+<p>Working with the content team, we also rewrote the licence summary copy. The original language had been pulled directly from legal. The new version said the same things in plain English, with the important distinctions made clear upfront rather than buried in a modal.</p>

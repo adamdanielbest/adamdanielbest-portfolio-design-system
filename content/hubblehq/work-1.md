@@ -1,1 +1,5 @@
-<p><em>Content to be written.</em></p>
+<p>Before designing anything, I needed to understand why the decline rate was so high and where the biggest drop-off points were. I ran a series of interviews with both sides of the marketplace: searchers who had abandoned a viewing process, and hosts who had declined or not responded.</p>
+
+<p>The findings split into two distinct problems. On the searcher side, the booking request flow asked for information hosts needed but did not explain why, which put people off completing it. On the host side, the calendar and availability tools were basic enough that many hosts were listing times they could not actually commit to.</p>
+
+<p>I mapped the full journey for both personas and scored the friction points by how much they contributed to the 30% decline rate and how feasible they were to address given our constraints. This gave the team a shared, ranked view of what was worth building first, rather than a wish list. We worked through the options together as a team, with each person bringing their own knowledge of what was technically viable.</p>

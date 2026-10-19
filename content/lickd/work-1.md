@@ -1,1 +1,5 @@
-<p><em>Content to be written.</em></p>
+<p>The checkout flow had grown to accommodate two fundamentally different product types: pay-per-licence commercial tracks with variable terms, and flat-rate subscription stock. A creator landing on a track from a major artist would hit licence terms they were not expecting, often mid-checkout, and abandon. The flow was not broken; it was just not designed for what it was actually selling.</p>
+
+<p>I audited the end-to-end journey, mapping where the drop-off was happening and why. Research with creators confirmed the same pattern: they understood what Lickd was, but the moment licence specifics appeared they second-guessed the whole purchase. The solution was not simplifying the terms. It was making sure creators arrived at checkout already understanding them.</p>
+
+<p>I redesigned the track page and pre-checkout states to surface the relevant licence information at the point of browsing, before any payment intent. Commercial and subscription tracks got visually distinct treatments so the product type was clear before a creator had committed to anything.</p>

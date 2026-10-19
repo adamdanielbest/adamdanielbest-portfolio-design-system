@@ -1,5 +1,5 @@
-<p>Research identified the engineer visit as the peak friction point, with a 40% pre-install cancellation rate driven by anxiety in the window between order confirmation and installation day.</p>
+<p>Research pointed to the period between order confirmation and installation day as where most anxiety was building. Around 40% of pre-install cancellations were happening in this window.</p>
 
-<p>I designed the pre-install preparation experience: a self-serve flow that collected critical field force data (health, safety, and vulnerability information) ahead of the engineer visit, and provided proactive status updates at each operational milestone. Working with the content designer, we wrote messaging to manage expectations around VMO2 logistics delays rather than obscure them.</p>
+<p>I designed a self-serve preparation flow that collected information needed by the field engineer ahead of the visit, including health, safety and vulnerability data, and gave members proactive status updates at each point along the way. Working with the content designer, we wrote the messaging to reflect VMO2's logistics accurately rather than obscure delays with vague updates.</p>
 
-<p>Despite unavoidable delays in VMO2's field force operations, we maintained a 95 NPS from the trialist cohort by treating transparency as the design principle, not a fallback.</p>
+<p>Despite unavoidable delays in VMO2's field operations, we maintained a Net Promoter Score (NPS) of 95 from the trialist cohort, which held through to commercial launch.</p>

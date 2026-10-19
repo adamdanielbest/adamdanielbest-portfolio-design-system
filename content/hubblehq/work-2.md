@@ -1,1 +1,7 @@
-<p><em>Content to be written.</em></p>
+<p>The core design problem was that we could not integrate with host calendar systems. The Chief Technology Officer (CTO) had assessed this early in the project; the technical and commercial complexity of connecting to the range of calendar tools hosts used was out of scope. We had to build a flow that felt reliable without the infrastructure that would make it actually reliable.</p>
+
+<p>The solution was to be transparent about the process rather than paper over it. Rather than presenting a booking as confirmed until a host declined, I redesigned the flow to set expectations clearly at every stage: the request had been sent, the host typically responds within a given window, and the searcher would receive a notification either way. We also introduced smart defaults that reduced the cognitive load on the request form, pre-filling details where we had them and asking only for what the host genuinely needed.</p>
+
+<p>On the host side, we made availability management simpler and faster, reducing the friction of keeping listings accurate. The parallel workstream on the host experience, led by the second designer, fed directly into this.</p>
+
+<p>The redesign launched in early 2020. Within weeks, COVID had effectively shut down the office market. The results we had been tracking became meaningless as demand collapsed, but the work itself held up as a sound approach to the underlying problem.</p>
