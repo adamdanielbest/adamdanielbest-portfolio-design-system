@@ -5,6 +5,19 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   Breakpoint tokens
+   Not usable in @media queries directly, but readable via JS getComputedStyle.
+   Raw values are mirrored in src/js/breakpoints.js for media query use in JS.
+   -------------------------------------------------------------------------- */
+:root {
+  --bp-sm:  640px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+  --bp-2xl: 1536px;
+}
+
+/* --------------------------------------------------------------------------
    Body
    -------------------------------------------------------------------------- */
 body {
@@ -104,6 +117,17 @@ body {
 
 /* Strip component padding so the bar is exactly 48px, matching the header */
 .site-main__nav .page-nav { padding: 0 var(--spacing-lg); }
+
+/* Narrow desktop / large tablet (769px–1100px): hide nav link labels so the
+   title has room to truncate cleanly, matching the mobile icon-only bar. */
+@media (max-width: 1100px) {
+  .site-main__nav .nav-link__label { display: none; }
+  .site-main__nav .page-nav__link  { width: 48px; justify-content: center; }
+  .site-main__nav .page-nav        { padding: 0 var(--spacing-sm); }
+  /* prev+next is 2×48px=96px on the right, back is 48px on the left.
+     Centering requires 2× the larger side: 2×96=192px, plus buffer. */
+  .site-main__nav .page-nav__title { max-width: calc(100% - 224px); }
+}
 
 
 /* --------------------------------------------------------------------------
