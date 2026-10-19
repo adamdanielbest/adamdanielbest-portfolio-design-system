@@ -521,12 +521,7 @@
   </main>
 
   <script>
-    // Desktop sidebar collapse
-    const sidebarToggle = document.querySelector('.js-sidebar-toggle');
-    const aside         = document.querySelector('.site-aside');
-    const siteMain      = document.querySelector('.site-main');
-    const sidebarIcon   = sidebarToggle?.querySelector('use');
-
+    (function () {
     // Desktop sidebar collapse
     const sidebarToggle = document.querySelector('.js-sidebar-toggle');
     const aside         = document.querySelector('.site-aside');
@@ -551,6 +546,7 @@
     const bpLg = window.matchMedia('(max-width: 1024px)');
     bpLg.addEventListener('change', e => setSidebarCollapsed(e.matches));
     if (bpLg.matches) setSidebarCollapsed(true);
+    })();
   </script>
 
   <script>
