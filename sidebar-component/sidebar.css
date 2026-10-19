@@ -126,6 +126,10 @@
   border-radius: var(--radius-xs);
 }
 
+.sidebar-logo:hover .sidebar-logo__icon [fill="var(--brand-cobalt)"] {
+  fill: var(--text-link-hover);
+}
+
 .sidebar-logo:focus { outline: none; }
 
 .sidebar-logo:focus-visible {
