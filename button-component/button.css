@@ -167,7 +167,8 @@
 
 /* ---- Label span — used in both plain and icon variants ---- */
 .btn__label {
-  padding-top: 2px;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 /* ---- With-icon variant ---- */
@@ -181,7 +182,6 @@
   align-items: center;
   align-self: stretch;
   padding: 0 var(--spacing-md);
-  padding-top: 2px;
 }
 .btn__divider {
   width: 1px;
