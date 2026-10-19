@@ -1,7 +1,6 @@
-const sharp = require('sharp');
-const { glob } = require('glob');
-const fs = require('fs');
-const path = require('path');
+import sharp from 'sharp';
+import { glob } from 'glob';
+import fs from 'fs';
 
 const QUALITY = 82;
 const MIN_SAVING_BYTES = 1024; // skip if saving less than 1KB
