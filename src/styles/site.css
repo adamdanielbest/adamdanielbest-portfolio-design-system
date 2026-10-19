@@ -74,6 +74,19 @@ body {
 .site-aside--collapsed .header__logo { display: none; }
 .site-aside--collapsed .site-aside__body { display: none; }
 
+/* Collapsed-only icon — pinned to bottom of the 48px rail */
+.site-aside__collapsed-icon {
+  display: none;
+}
+
+.site-aside--collapsed .site-aside__collapsed-icon {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-sm) 0;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
 /* Strip demo-only constraints from sidebar inside site context */
 .site-aside .sidebar-demo {
   pointer-events: auto;

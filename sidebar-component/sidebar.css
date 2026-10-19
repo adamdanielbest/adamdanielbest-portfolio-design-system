@@ -108,3 +108,46 @@
   flex-direction: column;
   gap: var(--spacing-xs);
 }
+
+/* --------------------------------------------------------------------------
+   Branding footer — icon logo + handle
+   -------------------------------------------------------------------------- */
+.sidebar-footer {
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: calc(-1 * var(--spacing-md));
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+}
+
+.sidebar-logo:focus { outline: none; }
+
+.sidebar-logo:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.sidebar-logo__handle {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-info);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.sidebar-logo__copyright {
+  position: relative;
+  top: 1px;
+}
+
+.sidebar-logo__text {
+  position: relative;
+}
