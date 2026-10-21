@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 900px;
+    background: #0D0D0D;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 80px;
+    gap: 0;
+  }
+
+  .eyebrow {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #2A2A2A;
+    margin-bottom: 48px;
+  }
+
+  /* ── Three architecture layers ── */
+  .layers {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .layer {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle gradient overlay on hover-like effect */
+  .layer::before {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 200px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.01));
+    pointer-events: none;
+  }
+
+  .layer--components {
+    border-color: #1A2A3A;
+    background: linear-gradient(135deg, #091420 0%, #0B1A28 100%);
+  }
+  .layer--tokens {
+    border-color: #1A2A1A;
+    background: linear-gradient(135deg, #091408 0%, #0B1A0B 100%);
+  }
+  .layer--platform {
+    border-color: #2A1E0A;
+    background: linear-gradient(135deg, #130D04 0%, #180E05 100%);
+  }
+
+  .layer__index {
+    font-size: 64px; font-weight: 800;
+    letter-spacing: -0.06em; line-height: 1;
+    flex-shrink: 0; width: 56px;
+    opacity: 0.06;
+    color: #FFF;
+  }
+
+  .layer__content { flex: 1; }
+
+  .layer__title {
+    font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .layer--components .layer__title { color: #3A7AAA; }
+  .layer--tokens     .layer__title { color: #3A7A3A; }
+  .layer--platform   .layer__title { color: #8A6030; }
+
+  .layer__sub {
+    font-size: 13px; letter-spacing: 0.01em;
+  }
+  .layer--components .layer__sub { color: #1E3A5A; }
+  .layer--tokens     .layer__sub { color: #1E3A1E; }
+  .layer--platform   .layer__sub { color: #3A2010; }
+
+  /* Right side of each layer */
+  .layer__tags {
+    display: flex; gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .tag {
+    padding: 6px 12px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid;
+  }
+
+  .layer--components .tag {
+    background: #0A1828; color: #2A5A8A; border-color: #142240;
+  }
+  .layer--tokens .tag {
+    background: #0A1808; color: #2A5A2A; border-color: #142014;
+  }
+  .layer--platform .tag {
+    background: #160E04; color: #6A4818; border-color: #281808;
+  }
+
+  /* Framework logos row */
+  .fw-row {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    height: 80px;
+  }
+
+  .fw-tile {
+    flex: 1;
+    border: 1px solid #161616;
+    border-radius: 10px;
+    background: #0C0C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .fw-tile--vanilla {
+    border-color: #1E180A;
+    background: #0C0A04;
+  }
+
+  .fw-name {
+    font-size: 16px; font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .fw-tile:nth-child(1) .fw-name { color: #1A4A6A; }
+  .fw-tile:nth-child(2) .fw-name { color: #1A4A2A; }
+  .fw-tile:nth-child(3) .fw-name { color: #5A1A1A; }
+  .fw-tile--vanilla     .fw-name { color: #4A3810; }
+
+  .fw-subtitle {
+    font-size: 11px; color: #1E1E1E; font-weight: 500;
+  }
+  .fw-tile--vanilla .fw-subtitle { color: #2A1E08; }
+
+  .fw-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+  <p class="eyebrow">Architecture · Framework-agnostic by design</p>
+
+  <!-- Three layers -->
+  <div class="layers">
+
+    <div class="layer layer--components">
+      <div class="layer__index">3</div>
+      <div class="layer__content">
+        <div class="layer__title">Components</div>
+        <div class="layer__sub">HTML · Storybook · 25 components · all variants and states documented</div>
+      </div>
+      <div class="layer__tags">
+        <div class="tag">Render</div>
+        <div class="tag">Storybook</div>
+      </div>
+    </div>
+
+    <div class="layer layer--tokens">
+      <div class="layer__index">2</div>
+      <div class="layer__content">
+        <div class="layer__title">Design tokens</div>
+        <div class="layer__sub">CSS custom properties · DTCG format · light + dark · 419 tokens · primitives → semantic</div>
+      </div>
+      <div class="layer__tags">
+        <div class="tag">CSS vars</div>
+        <div class="tag">DTCG</div>
+      </div>
+    </div>
+
+    <div class="layer layer--platform">
+      <div class="layer__index">1</div>
+      <div class="layer__content">
+        <div class="layer__title">Web platform</div>
+        <div class="layer__sub">Vanilla HTML · CSS cascade · JavaScript · no build step · no dependencies</div>
+      </div>
+      <div class="layer__tags">
+        <div class="tag">Foundation</div>
+        <div class="tag">W3C</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Framework compatibility row -->
+  <div class="fw-row">
+    <div class="fw-tile">
+      <div class="fw-dot" style="background:#1A4A6A"></div>
+      <span class="fw-name">React</span>
+      <span class="fw-subtitle">CSS vars, same tokens</span>
+    </div>
+    <div class="fw-tile">
+      <div class="fw-dot" style="background:#1A4A2A"></div>
+      <span class="fw-name">Vue</span>
+      <span class="fw-subtitle">CSS vars, same tokens</span>
+    </div>
+    <div class="fw-tile">
+      <div class="fw-dot" style="background:#5A1A1A"></div>
+      <span class="fw-name">Angular</span>
+      <span class="fw-subtitle">CSS vars, same tokens</span>
+    </div>
+    <div class="fw-tile fw-tile--vanilla">
+      <div class="fw-dot" style="background:#4A3810"></div>
+      <span class="fw-name">Vanilla ✦</span>
+      <span class="fw-subtitle">This project — zero overhead</span>
+    </div>
+  </div>
+
+</body>
+</html>

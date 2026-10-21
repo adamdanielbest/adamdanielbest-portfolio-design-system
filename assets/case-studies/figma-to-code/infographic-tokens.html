@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 900px;
+    background: #0D0D0D;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+  }
+
+  .col { padding: 64px 56px; display: flex; flex-direction: column; gap: 32px; }
+  .divider { background: #141414; }
+
+  .col-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #2A2A2A;
+  }
+
+  /* ── Primitive swatches ── */
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    flex: 1;
+  }
+
+  .swatch {
+    border-radius: 8px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+
+  .swatch-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .swatch-col {
+    display: flex; gap: 6px;
+  }
+
+  /* Blues */
+  .s-blue-50  { background: #EAF0FB; }
+  .s-blue-100 { background: #D5E1F7; }
+  .s-blue-200 { background: #9DBCF0; }
+  .s-blue-300 { background: #6498E8; }
+  .s-blue-400 { background: #3A7AE0; }
+  .s-blue-500 { background: #1A6CE8; outline: 2px solid rgba(255,255,255,0.15); outline-offset: 2px; }
+  .s-blue-600 { background: #1558C0; }
+  .s-blue-700 { background: #103E8A; }
+
+  /* Neutrals */
+  .s-n-0   { background: #FFFFFF; }
+  .s-n-50  { background: #FAFAFA; }
+  .s-n-100 { background: #F5F5F5; }
+  .s-n-200 { background: #E8E8E8; }
+  .s-n-300 { background: #D0D0D0; }
+  .s-n-400 { background: #9A9A9A; }
+  .s-n-500 { background: #6A6A6A; }
+  .s-n-600 { background: #3A3A3A; }
+  .s-n-700 { background: #1A1A1A; }
+  .s-n-800 { background: #0D0D0D; border: 1px solid #222; }
+
+  /* Greens */
+  .s-g-100 { background: #E6F6EC; }
+  .s-g-400 { background: #2EBD6A; }
+  .s-g-500 { background: #1E9E54; }
+  .s-g-700 { background: #0F6634; }
+
+  /* Reds */
+  .s-r-100 { background: #FEECEC; }
+  .s-r-400 { background: #E04040; }
+  .s-r-500 { background: #C42828; }
+  .s-r-700 { background: #7A1818; }
+
+  .scale-label {
+    font-size: 10px; color: #2A2A2A; letter-spacing: 0.04em;
+    text-transform: uppercase; margin-top: 4px;
+  }
+
+  /* ── Right: semantic rendered component ── */
+  .semantic-col {
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  /* Rendered button with annotations */
+  .annotated {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .component-render {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 32px 40px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #1A1A1A;
+    justify-content: center;
+  }
+
+  /* Button renders */
+  .btn-render {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    position: relative;
+  }
+  .btn-primary { background: #1A6CE8; color: #FFF; }
+  .btn-secondary { background: #EAF0FB; color: #1A6CE8; border: 1px solid #D5E1F7; }
+  .btn-ghost { background: transparent; color: #1A6CE8; border: 1px solid transparent; }
+  .btn-danger { background: #E04040; color: #FFF; }
+  .btn-disabled { background: #1A1A1A; color: #3A3A3A; cursor: not-allowed; border: 1px solid #222; }
+
+  /* Token annotation list */
+  .token-annotations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ann-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ann-swatch {
+    width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
+  }
+
+  .ann-token {
+    font-size: 12px; font-family: 'SF Mono', 'Fira Code', monospace;
+    color: #4A8AC0; flex: 1;
+  }
+
+  .ann-arrow {
+    font-size: 11px; color: #222;
+  }
+
+  .ann-primitive {
+    font-size: 11px; font-family: 'SF Mono', 'Fira Code', monospace;
+    color: #2A2A2A;
+  }
+
+  .ann-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #1E1E1E;
+    flex-shrink: 0;
+  }
+
+  /* Mode strip */
+  .mode-strip {
+    display: flex;
+    gap: 8px;
+    padding-top: 24px;
+    border-top: 1px solid #141414;
+  }
+
+  .mode-chip {
+    flex: 1; display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px; border-radius: 8px; border: 1px solid #1A1A1A;
+    background: #0F0F0F;
+  }
+
+  .mode-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .mode-name { font-size: 12px; color: #333; font-weight: 500; }
+  .mode-val  { font-size: 11px; font-family: 'SF Mono', monospace; color: #222; margin-left: auto; }
+</style>
+</head>
+<body>
+
+  <!-- Left: primitive colour scales -->
+  <div class="col">
+    <span class="col-label">Primitives — raw scale</span>
+
+    <!-- Blue scale -->
+    <div>
+      <div class="swatch-col" style="gap:6px; margin-bottom:6px">
+        <div class="swatch s-blue-50"  style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-blue-100" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-blue-200" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-blue-300" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-blue-400" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-blue-500" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-blue-600" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-blue-700" style="width:44px;height:44px;border-radius:8px"></div>
+      </div>
+      <div class="scale-label">colour · blue · 50–700</div>
+    </div>
+
+    <!-- Neutral scale -->
+    <div>
+      <div class="swatch-col" style="gap:6px; margin-bottom:6px">
+        <div class="swatch s-n-0"   style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-n-50"  style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-n-100" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-n-200" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-n-300" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-n-400" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-n-600" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-n-800" style="width:44px;height:44px;border-radius:8px"></div>
+      </div>
+      <div class="scale-label">colour · neutral · 0–800</div>
+    </div>
+
+    <!-- Green + Red -->
+    <div>
+      <div class="swatch-col" style="gap:6px; margin-bottom:6px">
+        <div class="swatch s-g-100" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-g-400" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-g-500" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-g-700" style="width:44px;height:44px;border-radius:8px"></div>
+        <div style="width:6px"></div>
+        <div class="swatch s-r-100" style="width:44px;height:44px;border-radius:8px;border:1px solid #1a1a1a"></div>
+        <div class="swatch s-r-400" style="width:44px;height:44px;border-radius:8px"></div>
+        <div class="swatch s-r-500" style="width:44px;height:44px;border-radius:8px"></div>
+      </div>
+      <div class="scale-label">colour · green + red</div>
+    </div>
+
+    <!-- Spacing scale -->
+    <div>
+      <div style="display:flex;gap:6px;align-items:flex-end;margin-bottom:6px">
+        <div style="width:4px;height:4px;background:#1A2A1A;border-radius:2px"></div>
+        <div style="width:8px;height:8px;background:#1A3A1A;border-radius:2px"></div>
+        <div style="width:12px;height:12px;background:#1A4A2A;border-radius:2px"></div>
+        <div style="width:16px;height:16px;background:#1E5A2A;border-radius:2px"></div>
+        <div style="width:20px;height:20px;background:#206030;border-radius:2px"></div>
+        <div style="width:24px;height:24px;background:#226435;border-radius:2px"></div>
+        <div style="width:32px;height:32px;background:#24683A;border-radius:2px"></div>
+        <div style="width:40px;height:40px;background:#286C3F;border-radius:2px"></div>
+      </div>
+      <div class="scale-label">size · 100–1800 · 2–120px</div>
+    </div>
+
+    <!-- Radius -->
+    <div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+        <div style="width:40px;height:40px;background:#181818;border:1px solid #262626;border-radius:2px"></div>
+        <div style="width:40px;height:40px;background:#181818;border:1px solid #262626;border-radius:4px"></div>
+        <div style="width:40px;height:40px;background:#181818;border:1px solid #262626;border-radius:8px"></div>
+        <div style="width:40px;height:40px;background:#181818;border:1px solid #262626;border-radius:16px"></div>
+        <div style="width:40px;height:40px;background:#181818;border:1px solid #262626;border-radius:20px"></div>
+      </div>
+      <div class="scale-label">radius · 100–pill · xs→pill</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Right: semantic tokens applied -->
+  <div class="semantic-col">
+    <span class="col-label">Semantic — purpose, not value</span>
+
+    <!-- Component renders -->
+    <div class="component-render">
+      <div class="btn-render btn-primary">Primary</div>
+      <div class="btn-render btn-secondary">Secondary</div>
+      <div class="btn-render btn-danger">Danger</div>
+      <div class="btn-render btn-disabled">Disabled</div>
+    </div>
+
+    <!-- Token map -->
+    <div class="token-annotations">
+      <div class="ann-row">
+        <div class="ann-swatch" style="background:#1A6CE8"></div>
+        <span class="ann-token">--background-action-primary</span>
+        <span class="ann-arrow">→</span>
+        <span class="ann-primitive">blue/500</span>
+      </div>
+      <div class="ann-row">
+        <div class="ann-swatch" style="background:#1558C0"></div>
+        <span class="ann-token">--background-action-primary-hover</span>
+        <span class="ann-arrow">→</span>
+        <span class="ann-primitive">blue/600</span>
+      </div>
+      <div class="ann-row">
+        <div class="ann-swatch" style="background:#EAF0FB; border:1px solid #1a1a1a"></div>
+        <span class="ann-token">--background-action-secondary</span>
+        <span class="ann-arrow">→</span>
+        <span class="ann-primitive">blue/50</span>
+      </div>
+      <div class="ann-row">
+        <div class="ann-swatch" style="background:#E04040"></div>
+        <span class="ann-token">--background-feedback-danger</span>
+        <span class="ann-arrow">→</span>
+        <span class="ann-primitive">red/400</span>
+      </div>
+      <div class="ann-row">
+        <div class="ann-swatch" style="background:#1A1A1A; border:1px solid #222"></div>
+        <span class="ann-token">--background-action-disabled</span>
+        <span class="ann-arrow">→</span>
+        <span class="ann-primitive">neutral/700</span>
+      </div>
+    </div>
+
+    <!-- Light / dark -->
+    <div class="mode-strip">
+      <div class="mode-chip">
+        <div class="mode-dot" style="background:#FAFAFA;border:1px solid #333"></div>
+        <span class="mode-name">Light</span>
+        <span class="mode-val">page → neutral/50</span>
+      </div>
+      <div class="mode-chip" style="border-color:#1D2535;background:#0A0E16">
+        <div class="mode-dot" style="background:#1A1A1A;border:1px solid #333"></div>
+        <span class="mode-name" style="color:#4A6080">Dark</span>
+        <span class="mode-val" style="color:#2A4060">page → neutral/800</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

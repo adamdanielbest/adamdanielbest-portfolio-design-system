@@ -56,21 +56,78 @@
   aspect-ratio: 4 / 3;
 }
 
-/* When a real image or video is present, render at natural dimensions —
-   no cropping, no letterboxing. The aspect-ratio class is for placeholders only. */
 .media-block__image:has(img),
 .media-block__image:has(video) {
-  aspect-ratio: unset;
   background-image: none;
   border: none;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .media-block__image img,
 .media-block__image video {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.media-block__image--grid,
+.media-block__image--grid:has(img),
+.media-block__image--grid:has(video) {
+  background-color: #0D1520;
+  background-image: radial-gradient(circle, #10243A 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid img {
+  object-fit: contain;
+  padding: 2%;
+}
+
+.media-block__image--grid-lickd,
+.media-block__image--grid-lickd:has(img),
+.media-block__image--grid-lickd:has(video) {
+  background-color: #262E3F;
+  background-image: radial-gradient(circle, #1B212D 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-lickd img {
+  padding: 0;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.media-block__image--grid-hubblehq,
+.media-block__image--grid-hubblehq:has(img),
+.media-block__image--grid-hubblehq:has(video) {
+  background-color: #00F2C4;
+  background-image: radial-gradient(circle, #44C199 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-hubblehq img {
+  padding: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+.media-block__image--grid-giffgaff,
+.media-block__image--grid-giffgaff:has(img),
+.media-block__image--grid-giffgaff:has(video) {
+  background-color: #FCC31E;
+  background-image: radial-gradient(circle, #F1BB1D 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-giffgaff {
+  aspect-ratio: 10 / 7;
+}
+
+.media-block__image--grid-giffgaff img {
+  padding: 0;
 }
 
 /* --------------------------------------------------------------------------
