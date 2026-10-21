@@ -23,13 +23,10 @@
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
   }
   .variant-card__grid {
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-md);
     overflow-x: auto;
     overflow-y: hidden;
   }
@@ -95,14 +92,16 @@
   /* ---- Section heading ---- */
 
   .page-subheading {
+    font-family: var(--type-family-semibold), system-ui, sans-serif;
     font-size: var(--type-heading-md-size);
     font-weight: var(--type-heading-md-weight);
     line-height: var(--type-heading-md-line-height);
     letter-spacing: var(--type-heading-md-letter-spacing);
-    margin: 0 0 var(--spacing-md) 0;
+    margin: 0;
+    padding: var(--spacing-md) var(--spacing-md) 0;
   }
   .variant-card__grid + .page-subheading {
-    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
   }
 </style>
 </head>

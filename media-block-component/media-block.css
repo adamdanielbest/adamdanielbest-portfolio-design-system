@@ -83,7 +83,7 @@
 
 .media-block__image--grid img {
   object-fit: contain;
-  padding: 2%;
+  padding: 0;
 }
 
 .media-block__image--grid-lickd,
