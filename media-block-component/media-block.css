@@ -122,11 +122,9 @@
   background-size: 16px 16px;
 }
 
-.media-block__image--grid-giffgaff {
-  aspect-ratio: 10 / 7;
-}
-
 .media-block__image--grid-giffgaff img {
+  object-fit: cover;
+  object-position: bottom;
   padding: 0;
 }
 
