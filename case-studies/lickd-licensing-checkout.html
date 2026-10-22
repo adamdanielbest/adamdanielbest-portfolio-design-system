@@ -77,18 +77,7 @@
 
   <script>
     document.documentElement.dataset.theme = 'light';
-    (function(){
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', '../src/icons/sprite.svg', false);
-      xhr.send();
-      if (xhr.status === 200) {
-        var div = document.createElement('div');
-        div.style.display = 'none';
-        div.setAttribute('aria-hidden', 'true');
-        div.innerHTML = xhr.responseText;
-        document.body.insertBefore(div, document.body.firstChild);
-      }
-    })();
+    
   </script>
 
   <!-- =====================================================================
@@ -626,5 +615,16 @@
   </script>
   <script src="../src/js/router.js"></script>
   <script type="module" src="../src/js/site.js"></script>
+  <script>
+    fetch('../src/icons/sprite.svg')
+      .then(r => r.text())
+      .then(svg => {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.setAttribute('aria-hidden', 'true');
+        div.innerHTML = svg;
+        document.body.insertBefore(div, document.body.firstChild);
+      });
+  </script>
 </body>
 </html>
