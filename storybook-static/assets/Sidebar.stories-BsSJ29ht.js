@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import"./button-KmAI3NQ4.js";import"./content-section-C824I60w.js";import"./text-link-DZ6mnAVp.js";import"./timeline-BZ4rga64.js";function t(e){return`<ol class="timeline" aria-label="Career timeline">
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import"./action-chip-5AQVePO4.js";import"./button-KmAI3NQ4.js";import"./content-section-C824I60w.js";import"./text-link-DZ6mnAVp.js";import"./timeline-BZ4rga64.js";function t(e){return`<ol class="timeline" aria-label="Career timeline">
           ${e.map(e=>`<li class="timeline-item${e.current?` timeline-item--current`:``}">
               <span class="timeline-item__icon" aria-hidden="true"></span>
               <div class="timeline-item__body">
@@ -25,8 +25,18 @@ import{n as e}from"./rolldown-runtime-DkW27tQK.js";import"./button-KmAI3NQ4.js";
         <footer class="content-section" aria-label="Contact">
           <h2 class="content-section__heading">Get in touch</h2>
           <div class="sidebar__links">
-            <a class="text-link" href="${c}">${s}</a>
-            <a class="text-link" href="${u}" target="_blank" rel="noopener">${l}</a>
+            <a class="action-chip" href="${c}">
+              <span class="action-chip__body">
+                <span class="action-chip__label">${s}</span>
+                <svg class="action-chip__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-outward"/></svg>
+              </span>
+            </a>
+            <a class="action-chip" href="${u}" target="_blank" rel="noopener noreferrer">
+              <span class="action-chip__body">
+                <span class="action-chip__label">${l}</span>
+                <svg class="action-chip__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-outward"/></svg>
+              </span>
+            </a>
           </div>
         </footer>`}var r;function i(){return(i=e((()=>{r=[{company:`giffgaff`,meta:`Product Designer · 2023`,current:!0},{company:`Lickd`,meta:`Product Designer · 2020`,current:!1},{company:`HubbleHQ`,meta:`Product Designer · 2019`,current:!1},{company:`ORDRE`,meta:`UI Designer · 2019`,current:!1},{company:`Harrods`,meta:`Lead Digital Designer · 2018`,current:!1},{company:`Boutique 1`,meta:`Digital Designer · 2017`,current:!1},{company:`Burberry`,meta:`Digital Designer · 2009`,current:!1}]})))()}function a({breakpoint:e=`desktop`,bio:t=`Senior Product Designer, London.<br>15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd). PoC to launch, DesignOps, measurable impact.`,timeline:i=r,cvLinkLabel:a=`Learn more about my experience`,buttonLabel:o=`View CV`,emailLabel:s=`Email`,linkedinLabel:c=`LinkedIn`}={}){let l=n({bio:t,timeline:i,cvLinkLabel:a,buttonLabel:o,emailLabel:s,emailHref:`#`,linkedinLabel:c,linkedinHref:`#`}),u=`
   <div class="sidebar-footer">
