@@ -120,11 +120,6 @@
       padding-inline: 0;
     }
 
-    @media (max-width: 768px) {
-      .site-main__nav { display: block; }
-      .site-main { padding-top: 96px; } /* header + page-nav */
-    }
-
     .cv-header {
       display: flex;
       justify-content: space-between;
@@ -651,6 +646,22 @@
       </svg>
     </button>
   </header>
+
+  <!-- Mobile / tablet page-nav bar, visible ≤768px -->
+  <nav class="site-page-nav" aria-label="Page navigation">
+    <nav class="page-nav" aria-label="Page navigation">
+      <div class="page-nav__back">
+        <a class="nav-link page-nav__link" href="index.html">
+          <span class="nav-link__icon" aria-hidden="true">
+            <svg width="32" height="32" focusable="false"><use href="#icon-arrow-backwards"/></svg>
+          </span>
+          <span class="nav-link__label">Back</span>
+        </a>
+      </div>
+      <p class="page-nav__title">CV</p>
+      <div class="page-nav__prev-next"></div>
+    </nav>
+  </nav>
 
   <!-- Mobile drawer -->
   <div class="site-drawer" id="site-drawer" role="dialog" aria-modal="true" aria-label="About Adam Daniel Best" hidden>
