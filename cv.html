@@ -26,7 +26,6 @@
     "name": "Adam Daniel Best",
     "url": "https://adamdanielbest.com",
     "email": "contact@adamdanielbest.com",
-    "telephone": "07825285810",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "London",
@@ -34,21 +33,29 @@
     },
     "jobTitle": "Senior Product Designer",
     "sameAs": [
-      "https://www.linkedin.com/in/adamdanielbest",
-      "https://adamdanielbest.com"
+      "https://www.linkedin.com/in/adamdanielbest"
     ],
-    "description": "London-based Senior Product Designer bridging luxury heritage and high-growth commercial utility. Proven record taking complex products from concept to full commercial launch within 3M+ member ecosystems, backed by over a decade of design systems work from Burberry to giffgaff.",
+    "description": "London-based Senior Product Designer bridging luxury heritage and high-growth commercial utility. Proven record taking complex products from concept (0→1) to full commercial launch within 3M+ member ecosystems, backed by over a decade of design systems work from Burberry to giffgaff. I reduce operational friction through AI-augmented research and service design.",
     "knowsAbout": [
       "Design Systems",
-      "Figma Variables",
       "Component Architecture",
+      "Figma Variables/Tokens",
+      "Usage Rules",
       "Storybook",
+      "GitHub",
+      "WCAG 2.2",
       "UX Strategy",
       "Service Design",
+      "ICE/RICE Prioritisation",
+      "Workshop Facilitation",
+      "Data Visualisation",
+      "A/B Testing",
       "AI Research Synthesis",
-      "WCAG 2.2",
-      "React",
-      "Tailwind"
+      "Generative UI",
+      "Figma Make",
+      "Astro",
+      "Tailwind",
+      "React"
     ],
     "hasOccupation": [
       {
@@ -58,8 +65,7 @@
           "@type": "City",
           "name": "London"
         },
-        "estimatedSalary": [],
-        "skills": "Design Systems, UX Strategy, Service Design, AI-augmented workflow"
+        "skills": "Design Systems, Component Architecture, Figma Variables/Tokens, UX Strategy, Service Design, AI-augmented research, WCAG 2.2, Storybook, Tailwind, React, Astro"
       }
     ],
     "worksFor": {
@@ -78,7 +84,12 @@
         "name": "Northumbria University",
         "description": "BA (Hons) Multimedia Design, 2006–2009"
       }
-    ]
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "CV — Adam Daniel Best",
+      "url": "https://adamdanielbest.com/assets/adamdanielbest-cv.pdf"
+    }
   }
   </script>
 
@@ -103,40 +114,56 @@
     /* =========================================================
        CV page styles
        ========================================================= */
-    .cv-header {
-      padding: var(--spacing-2xl) 0 var(--spacing-xl);
-      border-bottom: 1px solid var(--border-subtle);
-      margin-bottom: var(--spacing-2xl);
+    .site-main__nav .page-nav {
+      max-width: var(--layout-reading-column-width);
+      padding-inline: 0;
     }
 
-    .cv-header__name {
-      font-family: var(--type-family-semibold), system-ui, sans-serif;
-      font-size: var(--type-heading-xl-size);
-      font-weight: var(--type-heading-xl-weight);
-      line-height: var(--type-heading-xl-line-height);
-      color: var(--text-primary);
-      margin: 0 0 var(--spacing-xs);
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--spacing-md);
+      padding: 0 0 var(--spacing-md);
+      border-bottom: var(--border-width-strong) solid var(--border-default);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .cv-header__identity {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    .cv-header__wordmark {
+      display: block;
+      width: 207px;
+      height: 32px;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .cv-header__title {
+      font-family: var(--type-family-semibold), system-ui, sans-serif;
       font-size: var(--type-heading-sm-size);
       font-weight: var(--type-heading-sm-weight);
-      color: var(--text-secondary);
-      margin: 0 0 var(--spacing-md);
-    }
-
-    .cv-header__contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-xs) var(--spacing-lg);
-      list-style: none;
-      padding: 0;
+      line-height: var(--type-heading-sm-line-height);
+      color: var(--text-brand);
       margin: 0;
     }
 
-    .cv-header__contact li {
-      font-size: var(--type-body-sm-size);
+    .cv-header__contact {
+      text-align: right;
+      font-size: var(--type-caption-size);
+      line-height: var(--type-caption-line-height);
       color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+
+    .cv-header__contact p {
+      margin: 0;
     }
 
     .cv-header__contact a {
@@ -148,31 +175,43 @@
       color: var(--text-primary);
     }
 
+    .cv-content p,
+    .cv-content h1,
+    .cv-content h2,
+    .cv-content h3 {
+      text-box-trim: trim-both;
+      text-box-edge: cap alphabetic;
+    }
+
     .cv-section {
-      margin-bottom: var(--spacing-2xl);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-grid .cv-section {
+      margin-bottom: 0;
     }
 
     .cv-section__heading {
       font-family: var(--type-family-semibold), system-ui, sans-serif;
-      font-size: var(--type-label-size);
-      font-weight: var(--type-label-weight);
-      letter-spacing: var(--type-label-letter-spacing);
-      text-transform: uppercase;
-      color: var(--text-tertiary);
-      margin: 0 0 var(--spacing-md);
-      padding-bottom: var(--spacing-xs);
-      border-bottom: 1px solid var(--border-subtle);
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-emphasis-weight);
+      color: var(--text-brand);
+      margin: 0 0 var(--spacing-sm);
     }
 
     .cv-section__body {
-      font-size: var(--type-body-size);
-      line-height: var(--type-body-line-height);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
       color: var(--text-primary);
       margin: 0;
     }
 
     .cv-role {
-      margin-bottom: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
     }
 
     .cv-role:last-child {
@@ -183,26 +222,35 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: var(--spacing-md);
-      margin-bottom: var(--spacing-sm);
+      gap: var(--spacing-xs);
+      margin-bottom: var(--spacing-2xs);
     }
 
     .cv-role__title {
-      font-family: var(--type-family-semibold), system-ui, sans-serif;
-      font-size: var(--type-body-size);
-      font-weight: var(--type-heading-sm-weight);
+      font-family: var(--type-family-regular), system-ui, sans-serif;
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-weight);
+      line-height: var(--type-body-md-line-height);
       color: var(--text-primary);
       margin: 0;
     }
 
+    .cv-role__title [itemprop="name"] {
+      font-family: var(--type-family-semibold), system-ui, sans-serif;
+      font-weight: var(--type-body-md-emphasis-weight);
+    }
+
     .cv-role__company {
-      color: var(--text-secondary);
-      font-weight: 400;
+      font-family: var(--type-family-regular), system-ui, sans-serif;
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-weight);
+      color: var(--text-primary);
     }
 
     .cv-role__dates {
-      font-size: var(--type-body-sm-size);
-      color: var(--text-tertiary);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
+      color: var(--text-primary);
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -214,10 +262,10 @@
     }
 
     .cv-role__bullets li {
-      font-size: var(--type-body-sm-size);
-      line-height: var(--type-body-line-height);
-      color: var(--text-secondary);
-      margin-bottom: var(--spacing-xs);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-2xs);
     }
 
     .cv-role__bullets li:last-child {
@@ -225,80 +273,132 @@
     }
 
     .cv-role__bullets strong {
-      color: var(--text-primary);
       font-family: var(--type-family-semibold), system-ui, sans-serif;
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-emphasis-weight);
+      color: var(--text-primary);
     }
 
     .cv-skills {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-sm);
+      gap: var(--spacing-xs);
+      list-style: disc;
+      padding: 0 0 0 var(--spacing-md);
+      margin: 0;
     }
 
     .cv-skills__row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: var(--spacing-md);
-      font-size: var(--type-body-sm-size);
-      line-height: var(--type-body-line-height);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
+      color: var(--text-secondary);
     }
 
     .cv-skills__label {
-      color: var(--text-tertiary);
       font-family: var(--type-family-semibold), system-ui, sans-serif;
-    }
-
-    .cv-skills__value {
-      color: var(--text-secondary);
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-emphasis-weight);
+      color: var(--text-primary);
     }
 
     .cv-previous {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-xs);
+      gap: var(--spacing-sm);
     }
 
     .cv-previous__item {
-      display: flex;
-      justify-content: space-between;
-      gap: var(--spacing-md);
-      font-size: var(--type-body-sm-size);
-      line-height: var(--type-body-line-height);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
+      color: var(--text-secondary);
+      margin: 0;
     }
 
     .cv-previous__company {
-      color: var(--text-primary);
       font-family: var(--type-family-semibold), system-ui, sans-serif;
-    }
-
-    .cv-previous__role {
-      color: var(--text-secondary);
-    }
-
-    .cv-previous__dates {
-      color: var(--text-tertiary);
-      white-space: nowrap;
-      flex-shrink: 0;
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-emphasis-weight);
+      color: var(--text-primary);
     }
 
     .cv-education {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-sm);
+      gap: var(--spacing-xs);
     }
 
     .cv-education__item {
-      font-size: var(--type-body-sm-size);
-      line-height: var(--type-body-line-height);
+      font-size: var(--type-body-md-size);
+      line-height: var(--type-body-md-line-height);
     }
 
     .cv-education__institution {
-      color: var(--text-primary);
       font-family: var(--type-family-semibold), system-ui, sans-serif;
+      font-size: var(--type-body-md-size);
+      font-weight: var(--type-body-md-emphasis-weight);
+      color: var(--text-primary);
     }
 
     .cv-education__detail {
       color: var(--text-secondary);
+    }
+
+    /* =========================================================
+       CV content — readable max width
+       ========================================================= */
+    .cv-content {
+      max-width: var(--layout-reading-column-width);
+      margin-inline: auto;
+      background-color: var(--background-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      padding: var(--spacing-lg) var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    /* =========================================================
+       CV 2-column grid — Previous experience + Education
+       ========================================================= */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .site-main {
+        padding-top: 48px; /* header only — no page-nav on mobile */
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cv-header__contact {
+        text-align: left;
+      }
+
+      .site-main__content .container {
+        padding-inline: 0;
+      }
+
+      .cv-content {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding: var(--spacing-sm);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
 
     /* =========================================================
@@ -334,8 +434,7 @@
         margin-bottom: 1.5rem;
       }
 
-      .cv-header__name { font-size: 22pt; }
-      .cv-header__title { font-size: 12pt; }
+      .cv-header__title { font-size: 14pt; }
 
       .cv-header__contact a {
         color: black !important;
@@ -361,14 +460,13 @@
       }
 
       .cv-role__bullets li,
-      .cv-skills__value,
-      .cv-previous__role,
+      .cv-skills__row,
+      .cv-previous__item,
       .cv-education__detail {
         color: #333 !important;
       }
 
       .cv-role__dates,
-      .cv-previous__dates,
       .cv-skills__label,
       .cv-education__institution,
       .cv-header__title {
@@ -400,7 +498,7 @@
       <a class="header__logo" href="index.html" aria-label="Adam Daniel Best — home">
         <svg width="59" height="32" viewBox="0 0 59 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <mask id="logo-mark-border-mask-cv" fill="white"><path d="M2 0H57V32H2V0Z"/></mask>
-          <path d="M2 0H57V32H2V0Z" fill="var(--background-page)"/>
+          <path d="M2 0H57V32H2V0Z" fill="var(--background-selected)"/>
           <path d="M57 0H55V32H57H59V0H57ZM2 32H4V0H2H0V32H2Z" fill="var(--brand-cobalt)" mask="url(#logo-mark-border-mask-cv)"/>
           <rect y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
           <rect x="57" y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
@@ -480,6 +578,10 @@
               </li>
             </ol>
           </section>
+          <section class="content-section" aria-label="Download CV">
+            <a href="/assets/adamdanielbest-cv.pdf" download class="btn btn--primary btn--large btn--full-width"><span class="btn__label">Download CV</span></a>
+            <p class="sidebar__cv-label">.PDF · 1.1 MB</p>
+          </section>
           <footer class="content-section" aria-label="Contact">
             <h2 class="content-section__heading">Get in touch</h2>
             <div class="sidebar__links">
@@ -491,7 +593,7 @@
             <a class="sidebar-logo" href="index.html" aria-label="Adam Daniel Best — home">
               <svg class="sidebar-logo__icon" width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <mask id="logo-icon-border-mask-cv" fill="white"><path d="M2 0H34V32H2V0Z"/></mask>
-                <path d="M2 0H34V32H2V0Z" fill="var(--background-page)"/>
+                <path d="M2 0H34V32H2V0Z" fill="var(--background-selected)"/>
                 <path d="M34 0H32V32H34H36V0H34ZM2 32H4V0H2H0V32H2Z" fill="var(--brand-cobalt)" mask="url(#logo-icon-border-mask-cv)"/>
                 <rect y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
                 <rect x="34" y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
@@ -511,7 +613,7 @@
       <a class="sidebar-logo" href="index.html" aria-label="Adam Daniel Best — home" tabindex="-1">
         <svg class="sidebar-logo__icon" width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <mask id="logo-icon-border-mask-cv-collapsed" fill="white"><path d="M2 0H34V32H2V0Z"/></mask>
-          <path d="M2 0H34V32H2V0Z" fill="var(--background-page)"/>
+          <path d="M2 0H34V32H2V0Z" fill="var(--background-selected)"/>
           <path d="M34 0H32V32H34H36V0H34ZM2 32H4V0H2H0V32H2Z" fill="var(--brand-cobalt)" mask="url(#logo-icon-border-mask-cv-collapsed)"/>
           <rect y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
           <rect x="34" y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
@@ -532,7 +634,7 @@
     <a class="header__logo" href="index.html" aria-label="Adam Daniel Best — home">
       <svg width="59" height="32" viewBox="0 0 59 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <mask id="logo-mark-border-mask-cv-mobile" fill="white"><path d="M2 0H57V32H2V0Z"/></mask>
-        <path d="M2 0H57V32H2V0Z" fill="var(--background-page)"/>
+        <path d="M2 0H57V32H2V0Z" fill="var(--background-selected)"/>
         <path d="M57 0H55V32H57H59V0H57ZM2 32H4V0H2H0V32H2Z" fill="var(--brand-cobalt)" mask="url(#logo-mark-border-mask-cv-mobile)"/>
         <rect y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
         <rect x="57" y="15" width="2" height="2" fill="var(--brand-cobalt)"/>
@@ -560,6 +662,10 @@
           <h2 class="content-section__heading">About me</h2>
           <p class="content-section__body">Adam Daniel Best is a Senior Product Designer, based in London. 15 years across luxury heritage (Burberry, Harrods) and high-growth product (giffgaff, Lickd) — concept to launch, design systems, measurable outcomes.</p>
         </section>
+        <section class="content-section" aria-label="Download CV">
+          <a href="/assets/adamdanielbest-cv.pdf" download class="btn btn--primary btn--large btn--full-width"><span class="btn__label">Download CV</span></a>
+          <p class="sidebar__cv-label">.PDF · 1.1 MB</p>
+        </section>
         <footer class="content-section" aria-label="Contact">
           <h2 class="content-section__heading">Get in touch</h2>
           <div class="sidebar__links">
@@ -583,7 +689,7 @@
             <span class="nav-link__icon" aria-hidden="true">
               <svg focusable="false"><use href="#icon-arrow-backwards"/></svg>
             </span>
-            <span class="nav-link__label">Home</span>
+            <span class="nav-link__label">Back</span>
           </a>
         </div>
         <p class="page-nav__title">CV</p>
@@ -592,18 +698,19 @@
     </nav>
 
     <div class="site-main__content">
+      <div class="container">
       <article class="cv-content" itemscope itemtype="https://schema.org/Person">
 
         <!-- Header -->
         <header class="cv-header">
-          <h1 class="cv-header__name" itemprop="name">Adam Daniel Best</h1>
-          <p class="cv-header__title" itemprop="jobTitle">Senior Product Designer</p>
-          <ul class="cv-header__contact">
-            <li><a href="https://adamdanielbest.com" itemprop="url">adamdanielbest.com</a></li>
-            <li><a href="https://www.linkedin.com/in/adamdanielbest" itemprop="sameAs" target="_blank" rel="noopener">linkedin.com/in/adamdanielbest</a></li>
-            <li><a href="mailto:contact@adamdanielbest.com" itemprop="email">contact@adamdanielbest.com</a></li>
-            <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">London</span>, <span itemprop="addressCountry">UK</span></li>
-          </ul>
+          <div class="cv-header__identity">
+            <img class="cv-header__wordmark" src="/assets/images/wordmark.png" alt="Adam Daniel Best" itemprop="name" width="207" height="32">
+            <p class="cv-header__title" itemprop="jobTitle">Senior Product Designer</p>
+          </div>
+          <div class="cv-header__contact">
+            <p><a href="https://adamdanielbest.com" itemprop="url">adamdanielbest.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/adamdanielbest" itemprop="sameAs" target="_blank" rel="noopener">linkedin.com/in/adamdanielbest</a></p>
+            <p><a href="mailto:contact@adamdanielbest.com" itemprop="email">contact@adamdanielbest.com</a> &nbsp;|&nbsp; <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">London</span>, <span itemprop="addressCountry">UK</span></span></p>
+          </div>
         </header>
 
         <!-- Summary -->
@@ -615,20 +722,11 @@
         <!-- Skills -->
         <section class="cv-section" aria-label="Skills and technology">
           <h2 class="cv-section__heading">Skills &amp; technology</h2>
-          <div class="cv-skills">
-            <div class="cv-skills__row">
-              <span class="cv-skills__label">Design systems</span>
-              <span class="cv-skills__value">Component Architecture · Figma Variables/Tokens · Usage Rules · Storybook · GitHub · WCAG 2.2</span>
-            </div>
-            <div class="cv-skills__row">
-              <span class="cv-skills__label">AI &amp; tech</span>
-              <span class="cv-skills__value">Claude Code · AI Research Synthesis (Maze/GEM) · Generative UI (Figma Make) · Astro · Tailwind · React</span>
-            </div>
-            <div class="cv-skills__row">
-              <span class="cv-skills__label">Strategy</span>
-              <span class="cv-skills__value">UX Strategy · Service Design · ICE/RICE Prioritisation · Workshop Facilitation · Data Visualisation · A/B Testing &amp; CRO (Medallia/Eppo)</span>
-            </div>
-          </div>
+          <ul class="cv-skills">
+            <li class="cv-skills__row"><span class="cv-skills__label">Design systems:</span> Component Architecture · Figma Variables/Tokens · Usage Rules · Storybook · GitHub · WCAG 2.2</li>
+            <li class="cv-skills__row"><span class="cv-skills__label">AI &amp; tech:</span> Claude Code · AI Research Synthesis (Maze/GEM) · Generative UI (Figma Make) · Astro · Tailwind · React</li>
+            <li class="cv-skills__row"><span class="cv-skills__label">Strategy:</span> UX Strategy · Service Design · ICE/RICE Prioritisation · Workshop Facilitation · Data Visualisation · A/B Testing &amp; CRO (Medallia/Eppo)</li>
+          </ul>
         </section>
 
         <!-- Experience -->
@@ -652,7 +750,7 @@
 
           <div class="cv-role">
             <div class="cv-role__header">
-              <h3 class="cv-role__title">Lickd <span class="cv-role__company">· Product Designer</span></h3>
+              <h3 class="cv-role__title"><span itemprop="name">Lickd</span> <span class="cv-role__company">· Product Designer</span></h3>
               <span class="cv-role__dates">2020 – 2023</span>
             </div>
             <ul class="cv-role__bullets">
@@ -664,7 +762,7 @@
 
           <div class="cv-role">
             <div class="cv-role__header">
-              <h3 class="cv-role__title">HubbleHQ <span class="cv-role__company">· Product Designer</span></h3>
+              <h3 class="cv-role__title"><span itemprop="name">HubbleHQ</span> <span class="cv-role__company">· Product Designer</span></h3>
               <span class="cv-role__dates">2019 – 2020</span>
             </div>
             <ul class="cv-role__bullets">
@@ -674,45 +772,34 @@
           </div>
         </section>
 
-        <!-- Previous experience -->
-        <section class="cv-section" aria-label="Previous experience">
-          <h2 class="cv-section__heading">Previous experience</h2>
-          <div class="cv-previous">
-            <div class="cv-previous__item">
-              <span><span class="cv-previous__company">Harrods</span> <span class="cv-previous__role">· Lead Digital Designer</span></span>
-              <span class="cv-previous__dates">2018 – 2019</span>
+          <!-- Previous experience -->
+          <section class="cv-section" aria-label="Previous experience">
+            <h2 class="cv-section__heading">Previous experience</h2>
+            <div class="cv-previous">
+              <p class="cv-previous__item"><span class="cv-previous__company">Harrods</span> · Lead Digital Designer · 2018 – 2019</p>
+              <p class="cv-previous__item"><span class="cv-previous__company">Ordre.com</span> · UI Designer · 2019</p>
+              <p class="cv-previous__item"><span class="cv-previous__company">Boutique 1</span> · Digital Designer · 2017</p>
+              <p class="cv-previous__item"><span class="cv-previous__company">Burberry</span> · Digital Designer &amp; Creative Technologist · 2010 – 2016</p>
             </div>
-            <div class="cv-previous__item">
-              <span><span class="cv-previous__company">Ordre.com</span> <span class="cv-previous__role">· UI Designer</span></span>
-              <span class="cv-previous__dates">2019</span>
-            </div>
-            <div class="cv-previous__item">
-              <span><span class="cv-previous__company">Boutique 1</span> <span class="cv-previous__role">· Digital Designer</span></span>
-              <span class="cv-previous__dates">2017</span>
-            </div>
-            <div class="cv-previous__item">
-              <span><span class="cv-previous__company">Burberry</span> <span class="cv-previous__role">· Digital Designer &amp; Creative Technologist</span></span>
-              <span class="cv-previous__dates">2010 – 2016</span>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Education -->
-        <section class="cv-section" aria-label="Education">
-          <h2 class="cv-section__heading">Education</h2>
-          <div class="cv-education">
-            <div class="cv-education__item">
-              <span class="cv-education__institution">General Assembly</span>
-              <span class="cv-education__detail"> · User Experience Design · 2017</span>
+          <!-- Education -->
+          <section class="cv-section" aria-label="Education">
+            <h2 class="cv-section__heading">Education</h2>
+            <div class="cv-education">
+              <div class="cv-education__item">
+                <span class="cv-education__institution">General Assembly</span>
+                <span class="cv-education__detail"> · User Experience Design · 2017</span>
+              </div>
+              <div class="cv-education__item">
+                <span class="cv-education__institution">Northumbria University</span>
+                <span class="cv-education__detail"> · BA (Hons) Multimedia Design · 2006 – 2009</span>
+              </div>
             </div>
-            <div class="cv-education__item">
-              <span class="cv-education__institution">Northumbria University</span>
-              <span class="cv-education__detail"> · BA (Hons) Multimedia Design · 2006 – 2009</span>
-            </div>
-          </div>
-        </section>
+          </section>
 
       </article>
+      </div>
     </div>
   </main>
 
