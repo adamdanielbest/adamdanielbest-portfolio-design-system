@@ -2443,6 +2443,7 @@ code {
 .action-chip__body {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex: 1;
   height: var(--form-input-height);
   padding-left: var(--spacing-xs);
@@ -2465,7 +2466,6 @@ a.action-chip .action-chip__body {
    Label
    -------------------------------------------------------------------------- */
 .action-chip__label {
-  flex: 1;
   color: var(--text-link);
   font-size: var(--type-body-md-emphasis-size);
   font-weight: var(--type-body-md-emphasis-weight);
