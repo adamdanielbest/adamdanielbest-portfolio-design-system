@@ -63,3 +63,17 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.text-link--inverse {
+  color: var(--text-inverse, #FAF9F6);
+}
+
+.text-link--inverse:hover {
+  color: var(--text-inverse, #FAF9F6);
+  opacity: 0.8;
+}
+
+.text-link--inverse:focus-visible {
+  color: var(--text-inverse, #FAF9F6);
+  outline-color: var(--text-inverse, #FAF9F6);
+}
