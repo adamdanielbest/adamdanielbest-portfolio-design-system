@@ -3030,7 +3030,7 @@ body {
 }
 
 .cv-role__title {
-  font-family: var(--type-family-regular), system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: var(--type-body-md-size);
   font-weight: var(--type-body-md-weight);
   line-height: var(--type-body-md-line-height);
@@ -3044,7 +3044,7 @@ body {
 }
 
 .cv-role__company {
-  font-family: var(--type-family-regular), system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: var(--type-body-md-size);
   font-weight: var(--type-body-md-weight);
   color: var(--text-primary);
