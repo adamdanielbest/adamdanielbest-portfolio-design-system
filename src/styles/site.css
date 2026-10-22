@@ -230,6 +230,7 @@ body {
 
   .site-drawer .sidebar__inner {
     padding: var(--spacing-md) var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0px));
   }
 }
 

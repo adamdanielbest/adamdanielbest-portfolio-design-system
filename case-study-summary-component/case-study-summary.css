@@ -1,7 +1,7 @@
 .case-study-summary {
-  background-color: var(--background-inverse);
-  border: var(--border-width-default) solid var(--border-inverse);
-  border-radius: var(--radius-md);
+  background-color: var(--background-inverse, #10243A);
+  border: var(--border-width-default, 1px) solid var(--border-inverse, #081527);
+  border-radius: var(--radius-md, 8px);
   overflow: hidden;
   width: 100%;
   max-width: var(--layout-reading-column-width);
@@ -13,7 +13,7 @@
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-sm);
-  border-bottom: var(--border-width-default) solid var(--border-inverse);
+  border-bottom: var(--border-width-default, 1px) solid var(--border-inverse, #081527);
 }
 
 .case-study-summary__icon {
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--icon-inverse);
+  color: var(--icon-inverse, #FAF9F6);
 }
 
 .case-study-summary__icon svg {
@@ -39,7 +39,7 @@
 }
 
 .case-study-summary__title {
-  color: var(--text-inverse);
+  color: var(--text-inverse, #FAF9F6);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-heading-sm-size);
   font-weight: 400;
@@ -68,11 +68,11 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  color: var(--icon-inverse);
+  color: var(--icon-inverse, #FAF9F6);
 }
 
 .case-study-summary__description {
-  color: var(--text-inverse);
+  color: var(--text-inverse, #FAF9F6);
   font-family: var(--type-family-semibold), system-ui, sans-serif;
   font-size: var(--type-body-md-size);
   font-weight: 400;
