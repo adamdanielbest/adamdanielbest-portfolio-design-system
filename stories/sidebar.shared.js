@@ -3,6 +3,7 @@ import '../content-section-component/content-section.css';
 import '../timeline-component/timeline.css';
 import '../text-link-component/text-link.css';
 import '../button-component/button.css';
+import '../action-chip-component/action-chip.css';
 import { DEFAULT_TIMELINE, renderSidebarSections } from './sidebar.render.js';
 
 export function renderSidebar({
