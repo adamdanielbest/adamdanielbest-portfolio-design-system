@@ -30,6 +30,7 @@ const FILES = [
   'card-item-component/card-item.css',
   'case-study-hero-component/case-study-hero.css',
   'case-study-summary-component/case-study-summary.css',
+  'action-chip-component/action-chip.css',
   'src/styles/site.css',
 ];
 

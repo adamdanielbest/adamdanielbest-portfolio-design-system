@@ -22,6 +22,11 @@
   --brand-off-white: #FAF9F6;
   /* Borders, dividers, Platinum */
   --brand-platinum-grey: #E8E8E8;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 640px;
+  --breakpoint-xl: 1280px;
   /* Very light cobalt */
   --cobalt-100: #D9ECF7;
   /* Light cobalt */

@@ -57,11 +57,8 @@
   --spacing-xl: 40px;
   /* Between inline elements — icon + label. 8px both. */
   --spacing-xs: 8px;
-  /* Body md emphasis line height — 26px desktop */
-  --type-body-md-emphasis-line-height: 26;
-  /* Body md emphasis size — 16px desktop */
-  --type-body-md-emphasis-size: 16;
-  /* Semibold weight */
+  --type-body-md-emphasis-line-height: 26px;
+  --type-body-md-emphasis-size: 16px;
   --type-body-md-emphasis-weight: 600;
   /* Body md line height. 22px. */
   --type-body-md-line-height: 22px;
@@ -69,11 +66,8 @@
   --type-body-md-size: 16px;
   /* Body weight — regular. */
   --type-body-md-weight: 400;
-  /* Body sm emphasis line height — 22px desktop */
-  --type-body-sm-emphasis-line-height: 22;
-  /* Body sm emphasis size — 14px desktop */
-  --type-body-sm-emphasis-size: 14;
-  /* Semibold weight */
+  --type-body-sm-emphasis-line-height: 22px;
+  --type-body-sm-emphasis-size: 14px;
   --type-body-sm-emphasis-weight: 600;
   /* Body small line height. 20px desktop. */
   --type-body-sm-line-height: 20px;

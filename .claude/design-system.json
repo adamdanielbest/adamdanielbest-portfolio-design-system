@@ -176,6 +176,13 @@
       "figmaNodeId": "2925:9686"
     },
     {
+      "name": "action-chip",
+      "figmaNodeId": "3183:11581",
+      "cssFile": "action-chip-component/action-chip.css",
+      "htmlFile": "action-chip-component/action-chip.html",
+      "sharedFile": "stories/action-chip.shared.js"
+    },
+    {
       "name": "case-study-summary",
       "figmaNodeId": "3109:7900",
       "cssFile": "case-study-summary-component/case-study-summary.css",

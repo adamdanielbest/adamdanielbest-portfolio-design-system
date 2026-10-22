@@ -49,6 +49,11 @@
   --brand-off-white: #FAF9F6;
   /* Borders, dividers, Platinum */
   --brand-platinum-grey: #E8E8E8;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 640px;
+  --breakpoint-xl: 1280px;
   /* Very light cobalt */
   --cobalt-100: #D9ECF7;
   /* Light cobalt */
@@ -256,7 +261,6 @@
   --border-ghost: #5C91B5;
   /* Info state border — informational banners. */
   --border-info: #3A73A0;
-  /* Inverted border — card edges on dark/inverse surfaces. */
   --border-inverse: #081527;
   /* Prominent edge — selected/active states, strong dividers. */
   --border-strong: #ABABAB;
@@ -285,7 +289,6 @@
   --text-inverse: #FAF9F6;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
   --text-link: #3A73A0;
-  --text-link-inverse: #88B0CD;
   /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
   --text-link-hover: #224868;
   /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
@@ -384,8 +387,7 @@
   --border-ghost: #88B0CD;
   /* Info border in dark. */
   --border-info: #5C91B5;
-  /* Inverted border — card edges on dark/inverse surfaces. */
-  --border-inverse: #F0F6FA;
+  --border-inverse: #E8E8E8;
   /* Prominent edge — selected states, strong dividers in dark. */
   --border-strong: #888888;
   /* Barely-there dividers — section separators in dark. */
@@ -413,7 +415,6 @@
   --text-inverse: #121212;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
   --text-link: #88B0CD;
-  --text-link-inverse: #88B0CD;
   /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
   --text-link-hover: #B8D8ED;
   /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
@@ -495,11 +496,8 @@
   --spacing-xl: 40px;
   /* Between inline elements — icon + label. 8px both. */
   --spacing-xs: 8px;
-  /* Body md emphasis line height — 26px desktop */
-  --type-body-md-emphasis-line-height: 26;
-  /* Body md emphasis size — 16px desktop */
-  --type-body-md-emphasis-size: 16;
-  /* Semibold weight */
+  --type-body-md-emphasis-line-height: 26px;
+  --type-body-md-emphasis-size: 16px;
   --type-body-md-emphasis-weight: 600;
   /* Body md line height. 22px. */
   --type-body-md-line-height: 22px;
@@ -507,11 +505,8 @@
   --type-body-md-size: 16px;
   /* Body weight — regular. */
   --type-body-md-weight: 400;
-  /* Body sm emphasis line height — 22px desktop */
-  --type-body-sm-emphasis-line-height: 22;
-  /* Body sm emphasis size — 14px desktop */
-  --type-body-sm-emphasis-size: 14;
-  /* Semibold weight */
+  --type-body-sm-emphasis-line-height: 22px;
+  --type-body-sm-emphasis-size: 14px;
   --type-body-sm-emphasis-weight: 600;
   /* Body small line height. 20px desktop. */
   --type-body-sm-line-height: 20px;
@@ -645,11 +640,8 @@
   --spacing-xl: 40px;
   /* Icon + label. 8px both viewports. */
   --spacing-xs: 8px;
-  /* Body md emphasis line height — 26px mobile */
-  --type-body-md-emphasis-line-height: 26;
-  /* Body md emphasis size — 16px mobile */
-  --type-body-md-emphasis-size: 16;
-  /* Semibold weight */
+  --type-body-md-emphasis-line-height: 26px;
+  --type-body-md-emphasis-size: 16px;
   --type-body-md-emphasis-weight: 600;
   /* Body md line height. 22px. */
   --type-body-md-line-height: 22px;
@@ -657,11 +649,8 @@
   --type-body-md-size: 16px;
   /* Body weight — regular. */
   --type-body-md-weight: 400;
-  /* Body sm emphasis line height — 22px mobile */
-  --type-body-sm-emphasis-line-height: 22;
-  /* Body sm emphasis size — 14px mobile */
-  --type-body-sm-emphasis-size: 14;
-  /* Semibold weight */
+  --type-body-sm-emphasis-line-height: 22px;
+  --type-body-sm-emphasis-size: 14px;
   --type-body-sm-emphasis-weight: 600;
   /* Body small line height mobile. 22px. */
   --type-body-sm-line-height: 22px;
@@ -2426,6 +2415,132 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   Action Chip component
+   Renders as <a> (link) or <button> depending on context.
+   Dual-use: tertiary CTA and form action trigger.
+   ========================================================================== */
+
+.action-chip {
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--background-input);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* --------------------------------------------------------------------------
+   Inner body — bordered pill, icon + label row
+   -------------------------------------------------------------------------- */
+.action-chip__body {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: var(--form-input-height);
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
+  gap: var(--size-300);
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: var(--radius-sm);
+}
+
+/* Link variant — no visible border (keeps same dimensions via transparent) */
+a.action-chip .action-chip__body {
+  border-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Label
+   -------------------------------------------------------------------------- */
+.action-chip__label {
+  flex: 1;
+  color: var(--text-link);
+  font-size: var(--type-body-md-emphasis-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  line-height: var(--type-body-md-emphasis-line-height);
+  white-space: nowrap;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Icon
+   -------------------------------------------------------------------------- */
+.action-chip__icon {
+  display: block;
+  flex-shrink: 0;
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  color: var(--icon-accent);
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   States
+   -------------------------------------------------------------------------- */
+
+/* Hover */
+.action-chip:hover .action-chip__body {
+  background: var(--background-hover);
+}
+
+button.action-chip:hover .action-chip__body {
+  border-color: var(--border-action-secondary-hover);
+}
+
+.action-chip:hover .action-chip__label {
+  color: var(--text-secondary);
+}
+
+.action-chip:hover .action-chip__icon {
+  color: var(--icon-secondary);
+}
+
+/* Focus */
+.action-chip:focus {
+  outline: none;
+}
+
+.action-chip:focus-visible .action-chip__body {
+  border-width: var(--border-width-focus);
+  border-color: var(--border-focus);
+  box-shadow: inset 0 0 0 var(--border-width-default) var(--border-focus-inner);
+}
+
+/* Focus + hover */
+.action-chip:focus-visible:hover .action-chip__body {
+  background: var(--background-hover);
+}
+
+/* Disabled */
+.action-chip:disabled,
+.action-chip[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.action-chip:disabled .action-chip__body,
+.action-chip[aria-disabled="true"] .action-chip__body {
+  background: var(--background-disabled);
+  border-color: var(--border-default);
+}
+
+.action-chip:disabled .action-chip__label,
+.action-chip[aria-disabled="true"] .action-chip__label {
+  color: var(--text-disabled);
+}
+
+.action-chip:disabled .action-chip__icon,
+.action-chip[aria-disabled="true"] .action-chip__icon {
+  color: var(--icon-disabled);
 }
 
 /* ==========================================================================
