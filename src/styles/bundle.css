@@ -1,0 +1,2778 @@
+@font-face {
+  font-family: 'Eina04';
+  src: url('../fonts/Eina04-Regular.woff2') format('woff2'),
+       url('../fonts/Eina04-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eina04-SemiBold';
+  src: url('../fonts/Eina04-SemiBold.woff2') format('woff2'),
+       url('../fonts/Eina04-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eina04-Bold';
+  src: url('../fonts/Eina04-Bold.woff2') format('woff2'),
+       url('../fonts/Eina04-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --amber-100: #FEF3C7;
+  --amber-200: #FDE68A;
+  --amber-300: #FCD34D;
+  --amber-400: #FBBF24;
+  --amber-50: #FFFBEB;
+  /* Primary warning — icons and backgrounds */
+  --amber-500: #F59E0B;
+  --amber-600: #D97706;
+  /* Warning text — 4.5:1 on white, AA */
+  --amber-700: #B45309;
+  --amber-800: #92400E;
+  --amber-900: #78350F;
+  --amber-950: #451A03;
+  /* Secondary text, Granite */
+  --brand-cobalt: #3A73A0;
+  /* Secondary text, Granite */
+  --brand-granite-grey: #666666;
+  /* Primary text, near-black */
+  --brand-off-black: #121212;
+  /* Page background, near-white surface */
+  --brand-off-white: #FAF9F6;
+  /* Borders, dividers, Platinum */
+  --brand-platinum-grey: #E8E8E8;
+  /* Very light cobalt */
+  --cobalt-100: #D9ECF7;
+  /* Light cobalt */
+  --cobalt-200: #B8D8ED;
+  /* Light Cobalt Blue — brand colour, decorative use */
+  --cobalt-300: #88B0CD;
+  /* Medium cobalt */
+  --cobalt-400: #5C91B5;
+  /* Lightest cobalt tint */
+  --cobalt-50: #F0F6FA;
+  /* Interactive cobalt — primary actions (5.3:1 on white, AA) */
+  --cobalt-500: #3A73A0;
+  /* Dark cobalt — hover states */
+  --cobalt-600: #2D5C82;
+  /* Deeper cobalt — pressed states */
+  --cobalt-700: #224868;
+  /* Very dark cobalt */
+  --cobalt-800: #193651;
+  /* Near-black cobalt */
+  --cobalt-900: #10243A;
+  /* Deepest cobalt */
+  --cobalt-950: #081527;
+  --family-bold: Eina04-Bold;
+  /* Primary typeface — all text across portfolio */
+  --family-primary: Eina04;
+  --family-semibold: Eina04-SemiBold;
+  --green-100: #DCFCE7;
+  --green-200: #BBF7D0;
+  --green-300: #86EFAC;
+  --green-400: #4ADE80;
+  --green-50: #F0FDF4;
+  /* Primary success — icons and backgrounds */
+  --green-500: #22C55E;
+  /* Success text — 4.5:1 on white, AA */
+  --green-600: #16A34A;
+  --green-700: #15803D;
+  --green-800: #166534;
+  --green-900: #14532D;
+  --green-950: #052E16;
+  /* Pure white */
+  --neutral-0: #FFFFFF;
+  /* Near-white surface */
+  --neutral-100: #F0EFEC;
+  /* Pure black */
+  --neutral-1000: #000000;
+  /* Platinum Grey — light surface and borders */
+  --neutral-200: #E8E8E8;
+  /* Light divider */
+  --neutral-300: #D4D4D4;
+  /* Placeholder text, muted icons */
+  --neutral-400: #ABABAB;
+  /* Off White — brand warm near-white */
+  --neutral-50: #FAF9F6;
+  /* Mid-grey */
+  --neutral-500: #888888;
+  --neutral-550: #737373;
+  /* Granite Grey — secondary text */
+  --neutral-600: #666666;
+  /* Strong secondary foreground */
+  --neutral-700: #4A4A4A;
+  /* Near-dark foreground */
+  --neutral-800: #2E2E2E;
+  /* Almost black */
+  --neutral-900: #1A1A1A;
+  /* Off Black — brand near-black */
+  --neutral-950: #121212;
+  --radius-100: 2px;
+  /* Deepest nested — tags, chips, indicators */
+  --radius-200: 4px;
+  /* Parent level — buttons, inputs, tooltips */
+  --radius-300: 8px;
+  /* Grandparent — project cards, thumbnails */
+  --radius-400: 16px;
+  /* Outermost containers — currently sharp, update when needed */
+  --radius-500: 0;
+  /* Fully rounded — badges, toggles */
+  --radius-pill: 999px;
+  --red-100: #FFE4E6;
+  --red-200: #FECDD3;
+  --red-300: #FDA4AF;
+  --red-400: #FB7185;
+  --red-50: #FFF1F2;
+  /* Primary error — icons and backgrounds */
+  --red-500: #F43F5E;
+  /* Error text — 4.5:1 on white, AA */
+  --red-600: #E11D48;
+  --red-700: #BE123C;
+  --red-800: #9F1239;
+  --red-900: #881337;
+  --red-950: #4C0519;
+  --shadow-dark-24: #0000003D;
+  --shadow-dark-28: #00000047;
+  --shadow-dark-40: #00000066;
+  --shadow-dark-60: #00000099;
+  --shadow-light-06: #0E16260F;
+  --shadow-light-08: #0E162614;
+  --shadow-light-10: #0E16261A;
+  --shadow-light-14: #0E162624;
+  --size-100: 2px;
+  /* 20px type size */
+  --size-1000: 20px;
+  /* 24px type size */
+  --size-1100: 24px;
+  /* 32px type size */
+  --size-1200: 32px;
+  /* 40px type size */
+  --size-1300: 40px;
+  /* 48px type size */
+  --size-1400: 48px;
+  --size-1500: 64px;
+  --size-1600: 80px;
+  --size-1700: 96px;
+  --size-1800: 120px;
+  --size-200: 4px;
+  --size-300: 8px;
+  /* 12px type size */
+  --size-500: 12px;
+  /* 14px type size */
+  --size-700: 14px;
+  /* 16px type size */
+  --size-800: 16px;
+  /* Bold — display, strong emphasis */
+  --weight-bold: 700;
+  /* Medium — labels, navigation */
+  --weight-medium: 500;
+  /* Regular — body, captions */
+  --weight-regular: 400;
+  /* SemiBold — headings, emphasis */
+  --weight-semibold: 600;
+}
+
+:root {
+  /* Cobalt indicator dots, progress fills, icon fills, tag backgrounds. */
+  --accent-brand: #88B0CD;
+  /* X icons, negative indicators. */
+  --accent-error: #BE123C;
+  /* Information icons. Aliases brand cobalt. */
+  --accent-info: #3A73A0;
+  /* Check icons, progress success, positive metric indicators. */
+  --accent-success: #22C55E;
+  /* Caution icons, amber indicators. */
+  --accent-warning: #F59E0B;
+  --background-action-destructive: #E11D48;
+  --background-action-destructive-hover: #BE123C;
+  --background-action-destructive-pressed: #9F1239;
+  --background-action-ghost: #F0F6FA;
+  --background-action-ghost-hover: #D9ECF7;
+  --background-action-ghost-pressed: #B8D8ED;
+  /* Primary CTA button. Pair with foreground/on-action. */
+  --background-action-primary: #3A73A0;
+  /* CTA button hover state. */
+  --background-action-primary-hover: #2D5C82;
+  /* CTA button pressed/active state. */
+  --background-action-primary-pressed: #224868;
+  --background-action-secondary: #121212;
+  --background-action-secondary-hover: #2E2E2E;
+  --background-action-secondary-pressed: #000000;
+  /* Brand cobalt surface — branded callouts, highlights. */
+  --background-brand: #88B0CD;
+  /* Subtle cobalt tint — tags, selected states, soft brand accents. */
+  --background-brand-subtle: #F0F6FA;
+  /* Card/container surfaces — panels holding content. Pair with border/default. */
+  --background-card: #FFFFFF;
+  --background-code: #1A1A1A;
+  --background-control: #121212;
+  --background-control-hover: #2E2E2E;
+  --background-control-pressed: #000000;
+  /* Disabled state — inactive buttons and inputs. Not for interactive elements. */
+  --background-disabled: #E8E8E8;
+  /* Elevated surface — popovers, tooltips, sticky headers. */
+  --background-elevated: #FFFFFF;
+  /* Error background — validation errors, destructive actions. */
+  --background-error: #FFF1F2;
+  --background-hover: #F0EFEC;
+  /* Info background — neutral informational banners. Aliases brand. */
+  --background-info: #F0F6FA;
+  /* Form inputs, selects, textareas. */
+  --background-input: #FFFFFF;
+  /* Inverted surface — dark chip/badge on light mode. */
+  --background-inverse: #10243A;
+  /* Modal scrim — darkens page to focus attention on elevated content. */
+  --background-overlay: #000000;
+  /* Page background — Off White outermost surface. */
+  --background-page: #FAF9F6;
+  --background-selected: #E8E8E8;
+  /* Success background — confirmation banners, success toasts. */
+  --background-success: #F0FDF4;
+  /* Warning background — caution banners, advisory states. */
+  --background-warning: #FFFBEB;
+  --border-action: #081527;
+  --border-action-secondary: #000000;
+  --border-action-secondary-hover: #000000;
+  --border-action-secondary-pressed: #ABABAB;
+  /* Brand-coloured border — cobalt edges for callouts, selected tags. */
+  --border-brand: #88B0CD;
+  /* Standard card edges, input borders, content dividers. */
+  --border-default: #E8E8E8;
+  --border-disabled: #D4D4D4;
+  --border-divider: #E8E8E8;
+  /* Error state border — error banners, invalid inputs. */
+  --border-error: #BE123C;
+  /* Keyboard focus ring — 2px outline. Always visible for accessibility. */
+  --border-focus: #3A73A0;
+  --border-focus-inner: #FAF9F6;
+  --border-ghost: #5C91B5;
+  /* Info state border — informational banners. */
+  --border-info: #3A73A0;
+  /* Inverted border — card edges on dark/inverse surfaces. */
+  --border-inverse: #081527;
+  /* Prominent edge — selected/active states, strong dividers. */
+  --border-strong: #ABABAB;
+  /* Barely-there dividers — section separators, list rules. */
+  --border-subtle: #F0EFEC;
+  /* Success state border — success banners, valid inputs. */
+  --border-success: #22C55E;
+  /* Warning state border — caution banners. */
+  --border-warning: #F59E0B;
+  --icon-accent: #3A73A0;
+  --icon-disabled: #ABABAB;
+  --icon-error: #BE123C;
+  --icon-inverse: #FAF9F6;
+  --icon-primary: #121212;
+  --icon-secondary: #666666;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels. */
+  --text-brand: #3A73A0;
+  --text-code: #F59E0B;
+  /* Disabled text and icons. Never on interactive elements. */
+  --text-disabled: #ABABAB;
+  /* Error text and icons — validation messages. */
+  --text-error: #BE123C;
+  /* Info text and icons. Aliases brand cobalt. */
+  --text-info: #3A73A0;
+  /* Text on inverted/dark surfaces in light mode. */
+  --text-inverse: #FAF9F6;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
+  --text-link: #3A73A0;
+  --text-link-inverse: #88B0CD;
+  /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
+  --text-link-hover: #224868;
+  /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
+  --text-link-visited: #224868;
+  /* Text/icons on background/action buttons — white on cobalt/500. */
+  --text-on-action: #FFFFFF;
+  /* Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark. */
+  --text-on-action-secondary: #FAF9F6;
+  --text-on-danger: #FFFFFF;
+  /* Body copy and long-form reading text. Highest contrast. Pairs with background/page. */
+  --text-primary: #121212;
+  --text-required: #E11D48;
+  /* Timestamps, project tags, secondary labels. */
+  --text-secondary: #666666;
+  /* Success text and icons — confirmation messages. */
+  --text-success: #16A34A;
+  /* Placeholder, helper text, captions. Least prominent foreground. */
+  --text-tertiary: #737373;
+  /* Warning text and icons — caution messages. */
+  --text-warning: #B45309;
+}
+
+[data-theme='dark'] {
+  /* Cobalt indicators, progress fills in dark. */
+  --accent-brand: #88B0CD;
+  /* Error indicators in dark. */
+  --accent-error: #F43F5E;
+  /* Info indicators in dark. Aliases cobalt. */
+  --accent-info: #3A73A0;
+  /* Success indicators in dark. */
+  --accent-success: #22C55E;
+  /* Warning indicators in dark. */
+  --accent-warning: #F59E0B;
+  --background-action-destructive: #FDA4AF;
+  --background-action-destructive-hover: #FECDD3;
+  --background-action-destructive-pressed: #FB7185;
+  --background-action-ghost: #10243A;
+  --background-action-ghost-hover: #193651;
+  --background-action-ghost-pressed: #081527;
+  /* Primary CTA button — light cobalt on dark. Pair with foreground/on-action. */
+  --background-action-primary: #88B0CD;
+  /* CTA button hover — lighter cobalt. */
+  --background-action-primary-hover: #B8D8ED;
+  /* CTA button pressed — slightly deeper cobalt. */
+  --background-action-primary-pressed: #5C91B5;
+  --background-action-secondary: #121212;
+  --background-action-secondary-hover: #000000;
+  --background-action-secondary-pressed: #000000;
+  /* Brand cobalt surface — deeper cobalt for dark branded sections. */
+  --background-brand: #2D5C82;
+  /* Subtle brand surface — dark card with blue cast for soft brand accents. */
+  --background-brand-subtle: #10243A;
+  /* Card surfaces — slightly lifted from page. Pair with border/default. */
+  --background-card: #10243A;
+  --background-code: #1A1A1A;
+  --background-control: #FAF9F6;
+  --background-control-hover: #F0EFEC;
+  --background-control-pressed: #E8E8E8;
+  /* Disabled state — inactive elements in dark mode. */
+  --background-disabled: #10243A;
+  /* Elevated surface — dropdowns, popovers, sticky headers. */
+  --background-elevated: #10243A;
+  /* Error background — dark red tint. */
+  --background-error: #4C0519;
+  --background-hover: #2E2E2E;
+  /* Info background — dark cobalt tint. Aliases brand. */
+  --background-info: #081527;
+  /* Form inputs — same as card in dark mode. */
+  --background-input: #10243A;
+  /* Inverted surface — light chip/badge on dark. */
+  --background-inverse: #FAF9F6;
+  /* Modal scrim — deep black at high opacity. */
+  --background-overlay: #000000;
+  /* Page background — near-black blue-grey. Reduces eye strain in low light. */
+  --background-page: #081527;
+  --background-selected: #4A4A4A;
+  /* Success background — dark green tint. */
+  --background-success: #052E16;
+  /* Warning background — dark amber tint. */
+  --background-warning: #451A03;
+  --border-action: #224868;
+  --border-action-secondary: #2E2E2E;
+  --border-action-secondary-hover: #2E2E2E;
+  --border-action-secondary-pressed: #2E2E2E;
+  /* Brand cobalt border in dark. */
+  --border-brand: #5C91B5;
+  /* Standard card edges and dividers — blue-grey tinted. */
+  --border-default: #193651;
+  --border-disabled: #4A4A4A;
+  --border-divider: #2E2E2E;
+  /* Error border in dark. */
+  --border-error: #E11D48;
+  /* Keyboard focus ring — cobalt/300 in dark. Always visible. */
+  --border-focus: #88B0CD;
+  --border-focus-inner: #FAF9F6;
+  --border-ghost: #88B0CD;
+  /* Info border in dark. */
+  --border-info: #5C91B5;
+  /* Inverted border — card edges on dark/inverse surfaces. */
+  --border-inverse: #F0F6FA;
+  /* Prominent edge — selected states, strong dividers in dark. */
+  --border-strong: #888888;
+  /* Barely-there dividers — section separators in dark. */
+  --border-subtle: #10243A;
+  /* Success border in dark. */
+  --border-success: #16A34A;
+  /* Warning border in dark. */
+  --border-warning: #D97706;
+  --icon-accent: #88B0CD;
+  --icon-disabled: #666666;
+  --icon-error: #FB7185;
+  --icon-inverse: #121212;
+  --icon-primary: #FAF9F6;
+  --icon-secondary: #ABABAB;
+  /* Brand cobalt text in dark — links, active nav items. */
+  --text-brand: #88B0CD;
+  --text-code: #F59E0B;
+  /* Disabled text and icons in dark mode. */
+  --text-disabled: #666666;
+  /* Error text and icons in dark mode. */
+  --text-error: #FB7185;
+  /* Info text and icons in dark mode. Aliases brand cobalt. */
+  --text-info: #88B0CD;
+  /* Dark text on inverted light surfaces. */
+  --text-inverse: #121212;
+  /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
+  --text-link: #88B0CD;
+  --text-link-inverse: #88B0CD;
+  /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
+  --text-link-hover: #B8D8ED;
+  /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */
+  --text-link-visited: #D9ECF7;
+  /* Text/icons on background/action — off-black on cobalt/300 (8.5:1 contrast). */
+  --text-on-action: #121212;
+  /* Off-white text for the solid-fill Secondary button — static across themes since background/action/secondary does not change between Light and Dark. */
+  --text-on-action-secondary: #FAF9F6;
+  --text-on-danger: #121212;
+  /* Body copy in dark mode — Off White. Maximum contrast against dark surfaces. */
+  --text-primary: #FAF9F6;
+  --text-required: #FB7185;
+  /* Secondary text — muted but readable. Timestamps, tags, metadata. */
+  --text-secondary: #ABABAB;
+  /* Success text and icons in dark mode. */
+  --text-success: #4ADE80;
+  /* Placeholder text, helper text, captions. Least prominent. */
+  --text-tertiary: #888888;
+  /* Warning text and icons in dark mode. */
+  --text-warning: #FCD34D;
+}
+
+:root {
+  --border-width-default: 1px;
+  --border-width-focus: 3px;
+  --border-width-strong: 2px;
+  --form-input-height: 40px;
+  --icon-size-lg: 48px;
+  --icon-size-md: 32px;
+  --icon-size-sm: 24px;
+  --icon-size-xs: 16px;
+  /* Breakpoint at which sidebar collapses to top bar. ≤900px triggers tablet layout. */
+  --layout-breakpoint-tablet: 900px;
+  /* Max width for form layouts. Keeps fields readable and connected. */
+  --layout-form-max-width: 600px;
+  /* Number of grid columns. 12 desktop. */
+  --layout-grid-columns: 12px;
+  /* Gap between grid columns. 24px desktop. */
+  --layout-grid-gutter: 24px;
+  /* Inner container padding. Matches spacing/page-margin. 32px desktop. */
+  --layout-grid-margin: 32px;
+  /* Maximum content width — container centred at this width. 1200px desktop. */
+  --layout-max-content-width: 1200px;
+  /* Max width for long-form body text. Optimal reading measure. 720px desktop. */
+  --layout-reading-column-width: 720px;
+  /* Fixed sidebar width on desktop. 30% of 1200px content width. */
+  --layout-sidebar-width: 360px;
+  /* Grandparent — project cards, thumbnails. 16px. */
+  --radius-lg: 16px;
+  /* Parent level — buttons, inputs, tooltips. 8px. */
+  --radius-md: 8px;
+  /* Fully rounded — badges, toggles. 999px. */
+  --radius-pill: 999px;
+  /* Deepest nested — tags, chips, indicators inside a card. 4px. */
+  --radius-sm: 4px;
+  /* Outermost containers — currently sharp (0px). Update primitive when needed. */
+  --radius-xl: 0;
+  --radius-xs: 2px;
+  --spacing-2xl: 48px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-2xs: 4px;
+  --spacing-3xl: 64px;
+  --spacing-3xs: 2px;
+  --spacing-4xl: 80px;
+  --spacing-5xl: 96px;
+  --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
+  --spacing-badge-padding: 4px;
+  /* Between content blocks within a section. 32px desktop. */
+  --spacing-lg: 32px;
+  /* Internal padding for project cards. 24px desktop. */
+  --spacing-md: 24px;
+  /* Min horizontal page padding. 32px desktop. */
+  --spacing-page-margin-x: 32px;
+  /* Page vertical padding. 80px desktop. */
+  --spacing-page-margin-y: 80px;
+  /* Between stacked elements in a column. 16px desktop. */
+  --spacing-sm: 16px;
+  --spacing-xl: 40px;
+  /* Between inline elements — icon + label. 8px both. */
+  --spacing-xs: 8px;
+  /* Body md emphasis line height — 26px desktop */
+  --type-body-md-emphasis-line-height: 26;
+  /* Body md emphasis size — 16px desktop */
+  --type-body-md-emphasis-size: 16;
+  /* Semibold weight */
+  --type-body-md-emphasis-weight: 600;
+  /* Body md line height. 22px. */
+  --type-body-md-line-height: 22px;
+  /* Default long-form reading text. Case study content. 16px both viewports. */
+  --type-body-md-size: 16px;
+  /* Body weight — regular. */
+  --type-body-md-weight: 400;
+  /* Body sm emphasis line height — 22px desktop */
+  --type-body-sm-emphasis-line-height: 22;
+  /* Body sm emphasis size — 14px desktop */
+  --type-body-sm-emphasis-size: 14;
+  /* Semibold weight */
+  --type-body-sm-emphasis-weight: 600;
+  /* Body small line height. 20px desktop. */
+  --type-body-sm-line-height: 20px;
+  /* Supporting content, image captions, metadata. 14px. */
+  --type-body-sm-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-sm-weight: 400;
+  --type-button-lg-letter-spacing: 0.5px;
+  --type-button-lg-line-height: 24px;
+  --type-button-lg-size: 16px;
+  --type-button-lg-weight: 600;
+  --type-button-md-letter-spacing: 0.5px;
+  --type-button-md-line-height: 20px;
+  --type-button-md-size: 14px;
+  --type-button-md-weight: 600;
+  --type-button-sm-letter-spacing: 0.5px;
+  --type-button-sm-line-height: 16px;
+  --type-button-sm-size: 12px;
+  --type-button-sm-weight: 600;
+  /* Caption line height. */
+  --type-caption-line-height: 16px;
+  /* Timestamps, tags, helper text. 13px. */
+  --type-caption-size: 12px;
+  /* Caption weight — regular. */
+  --type-caption-weight: 400;
+  /* Display letter spacing — slightly tight. */
+  --type-display-letter-spacing: -0.5px;
+  /* Display line height — tight for large type. */
+  --type-display-line-height: 56px;
+  /* Homepage hero, case study titles at full scale. 48px desktop. */
+  --type-display-size: 48px;
+  /* Display weight — bold. */
+  --type-display-weight: 700;
+  --type-family-bold: Eina04-Bold;
+  /* Primary typeface — Eina04, all text. */
+  --type-family-primary: Eina04;
+  --type-family-semibold: Eina04-SemiBold;
+  /* Heading 1 letter spacing. */
+  --type-heading-lg-letter-spacing: -0.30000001192092896px;
+  /* Heading 1 line height. */
+  --type-heading-lg-line-height: 40px;
+  /* Page-level titles. 32px desktop. */
+  --type-heading-lg-size: 32px;
+  /* Heading 1 weight — semibold. */
+  --type-heading-lg-weight: 600;
+  /* Heading 2 letter spacing. */
+  --type-heading-md-letter-spacing: -0.20000000298023224px;
+  /* Heading 2 line height. */
+  --type-heading-md-line-height: 32px;
+  /* Case study section headers. 24px desktop. */
+  --type-heading-md-size: 24px;
+  /* Heading 2 weight — semibold. */
+  --type-heading-md-weight: 600;
+  /* Heading 3 line height. */
+  --type-heading-sm-line-height: 28px;
+  /* Subsections, callout labels. 20px desktop. */
+  --type-heading-sm-size: 20px;
+  /* Heading 3 weight — semibold. */
+  --type-heading-sm-weight: 600;
+  /* Label letter spacing — slightly open. */
+  --type-label-letter-spacing: 0.009999999776482582px;
+  /* Label line height. */
+  --type-label-line-height: 16px;
+  /* Navigation, buttons, input labels. 14px. */
+  --type-label-size: 12px;
+  /* Label weight — medium. Distinguishes UI text from body copy. */
+  --type-label-weight: 600;
+  /* Overline letter spacing — wide, adds visual texture. */
+  --type-overline-letter-spacing: 0.07999999821186066px;
+  /* Overline line height. */
+  --type-overline-line-height: 16px;
+  /* Category labels, project tags above a heading. 12px. */
+  --type-overline-size: 12px;
+  /* Overline weight — semibold. */
+  --type-overline-weight: 600;
+}
+
+[data-density='mobile'] {
+  --border-width-default: 1px;
+  --border-width-focus: 3px;
+  --border-width-strong: 2px;
+  --button-padding-default: 16px;
+  --button-padding-sm: 8px;
+  --form-input-height: 48px;
+  --icon-size-lg: 48px;
+  --icon-size-md: 32px;
+  --icon-size-sm: 24px;
+  --icon-size-xs: 16px;
+  /* Max width for form layouts. Full-width on mobile. */
+  --layout-form-max-width: 430px;
+  /* Grid columns — 4 mobile. */
+  --layout-grid-columns: 4px;
+  /* Column gap. 16px mobile. */
+  --layout-grid-gutter: 16px;
+  /* Container padding. Matches spacing/page-margin. 16px. */
+  --layout-grid-margin: 16px;
+  /* Full-width at mobile — 430px (standard iPhone artboard). */
+  --layout-max-content-width: 430px;
+  /* Full-width reading on mobile — uses frame width. */
+  --layout-reading-column-width: 430px;
+  /* Grandparent — cards. 16px. */
+  --radius-lg: 16px;
+  /* Parent level — buttons, inputs. 8px. */
+  --radius-md: 8px;
+  /* Fully rounded — badges. 999px. */
+  --radius-pill: 999px;
+  /* Deepest nested — tags, chips. 4px. */
+  --radius-sm: 4px;
+  /* Outermost containers — sharp (0px). */
+  --radius-xl: 0;
+  --radius-xs: 2px;
+  /* Between major sections. 48px mobile. */
+  --spacing-2xl: 48px;
+  --spacing-2xs: 4px;
+  --spacing-3xl: 64px;
+  --spacing-3xs: 2px;
+  --spacing-4xl: 80px;
+  --spacing-5xl: 96px;
+  --spacing-6xl: 120px;
+  /* Badge padding. 4px. */
+  --spacing-badge-padding: 4px;
+  --spacing-lg: 32px;
+  /* Between content blocks. 16px mobile. */
+  --spacing-md: 24px;
+  /* Min horizontal page padding. 16px mobile. */
+  --spacing-page-margin-x: 16px;
+  /* Page vertical padding. 40px mobile. */
+  --spacing-page-margin-y: 40px;
+  /* Stacked elements. 16px mobile. */
+  --spacing-sm: 16px;
+  --spacing-xl: 40px;
+  /* Icon + label. 8px both viewports. */
+  --spacing-xs: 8px;
+  /* Body md emphasis line height — 26px mobile */
+  --type-body-md-emphasis-line-height: 26;
+  /* Body md emphasis size — 16px mobile */
+  --type-body-md-emphasis-size: 16;
+  /* Semibold weight */
+  --type-body-md-emphasis-weight: 600;
+  /* Body md line height. 22px. */
+  --type-body-md-line-height: 22px;
+  /* Body text. 16px — consistent with desktop for scale cohesion. */
+  --type-body-md-size: 16px;
+  /* Body weight — regular. */
+  --type-body-md-weight: 400;
+  /* Body sm emphasis line height — 22px mobile */
+  --type-body-sm-emphasis-line-height: 22;
+  /* Body sm emphasis size — 14px mobile */
+  --type-body-sm-emphasis-size: 14;
+  /* Semibold weight */
+  --type-body-sm-emphasis-weight: 600;
+  /* Body small line height mobile. 22px. */
+  --type-body-sm-line-height: 22px;
+  /* Supporting content, captions. 14px. */
+  --type-body-sm-size: 14px;
+  /* Body small weight — regular. */
+  --type-body-sm-weight: 400;
+  --type-button-lg-letter-spacing: 0.5px;
+  --type-button-lg-line-height: 24px;
+  --type-button-lg-size: 16px;
+  --type-button-lg-weight: 600;
+  --type-button-md-letter-spacing: 0.5px;
+  --type-button-md-line-height: 20px;
+  --type-button-md-size: 14px;
+  --type-button-md-weight: 600;
+  --type-button-sm-letter-spacing: 0.5px;
+  --type-button-sm-line-height: 16px;
+  --type-button-sm-size: 12px;
+  --type-button-sm-weight: 600;
+  /* Caption line height mobile. */
+  --type-caption-line-height: 18px;
+  /* Caption weight — regular. */
+  --type-caption-weight: 400;
+  /* Display letter spacing. */
+  --type-display-letter-spacing: -0.5px;
+  /* Display line height mobile. */
+  --type-display-line-height: 38px;
+  /* Homepage hero at mobile scale. 32px. */
+  --type-display-size: 32px;
+  /* Display weight — bold. */
+  --type-display-weight: 700;
+  --type-family-bold: Eina04-Bold;
+  /* Primary typeface — Eina04. */
+  --type-family-primary: Eina04;
+  --type-family-semibold: Eina04-SemiBold;
+  /* Heading 1 letter spacing. */
+  --type-heading-lg-letter-spacing: -0.30000001192092896px;
+  /* Heading 1 line height mobile. */
+  --type-heading-lg-line-height: 30px;
+  /* Page-level titles. 24px mobile. */
+  --type-heading-lg-size: 24px;
+  /* Heading 1 weight — semibold. */
+  --type-heading-lg-weight: 600;
+  /* Heading 2 letter spacing. */
+  --type-heading-md-letter-spacing: -0.20000000298023224px;
+  /* Heading 2 line height mobile. */
+  --type-heading-md-line-height: 28px;
+  /* Section headers. 20px mobile. */
+  --type-heading-md-size: 20px;
+  /* Heading 2 weight — semibold. */
+  --type-heading-md-weight: 600;
+  /* Heading 3 line height mobile. */
+  --type-heading-sm-line-height: 26px;
+  /* Heading 3 weight — semibold. */
+  --type-heading-sm-weight: 600;
+  /* Label letter spacing. */
+  --type-label-letter-spacing: 0.009999999776482582px;
+  /* Label line height. */
+  --type-label-line-height: 20px;
+  /* Navigation, buttons. 14px. */
+  --type-label-size: 14px;
+  /* Label weight — medium. */
+  --type-label-weight: 500;
+  /* Overline letter spacing — wide. */
+  --type-overline-letter-spacing: 0.07999999821186066px;
+  /* Overline line height. */
+  --type-overline-line-height: 16px;
+  /* Category labels. 12px. */
+  --type-overline-size: 12px;
+  /* Overline weight — semibold. */
+  --type-overline-weight: 600;
+}
+
+/* ==========================================================================
+   Layout utilities
+   Shared across all pages. Import after token files.
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+code {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-emphasis-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   Max-width wrapper, centred, with page-margin padding on both sides.
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--layout-max-content-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   12-column desktop / 4-column mobile using CSS grid.
+   Note: --layout-grid-columns token carries a px unit so repeat count is
+   hardcoded here; gutter still pulls from the token.
+   -------------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--layout-grid-gutter);
+}
+
+/* Span helpers — use as additional classes on grid children */
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Tablet (≤767px): 4-col grid.
+   Token overrides are handled by tokens-mobile.css — no duplication here.
+   Spans map proportionally: 12-col thirds → 4-col quarters. */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .col-1, .col-2, .col-3, .col-4    { grid-column: span 1; }
+  .col-5, .col-6                     { grid-column: span 2; }
+  .col-7, .col-8, .col-9            { grid-column: span 3; }
+  .col-10, .col-11, .col-12         { grid-column: span 4; }
+}
+
+/* Phone (≤480px): 2-col grid. Spans map to half/full. */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-1, .col-2, .col-3            { grid-column: span 1; }
+  .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9,
+  .col-10, .col-11, .col-12         { grid-column: span 2; }
+}
+
+/* --------------------------------------------------------------------------
+   Reading column
+   Left-aligned by default. Constrained to the optimal reading measure.
+   Add .reading-col--center to centre it when needed.
+   -------------------------------------------------------------------------- */
+.reading-col {
+  width: 100%;
+  max-width: 720px;
+}
+
+.reading-col--center {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Form container
+   Left-aligned by default. Narrower than reading column.
+   Add .form-col--center to centre it when needed.
+   -------------------------------------------------------------------------- */
+.form-col {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-col--center {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Section spacing
+   Vertical rhythm between major page sections.
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--spacing-5xl);
+}
+
+.section + .section {
+  padding-top: 0;
+}
+
+/* ==========================================================================
+   Content Section component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Content section — heading + body + optional media block
+   -------------------------------------------------------------------------- */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.content-section__heading {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-md-size);
+  font-weight: 400;
+  line-height: var(--type-heading-md-line-height);
+  letter-spacing: var(--type-heading-md-letter-spacing);
+  color: var(--text-primary);
+  max-width: var(--layout-reading-column-width);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.content-section__body {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  max-width: var(--layout-reading-column-width);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+
+/* ==========================================================================
+   Timeline component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Demo wrapper — card padding + constrain width so the list doesn't sprawl
+   -------------------------------------------------------------------------- */
+.timeline-demo-wrap {
+  padding: var(--spacing-md);
+}
+
+/* --------------------------------------------------------------------------
+   Timeline list
+   Relative positioning creates the stacking context for the connector line.
+   -------------------------------------------------------------------------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+/* --------------------------------------------------------------------------
+   Timeline item
+   HORIZONTAL layout: icon (32×32) + body text, gap = spacing/inline-gap
+   Padding top/bottom = spacing/inline-gap (8px each side = 48px min-height)
+   -------------------------------------------------------------------------- */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  min-height: 48px;
+  position: relative;
+}
+
+.timeline-item:first-child {
+  padding-top: 0;
+  min-height: auto;
+}
+
+.timeline-item:first-child::after {
+  top: 16px; /* no top padding: half of 32px icon only */
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+  min-height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Icon dot — 32×32 outer container, 16×16 visual dot centred inside
+   The 32×32 outer size matches the Figma icon frame; the visible circle
+   is the 16×16 dot within it (8px padding on all sides in the component).
+   background/card fill hides the connector line behind the icon.
+   -------------------------------------------------------------------------- */
+.timeline-item__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 16×16 visual dot */
+.timeline-item__icon::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--icon-primary);
+}
+
+/* Connector drawn from this item's dot centre down to the next item's dot centre.
+   top: 24px  = padding-top (8) + half of 32px icon (16)
+   bottom: -24px extends 24px past this item's bottom edge; since items have no gap,
+   that puts the connector end exactly at the next item's dot centre (pad 8 + half dot 16). */
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px; /* (32px icon / 2) - (1px / 2) */
+  top: 24px;
+  bottom: -24px;
+  width: 1px;
+  background: var(--text-tertiary);
+  z-index: 0;
+}
+
+/* Current role — hollow circle; card background covers the connector line */
+.timeline-item--current .timeline-item__icon::before {
+  background: var(--background-card);
+  border: 2px solid var(--icon-primary);
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Body text — VERTICAL stack, gap = spacing/inline-gap
+   -------------------------------------------------------------------------- */
+.timeline-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.timeline-item__company {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: 1;
+  font-weight: var(--type-body-md-weight);
+  color: var(--text-primary);
+  text-box: trim-both cap alphabetic;
+}
+
+.timeline-item__meta {
+  display: block;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  font-weight: var(--type-caption-weight);
+  color: var(--text-secondary);
+  text-box: trim-both cap alphabetic;
+}
+
+/* ==========================================================================
+   Text Link component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Link demo atoms
+   The component bounding box (hit area) is visible in all states.
+   Default/Hover/Visited/Disabled use a dashed border-default indicator;
+   Focus uses a solid border/focus stroke — no padding so the ring sits
+   flush with the bounding box edge, matching the Figma component.
+   -------------------------------------------------------------------------- */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 2px;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-link);
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width-strong);
+  text-underline-offset: var(--border-width-strong);
+  text-decoration-skip-ink: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+}
+
+.text-link:hover,
+.text-link--hover {
+  color: var(--text-link-hover);
+}
+
+.text-link--visited {
+  color: var(--text-link-visited);
+}
+
+.text-link:focus-visible,
+.text-link--focus,
+.text-link--focus-hover {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  outline: 3px solid var(--border-focus);
+  outline-offset: 0;
+  border-radius: var(--radius-xs);
+}
+
+.text-link:focus-visible,
+.text-link--focus {
+  color: var(--text-link);
+}
+
+.text-link:focus-visible:hover,
+.text-link--focus-hover {
+  color: var(--text-link-hover);
+}
+
+.text-link--disabled {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.text-link--inverse {
+  color: var(--text-link-inverse, #88B0CD);
+}
+
+.text-link--inverse:hover {
+  color: var(--text-link-inverse, #88B0CD);
+  opacity: 0.8;
+}
+
+.text-link--inverse:focus-visible {
+  color: var(--text-link-inverse, #88B0CD);
+  outline-color: var(--text-link-inverse, #88B0CD);
+}
+
+/*
+  Button component — built directly from the live Figma master component
+  (COMPONENT_SET 2624:6375), verified variant by variant via the Figma
+  Plugin API rather than approximated from memory.
+
+  Every colour, shadow, radius and spacing value below is a CSS custom
+  property resolved from the real token export (tokens.tokens.json).
+  No hardcoded hex values, no hardcoded px values for anything that has
+  a token. The only literal numbers here are the font-size/letter-spacing
+  pairs per size and the fixed heights — both measured directly off the
+  Figma component, which does not alias those to a shared type/spacing
+  token (confirmed by inspecting bound variables on the live node; these
+  are deliberately bespoke per-size overrides in the source file, not an
+  oversight in this build).
+
+  Requires (load before this file):
+    tokens-primitives.css
+    tokens-light.css  (+ tokens-dark.css for [data-theme="dark"])
+    tokens-desktop.css (+ tokens-mobile.css for [data-density="mobile"])
+*/
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--type-family-semibold), Arial, sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+}
+
+/* ---- Layout modifiers ---- */
+
+.btn--full-width {
+  width: 100%;
+}
+
+/* ---- Sizes ---- (measured from the Figma component: 32 / 40 / 48px tall) */
+
+.btn--small {
+  height: 32px;
+  padding-inline: var(--spacing-xs);
+  font-size: var(--type-button-sm-size);
+  line-height: var(--type-button-sm-line-height);
+  letter-spacing: var(--type-button-sm-letter-spacing);
+}
+
+.btn--medium {
+  height: 40px;
+  padding-inline: var(--spacing-sm);
+  font-size: var(--type-button-md-size);
+  line-height: var(--type-button-md-line-height);
+  letter-spacing: var(--type-button-md-letter-spacing);
+}
+
+.btn--large {
+  height: 48px;
+  padding-inline: var(--spacing-sm);
+  font-size: var(--type-button-lg-size);
+  line-height: var(--type-button-lg-line-height);
+  letter-spacing: var(--type-button-lg-letter-spacing);
+}
+
+/* ---- Variant: Primary ---- */
+
+.btn--primary {
+  background-color: var(--background-action-primary);
+  color: var(--text-on-action);
+  box-shadow: 0 1px 0 0 var(--border-action);
+}
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--background-action-primary-hover);
+}
+.btn--primary:active:not(:disabled) {
+  background-color: var(--background-action-primary-pressed);
+  box-shadow: none;
+}
+.btn--primary:focus-visible {
+  background-color: var(--background-action-primary);
+  box-shadow:
+    0 0 0 1px var(--border-focus-inner),
+    0 0 0 4px var(--border-focus);
+}
+
+/* ---- Variant: Secondary ---- */
+
+.btn--secondary {
+  background-color: var(--background-action-secondary);
+  color: var(--text-on-action-secondary);
+  box-shadow: 0 1px 0 0 var(--border-action-secondary);
+}
+.btn--secondary:hover:not(:disabled) {
+  background-color: var(--background-action-secondary-hover);
+}
+.btn--secondary:active:not(:disabled) {
+  background-color: var(--background-action-secondary-pressed);
+  box-shadow: none;
+}
+.btn--secondary:focus-visible {
+  background-color: var(--background-action-secondary);
+  box-shadow:
+    0 0 0 1px var(--border-focus-inner),
+    0 0 0 4px var(--border-focus);
+}
+
+/* ---- Variant: Ghost ---- (no resting shadow in the source component) */
+
+.btn--ghost {
+  background-color: var(--background-action-ghost);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 1px var(--border-ghost);
+}
+.btn--ghost:hover:not(:disabled) {
+  background-color: var(--background-action-ghost-hover);
+}
+.btn--ghost:active:not(:disabled) {
+  background-color: var(--background-action-ghost-pressed);
+}
+.btn--ghost:focus-visible {
+  background-color: var(--background-action-ghost);
+  box-shadow:
+    0 0 0 1px var(--border-focus-inner),
+    0 0 0 4px var(--border-focus);
+}
+
+/* ---- Variant: Ghost Inverse ---- for use on dark/inverse backgrounds */
+
+.btn--ghost-inverse {
+  background-color: transparent;
+  color: var(--text-inverse, #FAF9F6);
+  box-shadow: 0 0 0 1px var(--border-ghost);
+}
+.btn--ghost-inverse:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.btn--ghost-inverse:active:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.btn--ghost-inverse:focus-visible {
+  background-color: transparent;
+  box-shadow:
+    0 0 0 1px var(--border-focus-inner),
+    0 0 0 4px var(--border-focus);
+}
+
+/* ---- Variant: Destructive ---- */
+
+.btn--destructive {
+  background-color: var(--background-action-destructive);
+  color: var(--text-on-danger);
+  box-shadow: 0 1px 0 0 var(--border-error);
+}
+.btn--destructive:hover:not(:disabled) {
+  background-color: var(--background-action-destructive-hover);
+}
+.btn--destructive:active:not(:disabled) {
+  background-color: var(--background-action-destructive-pressed);
+  box-shadow: none;
+}
+.btn--destructive:focus-visible {
+  background-color: var(--background-action-destructive);
+  box-shadow:
+    0 0 0 1px var(--border-focus-inner),
+    0 0 0 4px var(--border-focus);
+}
+
+/* ---- Disabled ---- (same across all four variants, per source component) */
+
+.btn:disabled,
+.btn[disabled] {
+  background-color: var(--background-disabled) !important;
+  color: var(--text-disabled) !important;
+  box-shadow: none !important;
+}
+
+/* ---- Label span — used in both plain and icon variants ---- */
+.btn__label {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* ---- With-icon variant ---- */
+.btn--icon {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+.btn--icon .btn__label {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 var(--spacing-md);
+}
+.btn__divider {
+  width: 1px;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.btn--primary .btn__divider     { background-color: var(--border-action); }
+.btn--secondary .btn__divider   { background-color: var(--border-action-secondary); }
+.btn--ghost .btn__divider,
+.btn--ghost-inverse .btn__divider { background-color: var(--border-ghost); }
+.btn--destructive .btn__divider { background-color: var(--border-error); }
+.btn:disabled .btn__divider     { background-color: var(--text-disabled); }
+.btn__icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.btn--icon.btn--small .btn__icon-container  { width: 32px; height: 32px; }
+.btn--icon.btn--medium .btn__icon-container { width: 40px; height: 40px; }
+.btn--icon.btn--large .btn__icon-container  { width: 48px; height: 48px; }
+.btn__icon {
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: currentColor;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Demo state simulation — used by Storybook stories and the reference sheet
+   to force hover/focus/pressed states without real interaction.
+   -------------------------------------------------------------------------- */
+.demo-hover .btn--primary:not(:disabled)         { background-color: var(--background-action-primary-hover); }
+.demo-hover .btn--secondary:not(:disabled)       { background-color: var(--background-action-secondary-hover); }
+.demo-hover .btn--ghost:not(:disabled)           { background-color: var(--background-action-ghost-hover); }
+.demo-hover .btn--destructive:not(:disabled)     { background-color: var(--background-action-destructive-hover); }
+
+.demo-pressed .btn--primary:not(:disabled)       { background-color: var(--background-action-primary-pressed); box-shadow: none; }
+.demo-pressed .btn--secondary:not(:disabled)     { background-color: var(--background-action-secondary-pressed); box-shadow: none; }
+.demo-pressed .btn--ghost:not(:disabled)         { background-color: var(--background-action-ghost-pressed); box-shadow: none; }
+.demo-pressed .btn--destructive:not(:disabled)   { background-color: var(--background-action-destructive-pressed); box-shadow: none; }
+
+.demo-focus .btn--primary:not(:disabled),
+.demo-focus .btn--secondary:not(:disabled),
+.demo-focus .btn--ghost:not(:disabled),
+.demo-focus .btn--destructive:not(:disabled)     { outline: none; box-shadow: 0 0 0 1px var(--border-focus-inner), 0 0 0 4px var(--border-focus); }
+
+.demo-focus-hover .btn--primary:not(:disabled)   { outline: none; background-color: var(--background-action-primary-hover); box-shadow: 0 0 0 1px var(--border-focus-inner), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--secondary:not(:disabled) { outline: none; background-color: var(--background-action-secondary-hover); box-shadow: 0 0 0 1px var(--border-focus-inner), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--ghost:not(:disabled)     { outline: none; background-color: var(--background-action-ghost-hover); box-shadow: 0 0 0 1px var(--border-focus-inner), 0 0 0 4px var(--border-focus); }
+.demo-focus-hover .btn--destructive:not(:disabled){ outline: none; background-color: var(--background-action-destructive-hover); box-shadow: 0 0 0 1px var(--border-focus-inner), 0 0 0 4px var(--border-focus); }
+
+/* ==========================================================================
+   Sidebar component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers
+   background/page + full border, 24px padding — mirrors Figma card frame
+   -------------------------------------------------------------------------- */
+.sidebar-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar — base
+   -------------------------------------------------------------------------- */
+.sidebar-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  background: var(--background-card);
+  pointer-events: none;
+}
+
+/* Mobile — no border, 24px top/bottom, 16px left/right */
+.sidebar-demo--mobile {
+  padding: var(--spacing-md) var(--spacing-sm);
+  max-width: 375px;
+}
+
+/* Tablet — bottom border only */
+.sidebar-demo--tablet {
+  padding: var(--spacing-md) var(--spacing-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Desktop — right border only, 0 outer padding (inner frame handles it) */
+.sidebar-demo--desktop {
+  width: 360px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Desktop — inner padding frame
+   -------------------------------------------------------------------------- */
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Tablet — 2-column layout
+   -------------------------------------------------------------------------- */
+.sidebar__tablet-container {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.sidebar__tablet-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* --------------------------------------------------------------------------
+   Context overrides — strip reading-column max-width inside sidebar
+   -------------------------------------------------------------------------- */
+.sidebar-demo .content-section__heading,
+.sidebar-demo .content-section__body {
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   CV section — text-link + button
+   -------------------------------------------------------------------------- */
+.sidebar__cv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sidebar__cv-label {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-secondary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* --------------------------------------------------------------------------
+   Footer links
+   -------------------------------------------------------------------------- */
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/* --------------------------------------------------------------------------
+   Branding footer — icon logo + handle
+   -------------------------------------------------------------------------- */
+.sidebar-footer {
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: calc(-1 * var(--spacing-md));
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+}
+
+.sidebar-logo:hover .sidebar-logo__icon [fill="var(--brand-cobalt)"] {
+  fill: var(--text-link-hover);
+}
+
+.sidebar-logo:focus { outline: none; }
+
+.sidebar-logo:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.sidebar-logo__handle {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-info);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.sidebar-logo__copyright {
+  position: relative;
+  top: 1px;
+}
+
+.sidebar-logo__text {
+  position: relative;
+}
+
+/* ==========================================================================
+   Header component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers
+   -------------------------------------------------------------------------- */
+.header-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Header demo
+   48px tall, background/card, 1px border/subtle bottom
+   Padding left only — matches Figma (padding-right: 0)
+   -------------------------------------------------------------------------- */
+.header-demo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  height: 48px;
+  padding-left: var(--spacing-sm);
+  background: var(--background-card);
+  border-bottom: 1px solid var(--border-subtle);
+  pointer-events: none;
+}
+
+.header-demo--mobile {
+  max-width: 375px;
+}
+
+.header-demo--desktop-closed {
+  width: 48px;
+  min-width: 48px;
+  padding-left: 0;
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Logo — rendered as <a> (logo/wordmark-link component)
+   Underline is a text decoration on the wordmark: 2px, offset 0, brand/cobalt.
+   -------------------------------------------------------------------------- */
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--background-card);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+}
+
+.header__logo:hover svg [fill="var(--brand-cobalt)"] {
+  fill: var(--text-link-hover);
+}
+
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo:focus-visible,
+.header__logo--focus {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Menu icon button
+   Touch target: 48×48. Icon glyph: 32×32. Pushed to far right by auto margin.
+   -------------------------------------------------------------------------- */
+.header__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  padding: 0;
+  cursor: default;
+}
+
+.header__icon-btn:hover {
+  background: var(--background-hover);
+  cursor: pointer;
+}
+
+.header__icon-btn:focus {
+  outline: none;
+}
+
+.header__icon-btn:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: -2px;
+  border-radius: var(--radius-xs);
+}
+
+@media (hover: none) {
+  .header__icon-btn:hover {
+    background: none;
+  }
+  .header__icon-btn:focus-visible {
+    outline: none;
+  }
+}
+
+.header__icon {
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: var(--icon-accent);
+}
+
+@media (max-width: 768px) {
+  .header__icon {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+  }
+}
+
+/* ==========================================================================
+   Page Nav component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrapper
+   -------------------------------------------------------------------------- */
+.page-nav-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Page nav bar
+   Sits on background/page — no card surface, no border.
+   Horizontal bar, 48px tall.
+   -------------------------------------------------------------------------- */
+.page-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  height: 48px;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Back group — left-aligned
+   -------------------------------------------------------------------------- */
+.page-nav__back {
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   Title — truly centred over the bar; max-width guards against button overlap
+   (prev+next group ≈ 112px, 8px padding each side → 240px total clearance)
+   -------------------------------------------------------------------------- */
+.page-nav__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 240px);
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: 400;
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Previous / next group — right-aligned
+   -------------------------------------------------------------------------- */
+.page-nav__prev-next {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-left: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Nav link — 48px touch target height extension
+   Atom styles live in nav-link.css; page-nav just sets the bounding height.
+   -------------------------------------------------------------------------- */
+.page-nav__link {
+  height: 48px;
+}
+
+/* icons-only variant — 48×48px touch targets, no label */
+.page-nav__link--icon-only {
+  width: 48px;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Nav Link component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Nav link — reusable atom
+   Self-contained: no dependency on .link-demo from text-link.css.
+   -------------------------------------------------------------------------- */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  color: var(--text-link);
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.nav-link:hover {
+  color: var(--text-link-hover);
+}
+
+.nav-link:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.nav-link__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: currentColor;
+}
+
+.nav-link__label {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  text-decoration: none;
+  white-space: nowrap;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.nav-link:hover .nav-link__label,
+.nav-link:focus-visible .nav-link__label {
+  color: var(--text-link-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Simulated state modifiers — sheet use only
+   -------------------------------------------------------------------------- */
+.nav-link--hover {
+  color: var(--text-link-hover);
+}
+
+.nav-link--hover .nav-link__label {
+  color: var(--text-link-hover);
+}
+
+.nav-link--focus,
+.nav-link--focus-hover {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.nav-link--focus-hover .nav-link__label {
+  color: var(--text-link-hover);
+}
+
+/* ==========================================================================
+   Media Block component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrapper
+   -------------------------------------------------------------------------- */
+.media-block-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Media block — image + optional caption
+   -------------------------------------------------------------------------- */
+.media-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: 0;
+}
+
+.media-block + .media-block {
+  margin-top: var(--spacing-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Image placeholder
+   -------------------------------------------------------------------------- */
+.media-block__image {
+  width: 100%;
+  background-color: var(--background-hover);
+  background-image:
+    linear-gradient(45deg, var(--border-default) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--border-default) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--border-default) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--border-default) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.media-block__image--16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.media-block__image--4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.media-block__image:has(img),
+.media-block__image:has(video) {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.media-block__image img,
+.media-block__image video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.media-block__image--grid,
+.media-block__image--grid:has(img),
+.media-block__image--grid:has(video) {
+  background-color: #0D1520;
+  background-image: radial-gradient(circle, #10243A 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid img {
+  object-fit: contain;
+  padding: 0;
+}
+
+.media-block__image--grid-lickd,
+.media-block__image--grid-lickd:has(img),
+.media-block__image--grid-lickd:has(video) {
+  background-color: #262E3F;
+  background-image: radial-gradient(circle, #1B212D 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-lickd img {
+  padding: 0;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.media-block__image--grid-hubblehq,
+.media-block__image--grid-hubblehq:has(img),
+.media-block__image--grid-hubblehq:has(video) {
+  background-color: #00F2C4;
+  background-image: radial-gradient(circle, #44C199 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-hubblehq img {
+  padding: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+.media-block__image--grid-giffgaff,
+.media-block__image--grid-giffgaff:has(img),
+.media-block__image--grid-giffgaff:has(video) {
+  background-color: #FCC31E;
+  background-image: radial-gradient(circle, #F1BB1D 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.media-block__image--grid-giffgaff img {
+  object-fit: cover;
+  object-position: bottom;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Caption
+   -------------------------------------------------------------------------- */
+.media-block__caption {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+  max-width: var(--layout-reading-column-width);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* ==========================================================================
+   Card Grid Item component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Demo cells — tall enough to show the full card
+   -------------------------------------------------------------------------- */
+.demo-cell {
+  vertical-align: top;
+  padding: var(--spacing-md) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Card item — media area + copy area
+   Used as an <a> on index.html; pointer-events enabled in production.
+   -------------------------------------------------------------------------- */
+.card-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Hover state — shadow */
+.card-item--hover {
+  box-shadow:
+    0px 4px 6px var(--shadow-light-08),
+    0px 1px 1.5px var(--shadow-light-06);
+}
+
+[data-theme="dark"] .card-item--hover {
+  box-shadow:
+    0px 4px 6px var(--shadow-dark-28),
+    0px 1px 1.5px var(--shadow-dark-24);
+}
+
+/* Focus states — 3px outside focus ring + hover shadow */
+[data-state="focus"],
+[data-state="focus-hover"] {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 0px;
+  box-shadow:
+    0px 4px 6px var(--shadow-light-08),
+    0px 1px 1.5px var(--shadow-light-06);
+}
+
+[data-theme="dark"] [data-state="focus"],
+[data-theme="dark"] [data-state="focus-hover"] {
+  box-shadow:
+    0px 4px 6px var(--shadow-dark-28),
+    0px 1px 1.5px var(--shadow-dark-24);
+}
+
+/* --------------------------------------------------------------------------
+   Media block — remove standalone border/radius when nested in card
+   -------------------------------------------------------------------------- */
+.card-item .media-block__image {
+  border: none;
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Copy area
+   -------------------------------------------------------------------------- */
+.card-item__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-sm);
+  flex: 1;
+}
+
+.card-item__copy--hover {
+  background: var(--background-hover);
+}
+
+.card-item__copy--hover .card-item__role,
+[data-state="focus"] .card-item__role,
+[data-state="focus-hover"] .card-item__role {
+  color: var(--text-secondary);
+}
+
+.card-item__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Title — type/heading-1 */
+.card-item__title {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-lg-size);
+  font-weight: 400;
+  line-height: var(--type-heading-lg-line-height);
+  letter-spacing: var(--type-heading-lg-letter-spacing);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.card-item__outcome {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.card-item__bottom {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+/* Role — type/caption */
+.card-item__role {
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-info);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* ==========================================================================
+   Case Study Hero component sheet
+   Shared grid/table styles live in sheet.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variant card wrappers — background/page fill, full border, 16px radius
+   -------------------------------------------------------------------------- */
+.hero-variant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Case study hero — card atom
+   background/card, border/default, radius/medium
+   Desktop/tablet: horizontal. Mobile: vertical.
+   -------------------------------------------------------------------------- */
+.case-study-hero {
+  display: flex;
+  border-radius: var(--radius-md);
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.case-study-hero--desktop {
+  flex-direction: row;
+  width: 100%;
+  min-height: 360px;
+}
+
+.case-study-hero--tablet {
+  flex-direction: row;
+  width: 100%;
+  min-height: 300px;
+}
+
+.case-study-hero--mobile {
+  flex-direction: column;
+  width: 343px;
+}
+
+/* --------------------------------------------------------------------------
+   Media panel — image placeholder
+   -------------------------------------------------------------------------- */
+.case-study-hero__media {
+  flex-shrink: 0;
+  background: var(--background-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-hero--desktop .case-study-hero__media {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+}
+
+.case-study-hero--tablet .case-study-hero__media {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+}
+
+.case-study-hero--mobile .case-study-hero__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Media block — fill the media panel, no standalone border/radius
+   -------------------------------------------------------------------------- */
+.case-study-hero__media .media-block {
+  width: 100%;
+  align-self: stretch;
+  margin: 0;
+}
+
+.case-study-hero__media .media-block__image {
+  flex: 1;
+  width: 100%;
+  aspect-ratio: unset;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Copy panel
+   -------------------------------------------------------------------------- */
+.case-study-hero__copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.case-study-hero--desktop .case-study-hero__copy {
+  padding: 32px var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.case-study-hero--tablet .case-study-hero__copy,
+.case-study-hero--mobile .case-study-hero__copy {
+  padding: var(--spacing-md) var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.case-study-hero--mobile .case-study-hero__copy {
+  gap: var(--spacing-md);
+}
+
+/* --------------------------------------------------------------------------
+   Hero copy — top block (title + outcome)
+   -------------------------------------------------------------------------- */
+.case-study-hero__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.case-study-hero__title {
+  margin: 0;
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: var(--type-heading-lg-line-height);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.case-study-hero--desktop .case-study-hero__title {
+  font-size: var(--type-heading-lg-size);
+}
+
+.case-study-hero--tablet .case-study-hero__title,
+.case-study-hero--mobile .case-study-hero__title {
+  font-size: var(--type-heading-lg-size);
+  line-height: var(--type-heading-lg-line-height);
+}
+
+.case-study-hero__outcome {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Bottom — role / meta line
+   -------------------------------------------------------------------------- */
+.case-study-hero__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+}
+
+.case-study-hero__role {
+  margin: 0;
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-info);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — collapse desktop hero to vertical at ≤992px (sidebar present)
+   then at ≤768px regardless of modifier class
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .case-study-hero--desktop {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .case-study-hero--desktop .case-study-hero__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .case-study-hero--desktop .case-study-hero__copy {
+    padding: var(--spacing-md) var(--spacing-sm);
+    gap: var(--spacing-md);
+  }
+
+  .case-study-hero--desktop .case-study-hero__title {
+    font-size: var(--type-heading-lg-size);
+    line-height: var(--type-heading-lg-line-height);
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-hero--desktop,
+  .case-study-hero--tablet {
+    flex-direction: column;
+    width: auto;
+    min-height: unset;
+  }
+
+  .case-study-hero--desktop .case-study-hero__media,
+  .case-study-hero--tablet .case-study-hero__media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  .case-study-hero--desktop .case-study-hero__copy,
+  .case-study-hero--tablet .case-study-hero__copy {
+    padding: var(--spacing-md) var(--spacing-sm);
+    gap: var(--spacing-md);
+  }
+
+  .case-study-hero--desktop .case-study-hero__title {
+    font-size: var(--type-heading-lg-size);
+  }
+}
+
+.case-study-summary {
+  background-color: var(--background-inverse, #10243A);
+  border: var(--border-width-default, 1px) solid var(--border-inverse, #081527);
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--layout-reading-column-width);
+}
+
+.case-study-summary__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border-bottom: var(--border-width-default, 1px) solid var(--border-inverse, #081527);
+}
+
+.case-study-summary__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--icon-inverse, #FAF9F6);
+}
+
+.case-study-summary__icon svg {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.case-study-summary__list-icon svg {
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.case-study-summary__title {
+  color: var(--text-inverse, #FAF9F6);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-sm-size);
+  font-weight: 400;
+  line-height: var(--type-heading-sm-line-height);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.case-study-summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  margin: 0;
+  list-style: none;
+}
+
+.case-study-summary__list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.case-study-summary__list-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--icon-inverse, #FAF9F6);
+}
+
+.case-study-summary__description {
+  color: var(--text-inverse, #FAF9F6);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: 400;
+  line-height: var(--type-body-md-line-height);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.case-study-summary__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}
+
+.case-study-summary__body .case-study-summary__description {
+  margin: 0;
+}
+
+.case-study-summary__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   Site shell — portfolio layout
+   This file is for adamdanielbest.com only. Component and token CSS live in
+   their own files; this layer wires them together into a page layout.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Breakpoint tokens
+   Not usable in @media queries directly, but readable via JS getComputedStyle.
+   Raw values are mirrored in src/js/breakpoints.js for media query use in JS.
+   -------------------------------------------------------------------------- */
+:root {
+  --bp-sm:  640px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+  --bp-2xl: 1536px;
+}
+
+/* --------------------------------------------------------------------------
+   Body
+   -------------------------------------------------------------------------- */
+body {
+  margin: 0;
+  background: var(--background-page);
+  color: var(--text-primary);
+  font-family: var(--type-family-primary), system-ui, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop layout: fixed aside (360px) + fluid main
+   -------------------------------------------------------------------------- */
+.site-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--background-card);
+  border-right: 1px solid var(--border-subtle);
+  z-index: 100;
+}
+
+/* Header row at the top of the aside */
+.site-aside__header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 48px;
+  padding-left: var(--spacing-md);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--background-card);
+}
+
+/* Scrollable sidebar body below the header */
+.site-aside__body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Collapsed desktop aside — 48px icon-only rail */
+.site-aside--collapsed {
+  width: 48px;
+}
+
+.site-aside--collapsed .site-aside__header {
+  padding-left: 0;
+  justify-content: center;
+}
+
+.site-aside--collapsed .header__logo { display: none; }
+.site-aside--collapsed .site-aside__body { display: none; }
+
+/* Collapsed-only icon — pinned to bottom of the 48px rail */
+.site-aside__collapsed-icon {
+  display: none;
+}
+
+.site-aside--collapsed .site-aside__collapsed-icon {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-sm) 0;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Strip demo-only constraints from sidebar inside site context */
+.site-aside .sidebar-demo {
+  pointer-events: auto;
+  width: auto;
+  border: none;
+}
+
+.site-aside .sidebar__inner {
+  padding: var(--spacing-md);
+}
+
+.site-main {
+  margin-left: 360px;
+  min-height: 100vh;
+}
+
+.site-main--aside-collapsed {
+  margin-left: 48px;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop page-nav — sticky inside site-main, hidden on mobile
+   -------------------------------------------------------------------------- */
+.site-main__nav {
+  position: sticky;
+  top: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background: var(--background-card);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 50;
+}
+
+.site-main__nav .page-nav {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Strip component padding so the bar is exactly 48px, matching the header */
+.site-main__nav .page-nav { padding: 0 var(--spacing-lg); }
+
+/* Narrow desktop / large tablet (769px–1100px): hide nav link labels so the
+   title has room to truncate cleanly, matching the mobile icon-only bar. */
+@media (max-width: 1100px) {
+  .site-main__nav .nav-link__label { display: none; }
+  .site-main__nav .page-nav__link  { width: 48px; justify-content: center; }
+  .site-main__nav .page-nav        { padding: 0 var(--spacing-sm); }
+  /* prev+next is 2×48px=96px on the right, back is 48px on the left.
+     Centering requires 2× the larger side: 2×96=192px, plus buffer. */
+  .site-main__nav .page-nav__title { max-width: calc(100% - 224px); }
+}
+
+
+/* --------------------------------------------------------------------------
+   Centered content container inside site-main
+   -------------------------------------------------------------------------- */
+.site-main__content {
+  /* No max-width here — card-grid controls its own centering */
+}
+
+/* Mobile/tablet chrome hidden on desktop */
+.site-header     { display: none; }
+.site-page-nav   { display: none; }
+.site-drawer     { display: none; }
+
+/* --------------------------------------------------------------------------
+   Mobile / tablet layout (≤768px)
+   Aside hidden, sticky header + page-nav bar, drawer overlay
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .site-aside { display: none; }
+  .site-main__nav { display: none; }
+  .site-main__content { max-width: none; margin-inline: 0; }
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    padding-left: var(--spacing-sm);
+    background: var(--background-card);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 100;
+  }
+
+  .site-page-nav {
+    display: block;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    background: var(--background-card);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 99;
+  }
+
+  .site-page-nav .page-nav { padding: 0; }
+
+  .site-main {
+    margin-left: 0;
+    padding-top: 96px; /* 48px header + 48px page-nav */
+  }
+
+  /* Drawer — sidebar overlay below the fixed header */
+  .site-drawer {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background: var(--background-card);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+
+  .site-drawer--open {
+    display: block;
+    transform: translateX(0);
+  }
+
+  body.drawer-open {
+    overflow: hidden;
+  }
+
+  /* Strip demo-only constraints from sidebar inside drawer */
+  .site-drawer .sidebar-demo {
+    pointer-events: auto;
+    width: auto;
+    border: none;
+    max-width: none;
+    padding: 0;
+  }
+
+  .site-drawer .sidebar__inner {
+    padding: var(--spacing-md) var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Work section — homepage card grid
+   -------------------------------------------------------------------------- */
+.section--work {
+  padding: var(--spacing-xl) 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-lg) var(--spacing-xl);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Sidebar open: stack cards at 992px; collapsed sidebar keeps 2-col until 768px */
+@media (max-width: 992px) {
+  .site-main:not(.site-main--aside-collapsed) .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section--work {
+    padding: var(--spacing-md) 0;
+    border-radius: var(--radius-xs);
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 0 var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* Enable interactivity on card links */
+.card-item {
+  pointer-events: auto;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card-item:hover {
+  box-shadow:
+    0px 4px 6px var(--shadow-light-08),
+    0px 1px 1.5px var(--shadow-light-06);
+}
+
+.card-item:hover .card-item__copy {
+  background: var(--background-hover);
+}
+
+.card-item:hover .card-item__role {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .card-item:hover {
+  box-shadow:
+    0px 4px 6px var(--shadow-dark-28),
+    0px 1px 1.5px var(--shadow-dark-24);
+}
+
+.card-item:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Case study page content
+   -------------------------------------------------------------------------- */
+.case-study-content {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.case-study-content .case-study-summary {
+  margin-top: var(--spacing-xl);
+}
+
+.case-study-content .content-section {
+  margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .case-study-content {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section heading (above card grid)
+   -------------------------------------------------------------------------- */
+.section-heading {
+  margin: 0 0 var(--spacing-md);
+  padding: 0 var(--spacing-lg);
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-lg-size);
+  font-weight: 400;
+  line-height: var(--type-heading-lg-line-height);
+  letter-spacing: var(--type-heading-lg-letter-spacing);
+  color: var(--text-primary);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    padding: 0 var(--spacing-sm);
+  }
+}

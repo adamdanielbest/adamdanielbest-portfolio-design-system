@@ -37,6 +37,9 @@ jobs:
         # Outputs to storybook/ at repo root — picked up by the Pages artifact below.
         run: npm run build-storybook -- --output-dir storybook
 
+      - name: Bundle CSS
+        run: node scripts/bundle-css.js
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
