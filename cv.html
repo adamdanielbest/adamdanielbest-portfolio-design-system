@@ -120,6 +120,11 @@
       padding-inline: 0;
     }
 
+    @media (max-width: 768px) {
+      .site-main__nav { display: block; }
+      .site-main { padding-top: 96px; } /* header + page-nav */
+    }
+
     .cv-header {
       display: flex;
       justify-content: space-between;
@@ -370,7 +375,7 @@
 
     @media (max-width: 768px) {
       .site-main {
-        padding-top: 48px; /* header only — no page-nav on mobile */
+        padding-top: 48px;
       }
     }
 
