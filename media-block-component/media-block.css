@@ -59,8 +59,8 @@
 .media-block__image:has(img),
 .media-block__image:has(video) {
   background-image: none;
-  border: none;
-  border-radius: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   overflow: hidden;
 }
 
