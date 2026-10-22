@@ -593,6 +593,10 @@
     drawer?.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeDrawer();
     });
+
+    drawer?.addEventListener('click', e => {
+      if (e.target.closest('a')) closeDrawer();
+    });
   </script>
 
   <script>
