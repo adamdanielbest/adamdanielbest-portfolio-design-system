@@ -16,6 +16,8 @@
       swap('.site-main__nav');
       swap('.site-main__content');
       swap('.site-page-nav');
+      swap('.site-aside__body');
+      swap('.site-drawer');
 
       document.title = doc.title;
       if (push) history.pushState({ url }, doc.title, url);

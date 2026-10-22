@@ -458,27 +458,28 @@
 
   <script>
     (function () {
-    // Desktop sidebar collapse
-    const sidebarToggle = document.querySelector('.js-sidebar-toggle');
-    const aside         = document.querySelector('.site-aside');
-    const siteMain      = document.querySelector('.site-main');
-    const sidebarIcon   = sidebarToggle?.querySelector('use');
+    const aside    = document.querySelector('.site-aside');
+    const siteMain = document.querySelector('.site-main');
 
     function setSidebarCollapsed(collapsed) {
       aside.classList.toggle('site-aside--collapsed', collapsed);
       siteMain.classList.toggle('site-main--aside-collapsed', collapsed);
-      if (sidebarToggle) {
-        sidebarToggle.setAttribute('aria-label', collapsed ? 'Open sidebar' : 'Close sidebar');
-        sidebarToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      const btn  = document.querySelector('.js-sidebar-toggle');
+      const icon = btn?.querySelector('use');
+      if (btn) {
+        btn.setAttribute('aria-label', collapsed ? 'Open sidebar' : 'Close sidebar');
+        btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
       }
-      if (sidebarIcon) sidebarIcon.setAttribute('href', collapsed ? '#icon-left-panel-open-sm' : '#icon-left-panel-close-sm');
+      if (icon) icon.setAttribute('href', collapsed ? '#icon-left-panel-open-sm' : '#icon-left-panel-close-sm');
     }
 
-    sidebarToggle?.addEventListener('click', () => {
-      setSidebarCollapsed(!aside.classList.contains('site-aside--collapsed'));
+    // Event delegation — survives sidebar DOM swaps
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.js-sidebar-toggle')) {
+        setSidebarCollapsed(!aside.classList.contains('site-aside--collapsed'));
+      }
     });
 
-    // Auto-collapse sidebar below breakpoint/lg (1024px)
     const bpLg = window.matchMedia('(max-width: 1024px)');
     bpLg.addEventListener('change', e => setSidebarCollapsed(e.matches));
     if (bpLg.matches) setSidebarCollapsed(true);
@@ -486,43 +487,42 @@
   </script>
 
   <script>
-    const drawerToggle = document.querySelector('.js-drawer-toggle');
-    const drawer       = document.getElementById('site-drawer');
-    const toggleIcon   = drawerToggle?.querySelector('use');
+    (function () {
+    const drawer = document.getElementById('site-drawer');
 
     function openDrawer() {
+      const btn  = document.querySelector('.js-drawer-toggle');
+      const icon = btn?.querySelector('use');
       drawer.removeAttribute('hidden');
       drawer.classList.add('site-drawer--open');
       document.body.classList.add('drawer-open');
-      drawerToggle.setAttribute('aria-expanded', 'true');
-      drawerToggle.setAttribute('aria-label', 'Close menu');
-      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-close-sm');
-      drawerToggle.focus();
+      if (btn) { btn.setAttribute('aria-expanded', 'true'); btn.setAttribute('aria-label', 'Close menu'); }
+      if (icon) icon.setAttribute('href', '#icon-top-panel-close-sm');
+      btn?.focus();
     }
 
     function closeDrawer() {
+      const btn  = document.querySelector('.js-drawer-toggle');
+      const icon = btn?.querySelector('use');
       drawer.classList.remove('site-drawer--open');
       document.body.classList.remove('drawer-open');
-      drawerToggle.setAttribute('aria-expanded', 'false');
-      drawerToggle.setAttribute('aria-label', 'Open menu');
-      if (toggleIcon) toggleIcon.setAttribute('href', '#icon-top-panel-open-sm');
-      drawerToggle.focus();
+      if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); }
+      if (icon) icon.setAttribute('href', '#icon-top-panel-open-sm');
+      btn?.focus();
       drawer.addEventListener('transitionend', () => drawer.setAttribute('hidden', ''), { once: true });
     }
 
-    drawerToggle?.addEventListener('click', () => {
-      drawer.hasAttribute('hidden') || !drawer.classList.contains('site-drawer--open')
-        ? openDrawer()
-        : closeDrawer();
+    // Event delegation — survives header DOM swaps
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.js-drawer-toggle')) {
+        drawer.hasAttribute('hidden') || !drawer.classList.contains('site-drawer--open')
+          ? openDrawer() : closeDrawer();
+      }
+      if (e.target.closest('#site-drawer a')) closeDrawer();
     });
 
-    drawer?.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeDrawer();
-    });
-
-    drawer?.addEventListener('click', e => {
-      if (e.target.closest('a')) closeDrawer();
-    });
+    drawer?.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    })();
   </script>
 
   <script src="src/js/router.js"></script>
