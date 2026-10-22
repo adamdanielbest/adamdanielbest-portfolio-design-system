@@ -49,18 +49,18 @@ export function renderSidebarSections({
         <footer class="content-section" aria-label="Contact">
           <h2 class="content-section__heading">Get in touch</h2>
           <div class="sidebar__links">
-            <a class="action-chip" href="${emailHref}">
+            <button class="action-chip" type="button" data-href="${emailHref}">
               <span class="action-chip__body">
                 <span class="action-chip__label">${emailLabel}</span>
                 <svg class="action-chip__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-outward"/></svg>
               </span>
-            </a>
-            <a class="action-chip" href="${linkedinHref}" target="_blank" rel="noopener noreferrer">
+            </button>
+            <button class="action-chip" type="button" data-href="${linkedinHref}" data-target="_blank">
               <span class="action-chip__body">
                 <span class="action-chip__label">${linkedinLabel}</span>
                 <svg class="action-chip__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow-outward"/></svg>
               </span>
-            </a>
+            </button>
           </div>
         </footer>`;
 }
