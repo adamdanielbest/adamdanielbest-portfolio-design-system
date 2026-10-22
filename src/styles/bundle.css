@@ -2452,7 +2452,11 @@ code {
   border-radius: var(--radius-sm);
 }
 
-/* Link variant — no visible border (keeps same dimensions via transparent) */
+/* Link variant — no border, no background fill */
+a.action-chip {
+  background: transparent;
+}
+
 a.action-chip .action-chip__body {
   border-color: transparent;
 }
