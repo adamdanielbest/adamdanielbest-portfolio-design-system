@@ -32,16 +32,17 @@ export const renderActionChip = (args) => {
       ${iconSvg}
     </span>`;
 
+  const demoClass = ['hover', 'focus', 'focus-hover'].includes(state) ? `demo-${state}` : '';
+  const wrap = (html) => demoClass ? `<div class="${demoClass}">${html}</div>` : html;
+
   if (href && !isDisabled) {
     const targetAttr = target ? ` target="${target}"` : '';
     const relAttr = target === '_blank' ? ' rel="noopener noreferrer"' : '';
-    return `<a class="action-chip" href="${href}"${targetAttr}${relAttr}>${inner}
-</a>`;
+    return wrap(`<a class="action-chip" href="${href}"${targetAttr}${relAttr}>${inner}</a>`);
   }
 
   const disabledAttr = isDisabled ? ' disabled aria-disabled="true"' : '';
-  return `<button class="action-chip" type="button"${disabledAttr}>${inner}
-</button>`;
+  return wrap(`<button class="action-chip" type="button"${disabledAttr}>${inner}</button>`);
 };
 
 export const stateArgTypes = {
