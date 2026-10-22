@@ -81,11 +81,20 @@
   text-box-edge: cap alphabetic;
 }
 
-.case-study-summary__links {
+.case-study-summary__body {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  padding: 0 var(--spacing-sm);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}
+
+.case-study-summary__body .case-study-summary__description {
   margin: 0;
-  list-style: none;
+}
+
+.case-study-summary__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
 }

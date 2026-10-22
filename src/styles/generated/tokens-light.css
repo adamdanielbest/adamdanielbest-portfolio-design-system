@@ -103,6 +103,7 @@
   --text-inverse: #FAF9F6;
   /* Brand cobalt text — links, active nav items, cobalt-accented labels and accents. */
   --text-link: #3A73A0;
+  --text-link-inverse: #88B0CD;
   /* Link colour on hover. One step darker than text/brand in light mode, one step lighter in dark mode (matches the action-button hover direction convention). */
   --text-link-hover: #224868;
   /* Link colour after the user has visited it. One step further than hover in the same direction (darker in light mode, lighter in dark mode). */

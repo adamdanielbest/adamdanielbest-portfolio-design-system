@@ -65,15 +65,15 @@
 }
 
 .text-link--inverse {
-  color: var(--text-inverse, #FAF9F6);
+  color: var(--text-link-inverse, #88B0CD);
 }
 
 .text-link--inverse:hover {
-  color: var(--text-inverse, #FAF9F6);
+  color: var(--text-link-inverse, #88B0CD);
   opacity: 0.8;
 }
 
 .text-link--inverse:focus-visible {
-  color: var(--text-inverse, #FAF9F6);
-  outline-color: var(--text-inverse, #FAF9F6);
+  color: var(--text-link-inverse, #88B0CD);
+  outline-color: var(--text-link-inverse, #88B0CD);
 }
