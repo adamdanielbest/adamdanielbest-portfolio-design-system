@@ -61,15 +61,18 @@
 
   <script>
     document.documentElement.dataset.theme = 'light';
-    fetch('../src/icons/sprite.svg')
-      .then(r => r.text())
-      .then(svg => {
-        const div = document.createElement('div');
+    (function(){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '../src/icons/sprite.svg', false);
+      xhr.send();
+      if (xhr.status === 200) {
+        var div = document.createElement('div');
         div.style.display = 'none';
         div.setAttribute('aria-hidden', 'true');
-        div.innerHTML = svg;
+        div.innerHTML = xhr.responseText;
         document.body.insertBefore(div, document.body.firstChild);
-      });
+      }
+    })();
   </script>
 
   <!-- =====================================================================
@@ -421,7 +424,7 @@
         <div class="case-study-summary">
           <div class="case-study-summary__header">
             <div class="case-study-summary__icon" aria-hidden="true">
-              <svg focusable="false"><use href="#icon-summarise-md"/></svg>
+              <svg width="32" height="32" focusable="false"><use href="#icon-summarise-md"/></svg>
             </div>
             <span class="case-study-summary__title">Summary</span>
           </div>
