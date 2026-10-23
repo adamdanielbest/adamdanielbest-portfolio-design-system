@@ -3171,6 +3171,11 @@ body {
   align-items: start;
 }
 
+/* Mobile-only download button — hidden on desktop where sidebar carries it */
+.cv-mobile-download {
+  display: none;
+}
+
 /* Mobile chrome (header + page-nav) is active at ≤768px in both orientations,
    so the card sits flush to the body edges across the whole range. */
 @media (max-width: 768px) {
@@ -3186,6 +3191,17 @@ body {
     padding: var(--spacing-sm);
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .cv-mobile-download {
+    display: block;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .cv-mobile-download__divider {
+    margin: 0 0 var(--spacing-sm);
+    border: none;
+    border-top: 1px solid var(--border-subtle);
   }
 }
 
