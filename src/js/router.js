@@ -48,6 +48,7 @@
 
     if (url.origin !== window.location.origin) return;
     if (!url.pathname.endsWith('.html')) return;
+    if (a.hasAttribute('download') || a.target === '_blank') return;
 
     e.preventDefault();
     loadPage(url.href, true);
