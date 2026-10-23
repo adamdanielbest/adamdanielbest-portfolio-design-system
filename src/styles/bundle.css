@@ -2748,7 +2748,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 48px;
+    height: 56px; /* 48px base + 8px top padding for logo breathing room */
+    padding-top: var(--spacing-sm);
     padding-left: var(--spacing-sm);
     background: var(--background-card);
     border-bottom: 1px solid var(--border-subtle);
@@ -2758,7 +2759,7 @@ body {
   .site-page-nav {
     display: block;
     position: fixed;
-    top: 48px;
+    top: 56px;
     left: 0;
     right: 0;
     background: var(--background-card);
@@ -2770,7 +2771,7 @@ body {
 
   .site-main {
     margin-left: 0;
-    padding-top: 96px; /* 48px header + 48px page-nav */
+    padding-top: 104px; /* 56px header + 48px page-nav */
   }
 
   /* Drawer — sidebar overlay below the fixed header */
