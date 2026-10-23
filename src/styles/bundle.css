@@ -2777,7 +2777,7 @@ body {
   /* Drawer — sidebar overlay below the fixed header */
   .site-drawer {
     position: fixed;
-    top: 48px;
+    top: 56px;
     left: 0;
     right: 0;
     bottom: 0;

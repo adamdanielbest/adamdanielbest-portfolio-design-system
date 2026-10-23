@@ -13,6 +13,14 @@
         if (incoming && current) current.innerHTML = incoming.innerHTML;
       };
 
+      // Close drawer before swapping — prevents transitionend race with innerHTML replacement
+      const drawer = document.querySelector('.site-drawer');
+      if (drawer && drawer.classList.contains('site-drawer--open')) {
+        drawer.classList.remove('site-drawer--open');
+        document.body.classList.remove('drawer-open');
+        drawer.addEventListener('transitionend', () => drawer.setAttribute('hidden', ''), { once: true });
+      }
+
       swap('.site-main__nav');
       swap('.site-main__content');
       swap('.site-page-nav');
