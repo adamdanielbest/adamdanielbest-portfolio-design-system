@@ -1,39 +1,56 @@
-# Design Tokens — adamdanielbest.com
+# Design System — adamdanielbest.com
 
-Design tokens exported from the Figma source of truth for [adamdanielbest.com](https://adamdanielbest.com), Adam Daniel Best's product design portfolio.
+Design tokens and coded components for [adamdanielbest.com](https://adamdanielbest.com), Adam Daniel Best's product design portfolio. Token source of truth is Figma; everything in this repo is generated or derived from it.
 
 ## What's in here
 
-- `src/styles/tokens/tokens.tokens.json` — the canonical token export, in [DTCG](https://design-tokens.github.io/community-group/format/) format, generated directly from Figma Variables via the Figma Plugin API.
-- `tokens.config.json` — config consumed by the export tooling (source/output directories, generation format).
+- `src/styles/tokens/tokens.tokens.json` — canonical token export in [DTCG](https://design-tokens.github.io/community-group/format/) format, generated from Figma Variables via the Figma Plugin API
+- `src/styles/bundle.css` — compiled stylesheet: token custom properties + all component styles
+- `src/icons/sprite.svg` — SVG sprite, exported from the Figma icon set
+- `*-component/` — one directory per component, each with CSS and an HTML preview page
+- `stories/` — Storybook story files and shared render functions
 
-## Collections
+## Token collections
 
-| Collection | Modes | Token count |
+440 tokens across 5 collections. Primitives are raw scale values; the semantic layers alias primitives only — no raw hex or pixel values at the semantic layer.
+
+| Collection | Modes | Tokens |
 |---|---|---|
-| `01-primitives` | Value | 106 |
-| `02-color-light` | Light | 61 |
-| `02-color-dark` | Dark | 61 |
-| `02-dimensions-desktop` | Desktop | 63 |
-| `02-dimensions-mobile` | Mobile | 63 |
-
-Primitives are raw scale values (colour ramps, spacing scale). The Light/Dark and Desktop/Mobile collections are semantic tokens that alias primitives — no raw hex or pixel values at the semantic layer.
-
-## Provenance
-
-Exported 22 June 2026, immediately after a full four-part design system audit (hardcoded-value sweep, naming consistency, WCAG AA contrast, component structural review) — see the [design system case study](https://adamdanielbest.com) for the full process writeup.
+| `01-primitives` | Value | 104 |
+| `02-color-light` | Light | 78 |
+| `02-color-dark` | Dark | 78 |
+| `02-dimensions-desktop` | Desktop | 90 |
+| `02-dimensions-mobile` | Mobile | 90 |
 
 ## Components
 
-Coded, token-driven component pages sit alongside the tokens, each with its own README covering coverage and known simplifications against the Figma source.
+23 component directories, all token-driven with no hardcoded values. Storybook stories cover 20 components (some have multiple story files for variant groups).
 
-| Component | Status |
-|---|---|
-| Button | Built |
-| Layout | Built |
-| Select | In progress (not yet committed) |
-| Input | Not started |
+| Component | Directory | Stories |
+|---|---|---|
+| ActionChip | ✓ | ✓ |
+| Button | ✓ | ✓ |
+| Card | ✓ | ✓ |
+| CardItem | ✓ | ✓ |
+| CaseStudyHero | ✓ | ✓ |
+| CaseStudySummary | ✓ | ✓ |
+| Checkbox | ✓ | ✓ |
+| ContentSection | ✓ | ✓ |
+| Header | ✓ | ✓ |
+| Icon | ✓ | — |
+| Input | ✓ | ✓ |
+| Layout | ✓ | — |
+| MediaBlock | ✓ | ✓ |
+| NavLink | ✓ | ✓ |
+| PageNav | ✓ | ✓ |
+| Radio | ✓ | ✓ |
+| Select | ✓ | ✓ |
+| Sidebar | ✓ | ✓ |
+| Table | ✓ | — |
+| TextLink | ✓ | ✓ |
+| Timeline | ✓ | ✓ |
+| Toggle | ✓ | ✓ |
 
-## Status
+## Provenance
 
-Tokens plus two coded components in this repo so far — Button and Layout, both fully token-driven with no hardcoded values. Select is built locally but not yet committed; Input hasn't been started.
+Tokens last exported October 2026 as part of ongoing portfolio build. The full design-to-code pipeline — Figma → token export → CSS generation → Storybook → GitHub Pages — is documented in the [Figma to code case study](https://adamdanielbest.com/case-studies/figma-to-code).

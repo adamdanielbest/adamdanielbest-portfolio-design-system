@@ -20,6 +20,7 @@
       swap('.site-drawer');
 
       document.title = doc.title;
+      document.body.className = doc.body.className;
       if (push) history.pushState({ url }, doc.title, url);
       window.scrollTo(0, 0);
     } catch {
