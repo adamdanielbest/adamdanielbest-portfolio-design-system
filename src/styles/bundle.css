@@ -2591,6 +2591,12 @@ button.action-chip:hover .action-chip__body {
 /* --------------------------------------------------------------------------
    Body
    -------------------------------------------------------------------------- */
+/* Stop iOS Safari inflating long text blocks in landscape */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background: var(--background-page);
@@ -2760,7 +2766,7 @@ body {
     z-index: 99;
   }
 
-  .site-page-nav .page-nav { padding: 0; }
+  .site-page-nav .page-nav { padding: 0 var(--spacing-sm); }
 
   .site-main {
     margin-left: 0;
@@ -3164,9 +3170,21 @@ body {
   align-items: start;
 }
 
+/* Mobile chrome (header + page-nav) is active at ≤768px in both orientations,
+   so the card sits flush to the body edges across the whole range. */
 @media (max-width: 768px) {
-  .cv-page .site-main {
-    padding-top: 48px;
+  .cv-page .site-main__content .container {
+    padding-inline: 0;
+  }
+
+  .cv-content {
+    max-width: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: var(--spacing-sm);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -3182,19 +3200,6 @@ body {
 
   .cv-header__contact {
     text-align: left;
-  }
-
-  .cv-page .site-main__content .container {
-    padding-inline: 0;
-  }
-
-  .cv-content {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    padding: var(--spacing-sm);
-    margin-top: 0;
-    margin-bottom: 0;
   }
 }
 

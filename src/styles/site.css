@@ -20,6 +20,12 @@
 /* --------------------------------------------------------------------------
    Body
    -------------------------------------------------------------------------- */
+/* Stop iOS Safari inflating long text blocks in landscape */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background: var(--background-page);
@@ -189,7 +195,7 @@ body {
     z-index: 99;
   }
 
-  .site-page-nav .page-nav { padding: 0; }
+  .site-page-nav .page-nav { padding: 0 var(--spacing-sm); }
 
   .site-main {
     margin-left: 0;
