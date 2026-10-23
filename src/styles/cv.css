@@ -1,0 +1,348 @@
+/* ==========================================================================
+   CV page
+   ========================================================================== */
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--spacing-md);
+  padding: 0 0 var(--spacing-md);
+  border-bottom: var(--border-width-strong) solid var(--border-default);
+  margin-bottom: var(--spacing-md);
+}
+
+.cv-header__identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cv-header__wordmark {
+  display: block;
+  width: 207px;
+  height: 32px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.cv-header__title {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-heading-sm-size);
+  font-weight: var(--type-heading-sm-weight);
+  line-height: var(--type-heading-sm-line-height);
+  color: var(--text-brand);
+  margin: 0;
+}
+
+.cv-header__contact {
+  text-align: right;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.cv-header__contact p {
+  margin: 0;
+}
+
+.cv-header__contact a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.cv-header__contact a:hover {
+  color: var(--text-primary);
+}
+
+.cv-content p,
+.cv-content h1,
+.cv-content h2,
+.cv-content h3 {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.cv-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.cv-section:last-child {
+  margin-bottom: 0;
+}
+
+.cv-grid .cv-section {
+  margin-bottom: 0;
+}
+
+.cv-section__heading {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  color: var(--text-brand);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.cv-section__body {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cv-role {
+  margin-bottom: var(--spacing-lg);
+}
+
+.cv-role:last-child {
+  margin-bottom: 0;
+}
+
+.cv-role__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-2xs);
+}
+
+.cv-role__title {
+  font-family: system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-weight);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cv-role__title [itemprop="name"] {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-weight: var(--type-body-md-emphasis-weight);
+}
+
+.cv-role__company {
+  font-family: system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-weight);
+  color: var(--text-primary);
+}
+
+.cv-role__dates {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cv-role__bullets {
+  margin: 0;
+  padding: 0 0 0 var(--spacing-md);
+  list-style: disc;
+}
+
+.cv-role__bullets li {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2xs);
+}
+
+.cv-role__bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.cv-role__bullets strong {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  color: var(--text-primary);
+}
+
+.cv-skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  list-style: disc;
+  padding: 0 0 0 var(--spacing-md);
+  margin: 0;
+}
+
+.cv-skills__row {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+}
+
+.cv-skills__label {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  color: var(--text-primary);
+}
+
+.cv-previous {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cv-previous__item {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cv-previous__company {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  color: var(--text-primary);
+}
+
+.cv-education {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.cv-education__item {
+  font-size: var(--type-body-md-size);
+  line-height: var(--type-body-md-line-height);
+}
+
+.cv-education__institution {
+  font-family: var(--type-family-semibold), system-ui, sans-serif;
+  font-size: var(--type-body-md-size);
+  font-weight: var(--type-body-md-emphasis-weight);
+  color: var(--text-primary);
+}
+
+.cv-education__detail {
+  color: var(--text-primary);
+}
+
+.cv-content {
+  max-width: var(--layout-reading-column-width);
+  margin-inline: auto;
+  background-color: var(--background-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  padding: var(--spacing-lg) var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+/* Mobile chrome (header + page-nav) is active at ≤768px in both orientations,
+   so the card sits flush to the body edges across the whole range. */
+@media (max-width: 768px) {
+  .cv-page .site-main__content .container {
+    padding-inline: 0;
+  }
+
+  .cv-content {
+    max-width: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: var(--spacing-sm);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-header__contact {
+    text-align: left;
+  }
+}
+
+@media print {
+  .site-aside,
+  .site-header,
+  .site-page-nav,
+  .site-drawer,
+  .site-main__nav {
+    display: none !important;
+  }
+
+  .site-main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .site-main__content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  .cv-header {
+    padding: 0 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cv-header__title { font-size: 14pt; }
+
+  .cv-header__contact a {
+    color: black !important;
+  }
+
+  .cv-section {
+    margin-bottom: 1.5rem;
+    page-break-inside: avoid;
+  }
+
+  .cv-role {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  .cv-section__heading {
+    color: #444 !important;
+    border-bottom-color: #ccc !important;
+  }
+
+  .cv-role__bullets li,
+  .cv-skills__row,
+  .cv-previous__item,
+  .cv-education__detail {
+    color: #333 !important;
+  }
+
+  .cv-role__dates,
+  .cv-skills__label,
+  .cv-education__institution,
+  .cv-header__title {
+    color: #555 !important;
+  }
+}

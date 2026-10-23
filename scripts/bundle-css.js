@@ -32,6 +32,7 @@ const FILES = [
   'case-study-summary-component/case-study-summary.css',
   'action-chip-component/action-chip.css',
   'src/styles/site.css',
+  'src/styles/cv.css',
 ];
 
 const out = FILES.map(f => {
