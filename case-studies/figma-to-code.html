@@ -13,15 +13,15 @@
   <link rel="icon" type="image/svg+xml" href="/../assets/images/logo/favicon.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/../assets/images/logo/favicon@2x.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/../assets/images/logo/favicon-ico.png">
-  <meta name="description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 419 tokens, 25 components.">
+  <meta name="description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 440 tokens, 26 components.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://adamdanielbest.com/case-studies/figma-to-code.html">
   <meta property="og:title" content="Figma to Code Pipeline, Adam Daniel Best">
-  <meta property="og:description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 419 tokens, 25 components.">
+  <meta property="og:description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 440 tokens, 26 components.">
   <meta property="og:image" content="https://adamdanielbest.com/assets/images/adamdanielbest-OG-Image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Figma to Code Pipeline, Adam Daniel Best">
-  <meta name="twitter:description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 419 tokens, 25 components.">
+  <meta name="twitter:description" content="A solo design system project: Figma variables to production CSS, a Storybook component library, and an automated sync pipeline built with Claude. 440 tokens, 26 components.">
   <meta name="twitter:image" content="https://adamdanielbest.com/assets/images/adamdanielbest-OG-Image.jpg">
   <script type="application/ld+json">
   {
@@ -485,7 +485,7 @@
             <p>With that foundation in place, a <code>/setup-project</code> skill bootstraps a new project: reads the Figma file, discovers component sets, populates the registry, and scaffolds the directory structure. From there, the component pipeline runs in sequence.</p>
             <p><code>/sync</code> orchestrates the complete downstream flow. It starts with <code>/review-design</code>, a design audit that walks the Figma component tree before any code is touched. It checks every fill, stroke, spacing and radius value for variable bindings, flags scope mismatches where a token is used outside its intended purpose, and catches colour contrast issues in both light and dark modes. Unbound values and accessibility failures are resolved in Figma before the export runs. Design problems are caught at source rather than after they have propagated into CSS.</p>
             <p>From there, <code>/export-component</code> exports tokens in DTCG format, runs the patch script, regenerates CSS and checks for stale icon sprite references. <code>/render-component</code> reads the Figma variant structure and writes the render function. Before anything is committed, the component is previewed in a local server with a working light and dark mode toggle. Every variant and state is tested interactively: hover, focus, disabled, responsive breakpoints. This preview step is a required gate; nothing can be committed before it passes. <code>/check-drift</code> then compares Figma against code across token definitions, component CSS and Storybook story coverage, routing to the correct re-entry point if anything is out of line.</p>
-            <p>Before this pipeline existed, each component required manual Figma inspection, token cross-referencing, file editing, sprite management and story scaffolding. That took the better part of a day per component. The pipeline reduces execution to minutes; the time now goes into review and design decisions, which is where it should be. 25 components and 419 tokens are maintained this way, by one person, without a dedicated engineer.</p>
+            <p>Before this pipeline existed, each component required manual Figma inspection, token cross-referencing, file editing, sprite management and story scaffolding. That took the better part of a day per component. The pipeline reduces execution to minutes; the time now goes into review and design decisions, which is where it should be. 26 components and 440 tokens are maintained this way, by one person, without a dedicated engineer.</p>
           </div>
         </section>
 
@@ -516,8 +516,8 @@
           <h2 class="content-section__heading">Impact</h2>
           <div class="content-section__body">
             <ul>
-              <li>419 tokens across colour, spacing, type, radius and border, with full light and dark mode support</li>
-              <li>25 components documented in Storybook, covering all variant and state combinations</li>
+              <li>440 tokens across colour, spacing, type, radius and border, with full light and dark mode support</li>
+              <li>26 components documented in Storybook, covering all variant and state combinations</li>
               <li>Agent instructions (CLAUDE.md, design-system.json, skill specs) encode the design system's rules and process: the same work as writing a contribution guide, but one that can be executed autonomously</li>
               <li><code>/review-design</code> audit catches unbound tokens and accessibility issues before CSS is generated</li>
               <li>Interactive light and dark mode preview is a required gate before any component is committed</li>
