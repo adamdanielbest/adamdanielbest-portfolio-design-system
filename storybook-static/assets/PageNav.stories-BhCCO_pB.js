@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./sprite-D3HotjxQ.js";import"./nav-link-Ng1Inqe9.js";function n({labels:e=!0,backLabel:t=`Back`,title:n=`Title`,prevLabel:r=`Previous`,nextLabel:i=`Next`}={}){return e?`<nav class="page-nav" aria-label="Page navigation">
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./sprite-brgQYlfm.js";import"./nav-link-Ng1Inqe9.js";function n({labels:e=!0,backLabel:t=`Back`,title:n=`Title`,prevLabel:r=`Previous`,nextLabel:i=`Next`}={}){return e?`<nav class="page-nav" aria-label="Page navigation">
   <div class="page-nav__back">
     <a class="nav-link page-nav__link" href="#">
       <span class="nav-link__icon" aria-hidden="true">

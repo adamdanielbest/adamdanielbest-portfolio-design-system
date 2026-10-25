@@ -40,12 +40,12 @@ style.textContent = `
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm, 4px);
     border: none;
     background: var(--background-action-primary, #3A73A0);
-    color: var(--icon-primary, #FAF9F6);
+    color: var(--text-on-action, #FFFFFF);
     cursor: pointer;
     padding: 0;
     appearance: none;
@@ -75,7 +75,7 @@ overlay.innerHTML = `
   <div class="lightbox__content">
     <img class="lightbox__img" src="" alt="">
     <button class="lightbox__close" aria-label="Close lightbox">
-      <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-close-sm"/></svg>
+      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-close-sm"/></svg>
     </button>
   </div>
 `;

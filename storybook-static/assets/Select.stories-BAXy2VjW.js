@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,t as n}from"./sprite-D3HotjxQ.js";function r(e,t,n){let r=e===`multi`,i=l.map((e,t)=>{let i=n===e;return`<li class="select__option${i?` select__option--selected`:``}" role="option" aria-selected="${i}" tabindex="0"><span>${e}</span>${r?i?s:c:``}</li>`}).join(`
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,t as n}from"./sprite-brgQYlfm.js";function r(e,t,n){let r=e===`multi`,i=l.map((e,t)=>{let i=n===e;return`<li class="select__option${i?` select__option--selected`:``}" role="option" aria-selected="${i}" tabindex="0"><span>${e}</span>${r?i?s:c:``}</li>`}).join(`
         `);return`
       <ul class="select__dropdown" id="select-listbox" role="listbox" aria-labelledby="select-label"${r?` aria-multiselectable="true"`:``}${t?``:` style="display:none"`}>
         ${i}

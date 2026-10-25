@@ -1,0 +1,7 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import"./action-chip-DqatMFZH.js";import{t}from"./sprite-brgQYlfm.js";var n,r,i;function a(){return(a=e((()=>{t(),n=e=>{let{label:t=`Action`,href:n,icon:r=`icon-arrow-outward`,state:i=`default`,target:a}=e,o=i===`disabled`,s=`
+    <span class="action-chip__body">
+      <span class="action-chip__label">${t}</span>
+      ${`<svg class="action-chip__icon" aria-hidden="true" focusable="false">
+        <use href="#${r}"/>
+      </svg>`}
+    </span>`,c=[`hover`,`focus`,`focus-hover`].includes(i)?`demo-${i}`:``;return(e=>c?`<div class="${c}">${e}</div>`:e)(n&&!o?`<a class="action-chip" href="${n}"${a?` target="${a}"`:``}${a===`_blank`?` rel="noopener noreferrer"`:``}>${s}</a>`:`<button class="action-chip" type="button"${o?` disabled aria-disabled="true"`:``}>${s}</button>`)},r={state:{control:`select`,options:[`default`,`hover`,`focus`,`focus-hover`,`disabled`],description:`Simulated interaction state`},label:{control:`text`},href:{control:`text`,description:`If set, renders as <a> rather than <button>`},icon:{control:`text`,description:`Sprite symbol ID`},target:{control:`text`,description:`Link target (e.g. _blank)`}},i={label:`Action`,href:void 0,icon:`icon-arrow-outward`,state:`default`,target:void 0}})))()}export{r as i,a as n,n as r,i as t};
