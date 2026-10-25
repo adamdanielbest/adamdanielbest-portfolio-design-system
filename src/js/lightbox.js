@@ -37,23 +37,7 @@ style.textContent = `
     position: fixed;
     top: 12px;
     right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-sm, 4px);
-    border: none;
-    background: var(--background-action-primary, #3A73A0);
-    color: var(--text-on-action, #FFFFFF);
-    cursor: pointer;
-    padding: 0;
-    appearance: none;
-    -webkit-appearance: none;
   }
-  .lightbox__close:hover { background: var(--background-action-primary-hover, #2D5C82); }
-  .lightbox__close:active { background: var(--background-action-primary-pressed, #224868); }
-  .lightbox__close:focus-visible { outline: 2px solid var(--border-focus, #4D90FE); outline-offset: 2px; }
   body.lightbox-open { overflow: hidden; touch-action: none; }
   .media-block img { cursor: zoom-in; }
   .media-block img:focus-visible {
@@ -74,7 +58,7 @@ overlay.innerHTML = `
   <div class="lightbox__backdrop"></div>
   <div class="lightbox__content">
     <img class="lightbox__img" src="" alt="">
-    <button class="lightbox__close" aria-label="Close lightbox">
+    <button class="btn btn--primary btn--icon-only lightbox__close" aria-label="Close lightbox">
       <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="#icon-close-sm"/></svg>
     </button>
   </div>
