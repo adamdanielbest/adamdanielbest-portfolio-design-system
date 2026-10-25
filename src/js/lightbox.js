@@ -19,51 +19,42 @@ style.textContent = `
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
-    max-width: min(92vw, 1200px);
-    max-height: 92dvh;
-    padding: 0 16px;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    padding: 0;
   }
   .lightbox__img {
     display: block;
     max-width: 100%;
-    max-height: calc(92dvh - 80px);
+    max-height: 100dvh;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
-  }
-  .lightbox__caption {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(255,255,255,0.65);
-    text-align: center;
-    max-width: 640px;
   }
   .lightbox__close {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 8px;
     border: none;
-    background: rgba(255,255,255,0.12);
-    color: #fff;
+    background: var(--background-action-primary, #3A73A0);
+    color: var(--icon-primary, #FAF9F6);
     cursor: pointer;
     padding: 0;
     appearance: none;
     -webkit-appearance: none;
   }
-  .lightbox__close:hover { background: rgba(255,255,255,0.2); }
-  .lightbox__close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-  body.lightbox-open { overflow: hidden; }
+  .lightbox__close:hover { background: var(--background-action-primary-hover, #2D5C82); }
+  .lightbox__close:active { background: var(--background-action-primary-pressed, #224868); }
+  .lightbox__close:focus-visible { outline: 2px solid var(--border-focus, #4D90FE); outline-offset: 2px; }
+  body.lightbox-open { overflow: hidden; touch-action: none; }
   .media-block img { cursor: zoom-in; }
   .media-block img:focus-visible {
     outline: 3px solid #4D90FE;
@@ -83,7 +74,6 @@ overlay.innerHTML = `
   <div class="lightbox__backdrop"></div>
   <div class="lightbox__content">
     <img class="lightbox__img" src="" alt="">
-    <p class="lightbox__caption"></p>
     <button class="lightbox__close" aria-label="Close lightbox">
       <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-close-sm"/></svg>
     </button>
@@ -91,15 +81,12 @@ overlay.innerHTML = `
 `;
 document.body.appendChild(overlay);
 
-const img     = overlay.querySelector('.lightbox__img');
-const caption = overlay.querySelector('.lightbox__caption');
-const close   = overlay.querySelector('.lightbox__close');
+const img   = overlay.querySelector('.lightbox__img');
+const close = overlay.querySelector('.lightbox__close');
 
-function open(src, alt, captionText) {
+function open(src, alt) {
   img.src = src;
   img.alt = alt || '';
-  caption.textContent = captionText || '';
-  caption.hidden = !captionText;
   overlay.hidden = false;
   document.body.classList.add('lightbox-open');
   close.focus();
@@ -122,9 +109,7 @@ document.querySelectorAll('.media-block img').forEach(image => {
 
 function triggerFromImage(image) {
   lastTrigger = image;
-  const figure = image.closest('.media-block');
-  const captionEl = figure ? figure.querySelector('figcaption') : null;
-  open(image.src, image.alt, captionEl ? captionEl.textContent : '');
+  open(image.src, image.alt);
 }
 
 document.addEventListener('click', (e) => {
