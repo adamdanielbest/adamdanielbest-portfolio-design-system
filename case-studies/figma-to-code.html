@@ -514,6 +514,23 @@
           <figcaption class="media-block__caption">Token architecture as the universal layer, framework-agnostic by design. The render syntax changes; the design decisions do not.</figcaption>
         </figure>
 
+        <section class="content-section content-section--work" aria-label="Built to extend">
+          <h2 class="content-section__heading">Built to extend</h2>
+          <div class="content-section__body">
+            <p>The architecture is deliberately portable. Tokens are authored in DTCG JSON, a platform-agnostic format above any render target. Style Dictionary handles the transform layer: the same source produces CSS custom properties for the web layer today, and TypeScript constants or Swift/Kotlin assets for any platform added later. Adding a new output is a config change, not a structural one.</p>
+            <p>The JS and TypeScript constants output is the relevant extension for a React codebase. Typed token imports mean every component gets autocomplete, type-checking, and a clear import path back to the design source. The same token that defines a colour in Figma becomes a typed constant in the component, with no manual translation step in between.</p>
+            <p>Governance at scale is not an engineering problem. The pipeline already includes a drift check, a token reference validator, and agent-executable contribution rules. Extending those to a team means adding SemVer on the token layer, an RFC workflow for renamed or deprecated tokens, and hooking the drift check into CI. The infrastructure exists; what gets added is process, not engineering.</p>
+            <p>The pipeline does not assume a solo practitioner. The skills and agent instructions that drive it are explicit enough to be followed by another contributor: the design system encodes its own rules. That is the same job as writing a contribution guide, except it can be executed rather than read.</p>
+          </div>
+        </section>
+
+        <figure class="media-block">
+          <div class="media-block__image">
+            <img src="/assets/images/figma-to-code-06.png" alt="Pipeline diagram: Figma to DTCG JSON to Style Dictionary, branching via a bracket connector to CSS custom properties (built), JS/TS constants (React extension), and Swift/Kotlin (future). Below, a governance row: SemVer on tokens, RFC workflow, CI drift check.">
+          </div>
+          <figcaption class="media-block__caption">One token source, multiple render targets. The JS/TS constants output is the React extension; the governance layer adds process without changing the pipeline.</figcaption>
+        </figure>
+
         <section class="content-section content-section--impact" aria-label="Impact">
           <h2 class="content-section__heading">Impact</h2>
           <div class="content-section__body">
