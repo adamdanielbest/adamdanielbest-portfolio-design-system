@@ -1,4 +1,5 @@
 import { below } from './breakpoints.js';
+import './lightbox.js';
 
 // Auto-collapse the desktop sidebar when viewport drops below lg (1024px).
 // Only acts if the sidebar is currently open (not already collapsed).
