@@ -1,4 +1,5 @@
 import '../action-chip-component/action-chip.css';
+import './sprite.js';
 
 /**
  * Renders an action chip as either an <a> or <button> element.
