@@ -1,4 +1,5 @@
 import '../case-study-summary-component/case-study-summary.css';
+import './sprite.js';
 
 export const renderCaseStudySummary = (args) => {
   const { items = [], title = 'Summary', mode = 'on-light' } = args;
