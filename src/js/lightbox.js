@@ -38,7 +38,7 @@ style.textContent = `
     top: 12px;
     right: 12px;
   }
-  body.lightbox-open { overflow: hidden; touch-action: none; }
+  body.lightbox-open { overflow: hidden; }
   .media-block img { cursor: zoom-in; }
   .media-block img:focus-visible {
     outline: 3px solid #4D90FE;
