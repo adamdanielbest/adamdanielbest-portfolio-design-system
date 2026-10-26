@@ -86,6 +86,7 @@ function closeLightbox() {
 let lastTrigger = null;
 
 document.querySelectorAll('.media-block img').forEach(image => {
+  if (image.closest('a')) return;
   image.setAttribute('tabindex', '0');
   image.setAttribute('role', 'button');
   image.setAttribute('aria-haspopup', 'dialog');
@@ -99,11 +100,12 @@ function triggerFromImage(image) {
 document.addEventListener('click', (e) => {
   const image = e.target.closest('.media-block img');
   if (!image) return;
+  if (image.closest('a')) return;
   triggerFromImage(image);
 });
 
 document.addEventListener('keydown', (e) => {
-  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.media-block img')) {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.media-block img') && !e.target.closest('a')) {
     e.preventDefault();
     triggerFromImage(e.target);
   }
