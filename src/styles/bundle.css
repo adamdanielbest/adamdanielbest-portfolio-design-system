@@ -2904,7 +2904,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .card-item__copy {
+  .card-grid .card-item__copy {
     padding-top: var(--spacing-md);
     padding-bottom: var(--spacing-md);
   }
