@@ -2767,7 +2767,7 @@ body {
     z-index: 99;
   }
 
-  .site-page-nav .page-nav { padding: 0; }
+  .site-page-nav .page-nav { padding-left: 0; padding-right: 0; }
 
   .site-main {
     margin-left: 0;
