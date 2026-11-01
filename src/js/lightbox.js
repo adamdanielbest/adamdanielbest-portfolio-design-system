@@ -39,8 +39,8 @@ style.textContent = `
     right: 12px;
   }
   body.lightbox-open { overflow: hidden; }
-  .media-block img { cursor: zoom-in; }
-  .media-block img:focus-visible {
+  .media-block img[role="button"] { cursor: zoom-in; }
+  .media-block img[role="button"]:focus-visible {
     outline: 3px solid #4D90FE;
     outline-offset: 3px;
     border-radius: 4px;
@@ -87,6 +87,7 @@ let lastTrigger = null;
 
 document.querySelectorAll('.media-block img').forEach(image => {
   if (image.closest('a')) return;
+  if (image.closest('.media-block__image--4-3')) return;
   image.setAttribute('tabindex', '0');
   image.setAttribute('role', 'button');
   image.setAttribute('aria-haspopup', 'dialog');
@@ -101,11 +102,12 @@ document.addEventListener('click', (e) => {
   const image = e.target.closest('.media-block img');
   if (!image) return;
   if (image.closest('a')) return;
+  if (image.closest('.media-block__image--4-3')) return;
   triggerFromImage(image);
 });
 
 document.addEventListener('keydown', (e) => {
-  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.media-block img') && !e.target.closest('a')) {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.media-block img') && !e.target.closest('a') && !e.target.closest('.media-block__image--4-3')) {
     e.preventDefault();
     triggerFromImage(e.target);
   }
